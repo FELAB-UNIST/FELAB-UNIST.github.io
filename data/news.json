@@ -1,0 +1,180 @@
+{
+  "news": [
+    {
+      "id": "best-poster-icaif-2024",
+      "date": "2024-11-15",
+      "category": "award",
+      "featured": true,
+      "title": "Best Poster Award at ICAIF 2024",
+      "title_kr": "ICAIF 2024 최우수 포스터상 수상",
+      "summary": "Our PhD student Sohyeon Kwon received the Best Poster Award at the 5th ACM International Conference on AI in Finance for her work 'Can GANs Learn the Stylized Facts of Financial Time Series?'",
+      "content": {
+        "paragraphs": [
+          "We are thrilled to announce that our PhD student Sohyeon Kwon has been awarded the prestigious Best Poster Award at the 5th ACM International Conference on AI in Finance (ICAIF 2024), held in Brooklyn, New York.",
+          "Her research, titled 'Can GANs Learn the Stylized Facts of Financial Time Series?', explores the capability of Generative Adversarial Networks to capture and reproduce the complex statistical properties observed in financial market data.",
+          "This recognition highlights our lab's commitment to advancing the intersection of artificial intelligence and quantitative finance. The work demonstrates novel approaches to generating synthetic financial data that preserves important market characteristics, which has significant implications for risk management and strategy testing."
+        ],
+        "highlights": [
+          "Best Poster Award among 150+ submissions",
+          "Novel application of GANs in financial time series",
+          "Implications for synthetic data generation in finance"
+        ],
+        "quotes": [
+          {
+            "text": "This award reflects the hard work and innovation of our entire research team. We're pushing the boundaries of what's possible with AI in finance.",
+            "author": "Prof. Yongjae Lee"
+          }
+        ]
+      },
+      "images": [
+        {
+          "url": "./public/images/news/icaif-2024-award.jpg",
+          "caption": "Sohyeon Kwon receiving the Best Poster Award",
+          "alt": "Award ceremony at ICAIF 2024"
+        },
+        {
+          "url": "./public/images/news/icaif-2024-poster.jpg",
+          "caption": "The award-winning poster presentation",
+          "alt": "Research poster display"
+        },
+        {
+          "url": "./public/images/news/icaif-2024-team.jpg",
+          "caption": "Lab members at ICAIF 2024",
+          "alt": "Team photo at conference"
+        }
+      ],
+      "gallery": {
+        "title": "Conference Highlights",
+        "images": [
+          {
+            "url": "./public/images/news/icaif-2024-venue.jpg",
+            "caption": "Conference venue in Brooklyn",
+            "thumbnail": "./public/images/news/thumbs/icaif-2024-venue-thumb.jpg"
+          },
+          {
+            "url": "./public/images/news/icaif-2024-presentation.jpg",
+            "caption": "Sohyeon presenting her research",
+            "thumbnail": "./public/images/news/thumbs/icaif-2024-presentation-thumb.jpg"
+          }
+        ]
+      },
+      "links": [
+        {
+          "text": "Read the Paper",
+          "url": "https://doi.org/10.1145/3604237.3626888",
+          "type": "paper"
+        },
+        {
+          "text": "Conference Website",
+          "url": "https://ai-finance.org/icaif-24/",
+          "type": "external"
+        }
+      ],
+      "tags": ["award", "conference", "ICAIF", "GANs", "time series"],
+      "related_news": ["aaai-2025-acceptance", "jpm-publications-2024"]
+    },
+    {
+      "id": "aaai-2025-acceptance",
+      "date": "2025-01-10",
+      "category": "publication",
+      "featured": false,
+      "title": "Paper Accepted at AAAI 2025",
+      "title_kr": "AAAI 2025 논문 채택",
+      "summary": "Our paper 'Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset' has been accepted at AAAI-25 with 23.4% acceptance rate.",
+      "content": {
+        "paragraphs": [
+          "We are pleased to announce that our paper has been accepted for presentation at the 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25), one of the premier venues in AI research.",
+          "The paper introduces a novel approach using geodesic flow kernels for handling mixed-variable tabular datasets in semi-supervised learning settings, addressing a critical challenge in real-world machine learning applications."
+        ]
+      },
+      "images": [
+        {
+          "url": "./public/images/news/aaai-2025-logo.jpg",
+          "caption": "AAAI 2025 Conference",
+          "alt": "AAAI conference logo"
+        }
+      ],
+      "links": [
+        {
+          "text": "Paper Preprint",
+          "url": "https://arxiv.org/abs/paper-id",
+          "type": "paper"
+        }
+      ],
+      "tags": ["publication", "AAAI", "machine learning"],
+      "related_news": ["best-poster-icaif-2024"]
+    },
+    {
+      "id": "graduates-december-2024",
+      "date": "2024-12-20",
+      "category": "achievement",
+      "featured": false,
+      "title": "Four MS Students Successfully Graduate",
+      "title_kr": "석사 4명 졸업",
+      "summary": "Congratulations to Yejin Kim, Seonmi Kim, Seyoung Kim, and Youngbin Lee on successfully defending their MS theses and joining industry positions.",
+      "content": {
+        "paragraphs": [
+          "We celebrate the graduation of four talented MS students who have successfully defended their theses and are moving on to exciting career opportunities in the industry.",
+          "Their research contributions span various areas including personalized stock recommendations, NFT recommendation systems, GANs-based anomaly detection, and temporal graph networks for financial applications."
+        ],
+        "list_sections": [
+          {
+            "title": "Graduates and Their Next Steps",
+            "items": [
+              "Yejin Kim - Data Scientist at Meritz Fire & Marine Insurance",
+              "Seonmi Kim - Data Scientist at NICE P&I",
+              "Seyoung Kim - Quant Researcher",
+              "Youngbin Lee - AI Researcher at elice"
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "url": "./public/images/news/graduation-2024.jpg",
+          "caption": "December 2024 Graduation Ceremony",
+          "alt": "Graduates in academic regalia"
+        }
+      ],
+      "tags": ["graduation", "achievement", "alumni"],
+      "related_news": []
+    }
+  ],
+  "categories": {
+    "award": {
+      "name": "Awards",
+      "color": "amber",
+      "icon": "trophy"
+    },
+    "publication": {
+      "name": "Publications",
+      "color": "blue",
+      "icon": "document"
+    },
+    "achievement": {
+      "name": "Achievements",
+      "color": "green",
+      "icon": "academic-cap"
+    },
+    "collaboration": {
+      "name": "Collaborations",
+      "color": "purple",
+      "icon": "users"
+    },
+    "event": {
+      "name": "Events",
+      "color": "orange",
+      "icon": "calendar"
+    },
+    "grant": {
+      "name": "Grants",
+      "color": "teal",
+      "icon": "cash"
+    },
+    "general": {
+      "name": "General",
+      "color": "gray",
+      "icon": "newspaper"
+    }
+  }
+}

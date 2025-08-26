@@ -90,7 +90,7 @@ const ProjectsManager = {
     createProjectHTML(project) {
         const statusClass = project.status === 'ongoing' ? 'border-brand-teal' : 'border-gray-300';
         const statusBadge = project.status === 'ongoing' 
-            ? '<span class="inline-flex items-center gap-1.5 bg-brand-teal text-white text-xs font-medium px-2.5 py-1 rounded-full">🔄 진행중</span>'
+            ? '<span class="inline-flex items-center gap-1.5 bg-brand-teal text-white text-xs font-medium px-2.5 py-1 rounded-full">진행중</span>'
             : '<span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">✓ 완료</span>';
             
         const keywordsHtml = this.formatKeywords(project.keywords);

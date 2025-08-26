@@ -117,9 +117,7 @@ const PublicationsManager = {
             
             // Simple check for lab members
             const isLabMember = this.labMembers.some(member => 
-                cleanName.toLowerCase().includes(member.toLowerCase()) || 
-                trimmedAuthor.includes('*') || 
-                trimmedAuthor.includes('†')
+                cleanName.toLowerCase().includes(member.toLowerCase())
             );
             
             const authorClass = isLabMember ? 'text-author-pi' : 'text-author-external';
