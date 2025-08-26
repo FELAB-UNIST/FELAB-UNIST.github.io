@@ -4,91 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNIST Financial Engineering Lab | University</title>
+    
+    <!-- External CSS -->
     <script src="https://cdn-tailwindcss.vercel.app/"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Styles */
-        body {
-            font-family: 'Inter', 'Noto Sans KR', sans-serif;
-            background-color: #F7F9FC;
-            color: #0B1220;
-        }
-        /* Custom Accent Color for Tailwind */
-        .bg-brand-navy { background-color: #0B1220; }
-        .text-brand-navy { color: #0B1220; }
-        .bg-brand-off-white { background-color: #F7F9FC; }
-        .text-brand-off-white { color: #F7F9FC; }
-        .bg-brand-accent { background-color: #2563EB; } /* Accent: Blue */
-        .text-brand-accent { color: #2563EB; }
-        .border-brand-accent { border-color: #2563EB; }
-        .ring-brand-accent { --tw-ring-color: #2563EB; }
-        .bg-brand-teal { background-color: #0BB37F; }
-        .text-brand-teal { color: #0BB37F; }
-        
-        /* Publication Author Colors */
-        .text-author-pi, .text-author-lab { color: #4338CA; font-weight: 600; } /* Indigo, Bold */
-        .text-author-external { color: #0B1220; } /* Black/Navy */
-
-
-        /* Focus Ring */
-        *:focus-visible {
-            outline: 2px solid #2563EB;
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        /* Smooth Transitions */
-        .transition-all {
-            transition-property: all;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 300ms;
-        }
-
-        /* Side Drawer Styling */
-        #drawer-container {
-            visibility: hidden;
-            transition: visibility 0s linear 300ms;
-        }
-        #drawer-backdrop {
-            opacity: 0;
-            transition: opacity 300ms ease-in-out;
-        }
-        #drawer-panel {
-            transform: translateX(100%);
-            transition: transform 300ms ease-in-out;
-        }
-        #drawer-container.is-open {
-            visibility: visible;
-            transition-delay: 0s;
-        }
-        #drawer-container.is-open #drawer-backdrop {
-            opacity: 1;
-        }
-        #drawer-container.is-open #drawer-panel {
-            transform: translateX(0);
-        }
-
-        /* Accordion Styling */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-        .accordion-toggle svg {
-            transition: transform 0.3s ease-in-out;
-        }
-        .accordion-toggle.active svg {
-            transform: rotate(180deg);
-        }
-        
-        /* Tab active style */
-        .nav-link.active {
-            color: #0B1220;
-            font-weight: 600;
-        }
-    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="bg-brand-off-white">
 
@@ -120,11 +44,14 @@
                 <div class="flex items-center">
                     <a href="#" data-tab="join-us" class="nav-link hidden sm:inline-block bg-brand-accent text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm hover:bg-opacity-90 transition-all">Join Us</a>
                     <button id="mobile-menu-button" class="md:hidden ml-4 p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset ring-brand-accent">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
+        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -141,25 +68,57 @@
     </header>
 
     <main>
-        <!-- Tab Content -->
+        <!-- Home Tab -->
         <div id="tab-home" class="tab-content">
             <section class="py-16 md:py-24">
                 <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="text-center md:text-left">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy tracking-tighter leading-tight">
-                                We design better markets through data, optimization, and collaboration.
+                            <!-- 메인 타이틀 영역 -->
+                             
+                            <h1 class="font-bold text-brand-navy tracking-tight leading-tight">
+                                <span class="block text-2xl md:text-3xl lg:text-4xl mb-2">Welcome to the webpage of</span>
+                                <span class="block text-4xl md:text-5xl lg:text-6xl text-brand-accent">
+                                    UNIST Financial<br class="hidden sm:block">
+                                    Engineering Lab
+                                </span>
                             </h1>
-                            <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
-                                Our lab focuses on quantitative research in financial markets, developing robust models and computational methods to address complex challenges.
+
+                            <p class="mt-6 text-xl md:text-2xl text-gray-700 font-medium">
+                                UNIST 금융공학연구실에 오신 것을 환영합니다 🤗
                             </p>
+                            
+                            <div class="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+                                <p class="font-semibold text-brand-navy mb-3">Our Focus:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent mr-2">•</span>
+                                        <span>Quantitative research in financial markets</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent mr-2">•</span>
+                                        <span>Developing robust mathematical models</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent mr-2">•</span>
+                                        <span>Advanced computational methods for complex challenges</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent mr-2">•</span>
+                                        <span>Machine learning applications in finance</span>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                         <div>
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1470&auto=format&fit=crop" 
-                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/2563EB/0B1220?text=Team+Seminar';"
-                                 alt="A candid photo of the lab members during a seminar" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                            <img src="./public/images/main.png" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/2563EB/0B1220?text=Lab+Image';"
+                                alt="UNIST Financial Engineering Lab" 
+                                class="rounded-2xl shadow-xl w-full h-auto object-cover">
                         </div>
                     </div>
+                    
                     <div class="mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <a href="#" data-tab-link="members" class="group block bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all transform hover:-translate-y-1">
                             <h3 class="text-xl font-bold text-brand-navy">About Us</h3>
@@ -170,8 +129,8 @@
                             <h3 class="text-xl font-bold text-brand-navy">What We Do</h3>
                             <p class="mt-2 text-gray-500">Discover our ongoing projects and core research areas.</p>
                             <div class="mt-4 flex flex-col space-y-2">
-                                 <a href="#" data-tab-link="publications" class="text-brand-accent font-semibold hover:underline">Publications →</a>
-                                 <a href="#" data-tab-link="projects" class="text-brand-accent font-semibold hover:underline">Projects →</a>
+                                <a href="#" data-tab-link="publications" class="text-brand-accent font-semibold hover:underline">Publications →</a>
+                                <a href="#" data-tab-link="projects" class="text-brand-accent font-semibold hover:underline">Projects →</a>
                             </div>
                         </div>
                         <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all transform hover:-translate-y-1">
@@ -185,81 +144,43 @@
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-24 bg-white">
-                <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between items-center mb-12">
-                        <h2 class="text-3xl font-bold text-brand-navy">Latest News</h2>
-                        <a href="#" data-tab-link="news" class="text-brand-teal font-semibold hover:underline">View all news</a>
-                    </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="group"><img src="https://placehold.co/400x250/0BB37F/FFFFFF?text=News+1" alt="News thumbnail" class="rounded-xl mb-4 w-full h-auto object-cover"><p class="text-sm text-gray-500 mb-1">August 15, 2025</p><h3 class="text-lg font-semibold text-brand-navy group-hover:text-brand-teal transition-colors">Dr. Evelyn Reed wins Best Paper Award at QuantCon 2025</h3></div>
-                        <div class="group"><img src="https://placehold.co/400x250/0B1220/FFFFFF?text=News+2" alt="News thumbnail" class="rounded-xl mb-4 w-full h-auto object-cover"><p class="text-sm text-gray-500 mb-1">July 28, 2025</p><h3 class="text-lg font-semibold text-brand-navy group-hover:text-brand-teal transition-colors">Our lab releases open-source market simulation toolkit</h3></div>
-                        <div class="group"><img src="https://placehold.co/400x250/2563EB/FFFFFF?text=News+3" alt="News thumbnail" class="rounded-xl mb-4 w-full h-auto object-cover"><p class="text-sm text-gray-500 mb-1">June 05, 2025</p><h3 class="text-lg font-semibold text-brand-navy group-hover:text-brand-teal transition-colors">Welcoming new PhD students for the Fall semester</h3></div>
-                    </div>
-                </div>
-            </section>
         </div>
 
+        <!-- Members Tab -->
         <div id="tab-members" class="tab-content hidden">
             <section class="py-16 md:py-24">
                 <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-bold text-brand-navy text-center">Our People</h2>
-                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">Meet the researchers, students, and collaborators who drive our lab's innovation.</p>
+                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">
+                        Meet the researchers, students, and collaborators who drive our lab's innovation.
+                    </p>
                     
-                    <div class="mt-12">
-                        <h3 class="font-bold text-xl text-brand-navy">Current Members</h3>
-                        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                            <button onclick="openDrawer('member-yongjae-lee')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/4338CA/F7F9FC?text=YL" alt="Portrait of Yongjae Lee" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Yongjae Lee</h4><p class="text-sm text-gray-500">Professor</p></button>
-                            <button onclick="openDrawer('member-junhyeong-lee')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/0B1220/F7F9FC?text=JL" alt="Portrait of Junhyeong Lee" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Junhyeong Lee</h4><p class="text-sm text-gray-500">Ph.D-M.S Combined</p></button>
-                            <button onclick="openDrawer('member-inwoo-tae')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/0B1220/F7F9FC?text=IT" alt="Portrait of Inwoo Tae" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Inwoo Tae</h4><p class="text-sm text-gray-500">Ph.D-M.S Combined</p></button>
-                            <button onclick="openDrawer('member-juchan-kim')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/0B1220/F7F9FC?text=JK" alt="Portrait of Juchan Kim" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Juchan Kim</h4><p class="text-sm text-gray-500">Ph.D-M.S Combined</p></button>
-                            <button onclick="openDrawer('member-kangmin-kim')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/0B1220/F7F9FC?text=KK" alt="Portrait of Kangmin Kim" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Kangmin Kim</h4><p class="text-sm text-gray-500">Ph.D-M.S Combined</p></button>
-                            <button onclick="openDrawer('member-hoyoung-lee')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/0B1220/F7F9FC?text=HL" alt="Portrait of Hoyoung Lee" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Hoyoung Lee</h4><p class="text-sm text-gray-500">M.S. Student</p></button>
-                            <button onclick="openDrawer('member-interns')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/1f2937/F7F9FC?text=Interns" alt="Undergraduate Interns" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Undergraduate Intern</h4><p class="text-sm text-gray-500">Research History</p></button>
-                        </div>
-                    </div>
-
-                    <div class="mt-16">
-                        <h3 class="font-bold text-xl text-brand-navy">Alumni</h3>
-                        <div class="mt-8">
-                            <h4 class="font-semibold text-lg text-gray-800">Ph.D.</h4>
-                            <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                                <button onclick="openDrawer('alumni-yoontae-hwang')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=YH" alt="Portrait of Yoontae Hwang" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Yoontae Hwang (황윤태)</h4><p class="text-sm text-gray-500">Ph.D., 2024</p></button>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="font-semibold text-lg text-gray-800">M.S.</h4>
-                            <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                                <button onclick="openDrawer('alumni-yejin-kim')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=YK" alt="Portrait of Yejin Kim" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Yejin Kim (김예진)</h4><p class="text-sm text-gray-500">M.S., 2024</p></button>
-                                <button onclick="openDrawer('alumni-seonmi-kim')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=SK" alt="Portrait of Seonmi Kim" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Seonmi Kim (김선미)</h4><p class="text-sm text-gray-500">M.S., 2024</p></button>
-                                <button onclick="openDrawer('alumni-seyoung-kim')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=SK" alt="Portrait of Seyoung Kim" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Seyoung Kim (김세영)</h4><p class="text-sm text-gray-500">M.S., 2024</p></button>
-                                <button onclick="openDrawer('alumni-youngbin-lee')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=YL" alt="Portrait of Youngbin Lee" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Youngbin Lee (이영빈)</h4><p class="text-sm text-gray-500">M.S., 2024</p></button>
-                                <button onclick="openDrawer('alumni-sohyeon-kwon')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=SK" alt="Portrait of Sohyeon Kwon" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Sohyeon Kwon (권소현)</h4><p class="text-sm text-gray-500">M.S., 2023</p></button>
-                                <button onclick="openDrawer('alumni-minjoo-choi')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=MC" alt="Portrait of Minjoo Choi" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Minjoo Choi (최민주)</h4><p class="text-sm text-gray-500">M.S., 2023</p></button>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="font-semibold text-lg text-gray-800">Research Professor</h4>
-                            <div class="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                                <button onclick="openDrawer('alumni-hyungwoo-kong')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=HK" alt="Portrait of Hyungwoo Kong" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Hyungwoo Kong (공형우)</h4></button>
-                                <button onclick="openDrawer('alumni-joohwan-hong')" class="text-center group p-4 rounded-lg hover:bg-gray-100 transition-colors"><img src="https://placehold.co/200x200/6b7280/F7F9FC?text=JH" alt="Portrait of Joohwan Hong" class="w-32 h-32 mx-auto rounded-full shadow-lg group-hover:shadow-xl transition-shadow"><h4 class="mt-4 font-bold text-brand-navy">Joohwan Hong (홍주환)</h4></button>
-                            </div>
-                        </div>
+                    <!-- Member content will be dynamically loaded here -->
+                    <div id="members-container" class="mt-12">
+                        <!-- Members will be rendered by JavaScript -->
                     </div>
                 </div>
             </section>
         </div>
 
+        <!-- Publications Tab -->
         <div id="tab-publications" class="tab-content hidden">
             <section class="py-16 md:py-24 bg-white">
                 <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-bold text-brand-navy text-center">Publications</h2>
-                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">Explore our contributions to the field of financial engineering.</p>
+                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">
+                        Explore our contributions to the field of financial engineering.
+                    </p>
                     
                     <div class="mt-12 sticky top-20 bg-white/90 backdrop-blur-sm z-30 py-4">
                         <div class="relative max-w-2xl mx-auto">
-                            <input type="search" id="publication-search" placeholder="Search by title, author, or keyword..." class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
-                            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <input type="search" id="publication-search" 
+                                   placeholder="Search by title, author, or keyword..." 
+                                   class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent">
+                            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" 
+                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
                         </div>
                         <div class="text-center text-sm text-gray-500 mt-4 space-x-4">
                             <span><span class="text-author-pi">■</span> PI & Lab Member</span>
@@ -274,351 +195,66 @@
             </section>
         </div>
 
+        <!-- Other tabs remain the same structure... -->
         <div id="tab-projects" class="tab-content hidden">
-            <section class="py-16 md:py-24">
-                <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-brand-navy text-center">Research Projects</h2>
-                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">Our work spans from theoretical modeling to applied computational finance.</p>
-                    <div class="mt-12 grid md:grid-cols-2 gap-8">
-                        <!-- Project Item 1 -->
-                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
-                            <button class="accordion-toggle w-full p-6 text-left group">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <span class="text-xs font-bold uppercase text-brand-accent">Market Simulation</span>
-                                        <h3 class="mt-2 font-bold text-xl text-brand-navy">Agent-Based Market Simulation Platform</h3>
-                                        <p class="mt-2 text-sm text-gray-600">Developing a high-fidelity simulation environment to test trading strategies and market impact models.</p>
-                                    </div>
-                                    <svg class="w-6 h-6 text-gray-500 flex-shrink-0 ml-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-6 border-t border-gray-200">
-                                    <h5 class="font-semibold text-brand-navy mb-2">Details</h5>
-                                    <p class="text-gray-700 text-sm leading-relaxed mb-4">This project aims to build a scalable, agent-based model of a limit order book market. It allows for simulating various market participant behaviors and analyzing the emergent properties of the market under different conditions. The platform is built in Python with performance-critical parts in C++.</p>
-                                    <h5 class="font-semibold text-brand-navy mb-2">Participants</h5>
-                                    <ul class="list-disc list-inside text-sm text-gray-700">
-                                        <li>John Doe (PhD Student)</li>
-                                        <li>Jane Smith (MS Student)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add more project items here -->
-                    </div>
-                </div>
-            </section>
+            <!-- Projects content -->
         </div>
 
         <div id="tab-activities" class="tab-content hidden">
-            <section class="py-16 md:py-24 bg-white">
-                <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-brand-navy text-center">Activities</h2>
-                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">Explore our lab's seminars, talks, and conference participation.</p>
-                    
-                    <div class="mt-12 max-w-3xl mx-auto">
-                        <h3 class="font-bold text-xl text-brand-navy text-center">Seminars & Talks</h3>
-                        <div class="mt-8 space-y-4">
-                            <div class="border border-gray-200 rounded-xl">
-                                <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
-                                    <div>
-                                        <p class="text-brand-accent font-semibold">Oct 28, 2025 | 4:00 PM EST</p>
-                                        <h4 class="mt-2 text-xl font-bold text-brand-navy">Volatility Modeling with Hawkes Processes</h4>
-                                        <p class="mt-1 text-gray-600">Dr. Kenji Tanaka, University of Tokyo</p>
-                                        <div class="mt-3 flex flex-wrap gap-2">
-                                            <span class="text-xs font-medium bg-teal-100 text-teal-800 px-2 py-1 rounded-full">Stochastic Processes</span>
-                                            <span class="text-xs font-medium bg-slate-100 text-slate-800 px-2 py-1 rounded-full">High-Frequency Data</span>
-                                        </div>
-                                    </div>
-                                    <svg class="w-6 h-6 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="accordion-content">
-                                    <div class="p-6 border-t border-gray-200">
-                                        <h5 class="font-semibold text-brand-navy mb-2">Abstract</h5>
-                                        <p class="text-gray-700 text-sm leading-relaxed">This talk explores the application of Hawkes processes, a type of self-exciting point process, to model financial market volatility. We will discuss how clustering of trading events can be captured by this framework and present empirical results from analyzing high-frequency order book data. The session will cover both the theoretical underpinnings and practical implementation challenges.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-16 max-w-3xl mx-auto">
-                        <h3 class="font-bold text-xl text-brand-navy text-center">Conference Participation</h3>
-                        <div class="mt-8 space-y-4">
-                            <div class="border border-gray-200 rounded-xl p-6 hover:bg-gray-50 transition-colors cursor-pointer" onclick="openDrawer('conference-informs-2024')">
-                                <p class="text-brand-accent font-semibold">October 20-23, 2024</p>
-                                <h4 class="mt-2 text-xl font-bold text-brand-navy">INFORMS Annual Meeting 2024</h4>
-                                <p class="mt-1 text-gray-600">Seattle, WA</p>
-                                <p class="mt-3 text-sm text-gray-800">Presented our latest research on reinforcement learning for optimal execution.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+            <!-- Activities content -->
         </div>
-        
+
         <div id="tab-journal-club" class="tab-content hidden">
-             <section class="py-16 md:py-24">
-                <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-brand-navy text-center">Journal Club</h2>
-                    <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">A forum for sharing and discussing recent papers.</p>
-                    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200">
-                            <button class="accordion-toggle w-full p-6 text-left group">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h3 class="font-bold text-lg text-brand-navy">Attention is All You Need</h3>
-                                        <p class="text-sm text-gray-500 mt-1">Presented by: <span class="font-medium text-gray-700">J. Kim</span></p>
-                                        <p class="text-sm text-gray-500">Date: Aug 20, 2025</p>
-                                        <div class="mt-4 flex flex-wrap gap-2">
-                                            <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded-full">NLP</span>
-                                            <span class="text-xs font-medium bg-slate-100 text-slate-800 px-2 py-1 rounded-full">Transformers</span>
-                                        </div>
-                                    </div>
-                                    <svg class="w-6 h-6 text-gray-500 flex-shrink-0 ml-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-6 border-t border-gray-200">
-                                    <h5 class="font-semibold text-brand-navy mb-2">Reason for Selection</h5>
-                                    <p class="text-gray-700 text-sm leading-relaxed">This seminal paper introduced the Transformer architecture, which has become the foundation for most modern large language models. Understanding its self-attention mechanism is crucial for anyone working with sequence data, including financial time series.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Journal Club content -->
         </div>
 
-        <div id="tab-news" class="tab-content hidden"><section class="py-16 md:py-24 bg-white"><div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h2 class="text-3xl font-bold text-brand-navy text-center">Lab News & Announcements</h2><div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="group cursor-pointer" onclick="openDrawer('news')"><img src="https://placehold.co/400x250/0BB37F/FFFFFF?text=News+1" alt="News thumbnail" class="rounded-xl mb-4 w-full h-auto object-cover"><p class="text-sm text-gray-500 mb-1">August 15, 2025</p><h3 class="text-lg font-semibold text-brand-navy group-hover:text-brand-teal transition-colors">Dr. Evelyn Reed wins Best Paper Award at QuantCon 2025</h3></div></div></div></section></div>
-        <div id="tab-join-us" class="tab-content hidden"><section class="py-16 md:py-24"><div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="max-w-3xl mx-auto"><h2 class="text-3xl font-bold text-brand-navy text-center">Join the Lab</h2><p class="text-lg text-gray-600 text-center mt-4">We are always looking for passionate students and researchers to join our team.</p><div class="mt-12 bg-white p-8 rounded-2xl shadow-sm"><h3 class="text-xl font-bold text-brand-navy">Requirements</h3><ul class="mt-4 list-disc list-inside space-y-2 text-gray-700"><li>Strong background in probability, optimization, and numerical methods.</li><li>Proficiency in Python and at least one of C++, R, or Julia.</li><li>Basic understanding of financial markets, derivatives, and microstructure.</li></ul></div></div></div></section></div>
-        <div id="tab-contact" class="tab-content hidden"><section class="py-16 md:py-24 bg-brand-navy text-brand-off-white"><div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-2 gap-12"><div><h2 class="text-3xl font-bold">Contact Us</h2><p class="mt-4 text-gray-300">We'd love to hear from you. Reach out with any questions about our research or potential collaborations.</p><div class="mt-8 space-y-4"><p><strong>Email:</strong> <a href="mailto:contact@finenglab.edu" class="hover:underline">contact@finenglab.edu</a></p><p><strong>Address:</strong> 123 Quant Ave, Innovation City, USA 12345</p></div></div><div class="bg-gray-700 rounded-2xl h-64"><p class="flex items-center justify-center h-full text-gray-400">Map would be embedded here</p></div></div></div></section></div>
+        <div id="tab-news" class="tab-content hidden">
+            <!-- News content -->
+        </div>
+
+        <div id="tab-join-us" class="tab-content hidden">
+            <!-- Join Us content -->
+        </div>
     </main>
 
-    <footer class="bg-brand-navy text-brand-off-white"><div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8"><div class="text-center text-sm text-gray-400"><p>&copy; 2025 Financial Engineering Lab. All Rights Reserved.</p></div></div></footer>
-    <div id="drawer-container" class="fixed inset-0 z-50" aria-labelledby="drawer-title" role="dialog" aria-modal="true"><div id="drawer-backdrop" class="fixed inset-0 bg-black bg-opacity-50" onclick="closeDrawer()"></div><div class="fixed inset-y-0 right-0 flex max-w-full pl-10"><div id="drawer-panel" class="w-screen max-w-md"><div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl"><div class="bg-brand-navy p-4 sm:p-6"><div class="flex items-start justify-between"><h2 id="drawer-title" class="text-lg font-medium text-white">Drawer Title</h2><div class="ml-3 flex h-7 items-center"><button type="button" class="rounded-md bg-brand-navy text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white" onclick="closeDrawer()"><span class="sr-only">Close panel</span><svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button></div></div></div><div id="drawer-content" class="relative flex-1 p-6"></div></div></div></div></div>
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-brand-off-white">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-sm text-gray-400">
+                <p>&copy; 2025 Financial Engineering Lab. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        // --- Mobile Menu ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-
-        // --- Side Drawer ---
-        const drawerContainer = document.getElementById('drawer-container');
-        const drawerTitle = document.getElementById('drawer-title');
-        const drawerContent = document.getElementById('drawer-content');
-        const drawerData = {
-            'member-yongjae-lee': { title: 'Yongjae Lee', content: '<p>Professor</p>' },
-            'member-junhyeong-lee': { title: 'Junhyeong Lee', content: '<p>Ph.D-M.S Combined Student</p>' },
-            'member-inwoo-tae': { title: 'Inwoo Tae', content: '<p>Ph.D-M.S Combined Student</p>' },
-            'member-juchan-kim': { title: 'Juchan Kim', content: '<p>Ph.D-M.S Combined Student</p>' },
-            'member-kangmin-kim': { title: 'Kangmin Kim', content: '<p>Ph.D-M.S Combined Student</p>' },
-            'member-hoyoung-lee': { title: 'Hoyoung Lee', content: '<p>M.S. Student</p>' },
-            'member-interns': { title: 'Undergraduate Intern History', content: `<div class='text-sm space-y-6'><div><h3 class='text-lg font-bold mb-2'>2023 Fall</h3><h4 class='font-semibold'>주택담보대출 연체 및 부도 예측 인공지능 모형 개발 (한국주택금융공사 산학과제) & 포트폴리오 최적화를 위한 decision focused learning</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>개인별 의료비 예측 인공지능 모형 개발 (국민건강보험공단 맞춤형 DB)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리를 이용한 투자전략: 증권사 리포트 텍스트 분석 (AICP) & AI 기반 뉴스 연관 키워드 추출 모형 개발 (HuGraph 산학과제)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2023 Summer</h3><h4 class='font-semibold'>주택담보대출 연체 및 부도 예측 인공지능 모형 개발 (한국주택금융공사 산학과제)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>개인별 의료비 예측 인공지능 모형 개발 (국민건강보험공단 맞춤형 DB)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리를 이용한 투자전략: 증권사 리포트 텍스트 분석 (AICP) & AI 기반 뉴스 연관 키워드 추출 모형 개발 (HuGraph 산학과제)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li><li>Moolkyeol Kim (’20), Department of Industrial Engineering, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2023 Spring</h3><h4 class='font-semibold'>주택담보대출 연체 및 부도 예측 인공지능 모형 개발 (한국주택금융공사 산학과제)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>개인별 의료비 예측 인공지능 모형 개발 (국민건강보험공단 맞춤형 DB)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리를 이용한 투자전략: 증권사 리포트 텍스트 분석 (AICP) & AI 기반 뉴스 연관 키워드 추출 모형 개발 (HuGraph 산학과제)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li><li>Moolkyeol Kim (’20), Department of Industrial Engineering, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2023 Winter</h3><h4 class='font-semibold'>주택담보대출 연체 및 부도 예측 인공지능 모형 개발 (한국주택금융공사 과제 준비)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junhyeong Lee (’18), Department of Financial Engineering, Ajou University</li><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li><li>Juhyeon Kim (’18), Deparment of Industrial Engineering, UNIST</li><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>개인별 의료비 예측 인공지능 모형 개발 (국민건강보험공단 맞춤형 DB)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Sungjin Kim (’18), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>Pairs trading을 위한 주식 pair 선별 인공지능 모형 개발</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seunghwan No (’20), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2022 Fall</h3><h4 class='font-semibold'>Index tracking을 위한 asset selection 모형의 백테스트 모듈 구현 (NCSoft 과제 일부)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junhyeong Lee (’18), Department of Financial Engineering, Ajou University</li><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>Decision Transformer를 활용한 market making 전략 개발 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Dohyun Koo (’15), Department of Industrial Engineering, UNIST</li><li>Youngsik Hwang (’20), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리 인공지능 모형을 활용한 국내 주식 sentiment 분석 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li><li>Sungsu Hwang (’18), Department of Industrial Engineering, UNIST</li><li>Jaeyun Shim (’21), Department of Computer Science, UNIST</li><li>Seongwoon Jo (’21), Department of Computer Science, UNIST</li><li>Boin Heo (’21), Department of Computer Science, UNIST</li></ul><h4 class='font-semibold mt-3'>Attention을 활용한 주가지수 상관관계 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Min Hyeok Kang (’18), Department of Computer Science, UNIST</li><li>Seongrok Kim (’18), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2022 Summer</h3><h4 class='font-semibold'>Index tracking을 위한 asset selection 모형의 백테스트 모듈 구현 (NCSoft 과제 일부)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junhyeong Lee (’18), Department of Financial Engineering, Ajou University</li><li>Juchan Kim (’18), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>Decision Transformer를 활용한 market making 전략 개발 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Dohyun Koo (’15), Department of Industrial Engineering, UNIST</li><li>Youngsik Hwang (’20), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리 인공지능 모형을 활용한 국내 주식 sentiment 분석 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li><li>Sungsu Hwang (’18), Department of Industrial Engineering, UNIST</li><li>Jaeyun Shim (’21), Department of Computer Science, UNIST</li><li>Seongwoon Jo (’21), Department of Computer Science, UNIST</li><li>Boin Heo (’21), Department of Computer Science, UNIST</li></ul><h4 class='font-semibold mt-3'>Attention을 활용한 주가지수 상관관계 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Min Hyeok Kang (’18), Department of Computer Science, UNIST</li><li>Seongrok Kim (’18), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2022 Spring</h3><h4 class='font-semibold'>Deep Clustering을 통한 카드 사용 패턴 분석</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>딥 러닝 모형을 활용한 가계 부채 증감의 주요 feature 분석</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Yeonsu Kim (’17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>Decision Transformer를 활용한 market making 전략 개발 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Dohyun Koo (’15), Department of Industrial Engineering, UNIST</li><li>So Youn Jeong (’15), Department of Computer Science, UNIST</li><li>Youngsik Hwang (’20), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>자연어처리 인공지능 모형을 활용한 국내 주식 sentiment 분석 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li><li>Chungman Son (’20), Department of Industrial Engineering, UNIST</li><li>Sungsu Hwang (’18), Department of Industrial Engineering, UNIST</li><li>Jaeyun Shim (’21), Department of Computer Science, UNIST</li><li>Seongwoon Jo (’21), Department of Computer Science, UNIST</li><li>Boin Heo (’21), Department of Computer Science, UNIST</li></ul><h4 class='font-semibold mt-3'>Attention을 활용한 주가지수 상관관계 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Inwoo Tae (’18), Department of Computer Science, UNIST</li><li>Min Hyeok Kang (’18), Department of Computer Science, UNIST</li><li>Seongrok Kim (’18), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2022 Winter</h3><h4 class='font-semibold'>GAN을 활용한 자산배분 전략 개발</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seyoung Kim ('17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>Deep Clustering을 통한 카드 사용 패턴 분석</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngbin Lee ('16), Department of Industrial Engineering, UNIST</li><li>Seonggeun Ahn (’20), Department of Industrial Engineering, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2021 Fall</h3><h4 class='font-semibold'>GAN을 활용한 자산배분 전략 개발 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seyoung Kim ('17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>Deep Clustering을 통한 카드 사용 패턴 분석</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngbin Lee ('16), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>지역별 카드 사용 패턴을 통한 COVID-19 전파 분석 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngbin Lee ('16), Department of Industrial Engineering, UNIST</li><li>Junyoung Choi ('17), Department of Computer Science, UNIST</li><li>Woojin Jung ('17), Department of Computer Science, UNIST</li><li>Heewon Hwang ('17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>뉴스 텍스트 분석을 통한 개인 투자자 투자 행태 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Mina Kang ('20), Department of Industrial Engineering, UNIST</li><li>Sanghyeon Lee ('20), Department of Electrical Engineering, UNIST</li><li>Changhyeon Lim ('20), Department of Computer Science, UNIST</li><li>Junhwa Hong ('20), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2021 Summer</h3><h4 class='font-semibold'>GAN을 활용한 자산배분 전략 개발 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Seyoung Kim ('17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>개인 맞춤형 생애주기 의료비 예측 연구</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngseok Song ('15), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>Deep Clustering을 통한 카드 사용 패턴 분석</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngbin Lee ('16), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>지역별 카드 사용 패턴을 통한 COVID-19 전파 분석 (BTS)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngbin Lee ('16), Department of Industrial Engineering, UNIST</li><li>Junyoung Choi ('17), Department of Computer Science, UNIST</li><li>Woojin Jung ('17), Department of Computer Science, UNIST</li><li>Heewon Hwang ('17), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>뉴스 텍스트 분석을 통한 개인 투자자 투자 행태 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Mina Kang ('20), Department of Industrial Engineering, UNIST</li><li>Sanghyeon Lee ('20), Department of Electrical Engineering, UNIST</li><li>Changhyeon Lim ('20), Department of Computer Science, UNIST</li><li>Junhwa Hong ('20), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2021 Spring</h3><h4 class='font-semibold'>GAN을 활용한 Financial Time Series Modeling</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Kaheon Kim ('17), Department of Mathematical Sciences, UNIST</li></ul><h4 class='font-semibold mt-3'>GAN을 활용한 자산배분 전략 개발 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Taehyeon Kim ('15), School of Business Administration, UNIST</li></ul><h4 class='font-semibold mt-3'>개인 맞춤형 생애주기 의료비 예측 연구</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Youngseok Song ('15), Department of Industrial Engineering, UNIST</li></ul><h4 class='font-semibold mt-3'>뉴스 텍스트 분석을 통한 개인 투자자 투자 행태 분석 (AICP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Mina Kang ('20), Department of Industrial Engineering, UNIST</li><li>Sanghyeon Lee ('20), Department of Electrical Engineering, UNIST</li><li>Changhyeon Lim ('20), Department of Computer Science, UNIST</li><li>Junhwa Hong ('20), Department of Computer Science, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2021 Winter</h3><h4 class='font-semibold'>GAN을 활용한 Financial Time Series Modeling</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Kaheon Kim ('17), Department of Mathematical Sciences, UNIST</li><li>Sohyeon Kwon ('17), Department of Data Science, Sejong University</li></ul><h4 class='font-semibold mt-3'>Regime 정보를 활용한 Mean-Variance Optimization 연구</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Minjoo Choi ('16), Department of Physics, Yonsei University</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2020 Fall</h3><h4 class='font-semibold'>GAN을 활용한 Financial Time Series Modeling</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Kaheon Kim ('17), Department of Mathematical Sciences, UNIST</li><li>Sohyeon Kwon ('17), Department of Data Science, Sejong University</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2020 Summer</h3><h4 class='font-semibold'>COVID-19 전후 신용카드 소비 변화 분석 (BC카드, 데이터바우처)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Sangmin Kim ('15), Department of Industrial Engineering, Hanyang University</li><li>Taehyeon Kim ('15), School of Business Administration, UNIST</li><li>Ahyeon Song ('17), School of Business Administration, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2020 Spring</h3><p>(No internship due to the COVID-19 outbreak)</p></div><div><h3 class='text-lg font-bold mb-2'>2020 Winter</h3><h4 class='font-semibold'>가계금융복지조사 데이터를 활용한 금융건강검진 연구</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junho Son ('13), School of Business Administration, UNIST</li><li>Daehee Kim ('14), School of Business Administration, UNIST</li><li>Youngbin Lee ('16), School of Management Engineering, UNIST</li><li>Joohyeon Jeon ('17), School of Electrical & Computer Engineering</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2019 Fall</h3><h4 class='font-semibold'>가계금융복지조사 데이터를 활용한 금융건강검진 연구 (UIRP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junho Son ('13), School of Business Administration, UNIST</li><li>Changhee Yoon ('14), School of Electrical & Computer Engineering, UNIST</li><li>Yechan Kang ('14), School of Management Engineering, UNIST</li><li>Daham Kim ('14), School of Natural Sciences, UNIST</li><li>Jiwon Yoon ('14), School of Business Administration, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2019 Summer</h3><h4 class='font-semibold'>가계금융복지조사 데이터를 활용한 금융건강검진 연구 (UIRP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junho Son ('13), School of Business Administration, UNIST</li><li>Changhee Yoon ('14), School of Electrical & Computer Engineering, UNIST</li><li>Inyoung Na, ('17), School of Management Engineering, UNIST</li><li>Yechan Kang ('14), School of Management Engineering, UNIST</li><li>Hyuk Ahn ('17), School of Business Administration, UNIST</li><li>Yoontae Hwang ('14), School of Economics, Sangmyung University</li><li>Minho Kwon, ('16), Department of Engineering Science, University of Toronto</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2019 Spring</h3><h4 class='font-semibold'>가계금융복지조사 데이터를 활용한 금융건강검진 연구 (UIRP)</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junho Son ('13), School of Business Administration, UNIST</li><li>Changhee Yoon ('14), School of Electrical & Computer Engineering, UNIST</li><li>Joowon Kim ('14), School of Electrical & Computer Engineering, UNIST</li><li>Inyoung Na, ('17), School of Management Engineering, UNIST</li></ul></div><div><h3 class='text-lg font-bold mb-2'>2019 Winter</h3><h4 class='font-semibold'>가계금융복지조사 데이터를 활용한 금융건강검진 연구</h4><ul class='list-disc list-inside ml-4 mt-1'><li>Junho Son ('13), School of Business Administration, UNIST</li><li>Changhee Yoon ('14), School of Electrical & Computer Engineering, UNIST</li></ul></div><div class='mt-8 pt-4 border-t'><h4 class='font-semibold'>Project Definitions</h4><ul class='list-disc list-inside ml-4 mt-2 space-y-2'><li><strong>UIRP (Undergraduate Interdisciplinary Research Project):</strong> UNIST 교육센터에서 그룹 단위 학부 연구참여를 지원하는 프로젝트</li><li><strong>AICP (Artificial Intelligence Challengers Program):</strong> UNIST 교육센터에서 AI 관련 주제의 그룹단위 학부 연구참여를 지원하는 프로젝트</li><li><strong>BTS (Brain-to-Society):</strong> 미래기술혁신 융합형 인재양성 사업단(2021.04.01 ~ 2025.12.31)의 일환으로 공과대학에서 AI, 친환경 등의 주제로 그룹 단위 학부 연구참여를 지원하는 프로젝트</li></ul></div></div>` },
-            'alumni-yoontae-hwang': { title: 'Yoontae Hwang (황윤태)', content: '<p>Ph.D., 2024, “Financial Representation Learning”</p><p>First Position: Pusan National University</p><a href="https://yoontae6719.github.io/" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">Personal Website</a>' },
-            'alumni-yejin-kim': { title: 'Yejin Kim (김예진)', content: '<p>M.S., 2024, “Personalized Stock Recommendations Focusing on Temporal Preferences and Diversification Effect”</p><p>First Position: Data Scientist, Meritz Fire & Marine Insurance, 2024~</p><a href="https://www.linkedin.com/in/yejining99/" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'alumni-seonmi-kim': { title: 'Seonmi Kim (김선미)', content: '<p>M.S., 2024, “NFTs to MARS: Multi-Attention Recommender System for NFTs”</p><p>First Position: Data Scientist, NICE P&I, 2024~</p><a href="https://www.linkedin.com/in/seonmi-kim-441024286" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'alumni-seyoung-kim': { title: 'Seyoung Kim (김세영)', content: '<p>M.S., 2024, “A GANs-based Approach for Stock Price Anomaly Detection and Investment Risk Management”</p><p>First Position: Quant Researcher, 2024~</p><a href="https://www.linkedin.com/in/seyoung-kim-46620a245" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'alumni-youngbin-lee': { title: 'Youngbin Lee (이영빈)', content: '<p>M.S., 2024, “Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning”</p><p>First Position: AI Researcher (alternative military service), elice, 2024~</p><a href="https://www.linkedin.com/in/youngandbin" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'alumni-sohyeon-kwon': { title: 'Sohyeon Kwon (권소현)', content: '<p>M.S., 2023, “Can GANs learn temporal structures of financial time series?”</p><p>First Position: AI Researcher, NC Soft, 2023~</p><a href="https://www.linkedin.com/in/sohyeon-kwon-b879bb150/" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'alumni-minjoo-choi': { title: 'Minjoo Choi (최민주)', content: '<p>M.S., 2023, “Cluster analysis of cryptocurrencies via deep clustering”</p><p>First Position: Software Research Engineer, LIG Nex1, 2024~</p><a href="https://www.notion.so/b204363e14da45b59db347739f5e84ec?pvs=21" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">Notion Page</a>' },
-            'alumni-hyungwoo-kong': { title: 'Hyungwoo Kong (공형우)', content: '<p>Former Research Professor</p><p>Current Position: Assistant Professor, School of Finance & AI, Hankuk University of Foreign Studies, 2025~</p>' },
-            'alumni-joohwan-hong': { title: 'Joohwan Hong (홍주환)', content: '<p>Former Research Professor</p><p>Current Position: Senior Researcher, Korea Institute of Fusion Energy, 2023 ~</p><a href="https://www.linkedin.com/in/joohwan-hong-0636a03b/" class="text-brand-accent hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>' },
-            'news': { title: 'News Article', content: '<p>Full news article content here.</p>' },
-            'conference-informs-2024': { title: 'INFORMS Annual Meeting 2024', content: `<img src="https://placehold.co/400x250/2563EB/FFFFFF?text=Conference+Photo" alt="Team at INFORMS 2024" class="rounded-lg mb-4 w-full h-auto object-cover"><p class="text-gray-600 mb-2"><strong>Location:</strong> Seattle, WA</p><p class="text-gray-600 mb-4">Our team presented two papers at the INFORMS Annual Meeting, a premier conference for operations research and analytics. The talks covered our latest research on reinforcement learning for optimal execution and agent-based market simulation.</p>`}
-        };
-        function openDrawer(type) { if (drawerData[type]) { drawerTitle.textContent = drawerData[type].title; drawerContent.innerHTML = drawerData[type].content; drawerContainer.classList.add('is-open'); document.body.style.overflow = 'hidden'; } }
-        function closeDrawer() { drawerContainer.classList.remove('is-open'); document.body.style.overflow = ''; }
-        document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeDrawer(); });
-
-        // --- Tab Navigation ---
-        const allNavLinks = document.querySelectorAll('.nav-link');
-        const cardLinks = document.querySelectorAll('[data-tab-link]');
-        const tabContents = document.querySelectorAll('.tab-content');
-        function switchTab(tabId) {
-            tabContents.forEach(content => { content.id === `tab-${tabId}` ? content.classList.remove('hidden') : content.classList.add('hidden'); });
-            allNavLinks.forEach(link => { link.dataset.tab === tabId ? link.classList.add('active') : link.classList.remove('active'); });
-            window.scrollTo(0, 0);
-        }
-        allNavLinks.forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); switchTab(link.dataset.tab); if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } }); });
-        cardLinks.forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); switchTab(link.dataset.tabLink); }); });
-        
-        // --- Accordion ---
-        const accordionToggles = document.querySelectorAll('.accordion-toggle');
-        accordionToggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const content = toggle.nextElementSibling;
-                const isActive = toggle.classList.contains('active');
-                
-                const parentContainer = toggle.closest('.space-y-4, .space-y-8, .grid');
-                if (parentContainer) {
-                    parentContainer.querySelectorAll('.accordion-toggle').forEach(otherToggle => {
-                        if (otherToggle !== toggle) {
-                            otherToggle.classList.remove('active');
-                            if(otherToggle.nextElementSibling) otherToggle.nextElementSibling.style.maxHeight = null;
-                        }
-                    });
-                }
-
-                toggle.classList.toggle('active', !isActive);
-                if (content) {
-                    if (!isActive) {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    } else {
-                        content.style.maxHeight = null;
-                    }
-                }
-            });
-        });
-
-        // --- Publication Search and Rendering ---
-        const publicationData = [
-            { year: 2025, authors: "Hoyoung Lee†,Jahoon Lee,Minjae Kim,Suhwan Park,Sundong You,Taeyoon Lim,Wonbin Ahn†,Woohyung Lim*,Yongjae Lee*", venue: "The 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)", title: "THEME : Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics", keywords: ["Finance", "Machine Learning"], notes: "Applied Research Track (acceptance rate 30.1%)", link: "" },
-            { year: 2025, authors: "Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "ICLR 2025 Workshop on Advances in Financial AI", title: "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model", keywords: ["Finance", "Machine Learning"], notes: "", link: "" },
-            { year: 2025, authors: "Alejandro Lopez-Lira,Chaewoon Kim,Chanyeol Choi,Hojun Choi,Jaeseon Ha,Jihoon Kwon,Jy-yong Sohn,Yongjae Lee", venue: "ICLR 2025 Workshop on Advances in Financial AI", title: "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation", keywords: ["Finance", "Machine Learning"], notes: "", link: "" },
-            { year: 2025, authors: "Yongjae Lee*,Yoontae Hwang", venue: "The 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25)", title: "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset", keywords: ["Machine Learning"], notes: "Accepted (acceptance rate: 23.4%)", link: "https://ojs.aaai.org/index.php/AAAI/article/view/33928" },
-            { year: 2024, authors: "Frank J. Fabozzi,Jang Ho Kim,Taehyeon Kang,Woo Chang Kim,Yongjae Lee", venue: "Journal of Portfolio Management", title: "An overview of optimization models for portfolio management", keywords: ["Finance", "Optimization"], notes: "preprint version pdf: https://lnkd.in/gzFsSsBC", link: "https://doi.org/10.3905/jpm.2024.1.643" },
-            { year: 2024, authors: "Frank J. Fabozzi,Jang Ho Kim,Woo Chang Kim,Yongjae Lee", venue: "Journal of Portfolio Management", title: "An Overview of Machine Learning for Portfolio Optimization", keywords: ["Finance", "Machine Learning", "Optimization"], notes: "preprint version pdf: https://lnkd.in/gU8_M9VB", link: "https://doi.org/10.3905/jpm.2024.1.639" },
-            { year: 2024, authors: "Sohyeon Kwon,Yongjae Lee*", venue: "The 5th ACM International Conference on AI in Finance (ICAIF’24)", title: "Can GANs Learn the Stylized Facts of Financial Time Series?", keywords: ["Finance", "Machine Learning"], notes: "Oral presentation (top 18.7%)", link: "https://doi.org/10.1145/3677052.3698661" },
-            { year: 2024, authors: "Javier Sanz-Cruzado Puig,Richard Mccreadie,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "The 5th ACM International Conference on AI in Finance (ICAIF’24)", title: "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling", keywords: ["Finance", "Machine Learning"], notes: "Poster presentation (acceptance rate 39.3%)", link: "https://doi.org/10.1145/3677052.3698662" },
-            { year: 2024, authors: "Juchan Kim,Yongjae Lee*", venue: "ICAIF’24 Workshop on Machine Learning for Financial Wellness", title: "The Taxonomy of Retail Investors", keywords: ["Finance"], notes: "Non-archival workshop paper (short)", link: "https://sites.google.com/view/ml-for-financial-wellness/home?authuser=0" },
-            { year: 2024, authors: "Frank J. Fabozzi,Jang Ho Kim,Sanghyeon Bae,Woo Chang Kim*,Yongjae Lee*", venue: "Annals of Operations Research", title: "Goal-Based Investment with an Option to Postpone a Goal: Multistage Stochastic Mixed-Integer Programming Approach", keywords: ["Finance", "Optimization"], notes: "Special Issue in Memory of William T. Ziemba, online published", link: "https://doi.org/10.1007/s10479-024-06146-7" },
-            { year: 2024, authors: "Joohwan Hong*,Seonmi Kim†,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "Engineering Applications of Artificial Intelligence", title: "Multi-Attention Recommender System for NFTs", keywords: ["Finance", "Machine Learning"], notes: "", link: "https://doi.org/10.1016/j.engappai.2024.109179" },
-            { year: 2024, authors: "Javier Sanz-Cruzado Puig,Richard Mccreadie,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "IJCAI-24 Workshop on Recommeder Systems in Finance (Fin-RecSys)", title: "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling", keywords: ["Finance", "Machine Learning"], notes: "Non-archival workshop paper", link: "http://arxiv.org/abs/2404.07223" },
-            { year: 2024, authors: "Guhyuk Chung,Woo Chang Kim*,Yongjae Lee*", venue: "The 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024)", title: "Neural Marked Hawkes Process for Limit Order Book Modeling and Prediction", keywords: ["Finance", "Machine Learning"], notes: "Poster presentation (acceptance rate 24.6%)", link: "https://doi.org/10.1007/978-981-97-2259-4_15" },
-            { year: 2024, authors: "Frank J. Fabozzi,Jang Ho Kim*,Junpyo Park,Yongjae Lee*,Yoontae Hwang", venue: "Finance Research Letters", title: "Heterogeneous Trading Behaviors of Individual Investors: A Deep Clustering Approach", keywords: ["Finance", "Machine Learning"], notes: "", link: "https://doi.org/10.1016/j.frl.2024.105481" },
-            { year: 2024, authors: "Annika Lee,Jingwei Yuan,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "AAAI 2024 Workshop on Recommendation Ecosystems", title: "A Temporal Graph Network Framework for Dynamic Recommendation", keywords: ["Machine Learning"], notes: "Non-archival workshop paper", link: "https://sites.google.com/view/recommender-ecosystems/home" },
-            { year: 2024, authors: "Minyoung Choe,Sungju Oh,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "AAAI 2024 Workshop on AI in Finance for Social Impact", title: "Temporal Graph Networks for Graph Anomaly Detection in Financial Networks", keywords: ["Finance", "Machine Learning"], notes: "Non-archival workshop paper", link: "https://sites.google.com/view/aifin-aaai2024/home" },
-            { year: 2023, authors: "Daham Kim,Joohwan Hong*,Junhyeong Lee,Seunghwan Noh,Yongjae Lee*,Yoontae Hwang", venue: "4th ACM International Conference on AI in Finance (ICAIF’23)", title: "SimStock: Representation Model for Stock Similarities", keywords: ["Finance", "Machine Learning"], notes: "Oral presentation (Top 27%)", link: "https://dl.acm.org/doi/10.1145/3604237.3626888" },
-            { year: 2023, authors: "Chang Hwan Sung,Joohwan Hong*,Junpyo Park,Moolkyeol Kim,Seongjin Kim,Seonmi Kim†,Seyoung KIm†,Yejin Kim†,Yongjae Lee*", venue: "4th ACM International Conference on AI in Finance (ICAIF’23)", title: "LLMs Analyzing Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?", keywords: ["Finance", "Machine Learning"], notes: "* Best Poster Award at ICAIF’23", link: "https://dl.acm.org/doi/10.1145/3604237.3627721" },
-            { year: 2023, authors: "Joohwan Hong*,Seyoung Kim,Yongjae Lee*", venue: "4th ACM International Conference on AI in Finance (ICAIF’23)", title: "A GANs-based Approach for Stock Price Anomaly Detection and Investment Risk Management", keywords: ["Finance", "Machine Learning"], notes: "Oral presentation (Top 27%)", link: "https://dl.acm.org/doi/10.1145/3604237.3626892" },
-            { year: 2023, authors: "Joohwan Hong*,Yejin Kim,Yongjae Lee*,Youngbin Lee", venue: "ICAIF’23 Workshop on Machine Learning for Investor Modelling and Recommender Systems", title: "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning", keywords: ["Finance", "Machine Learning"], notes: "Non-archival workshop paper", link: "https://sites.google.com/view/ml-for-investor-recsys" },
-            { year: 2023, authors: "Dongcheol Lim,Junghye Lee*,Kyeongbin Kim†,Suhyeon Kim,Yongjae Lee*,Yoontae Hwang†", venue: "Quantitative Finance", title: "Household Financial Health: A Machine Learning Approach for Data-Driven Diagnosis and Prescription", keywords: ["Finance", "Machine Learning"], notes: "", link: "https://doi.org/10.1080/14697688.2023.2254335" },
-            { year: 2023, authors: "Sanghyeon Bae,Woo Chang Kim*,Yongjae Lee*", venue: "Quantitative Finance", title: "Optimal Portfolio Choice of Couples with Tax Deferred Accounts and Survival Contingent Products", keywords: ["Finance", "Optimization"], notes: "", link: "https://www.tandfonline.com/doi/full/10.1080/14697688.2023.2252852" },
-            { year: 2023, authors: "Francesco A. Fabozzi,Jang Ho Kim,John R.J. Thompson,Woo Chang Kim,Yongjae Lee", venue: "Journal of Portfolio Management", title: "An Overview of Machine Learning for Asset Management", keywords: ["Finance", "Machine Learning"], notes: "preprint version pdf: https://lnkd.in/gVf-74qU", link: "https://www.pm-research.com/content/iijpormgmt/early/2023/07/30/jpm20231526" },
-            { year: 2023, authors: "Bong-Geun Choi,Frank J. Fabozzi,Jang Ho Kim,Woo Chang Kim,Yongjae Lee", venue: "Journal of Portfolio Management", title: "Robustness in Portfolio Optimization", keywords: ["Finance", "Optimization"], notes: "preprint version pdf: https://lnkd.in/gSZBFTzd", link: "https://www.pm-research.com/content/iijpormgmt/early/2023/07/19/jpm20231522" },
-            { year: 2023, authors: "Dong-Young Lim*,Junpyo Park,Yongjae Lee*,Yoontae Hwang", venue: "Finance Research Letters", title: "Stop-loss Adjusted Labels for Machine Learning-based Trading of Risky Assets", keywords: ["Finance", "Machine Learning"], notes: "", link: "https://doi.org/10.1016/j.frl.2023.104285" },
-            { year: 2023, authors: "Do-Gyun Kwon,Jang Ho Kim,Jinkyu Lee,Woo Chang Kim*,Yongjae Lee*", venue: "Quantitative Finance", title: "Large-scale Financial Planning via a Partially Observable Stochastic Dual Dynamic Programming Framework", keywords: ["Finance", "Optimization"], notes: "", link: "https://doi.org/10.1080/14697688.2023.2221296" },
-            { year: 2023, authors: "Hyunglip Bae,Jinkyu Lee,Woo Chang Kim*,Yongjae Lee*", venue: "AISTATS 2023", title: "Deep Value Function Networks for Large-scale Multistage Stochastic Programs", keywords: ["Machine Learning", "Optimization"], notes: "", link: "https://proceedings.mlr.press/v206/bae23a.html" },
-            { year: 2023, authors: "Jinkyu Lee,Sanghyeon Bae,Woo Chang Kim*,Yongjae Lee*", venue: "European Journal of Operational Research", title: "Value Function Gradient Learning for Large-Scale Multistage Stochastic Programming Problems", keywords: ["Machine Learning", "Optimization"], notes: "", link: "https://doi.org/10.1016/j.ejor.2022.10.011" },
-            { year: 2023, authors: "Juchan Kim,Junhyeong Lee,Seyoung Kim,Sohyeon Kwon,Yongjae Lee*", venue: "AI in Finance Bridge Program at AAAI-23", title: "Index Tracking for Direct Indexing Services: A Deep Representation Learning Approach", keywords: ["Finance", "Machine Learning"], notes: "Non-archival workshop paper (short)", link: "https://drive.google.com/file/d/1bQ43MLaNjZdIdIY16ILjWg80_uHKUMcp/view?usp=share_link" },
-            { year: 2023, authors: "Joohwan Hong*,Minjoo Choi†,Seonmi Kim†,Yejin Kim†,Yongjae Lee*,Youngbin Lee†", venue: "AI in Finance Bridge Program at AAAI-23", title: "An NFT Collectibles Recommender System with Content Features", keywords: ["Finance", "Machine Learning"], notes: "Non-archival workshop paper (short)", link: "https://drive.google.com/file/d/1G2E_gwvHKwm9WZlWppq01SZHk9zCNJuo/view?usp=share_link" },
-            { year: 2023, authors: "Frank J. Fabozzi*,Yongjae Lee*,Yoontae Hwang", venue: "Annals of Operations Research", title: "Identifying Household Finance Heterogeneity via Deep Clustering", keywords: ["Finance", "Machine Learning"], notes: "", link: "https://link.springer.com/article/10.1007/s10479-022-04900-3" },
-            { year: 2022, authors: "Guhyuk Chung,Munki Chung,Woo Chang Kim*,Yongjae Lee*", venue: "3rd ACM International Conference on AI in Finance (ICAIF’22)", title: "Market Making under Order Stacking Framework: A Deep Reinforcement Learning Approach", keywords: ["Finance", "Machine Learning"], notes: "Oral presentation (acceptance rate 42.0%)", link: "https://dl.acm.org/doi/abs/10.1145/3533271.3561789" },
-            { year: 2022, authors: "Frank J. Fabozzi*,Jang Ho Kim,Munki Chung,Woo Chang Kim,Yongjae Lee*", venue: "Quantitative Finance", title: "The Effects of Errors in Means, Variances, and Correlations on the Mean-Variance Framework", keywords: ["Finance", "Optimization"], notes: "", link: "https://doi.org/10.1080/14697688.2022.2083009" },
-            { year: 2022, authors: "Frank J. Fabozzi*,Jang Ho Kim,Woo Chang Kim,Yongjae Lee", venue: "Annals of Operations Research", title: "Goal-based Investing Based on Multi-stage Robust Portfolio Optimization", keywords: ["Finance", "Optimization"], notes: "", link: "https://link.springer.com/article/10.1007/s10479-021-04473-7" },
-            { year: 2021, authors: "Jaekyu Bae,Jang Ho Kim,Woo Chang Kim*,Yongjae Lee", venue: "Journal of Portfolio Management", title: "Recent Trends and Perspectives on Korean Asset Management Industry", keywords: ["Finance"], notes: "preprint version pdf: https://lnkd.in/gB3UTQQK", link: "https://jpm.pm-research.com/content/47/7/172" },
-            { year: 2021, authors: "Frank J. Fabozzi*,Jang Ho Kim,Woo Chang Kim,Yongjae Lee", venue: "Journal of Portfolio Management", title: "Mean-Variance Optimization for Asset Allocation", keywords: ["Finance", "Optimization"], notes: "preprint version pdf: https://lnkd.in/gJXfd6rY", link: "https://jpm.pm-research.com/content/47/5/24" },
-            { year: 2020, authors: "Jang Ho Kim*,Woo Chang Kim,Yongjae Lee", venue: "Sustainability", title: "Achieving Portfolio Diversification for Individuals with Low Financial Sustainability", keywords: ["Finance"], notes: "", link: "https://www.mdpi.com/2071-1050/12/17/7073" },
-            { year: 2020, authors: "Daeyoung Choi,Eunjung Lee,Hyunghun Cho,Wonjong Rhee,Yongjae Lee,Yongjin Kim", venue: "IEEE Access", title: "Basic Enhancement Strategies When Using Bayesian Optimization for Hyperparameter Tuning of Deep Neural Networks", keywords: ["Machine Learning"], notes: "", link: "https://ieeexplore.ieee.org/document/9037259" },
-            { year: 2020, authors: "Changle Lin,Do-Gyun Kwon,Jang Ho Kim,Woo Chang Kim*,Yongjae Lee*", venue: "Quantitative Finance", title: "Personalized Goal-Based Investing via Multi-Stage Stochastic Goal Programming", keywords: ["Finance", "Optimization"], notes: "", link: "https://www.tandfonline.com/doi/full/10.1080/14697688.2019.1662079" },
-            { year: 2020, authors: "Jang Ho Kim,Ju Ri Jang,Min Jeong Kim,Woo Chang Kim*,Yongjae Lee", venue: "Journal of the Operational Research Society", title: "Sparse and Robust Portfolio Selection via Semi-Definite Relaxation", keywords: ["Finance", "Optimization"], notes: "", link: "https://doi.org/10.1080/01605682.2019.1581408" },
-            { year: 2019, authors: "Jaeyong Yu,Jang Ho Kim*,Joohwan Hong,Yongjae Lee", venue: "대한산업공학회지", title: "Lifetime Financial Planning with Human Capital in Korea (국내 인적자본을 고려한 생애주기별 자산관리)", keywords: ["Finance", "Optimization"], notes: "Written in Korean", link: "http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09218524" },
-            { year: 2018, authors: "Woo Chang Kim*,Yongjae Lee", venue: "International Journal of Financial Engineering and Risk Management", title: "Why Your Smart Beta Portfolio Might Not Work", keywords: ["Finance"], notes: "", link: "https://www.inderscienceonline.com/doi/abs/10.1504/IJFERM.2018.094034" },
-            { year: 2018, authors: "Do-Gyun Kwon,Frank J. Fabozzi,Woo Chang Kim*,Yongjae Lee", venue: "Applied Economics", title: "An Alternative Approach for Portfolio Performance Evaluation: Enabling Fund Evaluation Relative to Peer Group via Malkiel’s Monkey", keywords: ["Finance"], notes: "", link: "https://www.tandfonline.com/doi/full/10.1080/00036846.2018.1444263" },
-            { year: 2017, authors: "Beomhyeon Kim,Do-Gyun Kwon,Woo Chang Kim,Yongjae Lee*", venue: "대한산업공학회지", title: "A Study on the Korean ETF market: Systemic Risk and the Optimal ETF Introduction Sequence", keywords: ["Finance", "Optimization"], notes: "Written in Korean", link: "http://doi.org/10.7232/JKIIE.2017.43.6.482" },
-            { year: 2017, authors: "Do-Gyun Kwon,Jang Ho Kim,Woo Chang Kim*,Yongjae Lee", venue: "International Review of Financial Analysis", title: "Modeling the Dynamics of Institutional, Foreign, and Individual Investors through Price Consensus", keywords: ["Finance"], notes: "", link: "http://www.sciencedirect.com/science/article/pii/S1057521916301624" },
-            { year: 2016, authors: "Jang Ho Kim,Min Jeong Kim,Woo Chang Kim*,Yongjae Lee", venue: "Operations Research Letters", title: "Sparse Tangent Portfolio Selection via Semi-Definite Relaxation", keywords: ["Finance", "Optimization"], notes: "", link: "http://www.sciencedirect.com/science/article/pii/S0167637716300396" },
-            { year: 2016, authors: "Woo Chang Kim*,Yongjae Lee", venue: "Quantitative Finance", title: "A Uniformly Distributed Random Portfolio", keywords: ["Finance"], notes: "", link: "http://www.tandfonline.com/doi/abs/10.1080/14697688.2015.1114360" },
-            { year: 2014, authors: "Woo Chang Kim*,Yongjae Lee,Yoon Hak Lee", venue: "Journal of Portfolio Management", title: "Cost of Asset Allocation in Equity Market: How Much Do Investors Lose Due to Bad Asset Class Design?", keywords: ["Finance"], notes: "", link: "http://jpm.iijournals.com/content/41/1/34" },
-            { year: 2013, authors: "Woo Chang Kim*,Yongjae Lee", venue: "Management Science and Financial Engineering", title: "A Stochastic Model for Order Book Dynamics: An Application to Korean Stock Index Futures", keywords: ["Finance"], notes: "", link: "https://doi.org/10.7737/MSFE.2013.19.1.037" },
-            { year: "working paper", authors: "Munki Chung,Woo Chang Kim*,Yongjae Lee*", venue: "", title: "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation", keywords: ["Finance", "Machine Learning"], notes: "submitted", link: "https://arxiv.org/abs/2306.06590" },
-            { year: "working paper", authors: "Stefan Zohren,Yongjae Lee*,Yoontae Hwang", venue: "", title: "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management", keywords: ["Finance", "Machine Learning"], notes: "Submitted", link: "https://arxiv.org/abs/2407.13751" },
-            { year: "working paper", authors: "Inwoo Tae,Junhyeong Lee,Yongjae Lee*", venue: "", title: "Anatomy of Machines for Markowitz: Decision-Focused Learning for Mean-Variance Portfolio Optimization", keywords: ["Finance", "Machine Learning", "Optimization"], notes: "Submitted", link: "" },
-            { year: "working paper", authors: "Haeun Jeon†,Hyunglip Bae†,Minsu Park,Woo Chang Kim*,Yongjae Lee*", venue: "", title: "A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization", keywords: [], notes: "submitted", link: "" }
-        ];
-        
-        const publicationListContainer = document.getElementById('publication-list');
-        
-        function renderPublications() {
-            // Group publications by year
-            const groupedByYear = publicationData.reduce((acc, pub) => {
-                const year = pub.year;
-                if (!acc[year]) {
-                    acc[year] = [];
-                }
-                acc[year].push(pub);
-                return acc;
-            }, {});
-
-            let html = '';
-            
-            // Get sorted years, with 'working paper' at the end
-            const sortedYears = Object.keys(groupedByYear).sort((a, b) => {
-                if (a === 'working paper') return 1;
-                if (b === 'working paper') return -1;
-                return b - a;
-            });
-
-            sortedYears.forEach(year => {
-                const sectionTitle = year === 'working paper' ? 'Submitted & Working Papers' : year;
-                html += `<div><h3 class="font-bold text-xl text-brand-navy">${sectionTitle}</h3><div class="space-y-6 mt-4">`;
-
-                groupedByYear[year].forEach(pub => {
-                    const authorsHtml = pub.authors.split(',').map(author => {
-                        const trimmedAuthor = author.trim();
-                        let authorClass = 'text-author-external';
-                        if (trimmedAuthor.endsWith('*') || trimmedAuthor.endsWith('†')) {
-                            authorClass = 'text-author-pi'; // PI and Lab members are the same color now
-                        }
-                        return `<span class="${authorClass}">${trimmedAuthor.replace(/[*†]/g, '')}</span>`;
-                    }).join(', ');
-
-                    const keywordsHtml = pub.keywords.map(kw => `<span class="keyword text-xs font-medium bg-slate-100 text-slate-800 px-2 py-1 rounded-full">${kw}</span>`).join(' ');
-
-                    let awardHtml = '';
-                    if (pub.notes.toLowerCase().includes('best poster award')) {
-                        awardHtml = `<div class="flex-shrink-0"><span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full"><svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a.75.75 0 01.75.75v1.25a.75.75 0 01-1.5 0V2.75A.75.75 0 019 2zM10.75 18a.75.75 0 01.75-.75h1.25a.75.75 0 010 1.5H11.5a.75.75 0 01-.75-.75zM2 9.75A.75.75 0 012.75 9h1.25a.75.75 0 010 1.5H2.75A.75.75 0 012 9.75zM15 11.75a.75.75 0 01.75-.75h1.25a.75.75 0 010 1.5H15.75a.75.75 0 01-.75-.75zM4.094 15.906a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM14.846 6.154a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM15.906 15.906a.75.75 0 01-1.06 0l-.884-.884a.75.75 0 111.06-1.06l.884.884a.75.75 0 010 1.06zM5.154 6.154a.75.75 0 01-1.06 0l-.884-.884a.75.75 0 111.06-1.06l.884.884a.75.75 0 010 1.06zM10 4a6 6 0 100 12 6 6 0 000-12z" clip-rule="evenodd" /></svg>Best Poster Award</span></div>`;
-                    }
-                    
-                    let linkHtml = '';
-                    if(pub.link) {
-                        linkHtml = `<a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="text-brand-teal hover:underline">[Paper]</a>`;
-                    }
-
-                    html += `
-                        <div class="publication-item p-4 rounded-lg hover:bg-gray-50">
-                            <div class="flex items-start gap-4">
-                                <div class="flex-1">
-                                    <p class="font-semibold text-brand-navy text-lg">${pub.title}</p>
-                                    <p class="text-sm mt-1">${authorsHtml}</p>
-                                    <p class="text-sm text-gray-500 italic mt-1">${pub.venue}</p>
-                                    ${pub.keywords.length > 0 ? `<div class="mt-3 flex flex-wrap gap-2">${keywordsHtml}</div>` : ''}
-                                    <div class="mt-3 flex items-center space-x-4 text-sm">
-                                        ${linkHtml}
-                                    </div>
-                                </div>
-                                ${awardHtml}
+    <!-- Side Drawer -->
+    <div id="drawer-container" class="fixed inset-0 z-50" aria-labelledby="drawer-title" role="dialog" aria-modal="true">
+        <div id="drawer-backdrop" class="fixed inset-0 bg-black bg-opacity-50" onclick="closeDrawer()"></div>
+        <div class="fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div id="drawer-panel" class="w-screen max-w-md">
+                <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                    <div class="bg-brand-navy p-4 sm:p-6">
+                        <div class="flex items-start justify-between">
+                            <h2 id="drawer-title" class="text-lg font-medium text-white">Drawer Title</h2>
+                            <div class="ml-3 flex h-7 items-center">
+                                <button type="button" class="rounded-md bg-brand-navy text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white" onclick="closeDrawer()">
+                                    <span class="sr-only">Close panel</span>
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    `;
-                });
+                    </div>
+                    <div id="drawer-content" class="relative flex-1 p-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                html += `</div></div>`;
-            });
-            publicationListContainer.innerHTML = html;
-        }
-        
-        document.addEventListener('DOMContentLoaded', renderPublications);
-
-        const publicationSearchInput = document.getElementById('publication-search');
-        publicationSearchInput.addEventListener('keyup', () => {
-            const query = publicationSearchInput.value.toLowerCase();
-            const publicationItems = document.querySelectorAll('.publication-item');
-            publicationItems.forEach(item => {
-                const textContent = item.textContent.toLowerCase();
-                if (textContent.includes(query)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        // Initialize with home tab
-        switchTab('home');
-    </script>
+    <!-- JavaScript Files -->
+    <script src="./js/main.js"></script>
+    <script src="./js/drawer.js"></script>
+    <script src="./js/publications.js"></script>
+    <!-- Add more module scripts as needed -->
 </body>
 </html>

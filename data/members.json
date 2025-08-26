@@ -1,0 +1,154 @@
+{
+  "current": {
+    "professor": [
+      {
+        "id": "yongjae-lee",
+        "name": "Yongjae Lee",
+        "position": "Professor",
+        "image": "https://placehold.co/200x200/4338CA/F7F9FC?text=YL",
+        "bio": "Professor at UNIST Financial Engineering Lab",
+        "email": "",
+        "website": ""
+      }
+    ],
+    "phd_students": [
+      {
+        "id": "junhyeong-lee",
+        "name": "Junhyeong Lee",
+        "position": "Ph.D-M.S Combined",
+        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=JL",
+        "bio": "Ph.D-M.S Combined Student"
+      },
+      {
+        "id": "inwoo-tae",
+        "name": "Inwoo Tae",
+        "position": "Ph.D-M.S Combined",
+        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=IT",
+        "bio": "Ph.D-M.S Combined Student"
+      },
+      {
+        "id": "juchan-kim",
+        "name": "Juchan Kim",
+        "position": "Ph.D-M.S Combined",
+        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=JK",
+        "bio": "Ph.D-M.S Combined Student"
+      },
+      {
+        "id": "kangmin-kim",
+        "name": "Kangmin Kim",
+        "position": "Ph.D-M.S Combined",
+        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=KK",
+        "bio": "Ph.D-M.S Combined Student"
+      }
+    ],
+    "ms_students": [
+      {
+        "id": "hoyoung-lee",
+        "name": "Hoyoung Lee",
+        "position": "M.S. Student",
+        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=HL",
+        "bio": "M.S. Student"
+      }
+    ]
+  },
+  "alumni": {
+    "phd": [
+      {
+        "id": "yoontae-hwang",
+        "name": "Yoontae Hwang",
+        "name_kr": "황윤태",
+        "year": 2024,
+        "thesis": "Financial Representation Learning",
+        "current_position": "Pusan National University",
+        "links": {
+          "website": "https://yoontae6719.github.io/"
+        }
+      }
+    ],
+    "ms": [
+      {
+        "id": "yejin-kim",
+        "name": "Yejin Kim",
+        "name_kr": "김예진",
+        "year": 2024,
+        "thesis": "Personalized Stock Recommendations Focusing on Temporal Preferences and Diversification Effect",
+        "current_position": "Data Scientist, Meritz Fire & Marine Insurance",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/yejining99/"
+        }
+      },
+      {
+        "id": "seonmi-kim",
+        "name": "Seonmi Kim",
+        "name_kr": "김선미",
+        "year": 2024,
+        "thesis": "NFTs to MARS: Multi-Attention Recommender System for NFTs",
+        "current_position": "Data Scientist, NICE P&I",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/seonmi-kim-441024286"
+        }
+      },
+      {
+        "id": "seyoung-kim",
+        "name": "Seyoung Kim",
+        "name_kr": "김세영",
+        "year": 2024,
+        "thesis": "A GANs-based Approach for Stock Price Anomaly Detection and Investment Risk Management",
+        "current_position": "Quant Researcher",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/seyoung-kim-46620a245"
+        }
+      },
+      {
+        "id": "youngbin-lee",
+        "name": "Youngbin Lee",
+        "name_kr": "이영빈",
+        "year": 2024,
+        "thesis": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning",
+        "current_position": "AI Researcher (alternative military service), elice",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/youngandbin"
+        }
+      },
+      {
+        "id": "sohyeon-kwon",
+        "name": "Sohyeon Kwon",
+        "name_kr": "권소현",
+        "year": 2023,
+        "thesis": "Can GANs learn temporal structures of financial time series?",
+        "current_position": "AI Researcher, NC Soft",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sohyeon-kwon-b879bb150/"
+        }
+      },
+      {
+        "id": "minjoo-choi",
+        "name": "Minjoo Choi",
+        "name_kr": "최민주",
+        "year": 2023,
+        "thesis": "Cluster analysis of cryptocurrencies via deep clustering",
+        "current_position": "Software Research Engineer, LIG Nex1",
+        "links": {
+          "notion": "https://www.notion.so/b204363e14da45b59db347739f5e84ec?pvs=21"
+        }
+      }
+    ],
+    "research_professors": [
+      {
+        "id": "hyungwoo-kong",
+        "name": "Hyungwoo Kong",
+        "name_kr": "공형우",
+        "current_position": "Assistant Professor, School of Finance & AI, Hankuk University of Foreign Studies"
+      },
+      {
+        "id": "joohwan-hong",
+        "name": "Joohwan Hong",
+        "name_kr": "홍주환",
+        "current_position": "Senior Researcher, Korea Institute of Fusion Energy",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/joohwan-hong-0636a03b/"
+        }
+      }
+    ]
+  }
+}

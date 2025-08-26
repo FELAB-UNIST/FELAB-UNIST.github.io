@@ -1,0 +1,112 @@
+{
+  "publications": [
+    {
+      "year": 2025,
+      "authors": "Hoyoung Lee†,Jahoon Lee,Minjae Kim,Suhwan Park,Sundong You,Taeyoon Lim,Wonbin Ahn†,Woohyung Lim*,Yongjae Lee*",
+      "venue": "The 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)",
+      "title": "THEME : Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "Applied Research Track (acceptance rate 30.1%)",
+      "link": ""
+    },
+    {
+      "year": 2025,
+      "authors": "Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "venue": "ICLR 2025 Workshop on Advances in Financial AI",
+      "title": "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "",
+      "link": ""
+    },
+    {
+      "year": 2025,
+      "authors": "Alejandro Lopez-Lira,Chaewoon Kim,Chanyeol Choi,Hojun Choi,Jaeseon Ha,Jihoon Kwon,Jy-yong Sohn,Yongjae Lee",
+      "venue": "ICLR 2025 Workshop on Advances in Financial AI",
+      "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "",
+      "link": ""
+    },
+    {
+      "year": 2025,
+      "authors": "Yongjae Lee*,Yoontae Hwang",
+      "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25)",
+      "title": "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset",
+      "keywords": ["Machine Learning"],
+      "notes": "Accepted (acceptance rate: 23.4%)",
+      "link": "https://ojs.aaai.org/index.php/AAAI/article/view/33928"
+    },
+    {
+      "year": 2024,
+      "authors": "Frank J. Fabozzi,Jang Ho Kim,Taehyeon Kang,Woo Chang Kim,Yongjae Lee",
+      "venue": "Journal of Portfolio Management",
+      "title": "An overview of optimization models for portfolio management",
+      "keywords": ["Finance", "Optimization"],
+      "notes": "preprint version pdf: https://lnkd.in/gzFsSsBC",
+      "link": "https://doi.org/10.3905/jpm.2024.1.643"
+    },
+    {
+      "year": 2024,
+      "authors": "Frank J. Fabozzi,Jang Ho Kim,Woo Chang Kim,Yongjae Lee",
+      "venue": "Journal of Portfolio Management",
+      "title": "An Overview of Machine Learning for Portfolio Optimization",
+      "keywords": ["Finance", "Machine Learning", "Optimization"],
+      "notes": "preprint version pdf: https://lnkd.in/gU8_M9VB",
+      "link": "https://doi.org/10.3905/jpm.2024.1.639"
+    },
+    {
+      "year": 2024,
+      "authors": "Sohyeon Kwon,Yongjae Lee*",
+      "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
+      "title": "Can GANs Learn the Stylized Facts of Financial Time Series?",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "Oral presentation (top 18.7%)",
+      "link": "https://doi.org/10.1145/3677052.3698661"
+    },
+    {
+      "year": 2024,
+      "authors": "Javier Sanz-Cruzado Puig,Richard Mccreadie,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
+      "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "Poster presentation (acceptance rate 39.3%)",
+      "link": "https://doi.org/10.1145/3677052.3698662"
+    },
+    {
+      "year": 2023,
+      "authors": "Chang Hwan Sung,Joohwan Hong*,Junpyo Park,Moolkyeol Kim,Seongjin Kim,Seonmi Kim†,Seyoung KIm†,Yejin Kim†,Yongjae Lee*",
+      "venue": "4th ACM International Conference on AI in Finance (ICAIF'23)",
+      "title": "LLMs Analyzing Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "* Best Poster Award at ICAIF'23",
+      "link": "https://dl.acm.org/doi/10.1145/3604237.3627721"
+    },
+    {
+      "year": "working_paper",
+      "authors": "Munki Chung,Woo Chang Kim*,Yongjae Lee*",
+      "venue": "",
+      "title": "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "submitted",
+      "link": "https://arxiv.org/abs/2306.06590"
+    },
+    {
+      "year": "working_paper",
+      "authors": "Stefan Zohren,Yongjae Lee*,Yoontae Hwang",
+      "venue": "",
+      "title": "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management",
+      "keywords": ["Finance", "Machine Learning"],
+      "notes": "Submitted",
+      "link": "https://arxiv.org/abs/2407.13751"
+    },
+    {
+      "year": "working_paper",
+      "authors": "Inwoo Tae,Junhyeong Lee,Yongjae Lee*",
+      "venue": "",
+      "title": "Anatomy of Machines for Markowitz: Decision-Focused Learning for Mean-Variance Portfolio Optimization",
+      "keywords": ["Finance", "Machine Learning", "Optimization"],
+      "notes": "Submitted",
+      "link": ""
+    }
+  ]
+}
