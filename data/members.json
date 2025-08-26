@@ -16,28 +16,28 @@
         "id": "junhyeong-lee",
         "name": "Junhyeong Lee",
         "position": "Ph.D-M.S Combined",
-        "image": "./images/members/jhlee.png",
+        "image": "./public/images/members/jhlee.png",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
         "position": "Ph.D-M.S Combined",
-        "image": "./images/members/iwtae.png",
+        "image": "./public/images/members/iwtae.png",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "juchan-kim",
         "name": "Juchan Kim",
         "position": "Ph.D-M.S Combined",
-        "image": "./images/members/jckim.jpg",
+        "image": "./public/images/members/jckim.jpg",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "kangmin-kim",
         "name": "Kangmin Kim",
         "position": "Ph.D-M.S Combined",
-        "image": "./images/members/kmkim.jpg",
+        "image": "./public/images/members/kmkim.jpg",
         "bio": "Ph.D-M.S Combined Student"
       }
     ],
@@ -46,7 +46,7 @@
         "id": "hoyoung-lee",
         "name": "Hoyoung Lee",
         "position": "M.S. Student",
-        "image": "./images/members/hylee.jpg",
+        "image": "./public/images/members/hylee.jpg",
         "bio": "M.S. Student"
       }
     ]
