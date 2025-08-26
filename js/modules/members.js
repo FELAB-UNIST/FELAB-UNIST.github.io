@@ -57,6 +57,14 @@ const MembersManager = {
                 container.innerHTML = this.createMemberCards(current.ms_students);
             }
         }
+        
+        // Render Interns
+        if (current.interns) {
+            const container = document.getElementById('interns-container');
+            if (container) {
+                container.innerHTML = this.createInternCards(current.interns);
+            }
+        }
     },
     
     createMemberCards(members) {
@@ -92,6 +100,32 @@ const MembersManager = {
         `).join('');
     },
     
+    createInternCards(interns) {
+        return interns.map(intern => `
+            <div class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow p-6 cursor-pointer border-l-4 border-brand-teal" 
+                 onclick="openDrawer('member-${intern.id}')">
+                <div class="text-center">
+                    <div class="mb-4">
+                        <img src="${intern.image}" 
+                             alt="${intern.name}" 
+                             class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-gray-100"
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/0BB37F/F7F9FC?text=${this.getInitials(intern.name)}'">
+                    </div>
+                    <h5 class="font-semibold text-brand-navy text-lg">${intern.name}</h5>
+                    <p class="text-sm text-gray-600 mt-1">${intern.position}</p>
+                    ${intern.university ? `
+                        <p class="text-xs text-gray-500 mt-1">${intern.university}</p>
+                    ` : ''}
+                    ${intern.duration ? `
+                        <span class="inline-block mt-2 px-2 py-1 text-xs bg-brand-teal text-white rounded-full">
+                            ${intern.duration}
+                        </span>
+                    ` : ''}
+                </div>
+            </div>
+        `).join('');
+    },
+    
     renderAlumni() {
         const { alumni } = this.data;
         
@@ -116,6 +150,14 @@ const MembersManager = {
             const container = document.getElementById('research-professors-container');
             if (container) {
                 container.innerHTML = this.createResearchProfessorsList(alumni.research_professors);
+            }
+        }
+        
+        // Render Former Interns
+        if (alumni.interns) {
+            const container = document.getElementById('former-interns-container');
+            if (container) {
+                container.innerHTML = this.createFormerInternsList(alumni.interns);
             }
         }
     },
@@ -168,6 +210,41 @@ const MembersManager = {
                     </div>
                     <div class="flex gap-2 ml-4">
                         ${person.links ? this.createAlumniLinks(person.links) : ''}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    },
+    
+    createFormerInternsList(interns) {
+        return interns.map(intern => `
+            <div class="bg-white rounded-lg p-6 border-l-4 border-brand-teal hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-start">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3">
+                            <h5 class="font-semibold text-brand-navy">
+                                ${intern.name}
+                                ${intern.name_kr ? `<span class="text-gray-500 font-normal">(${intern.name_kr})</span>` : ''}
+                            </h5>
+                            <span class="text-sm text-gray-500">${intern.year}</span>
+                        </div>
+                        <div class="mt-2 space-y-1">
+                            ${intern.university ? `
+                                <p class="text-sm text-gray-600">
+                                    <strong>University:</strong> ${intern.university}
+                                </p>
+                            ` : ''}
+                            ${intern.duration ? `
+                                <p class="text-sm text-gray-600">
+                                    <strong>Duration:</strong> ${intern.duration}
+                                </p>
+                            ` : ''}
+                            ${intern.current_position ? `
+                                <p class="text-sm text-brand-accent">
+                                    <strong>Current:</strong> ${intern.current_position}
+                                </p>
+                            ` : ''}
+                        </div>
                     </div>
                 </div>
             </div>

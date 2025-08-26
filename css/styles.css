@@ -141,3 +141,77 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* Additional styles for improved publications page */
+
+/* Search highlight styles */
+.search-highlight {
+    background-color: #fef08a;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.highlight-match {
+    background-color: #f8fafc;
+    border-left: 3px solid var(--brand-accent);
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.highlight-match:hover {
+    background-color: #f1f5f9;
+    transform: translateX(2px);
+}
+
+/* Improved sticky search bar */
+.sticky {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Publication item animations */
+.publication-item {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.publication-item[style*="display: none"] {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Enhanced search input */
+#publication-search:focus {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Loading animation improvements */
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* No results message animation */
+#no-results-message {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

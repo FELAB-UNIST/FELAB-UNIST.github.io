@@ -5,10 +5,9 @@
         "id": "yongjae-lee",
         "name": "Yongjae Lee",
         "position": "Professor",
-        "image": "./images/members/yjlee.png",
+        "image": "./public/images/members/yjlee.png",
         "bio": "Professor at UNIST Financial Engineering Lab",
-        "email": "yongjae.lee@unist.ac.kr",
-        "website": ""
+        "email": "yongjae.lee@unist.ac.kr"
       }
     ],
     "phd_students": [
@@ -17,28 +16,32 @@
         "name": "Junhyeong Lee",
         "position": "Ph.D-M.S Combined",
         "image": "./public/images/members/jhlee.png",
-        "bio": "Ph.D-M.S Combined Student"
+        "bio": "Ph.D-M.S Combined Student",
+        "email": "jun.lee@unist.ac.kr"
       },
       {
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
         "position": "Ph.D-M.S Combined",
         "image": "./public/images/members/iwtae.png",
-        "bio": "Ph.D-M.S Combined Student"
+        "bio": "Ph.D-M.S Combined Student",
+        "email": "vitainu0104@unist.ac.kr"
       },
       {
         "id": "juchan-kim",
         "name": "Juchan Kim",
         "position": "Ph.D-M.S Combined",
         "image": "./public/images/members/jckim.jpg",
-        "bio": "Ph.D-M.S Combined Student"
+        "bio": "Ph.D-M.S Combined Student",
+        "email": "joc6021@unist.ac.kr"
       },
       {
         "id": "kangmin-kim",
         "name": "Kangmin Kim",
         "position": "Ph.D-M.S Combined",
         "image": "./public/images/members/kmkim.jpg",
-        "bio": "Ph.D-M.S Combined Student"
+        "bio": "Ph.D-M.S Combined Student",
+        "email": "kmin1015@unist.ac.kr"
       }
     ],
     "ms_students": [
@@ -47,7 +50,26 @@
         "name": "Hoyoung Lee",
         "position": "M.S. Student",
         "image": "./public/images/members/hylee.jpg",
-        "bio": "M.S. Student"
+        "bio": "M.S. Student",
+        "email": "hoyounglee@unist.ac.kr"
+      }
+    ],
+    "interns": [
+      {
+        "id": "sangjin",
+        "name": "Sangjin Jin",
+        "position": "Undergraduate Research Intern",
+        "image": "./public/images/members/sangjin.jpg",
+        "bio": "Undergraduate Research Intern",
+        "email": "jsj9185@unist.ac.kr"
+      },
+      {
+        "id": "sample-intern-2",
+        "name": "Sample Intern 2",
+        "position": "Undergraduate Research Intern",
+        "image": "/images/members/intern2.jpg",
+        "bio": "Undergraduate Research Intern",
+        "email": "hoyounglee@unist.ac.kr"
       }
     ]
   },
@@ -61,7 +83,8 @@
         "thesis": "Financial Representation Learning",
         "current_position": "Pusan National University",
         "links": {
-          "website": "https://yoontae6719.github.io/"
+          "website": "https://yoontae6719.github.io/",
+          "linkedin": "https://www.linkedin.com/in/yoontae/"
         }
       }
     ],
