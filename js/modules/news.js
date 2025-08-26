@@ -20,6 +20,7 @@ const NewsManager = {
             const response = await fetch('./data/news.json');
             const jsonData = await response.json();
             this.data = jsonData;
+            console.log(`Loaded ${this.data.news.length} news items`);
         } catch (error) {
             console.error('Failed to load news data:', error);
             this.data = { news: [], categories: {} };
@@ -27,31 +28,90 @@ const NewsManager = {
     },
     
     render() {
+        this.renderFilters();
         this.renderFeaturedNews();
         this.renderRecentNews();
         this.renderNewsArchive();
     },
     
-    renderFeaturedNews() {
-        const featured = this.data.news.find(n => n.featured);
-        if (!featured) return;
+    renderFilters() {
+        const filterContainer = document.getElementById('news-filters');
+        if (!filterContainer) return;
         
+        const categories = Object.entries(this.data.categories);
+        
+        // Count items per category
+        const categoryCounts = {};
+        this.data.news.forEach(news => {
+            categoryCounts[news.category] = (categoryCounts[news.category] || 0) + 1;
+        });
+        
+        // Filter out categories with 0 items
+        const activeCategories = categories.filter(([key, cat]) => categoryCounts[key] > 0);
+        
+        filterContainer.innerHTML = `
+            <button onclick="NewsManager.filterByCategory('all')" 
+                    data-category="all"
+                    class="filter-btn active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg shadow-md">
+                All (${this.data.news.length})
+            </button>
+            ${activeCategories.map(([key, cat]) => `
+                <button onclick="NewsManager.filterByCategory('${key}')" 
+                        data-category="${key}"
+                        class="filter-btn px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+                    ${cat.name} (${categoryCounts[key]})
+                </button>
+            `).join('')}
+        `;
+    },
+    
+    renderFeaturedNews() {
+        // Find the most recent featured news
+        const featured = this.data.news
+            .filter(n => n.featured)
+            .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+        
+        if (!featured) {
+            // If no featured news, show the most recent news as featured
+            const mostRecent = this.data.news
+                .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+            if (mostRecent) {
+                this.renderFeaturedCard(mostRecent);
+            }
+            return;
+        }
+        
+        this.renderFeaturedCard(featured);
+    },
+    
+    renderFeaturedCard(news) {
         const container = document.getElementById('featured-news');
         if (!container) return;
         
+        const category = this.data.categories[news.category] || this.data.categories.general;
+        
         container.innerHTML = `
-            <div class="flex items-center mb-4">
-                <span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full font-semibold">Featured</span>
-                <span class="ml-3 text-white/80 text-sm">${this.formatDate(featured.date)}</span>
+            <div class="bg-gradient-to-br from-gray-100 to-white rounded-2xl p-8 shadow-xl border border-gray-200">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    ${news.featured ? '<span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full font-semibold shadow-md">Featured</span>' : ''}
+                    <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+                        ${category.name}
+                    </span>
+                    <span class="text-gray-600 text-sm font-medium">${this.formatDate(news.date)}</span>
+                </div>
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-brand-navy">
+                    ${this.getCategoryIcon(news.category)} ${news.title}
+                </h3>
+                ${news.title_kr ? `<p class="text-lg lg:text-xl text-gray-700 mb-4 font-medium">${news.title_kr}</p>` : ''}
+                <p class="text-gray-800 text-base lg:text-lg mb-6 leading-relaxed">${news.summary}</p>
+                <button onclick="NewsManager.openNewsDetail('${news.id}')" 
+                        class="bg-brand-accent text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all inline-flex items-center gap-2 shadow-md hover:shadow-lg">
+                    Read More 
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
             </div>
-            <h3 class="text-2xl font-bold mb-4">
-                ${this.getCategoryIcon(featured.category)} ${featured.title}
-            </h3>
-            <p class="text-white/90 text-lg mb-6">${featured.summary}</p>
-            <button onclick="NewsManager.openNewsDetail('${featured.id}')" 
-                    class="bg-white text-brand-navy px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Read More →
-            </button>
         `;
     },
     
@@ -59,17 +119,44 @@ const NewsManager = {
         const container = document.getElementById('recent-news-grid');
         if (!container) return;
         
-        // Get recent non-featured news (limit to 6)
-        const recentNews = this.data.news
+        // Get filtered news
+        let allNews = this.currentFilter === 'all' 
+            ? this.data.news 
+            : this.data.news.filter(n => n.category === this.currentFilter);
+        
+        // Sort by date and exclude featured
+        const recentNews = allNews
             .filter(n => !n.featured)
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .slice(0, 6);
+            .slice(0, 6); // Always show max 6 items
+        
+        if (recentNews.length === 0) {
+            container.innerHTML = `
+                <div class="col-span-full text-center py-12 text-gray-500">
+                    <div class="text-4xl mb-4">📰</div>
+                    <p class="text-lg font-semibold mb-2">No news found in this category</p>
+                    <p class="text-sm">Try selecting a different category</p>
+                </div>
+            `;
+            return;
+        }
         
         container.innerHTML = recentNews.map(news => this.createNewsCard(news)).join('');
+        
+        console.log(`Recent: Showing ${recentNews.length} items (${this.currentFilter} filter)`);
     },
     
     createNewsCard(news) {
         const category = this.data.categories[news.category] || this.data.categories.general;
+        const categoryColors = {
+            publication: 'blue',
+            achievement: 'green',
+            collaboration: 'purple',
+            event: 'orange',
+            grant: 'teal',
+            general: 'gray'
+        };
+        const color = categoryColors[news.category] || 'gray';
         
         return `
             <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden cursor-pointer"
@@ -84,12 +171,13 @@ const NewsManager = {
                 ` : ''}
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-${category.color}-100 text-${category.color}-800 text-xs px-2 py-1 rounded">
+                        <span class="bg-${color}-100 text-${color}-800 text-xs px-2 py-1 rounded">
                             ${category.name}
                         </span>
                         <time class="ml-auto text-sm text-gray-500">${this.formatDate(news.date)}</time>
                     </div>
-                    <h4 class="font-semibold text-brand-navy mb-2">${news.title}</h4>
+                    <h4 class="font-semibold text-brand-navy mb-2 line-clamp-2">${news.title}</h4>
+                    ${news.title_kr ? `<p class="text-sm text-gray-500 mb-2 line-clamp-1">${news.title_kr}</p>` : ''}
                     <p class="text-gray-600 text-sm mb-4 line-clamp-3">${news.summary}</p>
                     <span class="text-brand-accent hover:underline text-sm font-semibold">Learn more →</span>
                 </div>
@@ -101,12 +189,37 @@ const NewsManager = {
         const container = document.getElementById('news-archive');
         if (!container) return;
         
-        // Get older news
-        const archiveNews = this.data.news
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .slice(6, 15); // Show next 9 items
+        // Get filtered archive news (items after the first 6)
+        let allNews = this.currentFilter === 'all' 
+            ? this.data.news 
+            : this.data.news.filter(n => n.category === this.currentFilter);
         
-        container.innerHTML = archiveNews.map(news => this.createArchiveItem(news)).join('');
+        // Exclude featured and get items after the first 6
+        const nonFeaturedNews = allNews
+            .filter(n => !n.featured)
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        const archiveNews = nonFeaturedNews.slice(6); // Start from 7th item
+        
+        // Get the archive section container
+        const archiveSection = container.closest('.mt-16');
+        
+        if (archiveNews.length === 0) {
+            // Hide entire archive section if no items
+            container.innerHTML = '';
+            if (archiveSection) {
+                archiveSection.style.display = 'none';
+            }
+            return;
+        } else {
+            // Show archive section and render items
+            if (archiveSection) {
+                archiveSection.style.display = 'block';
+            }
+            container.innerHTML = archiveNews.map(news => this.createArchiveItem(news)).join('');
+        }
+        
+        console.log(`Archive: Showing ${archiveNews.length} items from ${nonFeaturedNews.length} total (${this.currentFilter} filter)`);
     },
     
     createArchiveItem(news) {
@@ -122,13 +235,38 @@ const NewsManager = {
                             <time class="ml-3 text-sm text-gray-500">${this.formatDate(news.date)}</time>
                         </div>
                         <h4 class="font-semibold text-brand-navy">${news.title}</h4>
+                        ${news.title_kr ? `<p class="text-sm text-gray-500 mt-1">${news.title_kr}</p>` : ''}
                     </div>
-                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="w-5 h-5 text-gray-400 flex-shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </div>
             </a>
         `;
+    },
+    
+    filterByCategory(category) {
+        this.currentFilter = category;
+        
+        // Update filter button states
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            if (btn.dataset.category === category) {
+                btn.classList.add('active', 'bg-brand-accent', 'text-white');
+                btn.classList.remove('bg-gray-200', 'text-gray-700');
+            } else {
+                btn.classList.remove('active', 'bg-brand-accent', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            }
+        });
+        
+        // Re-render with filter
+        this.renderRecentNews();
+        this.renderNewsArchive();
+    },
+    
+    loadMore() {
+        this.currentPage++;
+        this.renderRecentNews();
     },
     
     openNewsDetail(newsId) {
@@ -149,11 +287,6 @@ const NewsManager = {
         modal.innerHTML = this.createNewsDetailModal(news);
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-        
-        // Initialize image gallery if present
-        if (news.gallery) {
-            this.initImageGallery();
-        }
     },
     
     createNewsDetailModal(news) {
@@ -190,67 +323,30 @@ const NewsManager = {
                     
                     <!-- Content -->
                     <div class="p-8">
-                        <!-- Main Images -->
-                        ${this.createMainImages(news.images)}
-                        
-                        <!-- Article Content -->
-                        <div class="prose prose-lg max-w-none mt-8">
-                            ${this.renderNewsContent(news.content)}
+                        <!-- Summary -->
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-lg text-gray-700 leading-relaxed">${news.summary}</p>
                         </div>
                         
-                        <!-- Image Gallery -->
-                        ${this.createImageGallery(news.gallery)}
-                        
-                        <!-- Links Section -->
-                        ${this.createLinksSection(news.links)}
+                        ${news.content ? this.renderNewsContent(news.content) : ''}
                         
                         <!-- Tags -->
-                        ${this.createTagsSection(news.tags)}
+                        ${news.tags && news.tags.length > 0 ? `
+                            <div class="mt-8 pt-8 border-t">
+                                <div class="flex flex-wrap gap-2">
+                                    ${news.tags.map(tag => `
+                                        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                                            #${tag}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
                         
-                        <!-- Related News -->
-                        ${this.createRelatedNews(news.related_news)}
+                        <!-- Links -->
+                        ${news.links && news.links.length > 0 ? this.createLinksSection(news.links) : ''}
                     </div>
                 </div>
-            </div>
-        `;
-    },
-    
-    createMainImages(images) {
-        if (!images || images.length === 0) return '';
-        
-        if (images.length === 1) {
-            return `
-                <figure class="mb-8">
-                    <img src="${images[0].url}" 
-                         alt="${images[0].alt}"
-                         class="w-full rounded-lg shadow-lg"
-                         onerror="this.onerror=null; this.parentElement.style.display='none'">
-                    ${images[0].caption ? `
-                        <figcaption class="text-center text-sm text-gray-600 mt-3">
-                            ${images[0].caption}
-                        </figcaption>
-                    ` : ''}
-                </figure>
-            `;
-        }
-        
-        // Multiple images - create a grid
-        return `
-            <div class="grid ${images.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-4 mb-8">
-                ${images.map(img => `
-                    <figure>
-                        <img src="${img.url}" 
-                             alt="${img.alt}"
-                             class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
-                             onclick="NewsManager.openImageLightbox('${img.url}')"
-                             onerror="this.onerror=null; this.style.display='none'">
-                        ${img.caption ? `
-                            <figcaption class="text-xs text-gray-600 mt-2 text-center">
-                                ${img.caption}
-                            </figcaption>
-                        ` : ''}
-                    </figure>
-                `).join('')}
             </div>
         `;
     },
@@ -258,7 +354,7 @@ const NewsManager = {
     renderNewsContent(content) {
         if (!content) return '';
         
-        let html = '';
+        let html = '<div class="mt-8 prose prose-lg max-w-none">';
         
         // Paragraphs
         if (content.paragraphs) {
@@ -282,65 +378,13 @@ const NewsManager = {
             `;
         }
         
-        // Quotes
-        if (content.quotes) {
-            content.quotes.forEach(quote => {
-                html += `
-                    <blockquote class="border-l-4 border-gray-300 pl-6 py-2 my-6 italic">
-                        <p class="text-gray-700 mb-2">"${quote.text}"</p>
-                        <footer class="text-sm text-gray-600">— ${quote.author}</footer>
-                    </blockquote>
-                `;
-            });
-        }
-        
-        // List Sections
-        if (content.list_sections) {
-            content.list_sections.forEach(section => {
-                html += `
-                    <div class="my-6">
-                        <h3 class="font-semibold text-brand-navy mb-3">${section.title}</h3>
-                        <ul class="space-y-2">
-                            ${section.items.map(item => `
-                                <li class="flex items-start">
-                                    <span class="text-brand-accent mr-2">•</span>
-                                    <span class="text-gray-700">${item}</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-                `;
-            });
-        }
-        
+        html += '</div>';
         return html;
     },
     
-    createImageGallery(gallery) {
-        if (!gallery || !gallery.images || gallery.images.length === 0) return '';
-        
-        return `
-            <div class="my-8 border-t pt-8">
-                <h3 class="font-semibold text-brand-navy mb-4">${gallery.title || 'Photo Gallery'}</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="image-gallery">
-                    ${gallery.images.map((img, idx) => `
-                        <div class="cursor-pointer hover:opacity-90 transition-opacity"
-                             onclick="NewsManager.openGalleryLightbox(${idx})">
-                            <img src="${img.thumbnail || img.url}" 
-                                 alt="${img.caption}"
-                                 class="w-full h-32 object-cover rounded-lg shadow-md">
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-    },
-    
     createLinksSection(links) {
-        if (!links || links.length === 0) return '';
-        
         return `
-            <div class="my-8 p-6 bg-gray-50 rounded-lg">
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h3 class="font-semibold text-brand-navy mb-4">Related Links</h3>
                 <div class="space-y-2">
                     ${links.map(link => `
@@ -358,56 +402,6 @@ const NewsManager = {
         `;
     },
     
-    createTagsSection(tags) {
-        if (!tags || tags.length === 0) return '';
-        
-        return `
-            <div class="my-6">
-                <div class="flex flex-wrap gap-2">
-                    ${tags.map(tag => `
-                        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
-                            #${tag}
-                        </span>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-    },
-    
-    createRelatedNews(relatedIds) {
-        if (!relatedIds || relatedIds.length === 0) return '';
-        
-        const relatedNews = relatedIds
-            .map(id => this.data.news.find(n => n.id === id))
-            .filter(n => n);
-        
-        if (relatedNews.length === 0) return '';
-        
-        return `
-            <div class="my-8 pt-8 border-t">
-                <h3 class="font-semibold text-brand-navy mb-4">Related News</h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    ${relatedNews.map(news => `
-                        <a href="#" onclick="event.preventDefault(); NewsManager.openNewsDetail('${news.id}')"
-                           class="block p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                            <div class="flex items-start">
-                                ${news.images && news.images[0] ? `
-                                    <img src="${news.images[0].url}" 
-                                         alt="${news.title}"
-                                         class="w-20 h-20 object-cover rounded mr-4 flex-shrink-0">
-                                ` : ''}
-                                <div class="flex-1">
-                                    <h4 class="font-medium text-brand-navy mb-1">${news.title}</h4>
-                                    <p class="text-sm text-gray-600">${this.formatDate(news.date)}</p>
-                                </div>
-                            </div>
-                        </a>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-    },
-    
     closeNewsDetail() {
         const modal = document.getElementById('news-detail-modal');
         if (modal) {
@@ -417,140 +411,6 @@ const NewsManager = {
         }
     },
     
-    openImageLightbox(imageUrl) {
-        // Create lightbox for single image
-        const lightbox = document.createElement('div');
-        lightbox.className = 'fixed inset-0 z-[60] bg-black bg-opacity-90 flex items-center justify-center p-4';
-        lightbox.onclick = () => lightbox.remove();
-        
-        lightbox.innerHTML = `
-            <img src="${imageUrl}" class="max-w-full max-h-full object-contain">
-            <button onclick="this.parentElement.remove()" 
-                    class="absolute top-4 right-4 bg-white rounded-full p-2">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        `;
-        
-        document.body.appendChild(lightbox);
-    },
-    
-    openGalleryLightbox(startIndex) {
-        const news = this.data.news.find(n => n.id === this.currentNewsId);
-        if (!news || !news.gallery) return;
-        
-        // Create gallery lightbox with navigation
-        let currentIndex = startIndex;
-        
-        const lightbox = document.createElement('div');
-        lightbox.id = 'gallery-lightbox';
-        lightbox.className = 'fixed inset-0 z-[60] bg-black bg-opacity-90 flex items-center justify-center';
-        
-        const updateImage = () => {
-            const img = news.gallery.images[currentIndex];
-            lightbox.innerHTML = `
-                <div class="relative max-w-6xl w-full h-full flex items-center justify-center p-4">
-                    <img src="${img.url}" class="max-w-full max-h-full object-contain">
-                    
-                    <!-- Navigation -->
-                    <button onclick="NewsManager.galleryPrev()" 
-                            class="absolute left-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <button onclick="NewsManager.galleryNext()" 
-                            class="absolute right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                    
-                    <!-- Close button -->
-                    <button onclick="NewsManager.closeGalleryLightbox()" 
-                            class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    
-                    <!-- Caption -->
-                    ${img.caption ? `
-                        <div class="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur text-white p-4 rounded-lg">
-                            <p class="text-center">${img.caption}</p>
-                            <p class="text-center text-sm mt-2">${currentIndex + 1} / ${news.gallery.images.length}</p>
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-        };
-        
-        // Store navigation functions
-        this.galleryPrev = () => {
-            currentIndex = (currentIndex - 1 + news.gallery.images.length) % news.gallery.images.length;
-            updateImage();
-        };
-        
-        this.galleryNext = () => {
-            currentIndex = (currentIndex + 1) % news.gallery.images.length;
-            updateImage();
-        };
-        
-        this.closeGalleryLightbox = () => {
-            lightbox.remove();
-        };
-        
-        updateImage();
-        document.body.appendChild(lightbox);
-        
-        // Keyboard navigation
-        const handleKeyboard = (e) => {
-            if (e.key === 'ArrowLeft') this.galleryPrev();
-            if (e.key === 'ArrowRight') this.galleryNext();
-            if (e.key === 'Escape') {
-                this.closeGalleryLightbox();
-                document.removeEventListener('keydown', handleKeyboard);
-            }
-        };
-        document.addEventListener('keydown', handleKeyboard);
-    },
-    
-    initFilters() {
-        const filterContainer = document.getElementById('news-filters');
-        if (!filterContainer) return;
-        
-        const categories = Object.entries(this.data.categories);
-        
-        filterContainer.innerHTML = `
-            <button onclick="NewsManager.filterByCategory('all')" 
-                    class="filter-btn active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg">
-                All
-            </button>
-            ${categories.map(([key, cat]) => `
-                <button onclick="NewsManager.filterByCategory('${key}')" 
-                        class="filter-btn px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
-                    ${cat.name}
-                </button>
-            `).join('')}
-        `;
-    },
-    
-    filterByCategory(category) {
-        this.currentFilter = category;
-        
-        // Update filter buttons
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.remove('active', 'bg-brand-accent', 'text-white');
-            btn.classList.add('bg-gray-200', 'text-gray-700');
-        });
-        event.target.classList.add('active', 'bg-brand-accent', 'text-white');
-        event.target.classList.remove('bg-gray-200', 'text-gray-700');
-        
-        // Re-render with filter
-        this.render();
-    },
-    
     getLinkIcon(type) {
         const icons = {
             paper: `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -558,10 +418,7 @@ const NewsManager = {
                     </svg>`,
             external: `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                       </svg>`,
-            video: `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>`
+                       </svg>`
         };
         return icons[type] || icons.external;
     },
@@ -581,7 +438,8 @@ const NewsManager = {
     
     formatDate(dateString) {
         const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
     },
     
     bindEvents() {

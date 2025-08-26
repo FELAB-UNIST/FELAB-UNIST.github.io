@@ -1,143 +1,340 @@
 {
   "news": [
     {
-      "id": "best-poster-icaif-2024",
-      "date": "2024-11-15",
+      "id": "tae-nrf-grant-2024",
+      "date": "2024-09-01",
+      "category": "grant",
+      "featured": false,
+      "title": "MS Student Inwoo Tae Selected for NRF Graduate Research Fellowship",
+      "title_kr": "석사과정 태인우, 한국연구재단 석사과정생 연구장려금지원 선정",
+      "summary": "Inwoo Tae, MS student, has been selected for the National Research Foundation of Korea's Graduate Research Fellowship program for his research on dynamic embedding techniques for financial text data.",
+      "tags": ["grant", "NRF", "student achievement"],
+      "links": []
+    },
+    {
+      "id": "kdd-2024-finance-day",
+      "date": "2024-08-26",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Yongjae Lee Invited Speaker at KDD 2024 Finance Day",
+      "title_kr": "이용재 교수, KDD 2024 Finance Day 초청 발표",
+      "summary": "Professor Yongjae Lee delivered an invited talk at the KDD 2024 Finance Day, presenting recent research on machine learning applications in quantitative finance.",
+      "tags": ["conference", "KDD", "invited talk"],
+      "links": []
+    },
+    {
+      "id": "kams-best-paper-2024",
+      "date": "2024-08-14",
       "category": "award",
+      "featured": false,
+      "title": "Dr. Yoontae Hwang and Prof. Lee Win Best Paper Award at KAMS 2024",
+      "title_kr": "황윤태 박사, 이용재 교수, 2024 한국경영학회 최우수논문상 수상",
+      "summary": "Dr. Yoontae Hwang and Prof. Yongjae Lee received the Best Paper Award at the 2024 Korean Academic Society of Business Administration conference for their work on financial representation learning.",
+      "tags": ["award", "KAMS", "best paper"],
+      "links": []
+    },
+    {
+      "id": "ijcai-finrecsys-2024",
+      "date": "2024-08-04",
+      "category": "event",
+      "featured": false,
+      "title": "IJCAI-24 Workshop on Recommender Systems in Finance",
+      "title_kr": "IJCAI-24 Workshop on Recommender Systems in Finance (Fin-RecSys)",
+      "summary": "Our lab presented research at the IJCAI-24 Workshop on Recommender Systems in Finance, focusing on temporal graph networks for stock recommendations.",
+      "tags": ["workshop", "IJCAI", "recommender systems"],
+      "links": []
+    },
+    {
+      "id": "unist-kcis-mou-2024",
+      "date": "2024-06-14",
+      "category": "collaboration",
+      "featured": false,
+      "title": "UNIST Signs MOU with Korea Credit Information Services",
+      "title_kr": "UNIST-한국신용정보원 업무협약 체결",
+      "summary": "UNIST and Korea Credit Information Services signed an MOU for collaborative research on synthetic data generation for credit information and AI applications in finance.",
+      "tags": ["MOU", "collaboration", "KCIS"],
+      "links": []
+    },
+    {
+      "id": "qraft-hf-conferences-2024",
+      "date": "2024-05-24",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Presents at QRAFT AI Finance Conference and HF Housing Finance Conference",
+      "title_kr": "이용재 교수, QRAFT AI Finance Conference, 주택금융공사 창립 20주년 기념 HF 주택금융 컨퍼런스 초청 발표",
+      "summary": "Professor Lee delivered invited talks at two major finance conferences, discussing AI applications in asset management and housing finance.",
+      "tags": ["conference", "QRAFT", "housing finance"],
+      "links": []
+    },
+    {
+      "id": "sejong-fellowship-2024",
+      "date": "2024-05-17",
+      "category": "achievement",
       "featured": true,
-      "title": "Best Poster Award at ICAIF 2024",
-      "title_kr": "ICAIF 2024 최우수 포스터상 수상",
-      "summary": "Our PhD student Sohyeon Kwon received the Best Poster Award at the 5th ACM International Conference on AI in Finance for her work 'Can GANs Learn the Stylized Facts of Financial Time Series?'",
+      "title": "Yoontae Hwang and Dr. Hyungwoo Kong Selected for Sejong Science Fellowship",
+      "title_kr": "석박통합과정 황윤태, 박사후연구원 공형우 박사 세종과학펠로우십 선정!",
+      "summary": "PhD candidate Yoontae Hwang and postdoctoral researcher Dr. Hyungwoo Kong have been selected for the prestigious Sejong Science Fellowship. This highly competitive fellowship recognizes outstanding early-career researchers and provides substantial research funding for independent research projects. Their selection reflects the excellence of research conducted at our lab.",
       "content": {
         "paragraphs": [
-          "We are thrilled to announce that our PhD student Sohyeon Kwon has been awarded the prestigious Best Poster Award at the 5th ACM International Conference on AI in Finance (ICAIF 2024), held in Brooklyn, New York.",
-          "Her research, titled 'Can GANs Learn the Stylized Facts of Financial Time Series?', explores the capability of Generative Adversarial Networks to capture and reproduce the complex statistical properties observed in financial market data.",
-          "This recognition highlights our lab's commitment to advancing the intersection of artificial intelligence and quantitative finance. The work demonstrates novel approaches to generating synthetic financial data that preserves important market characteristics, which has significant implications for risk management and strategy testing."
+          "The Sejong Science Fellowship is one of Korea's most prestigious research grants for young scientists, providing up to 300 million KRW over 5 years.",
+          "Yoontae Hwang's research focuses on financial representation learning and household finance analytics, while Dr. Kong specializes in machine learning applications for portfolio optimization."
         ],
         "highlights": [
-          "Best Poster Award among 150+ submissions",
-          "Novel application of GANs in financial time series",
-          "Implications for synthetic data generation in finance"
+          "Two lab members selected in the same year - a rare achievement",
+          "5-year research funding support",
+          "Recognition of lab's research excellence in financial AI"
+        ]
+      },
+      "tags": ["fellowship", "Sejong", "achievement", "research grant"],
+      "links": []
+    },
+    {
+      "id": "fsc-committees-2024",
+      "date": "2024-03-28",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee Appointed to FSC AI Council and Future Finance Task Force",
+      "title_kr": "이용재 교수, 금융위원회 '금융권 AI 협의회', '미래대응금융 TF' 위원 위촉",
+      "summary": "Professor Yongjae Lee has been appointed as a member of the Financial Services Commission's AI Council and Future Finance Task Force.",
+      "tags": ["appointment", "FSC", "policy"],
+      "links": []
+    },
+    {
+      "id": "aaai-24-bridge-talk",
+      "date": "2024-02-20",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Invited Speaker at AAAI-24 Bridge Program on AI for Financial Services",
+      "title_kr": "이용재 교수, AAAI-24 Bridge Program on AI for Financial Services 초청 발표",
+      "summary": "Professor Lee presented at the AAAI-24 Bridge Program, discussing recent advances in AI applications for financial services.",
+      "tags": ["AAAI", "conference", "invited talk"],
+      "links": []
+    },
+    {
+      "id": "best-poster-icaif-2023",
+      "date": "2023-11-29",
+      "category": "award",
+      "featured": true,
+      "title": "MS Students Win Best Poster Award at ICAIF'23",
+      "title_kr": "석사과정 김선미, 김세영, 김예진 등 ICAIF'23 Best Poster Award 수상!",
+      "summary": "MS students Seonmi Kim, Seyoung Kim, and Yejin Kim received the Best Poster Award at the 4th ACM International Conference on AI in Finance (ICAIF'23) for their work 'LLMs Analyzing Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?'. This recognition highlights our lab's excellence in applying large language models to financial analysis.",
+      "content": {
+        "paragraphs": [
+          "We are thrilled to announce that our MS students have won the prestigious Best Poster Award at ICAIF'23, one of the premier conferences in AI and finance.",
+          "Their research explores how large language models like BERT and GPT can be used to extract valuable insights from financial analyst reports, demonstrating superior performance compared to traditional methods."
         ],
-        "quotes": [
-          {
-            "text": "This award reflects the hard work and innovation of our entire research team. We're pushing the boundaries of what's possible with AI in finance.",
-            "author": "Prof. Yongjae Lee"
-          }
+        "highlights": [
+          "Best Poster Award among 100+ submissions",
+          "Novel application of LLMs in financial text analysis",
+          "Collaboration between multiple lab members"
         ]
       },
-      "images": [
-        {
-          "url": "./public/images/news/icaif-2024-award.jpg",
-          "caption": "Sohyeon Kwon receiving the Best Poster Award",
-          "alt": "Award ceremony at ICAIF 2024"
-        },
-        {
-          "url": "./public/images/news/icaif-2024-poster.jpg",
-          "caption": "The award-winning poster presentation",
-          "alt": "Research poster display"
-        },
-        {
-          "url": "./public/images/news/icaif-2024-team.jpg",
-          "caption": "Lab members at ICAIF 2024",
-          "alt": "Team photo at conference"
-        }
-      ],
-      "gallery": {
-        "title": "Conference Highlights",
-        "images": [
-          {
-            "url": "./public/images/news/icaif-2024-venue.jpg",
-            "caption": "Conference venue in Brooklyn",
-            "thumbnail": "./public/images/news/thumbs/icaif-2024-venue-thumb.jpg"
-          },
-          {
-            "url": "./public/images/news/icaif-2024-presentation.jpg",
-            "caption": "Sohyeon presenting her research",
-            "thumbnail": "./public/images/news/thumbs/icaif-2024-presentation-thumb.jpg"
-          }
-        ]
-      },
+      "tags": ["award", "ICAIF", "best poster", "LLM", "financial analysis"],
       "links": [
         {
           "text": "Read the Paper",
-          "url": "https://doi.org/10.1145/3604237.3626888",
+          "url": "https://dl.acm.org/doi/10.1145/3604237.3627721",
           "type": "paper"
-        },
-        {
-          "text": "Conference Website",
-          "url": "https://ai-finance.org/icaif-24/",
-          "type": "external"
         }
-      ],
-      "tags": ["award", "conference", "ICAIF", "GANs", "time series"],
-      "related_news": ["aaai-2025-acceptance", "jpm-publications-2024"]
+      ]
     },
     {
-      "id": "aaai-2025-acceptance",
-      "date": "2025-01-10",
-      "category": "publication",
+      "id": "icaif-workshop-2023",
+      "date": "2023-11-27",
+      "category": "event",
       "featured": false,
-      "title": "Paper Accepted at AAAI 2025",
-      "title_kr": "AAAI 2025 논문 채택",
-      "summary": "Our paper 'Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset' has been accepted at AAAI-25 with 23.4% acceptance rate.",
-      "content": {
-        "paragraphs": [
-          "We are pleased to announce that our paper has been accepted for presentation at the 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25), one of the premier venues in AI research.",
-          "The paper introduces a novel approach using geodesic flow kernels for handling mixed-variable tabular datasets in semi-supervised learning settings, addressing a critical challenge in real-world machine learning applications."
-        ]
-      },
-      "images": [
-        {
-          "url": "./public/images/news/aaai-2025-logo.jpg",
-          "caption": "AAAI 2025 Conference",
-          "alt": "AAAI conference logo"
-        }
-      ],
-      "links": [
-        {
-          "text": "Paper Preprint",
-          "url": "https://arxiv.org/abs/paper-id",
-          "type": "paper"
-        }
-      ],
-      "tags": ["publication", "AAAI", "machine learning"],
-      "related_news": ["best-poster-icaif-2024"]
+      "title": "ICAIF'23 Workshop on ML for Investor Modelling and Recommender Systems",
+      "title_kr": "ICAIF'23 Workshop on ML for Investor Modelling and Recommender Systems",
+      "summary": "Our lab organized and participated in the ICAIF'23 workshop focusing on machine learning applications for investor modeling.",
+      "tags": ["workshop", "ICAIF", "machine learning"],
+      "links": []
     },
     {
-      "id": "graduates-december-2024",
-      "date": "2024-12-20",
+      "id": "junhyeong-toronto-2023",
+      "date": "2023-08-03",
       "category": "achievement",
       "featured": false,
-      "title": "Four MS Students Successfully Graduate",
-      "title_kr": "석사 4명 졸업",
-      "summary": "Congratulations to Yejin Kim, Seonmi Kim, Seyoung Kim, and Youngbin Lee on successfully defending their MS theses and joining industry positions.",
-      "content": {
-        "paragraphs": [
-          "We celebrate the graduation of four talented MS students who have successfully defended their theses and are moving on to exciting career opportunities in the industry.",
-          "Their research contributions span various areas including personalized stock recommendations, NFT recommendation systems, GANs-based anomaly detection, and temporal graph networks for financial applications."
-        ],
-        "list_sections": [
-          {
-            "title": "Graduates and Their Next Steps",
-            "items": [
-              "Yejin Kim - Data Scientist at Meritz Fire & Marine Insurance",
-              "Seonmi Kim - Data Scientist at NICE P&I",
-              "Seyoung Kim - Quant Researcher",
-              "Youngbin Lee - AI Researcher at elice"
-            ]
-          }
-        ]
-      },
-      "images": [
-        {
-          "url": "./public/images/news/graduation-2024.jpg",
-          "caption": "December 2024 Graduation Ceremony",
-          "alt": "Graduates in academic regalia"
-        }
-      ],
-      "tags": ["graduation", "achievement", "alumni"],
-      "related_news": []
+      "title": "PhD Student Junhyeong Lee Accepted to 2024 U of T AI Education Program",
+      "title_kr": "석박통합과정 이준형 2024 U of T AI융합 교육프로그램 최종 합격!",
+      "summary": "Junhyeong Lee has been accepted to the prestigious University of Toronto AI Education Program for 2024.",
+      "tags": ["education", "University of Toronto", "AI"],
+      "links": []
+    },
+    {
+      "id": "professor-award-2023",
+      "date": "2023-04-11",
+      "category": "award",
+      "featured": false,
+      "title": "Prof. Lee Receives Excellence in Teaching Award",
+      "title_kr": "이용재 교수님 우수교원상 수상!",
+      "summary": "Professor Yongjae Lee was recognized with the Excellence in Teaching Award for outstanding contributions to education.",
+      "tags": ["award", "teaching", "UNIST"],
+      "links": []
+    },
+    {
+      "id": "cmu-ai-program-2023",
+      "date": "2023-03-29",
+      "category": "achievement",
+      "featured": false,
+      "title": "MS Students Youngbin Lee and Yejin Kim Accepted to 2023 CMU AI Program",
+      "title_kr": "석사과정 이영빈, 김예진 2023 CMU AI 집중 교육프로그램 최종 합격!",
+      "summary": "Youngbin Lee and Yejin Kim have been accepted to the 2023 Carnegie Mellon University AI Intensive Education Program.",
+      "tags": ["education", "CMU", "AI"],
+      "links": []
+    },
+    {
+      "id": "fields-workshop-2023",
+      "date": "2023-02-16",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Presents at Fields Workshop on ML for Investor Modeling",
+      "title_kr": "이용재 교수, Fields Workshop on ML for Investor Modeling 발표",
+      "summary": "Professor Lee delivered a presentation at the Fields Institute Workshop on Machine Learning for Investor Modeling.",
+      "tags": ["workshop", "Fields Institute", "machine learning"],
+      "links": []
+    },
+    {
+      "id": "competition-wins-2022",
+      "date": "2022-12-17",
+      "category": "award",
+      "featured": false,
+      "title": "FE Lab Wins Multiple Competition Awards",
+      "title_kr": "UNIST FE Lab 경진대회 연달아 수상!! (황윤태, 박준표, 이영빈)",
+      "summary": "Lab members Yoontae Hwang, Junpyo Park, and Youngbin Lee won awards in multiple data science and finance competitions.",
+      "tags": ["competition", "award", "data science"],
+      "links": []
+    },
+    {
+      "id": "korea-quant-conference-2022",
+      "date": "2022-10-19",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Speaks at Korea Quant Investment Conference",
+      "title_kr": "이용재 교수, 한국 퀀트투자 컨퍼런스 발표 (마이데이터와 맞춤형 금융 서비스)",
+      "summary": "Professor Lee presented on 'MyData and Personalized Financial Services' at the Korea Quant Investment Conference.",
+      "tags": ["conference", "quant", "MyData"],
+      "links": []
+    },
+    {
+      "id": "bigstar-seminar-2022",
+      "date": "2022-09-23",
+      "category": "event",
+      "featured": false,
+      "title": "Yoontae Hwang Presents at BigStar Competition Seminar",
+      "title_kr": "석박통합과정 황윤태, 빅스타 경진대회 연계 세미나 발표 (장기 시계열 예측 최신연구동향)",
+      "summary": "PhD candidate Yoontae Hwang presented on 'Recent Research Trends in Long-term Time Series Forecasting' at the BigStar Competition Seminar.",
+      "tags": ["seminar", "time series", "BigStar"],
+      "links": []
+    },
+    {
+      "id": "hwang-nrf-grant-2022",
+      "date": "2022-05-10",
+      "category": "grant",
+      "featured": false,
+      "title": "Yoontae Hwang Selected for NRF Doctoral Research Fellowship",
+      "title_kr": "석박통합과정 황윤태, 한국연구재단 박사과정생 연구장려금지원 선정",
+      "summary": "PhD candidate Yoontae Hwang has been selected for the National Research Foundation's Doctoral Research Fellowship.",
+      "tags": ["grant", "NRF", "fellowship"],
+      "links": []
+    },
+    {
+      "id": "mirae-asset-award-2021",
+      "date": "2021-11-30",
+      "category": "award",
+      "featured": false,
+      "title": "Students Win Excellence Award at Mirae Asset Financial Big Data Festival",
+      "title_kr": "석사과정 권소현, 최민주, 학부 인턴 김세영 '미래에셋 금융 빅데이터 페스티벌' 장려상 수상",
+      "summary": "MS students Sohyeon Kwon, Minjoo Choi, and undergraduate intern Seyoung Kim won the Excellence Award at the Mirae Asset Financial Big Data Festival.",
+      "tags": ["competition", "Mirae Asset", "big data"],
+      "links": []
+    },
+    {
+      "id": "kiri-seminar-2021",
+      "date": "2021-04-30",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Delivers Invited Seminar at Korea Insurance Research Institute",
+      "title_kr": "이용재 교수, 보험연구원 초청 세미나 발표 (AI 자산관리와 보험)",
+      "summary": "Professor Lee presented on 'AI Asset Management and Insurance' at an invited seminar at the Korea Insurance Research Institute.",
+      "tags": ["seminar", "KIRI", "insurance"],
+      "links": []
+    },
+    {
+      "id": "new-members-2021",
+      "date": "2021-03-02",
+      "category": "general",
+      "featured": false,
+      "title": "FE Lab Welcomes New Graduate Students",
+      "title_kr": "UNIST FE Lab, 석박통합과정 박준표, 석사과정 권소현, 최민주 영입",
+      "summary": "The lab welcomes new members: PhD candidate Junpyo Park and MS students Sohyeon Kwon and Minjoo Choi.",
+      "tags": ["new members", "recruitment"],
+      "links": []
+    },
+    {
+      "id": "statistics-award-2020",
+      "date": "2020-12-29",
+      "category": "award",
+      "featured": false,
+      "title": "Yoontae Hwang Receives Commissioner's Award from Statistics Korea",
+      "title_kr": "석박통합과정 황윤태, 데이터 분석대회에서 통계청장 표창",
+      "summary": "PhD candidate Yoontae Hwang received the Commissioner's Award from Statistics Korea in a national data analysis competition.",
+      "tags": ["award", "Statistics Korea", "data analysis"],
+      "links": []
+    },
+    {
+      "id": "koscom-mou-2020",
+      "date": "2020-11-24",
+      "category": "collaboration",
+      "featured": false,
+      "title": "UNIST Industrial Engineering Signs MOU with KOSCOM",
+      "title_kr": "UNIST 산업공학과 - 코스콤 MOU 체결",
+      "summary": "UNIST Department of Industrial Engineering signed an MOU with KOSCOM for collaboration in financial technology research.",
+      "tags": ["MOU", "KOSCOM", "collaboration"],
+      "links": []
+    },
+    {
+      "id": "lab-founding-2020",
+      "date": "2020-09-06",
+      "category": "general",
+      "featured": false,
+      "title": "UNIST Financial Engineering Lab in the Making",
+      "title_kr": "UNIST FE Lab in the making",
+      "summary": "The foundations of UNIST Financial Engineering Lab are being established with initial research directions and infrastructure.",
+      "tags": ["lab founding", "milestone"],
+      "links": []
+    },
+    {
+      "id": "hwang-joins-2020",
+      "date": "2020-03-01",
+      "category": "general",
+      "featured": false,
+      "title": "Yoontae Hwang Joins FE Lab as First PhD Student",
+      "title_kr": "UNIST FE Lab, 석박통합과정으로 황윤태 영입",
+      "summary": "Yoontae Hwang joins the lab as the first PhD student, marking an important milestone in the lab's growth.",
+      "tags": ["new member", "PhD student"],
+      "links": []
+    },
+    {
+      "id": "jfds-editorial-2020",
+      "date": "2020-02-19",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee Joins JFDS Editorial Board",
+      "title_kr": "이용재 교수, JFDS Editorial Board 입성",
+      "summary": "Professor Yongjae Lee has been appointed to the Editorial Board of the Journal of Finance and Data Science.",
+      "tags": ["editorial board", "JFDS", "appointment"],
+      "links": []
+    },
+    {
+      "id": "db-competition-2019",
+      "date": "2019-05-17",
+      "category": "award",
+      "featured": false,
+      "title": "Undergraduate Interns Win Excellence Award at DB Financial Competition",
+      "title_kr": "학부 연구인턴 윤창희 & 손준호 2019 DB 금융제안공모전 우수상 (2등) 수상",
+      "summary": "Undergraduate research interns Changhee Yoon and Junho Son won the Excellence Award (2nd place) at the 2019 DB Financial Proposal Competition.",
+      "tags": ["competition", "award", "undergraduate"],
+      "links": []
     }
   ],
   "categories": {
@@ -145,11 +342,6 @@
       "name": "Awards",
       "color": "amber",
       "icon": "trophy"
-    },
-    "publication": {
-      "name": "Publications",
-      "color": "blue",
-      "icon": "document"
     },
     "achievement": {
       "name": "Achievements",
