@@ -5,9 +5,9 @@
         "id": "yongjae-lee",
         "name": "Yongjae Lee",
         "position": "Professor",
-        "image": "https://placehold.co/200x200/4338CA/F7F9FC?text=YL",
+        "image": "./images/members/yjlee.png",
         "bio": "Professor at UNIST Financial Engineering Lab",
-        "email": "",
+        "email": "yongjae.lee@unist.ac.kr",
         "website": ""
       }
     ],
@@ -16,28 +16,28 @@
         "id": "junhyeong-lee",
         "name": "Junhyeong Lee",
         "position": "Ph.D-M.S Combined",
-        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=JL",
+        "image": "./images/members/jhlee.png",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
         "position": "Ph.D-M.S Combined",
-        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=IT",
+        "image": "./images/members/iwtae.png",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "juchan-kim",
         "name": "Juchan Kim",
         "position": "Ph.D-M.S Combined",
-        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=JK",
+        "image": "./images/members/jckim.jpg",
         "bio": "Ph.D-M.S Combined Student"
       },
       {
         "id": "kangmin-kim",
         "name": "Kangmin Kim",
         "position": "Ph.D-M.S Combined",
-        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=KK",
+        "image": "./images/members/kmkim.jpg",
         "bio": "Ph.D-M.S Combined Student"
       }
     ],
@@ -46,7 +46,7 @@
         "id": "hoyoung-lee",
         "name": "Hoyoung Lee",
         "position": "M.S. Student",
-        "image": "https://placehold.co/200x200/0B1220/F7F9FC?text=HL",
+        "image": "./images/members/hylee.jpg",
         "bio": "M.S. Student"
       }
     ]
