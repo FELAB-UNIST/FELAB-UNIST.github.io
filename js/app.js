@@ -10,7 +10,6 @@ const App = {
         'members': 'pages/members.html',
         'publications': 'pages/publications.html',
         'projects': 'pages/projects.html',
-        'activities': 'pages/activities.html',
         'journal-club': 'pages/journal-club.html',
         'news': 'pages/news.html',
         'join-us': 'pages/join-us.html'
@@ -155,6 +154,11 @@ const App = {
             case 'members':
                 if (typeof MembersManager !== 'undefined') {
                     MembersManager.init();
+                }
+                break;
+            case 'projects':
+                if (typeof ProjectsManager !== 'undefined') {
+                    ProjectsManager.init();
                 }
                 break;
             // Add more cases as needed
