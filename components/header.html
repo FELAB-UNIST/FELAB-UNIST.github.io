@@ -1,0 +1,50 @@
+<!-- Header Component -->
+<header id="main-header" class="bg-brand-off-white/80 backdrop-blur-lg sticky top-0 z-40 w-full border-b border-gray-200">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" data-tab="home" class="nav-link flex items-center gap-3">
+                    <div class="bg-brand-navy p-2 rounded-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 16L4 4M4 16L12 20L20 16L20 4M4 16L12 12.5M20 4L12 8L4 4M12 8V12.5" stroke="#F7F9FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="font-bold text-lg text-brand-navy tracking-tight leading-tight">
+                        UNIST<br>Financial Engineering Lab
+                    </div>
+                </a>
+            </div>
+            <nav class="hidden md:flex md:items-center md:space-x-6 lg:space-x-8">
+                <a href="#" data-tab="home" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Home</a>
+                <a href="#" data-tab="members" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Members</a>
+                <a href="#" data-tab="publications" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Publications</a>
+                <a href="#" data-tab="projects" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Projects</a>
+                <a href="#" data-tab="activities" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Activities</a>
+                <a href="#" data-tab="journal-club" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Journal Club</a>
+                <a href="#" data-tab="news" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">News</a>
+            </nav>
+            <div class="flex items-center">
+                <a href="#" data-tab="join-us" class="nav-link hidden sm:inline-block bg-brand-accent text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm hover:bg-opacity-90 transition-all">Join Us</a>
+                <button id="mobile-menu-button" class="md:hidden ml-4 p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset ring-brand-accent">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#" data-tab="home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Home</a>
+            <a href="#" data-tab="members" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Members</a>
+            <a href="#" data-tab="publications" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Publications</a>
+            <a href="#" data-tab="projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Projects</a>
+            <a href="#" data-tab="activities" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Activities</a>
+            <a href="#" data-tab="journal-club" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Journal Club</a>
+            <a href="#" data-tab="news" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">News</a>
+            <a href="#" data-tab="join-us" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-brand-accent hover:bg-blue-100">Join Us</a>
+        </div>
+    </div>
+</header>

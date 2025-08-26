@@ -1,0 +1,218 @@
+<!-- News Page -->
+<section class="py-16 md:py-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-brand-navy text-center">News & Announcements</h2>
+        <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">
+            Stay updated with our latest achievements, publications, and lab announcements.
+        </p>
+        
+        <!-- Featured News -->
+        <div class="mt-12 bg-gradient-to-r from-brand-navy to-brand-accent rounded-2xl p-8 text-white">
+            <div class="flex items-center mb-4">
+                <span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full font-semibold">Featured</span>
+                <span class="ml-3 text-white/80 text-sm">November 2024</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">
+                🏆 Best Poster Award at ICAIF 2024
+            </h3>
+            <p class="text-white/90 text-lg mb-6">
+                Our PhD student Sohyeon Kwon received the Best Poster Award at the 5th ACM International Conference 
+                on AI in Finance for her work "Can GANs Learn the Stylized Facts of Financial Time Series?". 
+                This recognition highlights our lab's contribution to advancing AI applications in finance.
+            </p>
+            <button onclick="openDrawer('news')" class="bg-white text-brand-navy px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Read More →
+            </button>
+        </div>
+        
+        <!-- Recent News Grid -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-brand-navy mb-8">Recent Updates</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- News Item 1 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Publication</span>
+                            <time class="ml-auto text-sm text-gray-500">January 2025</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            Paper Accepted at AAAI 2025
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Our paper "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset" 
+                            has been accepted at AAAI-25 with 23.4% acceptance rate.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">Learn more →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 2 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Achievement</span>
+                            <time class="ml-auto text-sm text-gray-500">December 2024</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            4 Students Graduate with MS Degrees
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Congratulations to Yejin Kim, Seonmi Kim, Seyoung Kim, and Youngbin Lee on successfully 
+                            defending their MS theses and joining industry positions.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">View details →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 3 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Collaboration</span>
+                            <time class="ml-auto text-sm text-gray-500">November 2024</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            New Industry Partnership Announced
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            We're excited to announce a new research collaboration with major Korean financial institutions 
+                            on AI-driven risk management systems.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">Read more →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 4 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Event</span>
+                            <time class="ml-auto text-sm text-gray-500">October 2024</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            Guest Lecture by Prof. Frank J. Fabozzi
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Renowned finance professor Frank J. Fabozzi delivered a special lecture on 
+                            "Machine Learning for Portfolio Optimization" to our lab.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">Watch recording →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 5 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Publication</span>
+                            <time class="ml-auto text-sm text-gray-500">September 2024</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            Two Papers in Journal of Portfolio Management
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Our review papers on optimization models and machine learning for portfolio management 
+                            have been published in the prestigious Journal of Portfolio Management.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">Access papers →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 6 -->
+                <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Grant</span>
+                            <time class="ml-auto text-sm text-gray-500">August 2024</time>
+                        </div>
+                        <h4 class="font-semibold text-brand-navy mb-2">
+                            Research Grant Awarded
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Our lab received a significant research grant from the National Research Foundation 
+                            for our project on AI-driven financial risk management.
+                        </p>
+                        <a href="#" class="text-brand-accent hover:underline text-sm font-semibold">Learn more →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <!-- News Archive -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-brand-navy mb-8">News Archive</h3>
+            
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="divide-y divide-gray-200">
+                    <a href="#" class="block hover:bg-gray-50 p-6 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">General</span>
+                                    <time class="ml-3 text-sm text-gray-500">July 2024</time>
+                                </div>
+                                <h4 class="font-semibold text-brand-navy">Summer Research Bootcamp Successfully Completed</h4>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="block hover:bg-gray-50 p-6 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Publication</span>
+                                    <time class="ml-3 text-sm text-gray-500">June 2024</time>
+                                </div>
+                                <h4 class="font-semibold text-brand-navy">Working Paper on Temporal Representation Learning Released</h4>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="block hover:bg-gray-50 p-6 transition-colors">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-2">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Achievement</span>
+                                    <time class="ml-3 text-sm text-gray-500">May 2024</time>
+                                </div>
+                                <h4 class="font-semibold text-brand-navy">Dr. Yoontae Hwang Completes PhD and Joins Pusan National University</h4>
+                            </div>
+                            <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <button class="text-brand-accent hover:underline font-semibold">
+                    View All News →
+                </button>
+            </div>
+        </div>
+        
+        <!-- Newsletter Signup -->
+        <div class="mt-16 bg-brand-navy rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Stay Connected</h3>
+            <p class="text-white/80 mb-6 max-w-2xl mx-auto">
+                Subscribe to our newsletter to receive updates about our latest research, publications, and events.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" 
+                       class="flex-1 px-4 py-2 rounded-lg text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-accent">
+                <button class="bg-brand-accent text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

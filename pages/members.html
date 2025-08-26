@@ -1,0 +1,82 @@
+<!-- Members Page -->
+<section class="py-16 md:py-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-brand-navy text-center">Our People</h2>
+        <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">
+            Meet the researchers, students, and collaborators who drive our lab's innovation.
+        </p>
+        
+        <!-- Current Members -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-brand-navy mb-8">Current Members</h3>
+            
+            <!-- Professor -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">Professor</h4>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow p-6 cursor-pointer" onclick="openDrawer('member-yongjae-lee')">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/80x80/4338CA/F7F9FC?text=YL" alt="Yongjae Lee" class="w-20 h-20 rounded-full">
+                            <div>
+                                <h5 class="font-semibold text-brand-navy">Yongjae Lee</h5>
+                                <p class="text-sm text-gray-600">Professor</p>
+                                <p class="text-xs text-gray-500 mt-1">Financial Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PhD Students -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">Ph.D Students</h4>
+                <div id="phd-students-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="text-center py-4">
+                        <span class="text-gray-500">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MS Students -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">M.S. Students</h4>
+                <div id="ms-students-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="text-center py-4">
+                        <span class="text-gray-500">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alumni -->
+        <div class="mt-20 border-t pt-16">
+            <h3 class="text-2xl font-bold text-brand-navy mb-8">Alumni</h3>
+            
+            <!-- PhD Alumni -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">Ph.D Alumni</h4>
+                <div id="phd-alumni-container" class="space-y-4">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- MS Alumni -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">M.S. Alumni</h4>
+                <div id="ms-alumni-container" class="space-y-4">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Research Professors -->
+            <div class="mb-12">
+                <h4 class="text-lg font-semibold text-gray-700 mb-6 uppercase tracking-wider">Former Research Professors</h4>
+                <div id="research-professors-container" class="space-y-4">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
