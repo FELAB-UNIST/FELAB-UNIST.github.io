@@ -12,44 +12,42 @@ const JournalClubManager = {
         if (this.initialized) return;
         
         console.log('Initializing Journal Club Manager...');
-        await this.loadData();
-        this.render();
-        this.initSearch();
-        this.initFilters();
-        this.updateStatistics();
-        this.initialized = true;
+        try {
+            await this.loadData();
+            this.render();
+            this.initSearch();
+            this.initFilters();
+            this.updateStatistics();
+            this.initialized = true;
+            console.log('Journal Club Manager initialized successfully');
+        } catch (error) {
+            console.error('Failed to initialize Journal Club Manager:', error);
+            this.showError();
+        }
     },
     
     async loadData() {
         try {
-            // Sample data based on your format - replace with actual fetch when ready
-            const sampleData = [
-                {
-                    "Date": "2025년 08월 21일",
-                    "Paper title": "Retrieval augmented diffusion models for time series forecasting",
-                    "Presenter": "김주찬",
-                    "Why?": "Retrieval + Time series forecasting 컨셉을 가져왔지만 백본으로 디퓨전 모델을 사용했다는 점에서 신기해서 가져와봤습니다.",
-                    "Paper URL": "https://arxiv.org/abs/2410.18712"
-                },
-                {
-                    "Date": "2025년 08월 21일",
-                    "Paper title": "mKG-RAG: Multimodal Knowledge Graph-Enhanced RAG for Visual Question Answering",
-                    "Presenter": "태인우",
-                    "Why?": "위 논문은 멀티모달 정보가 혼재된 환경에서 보다 신뢰성 있는 RAG(Retrieval-Augmented Generation)를 구현하기 위해 멀티모달 Knowledge Graph 기반 RAG(mKG-RAG) 프레임워크를 제안합니다.",
-                    "Paper URL": "https://www.arxiv.org/pdf/2508.05318"
-                }
-            ];
+            console.log('Loading journal club data...');
+            const response = await fetch('./data/journal-club.json');
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const jsonData = await response.json();
+            console.log('Raw data loaded:', jsonData);
             
             // Transform the data to match our structure
-            this.data = sampleData.map((item, index) => ({
+            this.data = jsonData.map((item, index) => ({
                 id: `jc${String(index + 1).padStart(3, '0')}`,
-                date: this.parseDate(item['Date']),
-                title: item['Paper title'],
-                presenter: item['Presenter'],
-                topic: this.extractTopic(item['Paper title'], item['Why?']),
-                keywords: this.extractKeywords(item['Paper title'], item['Why?']),
-                paper_link: item['Paper URL'],
-                why: item['Why?'],
+                date: this.parseDate(item.date),
+                title: item.title,
+                presenter: item.presenter,
+                topic: this.extractTopic(item.title, item.reason),
+                keywords: this.extractKeywords(item.title, item.reason),
+                paper_link: item.url,
+                why: item.reason,
                 status: 'discussed'
             }));
             
@@ -57,37 +55,112 @@ const JournalClubManager = {
             this.data.sort((a, b) => new Date(b.date) - new Date(a.date));
             this.filteredData = [...this.data];
             
-            console.log(`Loaded ${this.data.length} papers`);
+            console.log(`Successfully loaded ${this.data.length} papers`);
         } catch (error) {
             console.error('Failed to load journal club data:', error);
-            this.data = [];
-            this.filteredData = [];
+            // Fallback to sample data for demo
+            this.loadSampleData();
         }
+    },
+    
+    loadSampleData() {
+        console.log('Loading sample data as fallback...');
+        const sampleData = [
+            {
+                "date": "2025년 08월 21일",
+                "title": "Retrieval augmented diffusion models for time series forecasting",
+                "presenter": "Juchan Kim",
+                "reason": "Retrieval + Time series forecasting 컨셉을 가져왔지만 백본으로 디퓨전 모델을 사용했다는 점에서 신기해서 가져와봤습니다.",
+                "url": "https://arxiv.org/abs/2410.18712"
+            },
+            {
+                "date": "2025년 08월 21일",
+                "title": "mKG-RAG: Multimodal Knowledge Graph-Enhanced RAG for Visual Question Answering",
+                "presenter": "Inwoo Tae",
+                "reason": "위 논문은 멀티모달 정보가 혼재된 환경에서 보다 신뢰성 있는 RAG를 구현하기 위해 멀티모달 Knowledge Graph 기반 RAG 프레임워크를 제안합니다.",
+                "url": "https://www.arxiv.org/pdf/2508.05318"
+            },
+            {
+                "date": "2025년 08월 12일",
+                "title": "TRACE: Grounding Time Series in Context for Multimodal Embedding and Retrieval",
+                "presenter": "Junhyeong Lee",
+                "reason": "시계열에서의 Multimodal retreival 연구입니다. Time series forecasting이 LLMs을 이용하도록 많이 연구되면서 Times series retrieval system까지 나타나게 되었습니다.",
+                "url": "https://arxiv.org/pdf/2506.09114"
+            }
+        ];
+        
+        // Transform the sample data
+        this.data = sampleData.map((item, index) => ({
+            id: `jc${String(index + 1).padStart(3, '0')}`,
+            date: this.parseDate(item.date),
+            title: item.title,
+            presenter: item.presenter,
+            topic: this.extractTopic(item.title, item.reason),
+            keywords: this.extractKeywords(item.title, item.reason),
+            paper_link: item.url,
+            why: item.reason,
+            status: 'discussed'
+        }));
+        
+        // Sort by date (newest first)
+        this.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        this.filteredData = [...this.data];
+    },
+    
+    showError() {
+        const containers = ['recent-papers-grid', 'papers-table-container'];
+        containers.forEach(containerId => {
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.innerHTML = `
+                    <div class="text-center py-8 text-red-500">
+                        <div class="text-4xl mb-4">⚠️</div>
+                        <p class="text-lg font-semibold mb-2">Failed to load journal club data</p>
+                        <p class="text-sm">Please check if the data file exists and is properly formatted</p>
+                    </div>
+                `;
+            }
+        });
     },
     
     parseDate(dateString) {
-        // Parse Korean date format "2025년 08월 21일" to ISO format
-        const match = dateString.match(/(\d{4})년\s*(\d{2})월\s*(\d{2})일/);
-        if (match) {
-            return `${match[1]}-${match[2]}-${match[3]}`;
+        try {
+            // Parse Korean date format "2025년 08월 21일" to ISO format
+            const match = dateString.match(/(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일/);
+            if (match) {
+                const year = match[1];
+                const month = String(match[2]).padStart(2, '0');
+                const day = String(match[3]).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            }
+            
+            // If it's already in ISO format or another standard format, try to parse it
+            const date = new Date(dateString);
+            if (!isNaN(date.getTime())) {
+                return date.toISOString().split('T')[0];
+            }
+            
+            // Fallback to today's date
+            return new Date().toISOString().split('T')[0];
+        } catch (error) {
+            console.warn('Failed to parse date:', dateString, error);
+            return new Date().toISOString().split('T')[0];
         }
-        return dateString;
     },
     
-    extractTopic(title, whyText) {
-        // Extract topic from title and why text
+    extractTopic(title, reasonText = '') {
         const topics = {
-            'Time Series': ['time series', 'forecasting', '시계열', '예측'],
-            'Deep Learning': ['deep learning', 'neural', 'diffusion', '딥러닝', '신경망'],
-            'NLP & AI': ['RAG', 'retrieval', 'LLM', 'language model', 'question answering', 'multimodal'],
-            'Knowledge Graph': ['knowledge graph', 'KG', '지식 그래프'],
-            'Machine Learning': ['machine learning', 'ML', '머신러닝'],
+            'Time Series': ['time series', 'forecasting', '시계열', '예측', 'temporal', 'TRACE'],
+            'Deep Learning': ['deep learning', 'neural', 'diffusion', '딥러닝', '신경망', 'transformer'],
+            'NLP & AI': ['RAG', 'retrieval', 'LLM', 'language model', 'question answering', 'multimodal', 'LLMs'],
+            'Knowledge Graph': ['knowledge graph', 'KG', '지식 그래프', 'mKG-RAG'],
+            'Machine Learning': ['machine learning', 'ML', '머신러닝', 'embedding'],
             'Computer Vision': ['visual', 'image', '이미지', '시각'],
             'Optimization': ['optimization', '최적화'],
             'Finance': ['financial', 'portfolio', '금융', '포트폴리오']
         };
         
-        const searchText = (title + ' ' + (whyText || '')).toLowerCase();
+        const searchText = (title + ' ' + (reasonText || '')).toLowerCase();
         
         for (const [topic, keywords] of Object.entries(topics)) {
             if (keywords.some(keyword => searchText.includes(keyword.toLowerCase()))) {
@@ -98,15 +171,14 @@ const JournalClubManager = {
         return 'General';
     },
     
-    extractKeywords(title, whyText) {
-        // Extract meaningful keywords from title and why text
+    extractKeywords(title, reasonText = '') {
         const keywords = [];
-        const text = (title + ' ' + (whyText || '')).toLowerCase();
+        const text = (title + ' ' + (reasonText || '')).toLowerCase();
         
         const keywordPatterns = [
             'diffusion', 'retrieval', 'time series', 'forecasting', 'rag',
             'multimodal', 'knowledge graph', 'neural network', 'transformer',
-            'deep learning', 'machine learning', 'gan', 'lstm'
+            'deep learning', 'machine learning', 'llm', 'embedding', 'visual'
         ];
         
         keywordPatterns.forEach(pattern => {
@@ -142,28 +214,26 @@ const JournalClubManager = {
         
         let html = '';
         recentPapers.forEach(paper => {
-            const topicColor = this.getTopicColor(paper.topic);
             html += `
                 <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
                             ${this.formatDate(paper.date)}
                         </span>
-                        <span class="text-xs ${topicColor} px-2 py-1 rounded">
-                            ${paper.topic}
-                        </span>
                     </div>
-                    <h4 class="font-semibold text-brand-navy mb-2 group-hover:text-brand-accent transition-colors line-clamp-2">
-                        ${this.truncateTitle(paper.title)}
+                    <h4 class="font-semibold text-brand-navy mb-3 group-hover:text-brand-accent transition-colors leading-snug">
+                        ${paper.title}
                     </h4>
                     <div class="mt-4 flex items-center justify-between">
                         <p class="text-sm text-gray-500">
                             Presenter: <span class="font-medium">${paper.presenter}</span>
                         </p>
-                        <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
-                           class="text-brand-accent hover:underline text-sm font-medium">
-                            Paper →
-                        </a>
+                        ${paper.paper_link ? `
+                            <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
+                               class="text-brand-accent hover:underline text-sm font-medium">
+                                Paper →
+                            </a>
+                        ` : ''}
                     </div>
                 </div>
             `;
@@ -173,46 +243,12 @@ const JournalClubManager = {
     },
     
     renderTopicFilters() {
+        // Topic filters are no longer needed, so this function can be empty
+        // or we can remove the filter container from the HTML
         const container = document.getElementById('topic-filters');
-        const selectElement = document.getElementById('topic-filter');
-        if (!container || !selectElement) return;
-        
-        // Get unique topics from data
-        const topics = new Set(this.data.map(p => p.topic));
-        const topicsArray = ['all', ...Array.from(topics).sort()];
-        
-        // Render filter pills
-        let pillsHtml = '';
-        topicsArray.forEach(topic => {
-            const displayName = topic === 'all' ? 'All' : topic;
-            const isActive = topic === this.currentTopic;
-            pillsHtml += `
-                <button onclick="JournalClubManager.filterByTopic('${topic}')" 
-                        class="px-3 py-1 text-xs font-medium rounded-full transition-all ${
-                            isActive 
-                            ? 'bg-brand-accent text-white' 
-                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                        }">
-                    ${displayName}
-                </button>
-            `;
-        });
-        container.innerHTML = pillsHtml;
-        
-        // Update select element
-        let selectHtml = '<option value="all">All Topics</option>';
-        Array.from(topics).sort().forEach(topic => {
-            selectHtml += `<option value="${topic}" ${topic === this.currentTopic ? 'selected' : ''}>${topic}</option>`;
-        });
-        selectElement.innerHTML = selectHtml;
-        
-        // Remove existing event listeners and add new ones
-        const newSelectElement = selectElement.cloneNode(true);
-        selectElement.parentNode.replaceChild(newSelectElement, selectElement);
-        
-        newSelectElement.addEventListener('change', (e) => {
-            this.filterByTopic(e.target.value);
-        });
+        if (container) {
+            container.style.display = 'none';
+        }
     },
     
     renderPapersTable() {
@@ -224,12 +260,12 @@ const JournalClubManager = {
         const endIdx = startIdx + this.itemsPerPage;
         const paginatedData = this.filteredData.slice(startIdx, endIdx);
         
-        if (paginatedData.length === 0) {
+        if (this.filteredData.length === 0) {
             container.innerHTML = `
                 <div class="text-center py-12 text-gray-500">
                     <div class="text-4xl mb-4">📄</div>
                     <p class="text-lg font-semibold mb-2">No papers found</p>
-                    <p class="text-sm">Try different search terms or filters</p>
+                    <p class="text-sm">Try different search terms</p>
                 </div>
             `;
             return;
@@ -240,19 +276,16 @@ const JournalClubManager = {
                 <table class="w-full">
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider w-32">
                                 Date
                             </th>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Paper Title
                             </th>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider w-36">
                                 Presenter
                             </th>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                Topic
-                            </th>
-                            <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider w-20">
                                 Link
                             </th>
                         </tr>
@@ -261,32 +294,33 @@ const JournalClubManager = {
         `;
         
         paginatedData.forEach(paper => {
-            const topicColor = this.getTopicColor(paper.topic);
             html += `
                 <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 w-32">
                         ${this.formatDate(paper.date)}
                     </td>
                     <td class="px-6 py-4">
-                        <p class="text-sm font-medium text-brand-navy paper-title line-clamp-2">
+                        <p class="text-sm font-medium text-brand-navy paper-title">
                             ${this.highlightSearch(paper.title)}
                         </p>
+                        ${paper.why ? `
+                            <p class="text-xs text-gray-500 mt-2 line-clamp-3">
+                                ${this.truncateText(paper.why, 150)}
+                            </p>
+                        ` : ''}
                     </td>
-                    <td class="px-6 py-4 text-sm text-gray-600 paper-presenter">
+                    <td class="px-6 py-4 text-sm text-gray-600 paper-presenter w-36">
                         ${this.highlightSearch(paper.presenter)}
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="text-xs ${topicColor} px-2 py-1 rounded inline-block">
-                            ${paper.topic}
-                        </span>
-                    </td>
-                    <td class="px-6 py-4 text-center">
-                        <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
-                           class="text-brand-accent hover:underline text-sm font-medium">
-                            <svg class="w-5 h-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
+                    <td class="px-6 py-4 text-center w-20">
+                        ${paper.paper_link ? `
+                            <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
+                               class="text-brand-accent hover:underline text-sm font-medium">
+                                <svg class="w-5 h-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        ` : '<span class="text-gray-400">-</span>'}
                     </td>
                 </tr>
             `;
@@ -330,7 +364,7 @@ const JournalClubManager = {
             </button>
         `;
         
-        // Page numbers
+        // Page numbers (simplified for better performance)
         const maxVisible = 5;
         const startPage = Math.max(1, this.currentPage - Math.floor(maxVisible / 2));
         const endPage = Math.min(totalPages, startPage + maxVisible - 1);
@@ -446,22 +480,25 @@ const JournalClubManager = {
         }
     },
     
+    // Utility functions
     truncateTitle(title) {
-        // Remove URL if title is a URL
-        if (title.startsWith('http')) {
-            return 'No title available';
-        }
-        
-        // Truncate long titles
+        if (!title) return 'No title available';
         if (title.length > 80) {
             return title.substring(0, 77) + '...';
         }
-        
         return title;
     },
     
+    truncateText(text, maxLength) {
+        if (!text) return '';
+        if (text.length > maxLength) {
+            return text.substring(0, maxLength) + '...';
+        }
+        return text;
+    },
+    
     highlightSearch(text) {
-        if (!this.searchQuery) return text;
+        if (!this.searchQuery || !text) return text;
         
         const regex = new RegExp(`(${this.escapeRegExp(this.searchQuery)})`, 'gi');
         return text.replace(regex, '<mark class="bg-yellow-200 px-1 rounded">$1</mark>');
@@ -472,11 +509,15 @@ const JournalClubManager = {
     },
     
     formatDate(dateString) {
-        const date = new Date(dateString);
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}.${month}.${day}`;
+        try {
+            const date = new Date(dateString);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}.${month}.${day}`;
+        } catch (error) {
+            return dateString;
+        }
     },
     
     getTopicColor(topic) {

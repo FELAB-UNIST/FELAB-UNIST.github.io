@@ -1,4 +1,4 @@
-// Main Application Controller - Optimized Version
+// Main Application Controller - Updated Version
 const App = {
     currentTab: 'home',
     isInitialized: false,
@@ -152,6 +152,18 @@ const App = {
             
         } catch (error) {
             console.error(`Error loading page ${tabId}:`, error);
+            // Show error message
+            document.getElementById('main-content').innerHTML = `
+                <div class="flex items-center justify-center py-20">
+                    <div class="text-center">
+                        <div class="text-red-500 text-xl mb-4">⚠️</div>
+                        <p class="text-red-600">Failed to load page: ${tabId}</p>
+                        <button onclick="location.reload()" class="mt-4 px-4 py-2 bg-brand-accent text-white rounded hover:bg-opacity-90">
+                            Refresh Page
+                        </button>
+                    </div>
+                </div>
+            `;
         } finally {
             this.isNavigating = false;
         }
@@ -233,6 +245,15 @@ const App = {
                     ProjectsManager.init();
                 }
                 break;
+            case 'journal-club':
+                console.log('Initializing Journal Club Manager...');
+                if (typeof JournalClubManager !== 'undefined') {
+                    JournalClubManager.initialized = false; // Reset state
+                    JournalClubManager.init();
+                } else {
+                    console.warn('JournalClubManager not found');
+                }
+                break;
             case 'news':
                 if (typeof NewsManager !== 'undefined') {
                     NewsManager.initialized = false; // Reset state
@@ -245,7 +266,7 @@ const App = {
     cleanupModules() {
         // Clean up any module-specific event listeners or states
         // This prevents memory leaks and conflicts
-        const searchInputs = document.querySelectorAll('#publication-search, #project-search');
+        const searchInputs = document.querySelectorAll('#publication-search, #project-search, #journal-search');
         searchInputs.forEach(input => {
             if (input) {
                 // Clone node to remove all event listeners
