@@ -56,7 +56,7 @@
     ],
     "interns": [
       {
-        "id": "sangjin",
+        "id": "sangjin-jin",
         "name": "Sangjin Jin",
         "position": "Undergraduate Research Intern",
         "image": "./public/images/members/sangjin.jpg",
@@ -64,12 +64,12 @@
         "email": "jsj9185@unist.ac.kr"
       },
       {
-        "id": "sample-intern-2",
-        "name": "Sample Intern 2",
+        "id": "suhwan-park",
+        "name": "Suhwan Park",
         "position": "Undergraduate Research Intern",
-        "image": "/images/members/intern2.jpg",
+        "image": "public/images/members/shpark.jpeg",
         "bio": "Undergraduate Research Intern",
-        "email": "hoyounglee@unist.ac.kr"
+        "email": "suhwan@unist.ac.kr"
       }
     ]
   },
