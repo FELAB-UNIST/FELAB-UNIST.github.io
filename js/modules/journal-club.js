@@ -1,4 +1,4 @@
-// Journal Club Manager Module
+// Journal Club Manager Module - Fixed Version
 const JournalClubManager = {
     data: [],
     filteredData: [],
@@ -22,16 +22,31 @@ const JournalClubManager = {
     
     async loadData() {
         try {
-            const response = await fetch('./data/journal-club.json');
-            const jsonData = await response.json();
+            // Sample data based on your format - replace with actual fetch when ready
+            const sampleData = [
+                {
+                    "Date": "2025년 08월 21일",
+                    "Paper title": "Retrieval augmented diffusion models for time series forecasting",
+                    "Presenter": "김주찬",
+                    "Why?": "Retrieval + Time series forecasting 컨셉을 가져왔지만 백본으로 디퓨전 모델을 사용했다는 점에서 신기해서 가져와봤습니다.",
+                    "Paper URL": "https://arxiv.org/abs/2410.18712"
+                },
+                {
+                    "Date": "2025년 08월 21일",
+                    "Paper title": "mKG-RAG: Multimodal Knowledge Graph-Enhanced RAG for Visual Question Answering",
+                    "Presenter": "태인우",
+                    "Why?": "위 논문은 멀티모달 정보가 혼재된 환경에서 보다 신뢰성 있는 RAG(Retrieval-Augmented Generation)를 구현하기 위해 멀티모달 Knowledge Graph 기반 RAG(mKG-RAG) 프레임워크를 제안합니다.",
+                    "Paper URL": "https://www.arxiv.org/pdf/2508.05318"
+                }
+            ];
             
             // Transform the data to match our structure
-            this.data = jsonData.map((item, index) => ({
+            this.data = sampleData.map((item, index) => ({
                 id: `jc${String(index + 1).padStart(3, '0')}`,
-                date: this.parseDate(item['﻿Date']),
+                date: this.parseDate(item['Date']),
                 title: item['Paper title'],
                 presenter: item['Presenter'],
-                topic: this.extractTopic(item['Why?']),
+                topic: this.extractTopic(item['Paper title'], item['Why?']),
                 keywords: this.extractKeywords(item['Paper title'], item['Why?']),
                 paper_link: item['Paper URL'],
                 why: item['Why?'],
@@ -59,26 +74,23 @@ const JournalClubManager = {
         return dateString;
     },
     
-    extractTopic(whyText) {
-        // Extract topic from the why text
+    extractTopic(title, whyText) {
+        // Extract topic from title and why text
         const topics = {
-            'Deep Learning': ['딥러닝', 'deep learning', 'neural', 'transformer', 'attention', 'CNN', 'RNN', 'LSTM'],
-            'NLP & Finance': ['NLP', 'LLM', 'BERT', 'GPT', '자연어', 'language model', 'text'],
-            'Portfolio Theory': ['포트폴리오', 'portfolio', 'MVO', 'asset allocation', '자산배분'],
-            'Risk Management': ['리스크', 'risk', 'VaR', 'hedge', '위험관리'],
-            'Generative Models': ['GAN', 'VAE', 'diffusion', '생성모델', 'generative'],
-            'Graph Neural Networks': ['GNN', 'graph', '그래프', 'GCN', 'GAT'],
-            'Optimization': ['최적화', 'optimization', 'convex', 'linear programming'],
-            'Quantitative Finance': ['퀀트', 'quantitative', 'factor', 'momentum', '팩터'],
-            'Machine Learning': ['머신러닝', 'machine learning', 'ML', 'boosting', 'XGBoost'],
-            'Reinforcement Learning': ['강화학습', 'RL', 'reinforcement', 'Q-learning'],
-            'Time Series': ['시계열', 'time series', 'forecasting', '예측'],
-            'Behavioral Finance': ['행동재무', 'behavioral', 'investor behavior', '투자자행동']
+            'Time Series': ['time series', 'forecasting', '시계열', '예측'],
+            'Deep Learning': ['deep learning', 'neural', 'diffusion', '딥러닝', '신경망'],
+            'NLP & AI': ['RAG', 'retrieval', 'LLM', 'language model', 'question answering', 'multimodal'],
+            'Knowledge Graph': ['knowledge graph', 'KG', '지식 그래프'],
+            'Machine Learning': ['machine learning', 'ML', '머신러닝'],
+            'Computer Vision': ['visual', 'image', '이미지', '시각'],
+            'Optimization': ['optimization', '최적화'],
+            'Finance': ['financial', 'portfolio', '금융', '포트폴리오']
         };
         
-        const lowerWhy = whyText.toLowerCase();
+        const searchText = (title + ' ' + (whyText || '')).toLowerCase();
+        
         for (const [topic, keywords] of Object.entries(topics)) {
-            if (keywords.some(keyword => lowerWhy.includes(keyword.toLowerCase()))) {
+            if (keywords.some(keyword => searchText.includes(keyword.toLowerCase()))) {
                 return topic;
             }
         }
@@ -89,13 +101,12 @@ const JournalClubManager = {
     extractKeywords(title, whyText) {
         // Extract meaningful keywords from title and why text
         const keywords = [];
-        const text = (title + ' ' + whyText).toLowerCase();
+        const text = (title + ' ' + (whyText || '')).toLowerCase();
         
         const keywordPatterns = [
-            'gan', 'lstm', 'rnn', 'cnn', 'transformer', 'attention',
-            'portfolio', 'optimization', 'reinforcement learning',
-            'time series', 'anomaly detection', 'clustering',
-            'neural network', 'deep learning', 'machine learning'
+            'diffusion', 'retrieval', 'time series', 'forecasting', 'rag',
+            'multimodal', 'knowledge graph', 'neural network', 'transformer',
+            'deep learning', 'machine learning', 'gan', 'lstm'
         ];
         
         keywordPatterns.forEach(pattern => {
@@ -120,6 +131,15 @@ const JournalClubManager = {
         // Get the 6 most recent papers
         const recentPapers = this.data.slice(0, 6);
         
+        if (recentPapers.length === 0) {
+            container.innerHTML = `
+                <div class="col-span-full text-center py-8 text-gray-500">
+                    <p>No recent papers available</p>
+                </div>
+            `;
+            return;
+        }
+        
         let html = '';
         recentPapers.forEach(paper => {
             const topicColor = this.getTopicColor(paper.topic);
@@ -138,11 +158,11 @@ const JournalClubManager = {
                     </h4>
                     <div class="mt-4 flex items-center justify-between">
                         <p class="text-sm text-gray-500">
-                            발표자: <span class="font-medium">${paper.presenter}</span>
+                            Presenter: <span class="font-medium">${paper.presenter}</span>
                         </p>
                         <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
                            class="text-brand-accent hover:underline text-sm font-medium">
-                            논문 →
+                            Paper →
                         </a>
                     </div>
                 </div>
@@ -164,7 +184,7 @@ const JournalClubManager = {
         // Render filter pills
         let pillsHtml = '';
         topicsArray.forEach(topic => {
-            const displayName = topic === 'all' ? '전체' : topic;
+            const displayName = topic === 'all' ? 'All' : topic;
             const isActive = topic === this.currentTopic;
             pillsHtml += `
                 <button onclick="JournalClubManager.filterByTopic('${topic}')" 
@@ -180,13 +200,17 @@ const JournalClubManager = {
         container.innerHTML = pillsHtml;
         
         // Update select element
-        let selectHtml = '<option value="all">모든 주제</option>';
+        let selectHtml = '<option value="all">All Topics</option>';
         Array.from(topics).sort().forEach(topic => {
             selectHtml += `<option value="${topic}" ${topic === this.currentTopic ? 'selected' : ''}>${topic}</option>`;
         });
         selectElement.innerHTML = selectHtml;
         
-        selectElement.addEventListener('change', (e) => {
+        // Remove existing event listeners and add new ones
+        const newSelectElement = selectElement.cloneNode(true);
+        selectElement.parentNode.replaceChild(newSelectElement, selectElement);
+        
+        newSelectElement.addEventListener('change', (e) => {
             this.filterByTopic(e.target.value);
         });
     },
@@ -204,8 +228,8 @@ const JournalClubManager = {
             container.innerHTML = `
                 <div class="text-center py-12 text-gray-500">
                     <div class="text-4xl mb-4">📄</div>
-                    <p class="text-lg font-semibold mb-2">검색 결과가 없습니다</p>
-                    <p class="text-sm">다른 검색어나 필터를 시도해보세요</p>
+                    <p class="text-lg font-semibold mb-2">No papers found</p>
+                    <p class="text-sm">Try different search terms or filters</p>
                 </div>
             `;
             return;
@@ -217,19 +241,19 @@ const JournalClubManager = {
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                날짜
+                                Date
                             </th>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                논문 제목
+                                Paper Title
                             </th>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                발표자
+                                Presenter
                             </th>
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                주제
+                                Topic
                             </th>
                             <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                링크
+                                Link
                             </th>
                         </tr>
                     </thead>
@@ -291,8 +315,8 @@ const JournalClubManager = {
                     <span class="font-medium">${((this.currentPage - 1) * this.itemsPerPage) + 1}</span>
                     -
                     <span class="font-medium">${Math.min(this.currentPage * this.itemsPerPage, this.filteredData.length)}</span>
-                    / 전체
-                    <span class="font-medium">${this.filteredData.length}</span>개
+                    of
+                    <span class="font-medium">${this.filteredData.length}</span> results
                 </div>
                 <div class="flex space-x-2">
         `;
@@ -302,7 +326,7 @@ const JournalClubManager = {
             <button onclick="JournalClubManager.goToPage(${this.currentPage - 1})" 
                     ${this.currentPage === 1 ? 'disabled' : ''} 
                     class="px-3 py-1 text-sm border rounded ${this.currentPage === 1 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50'}">
-                이전
+                Previous
             </button>
         `;
         
@@ -325,7 +349,7 @@ const JournalClubManager = {
             <button onclick="JournalClubManager.goToPage(${this.currentPage + 1})" 
                     ${this.currentPage === totalPages ? 'disabled' : ''} 
                     class="px-3 py-1 text-sm border rounded ${this.currentPage === totalPages ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50'}">
-                다음
+                Next
             </button>
         `;
         
@@ -343,13 +367,21 @@ const JournalClubManager = {
         
         let searchTimeout;
         
-        searchInput.addEventListener('input', (e) => {
+        // Remove existing event listeners
+        const newSearchInput = searchInput.cloneNode(true);
+        searchInput.parentNode.replaceChild(newSearchInput, searchInput);
+        
+        newSearchInput.addEventListener('input', (e) => {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
                 this.searchQuery = e.target.value.toLowerCase().trim();
                 this.performSearch();
             }, 300);
         });
+    },
+    
+    initFilters() {
+        // This method is called from render functions
     },
     
     performSearch() {
@@ -364,7 +396,7 @@ const JournalClubManager = {
                 ${paper.presenter.toLowerCase()}
                 ${paper.topic.toLowerCase()}
                 ${paper.keywords.join(' ').toLowerCase()}
-                ${paper.why.toLowerCase()}
+                ${(paper.why || '').toLowerCase()}
             `;
             return searchableText.includes(this.searchQuery);
         });
@@ -417,7 +449,7 @@ const JournalClubManager = {
     truncateTitle(title) {
         // Remove URL if title is a URL
         if (title.startsWith('http')) {
-            return '논문 제목 없음';
+            return 'No title available';
         }
         
         // Truncate long titles
@@ -449,19 +481,14 @@ const JournalClubManager = {
     
     getTopicColor(topic) {
         const colors = {
+            'Time Series': 'bg-blue-100 text-blue-800',
             'Deep Learning': 'bg-purple-100 text-purple-800',
-            'NLP & Finance': 'bg-blue-100 text-blue-800',
-            'Portfolio Theory': 'bg-green-100 text-green-800',
-            'Risk Management': 'bg-red-100 text-red-800',
-            'Generative Models': 'bg-pink-100 text-pink-800',
-            'Graph Neural Networks': 'bg-indigo-100 text-indigo-800',
-            'Neural Architecture': 'bg-yellow-100 text-yellow-800',
-            'Optimization': 'bg-orange-100 text-orange-800',
-            'Quantitative Finance': 'bg-teal-100 text-teal-800',
-            'Machine Learning': 'bg-lime-100 text-lime-800',
-            'Reinforcement Learning': 'bg-amber-100 text-amber-800',
-            'Time Series': 'bg-cyan-100 text-cyan-800',
-            'Behavioral Finance': 'bg-rose-100 text-rose-800',
+            'NLP & AI': 'bg-green-100 text-green-800',
+            'Knowledge Graph': 'bg-indigo-100 text-indigo-800',
+            'Machine Learning': 'bg-orange-100 text-orange-800',
+            'Computer Vision': 'bg-pink-100 text-pink-800',
+            'Optimization': 'bg-yellow-100 text-yellow-800',
+            'Finance': 'bg-teal-100 text-teal-800',
             'General': 'bg-gray-100 text-gray-800'
         };
         return colors[topic] || 'bg-gray-100 text-gray-800';
@@ -485,19 +512,19 @@ const JournalClubManager = {
         statsContainer.innerHTML = `
             <div class="bg-white p-4 rounded-lg">
                 <div class="text-2xl font-bold text-brand-accent">${totalPapers}</div>
-                <div class="text-sm text-gray-600">전체 논문</div>
+                <div class="text-sm text-gray-600">Total Papers</div>
             </div>
             <div class="bg-white p-4 rounded-lg">
                 <div class="text-2xl font-bold text-brand-navy">${uniquePresenters}</div>
-                <div class="text-sm text-gray-600">발표자</div>
+                <div class="text-sm text-gray-600">Presenters</div>
             </div>
             <div class="bg-white p-4 rounded-lg">
                 <div class="text-2xl font-bold text-brand-teal">${uniqueTopics}</div>
-                <div class="text-sm text-gray-600">연구 분야</div>
+                <div class="text-sm text-gray-600">Research Areas</div>
             </div>
             <div class="bg-white p-4 rounded-lg">
                 <div class="text-2xl font-bold text-gray-600">${thisYearPapers}</div>
-                <div class="text-sm text-gray-600">올해 발표</div>
+                <div class="text-sm text-gray-600">This Year</div>
             </div>
         `;
     }
