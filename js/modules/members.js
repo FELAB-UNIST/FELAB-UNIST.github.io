@@ -162,6 +162,7 @@ const MembersManager = {
         }
     },
     
+    // Updated Alumni List Rendering
     createAlumniList(alumni) {
         return alumni.map(person => `
             <div class="bg-white rounded-lg p-6 border-l-4 border-brand-accent hover:shadow-md transition-shadow">
@@ -172,17 +173,29 @@ const MembersManager = {
                                 ${person.name}
                                 ${person.name_kr ? `<span class="text-gray-500 font-normal">(${person.name_kr})</span>` : ''}
                             </h5>
-                            <span class="text-sm text-gray-500">Class of ${person.year}</span>
                         </div>
-                        ${person.thesis ? `
+                        ${person.period ? `
                             <p class="text-sm text-gray-600 mt-2">
-                                <strong>Thesis:</strong> ${person.thesis}
+                                <strong>Period:</strong> ${person.period}
+                            </p>
+                        ` : ''}
+                        ${person.education ? `
+                            <p class="text-sm text-gray-600">
+                                <strong>Education:</strong> ${person.education}
+                            </p>
+                        ` : ''}
+                        ${person.postdoc ? `
+                            <p class="text-sm text-gray-600">
+                                <strong>Postdoc:</strong> ${person.postdoc}
                             </p>
                         ` : ''}
                         ${person.current_position ? `
                             <p class="text-sm text-brand-accent mt-1">
                                 <strong>Current:</strong> ${person.current_position}
                             </p>
+                        ` : ''}
+                        ${person.notes ? `
+                            <p class="text-sm text-gray-500 italic mt-1">${person.notes}</p>
                         ` : ''}
                     </div>
                     <div class="flex gap-2 ml-4">
@@ -192,20 +205,39 @@ const MembersManager = {
             </div>
         `).join('');
     },
-    
+
+    // Updated Research Professors List Rendering
     createResearchProfessorsList(professors) {
         return professors.map(person => `
-            <div class="bg-white rounded-lg p-6 border-l-4 border-gray-400 hover:shadow-md transition-shadow">
+            <div class="bg-white rounded-lg p-6 border-l-4 border-purple-500 hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start">
                     <div class="flex-1">
                         <h5 class="font-semibold text-brand-navy">
                             ${person.name}
                             ${person.name_kr ? `<span class="text-gray-500 font-normal">(${person.name_kr})</span>` : ''}
                         </h5>
+                        ${person.period ? `
+                            <p class="text-sm text-gray-600 mt-2">
+                                <strong>Period:</strong> ${person.period}
+                            </p>
+                        ` : ''}
+                        ${person.position ? `
+                            <p class="text-sm text-gray-600">
+                                <strong>Position at Lab:</strong> ${person.position}
+                            </p>
+                        ` : ''}
+                        ${person.previous ? `
+                            <p class="text-sm text-gray-600">
+                                <strong>Previous:</strong> ${person.previous}
+                            </p>
+                        ` : ''}
                         ${person.current_position ? `
                             <p class="text-sm text-brand-accent mt-1">
-                                ${person.current_position}
+                                <strong>Current:</strong> ${person.current_position}
                             </p>
+                        ` : ''}
+                        ${person.notes ? `
+                            <p class="text-sm text-gray-500 italic mt-1">${person.notes}</p>
                         ` : ''}
                     </div>
                     <div class="flex gap-2 ml-4">

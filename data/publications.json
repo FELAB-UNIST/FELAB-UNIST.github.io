@@ -29,7 +29,7 @@
     },
     {
       "year": 2025,
-      "authors": "Yongjae Lee*,Yoontae Hwang",
+      "authors": "Yoontae Hwang,Yongjae Lee",
       "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25)",
       "title": "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset",
       "keywords": ["Machine Learning"],
@@ -65,7 +65,7 @@
     },
     {
       "year": 2024,
-      "authors": "Javier Sanz-Cruzado Puig,Richard Mccreadie,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "authors": "Youngbin Lee†,Yejin Kim†,Javier Sanz-Cruzado Puig,Richard Mccreadie,Yongjae Lee*",
       "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -92,7 +92,7 @@
     },
     {
       "year": 2024,
-      "authors": "Joohwan Hong*,Seonmi Kim†,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "authors": "Youngbin Lee†,Seonmi Kim†,Yejin Kim†,Joohwan Hong*,Yongjae Lee*",
       "venue": "Engineering Applications of Artificial Intelligence",
       "title": "Multi-Attention Recommender System for NFTs",
       "keywords": ["Finance", "Machine Learning"],
@@ -101,7 +101,7 @@
     },
     {
       "year": 2024,
-      "authors": "Javier Sanz-Cruzado Puig,Richard Mccreadie,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "authors": "Youngbin Lee†,Yejin Kim†,Javier Sanz-Cruzado Puig,Richard Mccreadie,Yongjae Lee*",
       "venue": "IJCAI-24 Workshop on Recommeder Systems in Finance (Fin-RecSys)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -119,7 +119,7 @@
     },
     {
       "year": 2024,
-      "authors": "Frank J. Fabozzi,Jang Ho Kim*,Junpyo Park,Yongjae Lee*,Yoontae Hwang",
+      "authors": "Yoontae Hwang, Junpyo Park,Jang Ho Kim*, Yongjae Lee*,Frank J. Fabozzi",
       "venue": "Finance Research Letters",
       "title": "Heterogeneous Trading Behaviors of Individual Investors: A Deep Clustering Approach",
       "keywords": ["Finance", "Machine Learning"],
@@ -128,7 +128,7 @@
     },
     {
       "year": 2024,
-      "authors": "Annika Lee,Jingwei Yuan,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "authors": "Youngbin Lee†, Yejin Kim†, Annika Lee,Jingwei Yuan,Yongjae Lee*",
       "venue": "AAAI 2024 Workshop on Recommendation Ecosystems: Modeling, Optimization and Incentive Design",
       "title": "A Temporal Graph Network Framework for Dynamic Recommendation",
       "keywords": ["Machine Learning"],
@@ -137,7 +137,7 @@
     },
     {
       "year": 2024,
-      "authors": "Minyoung Choe,Sungju Oh,Yejin Kim†,Yongjae Lee*,Youngbin Lee†",
+      "authors": "Youngbin Lee†, Yejin Kim†, Minyoung Choe,Sungju Oh, Yongjae Lee*",
       "venue": "AAAI 2024 Workshop on AI in Finance for Social Impact",
       "title": "Temporal Graph Networks for Graph Anomaly Detection in Financial Networks",
       "keywords": ["Finance", "Machine Learning"],
@@ -146,7 +146,7 @@
     },
     {
       "year": 2023,
-      "authors": "Daham Kim,Joohwan Hong*,Junhyeong Lee,Seunghwan Noh,Yongjae Lee*,Yoontae Hwang",
+      "authors": "Yoontae Hwang, Daham Kim,Junhyeong Lee,Seunghwan Noh,Joohwan Hong*,Yongjae Lee*",
       "venue": "4th ACM International Conference on AI in Finance (ICAIF'23)",
       "title": "SimStock: Representation Model for Stock Similarities",
       "keywords": ["Finance", "Machine Learning"],
@@ -173,7 +173,7 @@
     },
     {
       "year": 2023,
-      "authors": "Joohwan Hong*,Yejin Kim,Yongjae Lee*,Youngbin Lee",
+      "authors": "Youngbin Lee,Yejin Kim,Joohwan Hong*,Yongjae Lee*",
       "venue": "ICAIF'23 Workshop on Machine Learning for Investor Modelling and Recommender Systems",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning",
       "keywords": ["Finance", "Machine Learning"],
@@ -182,7 +182,7 @@
     },
     {
       "year": 2023,
-      "authors": "Dongcheol Lim,Junghye Lee*,Kyeongbin Kim†,Suhyeon Kim,Yongjae Lee*,Yoontae Hwang†",
+      "authors": "Yoontae Hwang†, Dongcheol Lim,Kyeongbin Kim†,Suhyeon Kim, Junghye Lee*, Yongjae Lee*",
       "venue": "Quantitative Finance",
       "title": "Household Financial Health: A Machine Learning Approach for Data-Driven Diagnosis and Prescription",
       "keywords": ["Finance", "Machine Learning"],
@@ -218,7 +218,7 @@
     },
     {
       "year": 2023,
-      "authors": "Dong-Young Lim*,Junpyo Park,Yongjae Lee*,Yoontae Hwang",
+      "authors": "Dong-Young Lim*,Junpyo Park,Yoontae Hwang, Yongjae Lee*",
       "venue": "Finance Research Letters",
       "title": "Stop-loss Adjusted Labels for Machine Learning-based Trading of Risky Assets",
       "keywords": ["Finance", "Machine Learning"],
@@ -272,7 +272,7 @@
     },
     {
       "year": 2023,
-      "authors": "Frank J. Fabozzi*,Yongjae Lee*,Yoontae Hwang",
+      "authors": "Yoontae Hwang, Yongjae Lee*, Frank J. Fabozzi*",
       "venue": "Annals of Operations Research",
       "title": "Identifying Household Finance Heterogeneity via Deep Clustering",
       "keywords": ["Finance", "Machine Learning"],
@@ -335,7 +335,7 @@
     },
     {
       "year": 2020,
-      "authors": "Daeyoung Choi,Eunjung Lee,Hyunghun Cho,Wonjong Rhee,Yongjae Lee,Yongjin Kim",
+      "authors": "Daeyoung Choi,Eunjung Lee,Hyunghun Cho,Wonjong Rhee,Yongjin Kim,Yongjae Lee",
       "venue": "IEEE Access",
       "title": "Basic Enhancement Strategies When Using Bayesian Optimization for Hyperparameter Tuning of Deep Neural Networks",
       "keywords": ["Machine Learning"],
@@ -452,7 +452,7 @@
     },
     {
       "year": "working_paper",
-      "authors": "Stefan Zohren,Yongjae Lee*,Yoontae Hwang",
+      "authors": "Yoontae Hwang, Stefan Zohren,Yongjae Lee*,",
       "venue": "",
       "title": "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management",
       "keywords": ["Finance", "Machine Learning"],

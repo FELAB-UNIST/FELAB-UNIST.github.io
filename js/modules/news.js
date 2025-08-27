@@ -179,7 +179,7 @@ const NewsManager = {
                     <h4 class="font-semibold text-brand-navy mb-2 line-clamp-2">${news.title}</h4>
                     ${news.title_kr ? `<p class="text-sm text-gray-500 mb-2 line-clamp-1">${news.title_kr}</p>` : ''}
                     <p class="text-gray-600 text-sm mb-4 line-clamp-3">${news.summary}</p>
-                    <span class="text-brand-accent hover:underline text-sm font-semibold">Learn more →</span>
+                    <span class="text-brand-accent hover:underline text-sm font-semibold">Read more →</span>
                 </div>
             </article>
         `;
