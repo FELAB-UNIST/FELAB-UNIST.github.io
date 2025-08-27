@@ -80,8 +80,10 @@
         "name": "Yoontae Hwang",
         "name_kr": "황윤태",
         "year": 2024,
-        "thesis": "Financial Representation Learning",
-        "current_position": "Pusan National University",
+        "period": "2020.03 - 2023.08",
+        "postdoc": "University of Oxford",
+        "current_position": "Assistant Professor, Pusan National University",
+        "notes": "Sejong Science Fellowship (2024)",
         "links": {
           "website": "https://yoontae6719.github.io/",
           "linkedin": "https://www.linkedin.com/in/yoontae/"
@@ -94,8 +96,10 @@
         "name": "Yejin Kim",
         "name_kr": "김예진",
         "year": 2024,
-        "thesis": "Personalized Stock Recommendations Focusing on Temporal Preferences and Diversification Effect",
+        "period": "2022.09 - 2024.08",
+        "education": "B.S. Industrial Engineering, UNIST",
         "current_position": "Data Scientist, Meritz Fire & Marine Insurance",
+        "notes": "Carnegie Mellon University AI Program (2023-2024)",
         "links": {
           "linkedin": "https://www.linkedin.com/in/yejining99/"
         }
@@ -105,7 +109,8 @@
         "name": "Seonmi Kim",
         "name_kr": "김선미",
         "year": 2024,
-        "thesis": "NFTs to MARS: Multi-Attention Recommender System for NFTs",
+        "period": "2022.03 - 2024.02",
+        "education": "B.Sc. Economics, University of Manchester",
         "current_position": "Data Scientist, NICE P&I",
         "links": {
           "linkedin": "https://www.linkedin.com/in/seonmi-kim-441024286"
@@ -116,8 +121,9 @@
         "name": "Seyoung Kim",
         "name_kr": "김세영",
         "year": 2024,
-        "thesis": "A GANs-based Approach for Stock Price Anomaly Detection and Investment Risk Management",
-        "current_position": "Quant Researcher",
+        "period": "2022.03 - 2024.02",
+        "education": "B.B.A. Management, UNIST",
+        "current_position": "Assistant Manager, Dneuro",
         "links": {
           "linkedin": "https://www.linkedin.com/in/seyoung-kim-46620a245"
         }
@@ -127,8 +133,10 @@
         "name": "Youngbin Lee",
         "name_kr": "이영빈",
         "year": 2024,
-        "thesis": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning",
-        "current_position": "AI Researcher (alternative military service), elice",
+        "period": "2022.03 - 2024.02",
+        "education": "B.S. Industrial Engineering, UNIST",
+        "current_position": "AI Engineer (alternative military service), Elice",
+        "notes": "Carnegie Mellon University Visiting Scholar (2023-2024)",
         "links": {
           "linkedin": "https://www.linkedin.com/in/youngandbin"
         }
@@ -138,8 +146,9 @@
         "name": "Sohyeon Kwon",
         "name_kr": "권소현",
         "year": 2023,
-        "thesis": "Can GANs learn temporal structures of financial time series?",
-        "current_position": "AI Researcher, NC Soft",
+        "period": "2021.01 - 2023.02",
+        "education": "B.S. Data Science, Sejong University",
+        "current_position": "AI Researcher, NCsoft",
         "links": {
           "linkedin": "https://www.linkedin.com/in/sohyeon-kwon-b879bb150/"
         }
@@ -149,7 +158,7 @@
         "name": "Minjoo Choi",
         "name_kr": "최민주",
         "year": 2023,
-        "thesis": "Cluster analysis of cryptocurrencies via deep clustering",
+        "period": "2021.01 - 2023.02",
         "current_position": "Software Research Engineer, LIG Nex1",
         "links": {
           "notion": "https://www.notion.so/b204363e14da45b59db347739f5e84ec?pvs=21"
@@ -161,12 +170,20 @@
         "id": "hyungwoo-kong",
         "name": "Hyungwoo Kong",
         "name_kr": "공형우",
-        "current_position": "Assistant Professor, School of Finance & AI, Hankuk University of Foreign Studies"
+        "year": 2025,
+        "period": "2024.03 - 2025.02",
+        "position": "Postdoctoral Researcher",
+        "current_position": "Assistant Professor, School of Finance & AI, Hankuk University of Foreign Studies",
+        "notes": "Sejong Science Fellowship (2024)"
       },
       {
         "id": "joohwan-hong",
         "name": "Joohwan Hong",
         "name_kr": "홍주환",
+        "year": 2023,
+        "period": "2022.10 - 2023.10",
+        "position": "Research Assistant Professor",
+        "previous": "Chief Research Officer, Veranos Technologies",
         "current_position": "Senior Researcher, Korea Institute of Fusion Energy",
         "links": {
           "linkedin": "https://www.linkedin.com/in/joohwan-hong-0636a03b/"
