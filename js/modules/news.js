@@ -293,9 +293,9 @@ const NewsManager = {
         const category = this.data.categories[news.category] || this.data.categories.general;
         
         return `
-            <div class="fixed inset-0 bg-black bg-opacity-50" onclick="NewsManager.closeNewsDetail()"></div>
-            <div class="relative min-h-screen flex items-center justify-center p-4">
-                <div class="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="fixed inset-0 bg-black bg-opacity-50 z-40" onclick="NewsManager.closeNewsDetail()"></div>
+            <div class="relative min-h-screen flex items-start justify-center p-4 pt-8 z-50">
+                <div class="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
                     <!-- Close button -->
                     <button onclick="NewsManager.closeNewsDetail()" 
                             class="absolute top-4 right-4 z-10 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow">
@@ -304,70 +304,139 @@ const NewsManager = {
                         </svg>
                     </button>
                     
-                    <!-- Header -->
-                    <div class="bg-gradient-to-br from-brand-navy to-brand-accent text-white p-8 rounded-t-xl">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-white/20 backdrop-blur text-white text-xs px-3 py-1 rounded-full">
-                                ${category.name}
-                            </span>
-                            <time class="text-white/80 text-sm">${this.formatDate(news.date)}</time>
-                            ${news.featured ? `
-                                <span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full ml-auto">
-                                    Featured
+                    <!-- Scrollable Content Container -->
+                    <div class="overflow-y-auto max-h-[90vh]">
+                        <!-- Header -->
+                        <div class="bg-white p-8 rounded-t-xl border-b border-gray-200">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-${this.getCategoryColor(news.category)}-100 text-${this.getCategoryColor(news.category)}-800 text-xs px-3 py-1 rounded-full">
+                                    ${category.name}
                                 </span>
-                            ` : ''}
-                        </div>
-                        <h1 class="text-3xl font-bold mb-2">${news.title}</h1>
-                        ${news.title_kr ? `<p class="text-xl text-white/90">${news.title_kr}</p>` : ''}
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="p-8">
-                        <!-- Summary -->
-                        <div class="prose prose-lg max-w-none">
-                            <p class="text-lg text-gray-700 leading-relaxed">${news.summary}</p>
-                        </div>
-                        
-                        ${news.content ? this.renderNewsContent(news.content) : ''}
-                        
-                        <!-- Tags -->
-                        ${news.tags && news.tags.length > 0 ? `
-                            <div class="mt-8 pt-8 border-t">
-                                <div class="flex flex-wrap gap-2">
-                                    ${news.tags.map(tag => `
-                                        <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
-                                            #${tag}
-                                        </span>
-                                    `).join('')}
-                                </div>
+                                <time class="text-gray-500 text-sm">${this.formatDate(news.date)}</time>
+                                ${news.featured ? `
+                                    <span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full ml-auto">
+                                        Featured
+                                    </span>
+                                ` : ''}
                             </div>
-                        ` : ''}
+                            <h1 class="text-3xl font-bold mb-2 text-brand-navy">${news.title}</h1>
+                            ${news.title_kr ? `<p class="text-xl text-gray-700">${news.title_kr}</p>` : ''}
+                        </div>
                         
-                        <!-- Links -->
-                        ${news.links && news.links.length > 0 ? this.createLinksSection(news.links) : ''}
+                        <!-- Content -->
+                        <div class="px-8 pt-0 pb-8">
+                            
+                            ${this.renderNewsContent(news)}
+                            
+                            <!-- Tags -->
+                            ${news.tags && news.tags.length > 0 ? `
+                                <div class="mt-8 pt-8 border-t">
+                                    <div class="flex flex-wrap gap-2">
+                                        ${news.tags.map(tag => `
+                                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                                                #${tag}
+                                            </span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+                            
+                            <!-- Links -->
+                            ${news.links && news.links.length > 0 ? this.createLinksSection(news.links) : ''}
+                        </div>
                     </div>
                 </div>
             </div>
         `;
     },
-    
-    renderNewsContent(content) {
-        if (!content) return '';
+
+    renderNewsContent(news) {
+        if (!news.content && !this.hasAnyImages(news)) return '';
         
-        let html = '<div class="mt-8 prose prose-lg max-w-none">';
+        let html = '<div class="mt-8">';
         
-        // Paragraphs
-        if (content.paragraphs) {
-            html += content.paragraphs.map(p => `<p class="mb-4 text-gray-700">${p}</p>`).join('');
+        // Handle content with embedded figures
+        if (news.content) {
+            let contentParts = news.content;
+            let figureHtmls = [];
+            
+            // Dynamically find all figure fields (figure1, figure2, figure3, etc.)
+            const imageFields = this.getImageFields(news);
+            
+            imageFields.forEach(({ fieldName, imageUrl, figureNumber }) => {
+                const figureHtml = `<div class="my-8 figure-container" data-figure="${figureNumber}">
+                    <img src="${imageUrl}" 
+                        alt="Figure ${figureNumber}" 
+                        class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                        onclick="NewsManager.openImageModal('${imageUrl}')"
+                        onerror="console.log('Image failed to load: ${imageUrl}'); this.parentElement.style.display='none';">
+                </div>`;
+                
+                figureHtmls.push({ 
+                    placeholder: `[${fieldName}]`, 
+                    html: figureHtml 
+                });
+            });
+            
+            // Replace placeholders with figure HTML
+            figureHtmls.forEach(({ placeholder, html }) => {
+                contentParts = contentParts.replace(new RegExp(`\\${placeholder}`, 'g'), html);
+            });
+            
+            // Remove any remaining unreplaced figure placeholders
+            contentParts = contentParts.replace(/\[figure\d+\]/g, '');
+            
+            // Split content into parts and process
+            const contentSegments = contentParts.split(/(<div class="my-8 figure-container"[\s\S]*?<\/div>)/).filter(part => part.trim());
+            
+            html += '<div class="prose prose-lg max-w-none">';
+            
+            contentSegments.forEach(segment => {
+                if (segment.includes('figure-container')) {
+                    // Close prose div, add figure, then reopen prose div
+                    html += '</div>' + segment + '<div class="prose prose-lg max-w-none">';
+                } else if (segment.trim()) {
+                    // Process text paragraphs
+                    const paragraphs = segment.split('\n\n').filter(p => p.trim());
+                    paragraphs.forEach(paragraph => {
+                        if (paragraph.trim()) {
+                            html += `<p class="mb-4 text-gray-700 leading-relaxed">${paragraph.trim()}</p>`;
+                        }
+                    });
+                }
+            });
+            
+            html += '</div>';
         }
         
-        // Highlights
-        if (content.highlights) {
+        // Handle standalone figures (if no content but figures exist)
+        else {
+            const imageFields = this.getImageFields(news);
+            
+            imageFields.forEach(({ fieldName, imageUrl, figureNumber }) => {
+                html += `<div class="my-8 figure-container">
+                    <img src="${imageUrl}" 
+                        alt="Figure ${figureNumber}" 
+                        class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                        onclick="NewsManager.openImageModal('${imageUrl}')"
+                        onerror="console.log('Image failed to load: ${imageUrl}'); this.parentElement.style.display='none';">
+                </div>`;
+            });
+        }
+        
+        // Legacy content structure support
+        if (news.content && news.content.paragraphs) {
+            html += '<div class="prose prose-lg max-w-none">';
+            html += news.content.paragraphs.map(p => `<p class="mb-4 text-gray-700">${p}</p>`).join('');
+            html += '</div>';
+        }
+        
+        if (news.content && news.content.highlights) {
             html += `
                 <div class="bg-blue-50 border-l-4 border-brand-accent p-6 my-6 rounded-r-lg">
                     <h3 class="font-semibold text-brand-navy mb-3">Key Highlights</h3>
                     <ul class="space-y-2">
-                        ${content.highlights.map(h => `
+                        ${news.content.highlights.map(h => `
                             <li class="flex items-start">
                                 <span class="text-brand-accent mr-2">•</span>
                                 <span class="text-gray-700">${h}</span>
@@ -381,18 +450,96 @@ const NewsManager = {
         html += '</div>';
         return html;
     },
+
+    // Helper function to check if news has any images
+    hasAnyImages(news) {
+        return Object.keys(news).some(key => key.startsWith('figure') && news[key]);
+    },
+
+    // Helper function to get all image fields dynamically
+    getImageFields(news) {
+        const imageFields = [];
+        
+        Object.keys(news).forEach(key => {
+            if (key.startsWith('figure') && news[key]) {
+                const figureNumber = key.replace('figure', '');
+                imageFields.push({
+                    fieldName: key,
+                    imageUrl: news[key],
+                    figureNumber: figureNumber
+                });
+            }
+        });
+        
+        // Sort by figure number to maintain order
+        return imageFields.sort((a, b) => parseInt(a.figureNumber) - parseInt(b.figureNumber));
+    },
+    
+    openImageModal(imageSrc) {
+        // Create image modal for full-screen viewing
+        let imageModal = document.getElementById('image-modal');
+        if (!imageModal) {
+            imageModal = document.createElement('div');
+            imageModal.id = 'image-modal';
+            imageModal.className = 'fixed inset-0 z-[60] hidden';
+            document.body.appendChild(imageModal);
+        }
+        
+        imageModal.innerHTML = `
+            <div class="fixed inset-0 bg-black bg-opacity-90" onclick="NewsManager.closeImageModal()"></div>
+            <div class="relative w-full h-full flex items-center justify-center p-4">
+                <button onclick="NewsManager.closeImageModal()" 
+                        class="absolute top-4 right-4 z-10 bg-white/20 backdrop-blur rounded-full p-3 text-white hover:bg-white/30 transition-colors">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <img src="${imageSrc}" 
+                     alt="Full size image" 
+                     class="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                     onclick="event.stopPropagation()">
+            </div>
+        `;
+        
+        imageModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    },
+    
+    closeImageModal() {
+        const imageModal = document.getElementById('image-modal');
+        if (imageModal) {
+            imageModal.classList.add('hidden');
+        }
+        // Don't reset body overflow here as news detail modal might still be open
+    },
     
     createLinksSection(links) {
+        const linkIcons = {
+            'website': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>`,
+            'slides': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2h4a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1h4z"/>
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                       </svg>`,
+            'paper': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>`,
+            'external': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                         </svg>`
+        };
+        
         return `
             <div class="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h3 class="font-semibold text-brand-navy mb-4">Related Links</h3>
                 <div class="space-y-2">
                     ${links.map(link => `
                         <a href="${link.url}" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center text-brand-accent hover:underline">
-                            ${this.getLinkIcon(link.type)}
+                           class="flex items-center text-brand-accent hover:underline transition-colors group">
+                            ${linkIcons[link.type] || linkIcons.external}
                             <span class="ml-2">${link.text}</span>
-                            <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
                         </a>
@@ -404,23 +551,35 @@ const NewsManager = {
     
     closeNewsDetail() {
         const modal = document.getElementById('news-detail-modal');
+        const imageModal = document.getElementById('image-modal');
+        
         if (modal) {
             modal.classList.add('hidden');
-            document.body.style.overflow = '';
-            this.currentNewsId = null;
         }
+        if (imageModal) {
+            imageModal.classList.add('hidden');
+        }
+        
+        document.body.style.overflow = '';
+        this.currentNewsId = null;
     },
     
-    getLinkIcon(type) {
-        const icons = {
-            paper: `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>`,
-            external: `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                       </svg>`
-        };
-        return icons[type] || icons.external;
+    bindEvents() {
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.closeNewsDetail();
+                this.closeImageModal();
+            }
+        });
+    },
+    
+    // ... (keep all other existing methods: render, renderFilters, etc.)
+    
+    formatDate(dateString) {
+        const date = new Date(dateString);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
     },
     
     getCategoryIcon(category) {
@@ -435,21 +594,18 @@ const NewsManager = {
         };
         return icons[category] || '';
     },
-    
-    formatDate(dateString) {
-        const date = new Date(dateString);
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return date.toLocaleDateString('en-US', options);
-    },
-    
-    bindEvents() {
-        // Close modal on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.closeNewsDetail();
-            }
-        });
-    }
+
+    getCategoryColor(category) {
+    const categoryColors = {
+        award: 'amber',
+        achievement: 'green', 
+        collaboration: 'purple',
+        event: 'orange',
+        grant: 'teal',
+        general: 'gray'
+    };
+    return categoryColors[category] || 'gray';
+},
 };
 
 // Export for use in other modules

@@ -8,6 +8,7 @@
       "title": "MS Student Inwoo Tae Selected for NRF Graduate Research Fellowship",
       "title_kr": "석사과정 태인우, 한국연구재단 석사과정생 연구장려금지원 선정",
       "summary": "Inwoo Tae, MS student, has been selected for the National Research Foundation of Korea's Graduate Research Fellowship program for his research on dynamic embedding techniques for financial text data.",
+      "content": "MS student Inwoo Tae has been selected for the National Research Foundation of Korea's Graduate Research Fellowship program with his research topic \"Development and Analysis of Dynamic Embedding Techniques for Capturing Temporal Changes in Financial Text Data.\"\n\nPlease join us in congratulating Inwoo on this achievement!",
       "tags": ["grant", "NRF", "student achievement"],
       "links": []
     },
@@ -19,8 +20,22 @@
       "title": "Prof. Yongjae Lee Invited Speaker at KDD 2024 Finance Day",
       "title_kr": "이용재 교수, KDD 2024 Finance Day 초청 발표",
       "summary": "Professor Yongjae Lee delivered an invited talk at the KDD 2024 Finance Day, presenting recent research on machine learning applications in quantitative finance.",
+      "content": "Professor Yongjae Lee participated and presented at KDD 2024 Finance Day. [figure1]\n He introduced research conducted previously with Shinhan Investment & Securities, as well as ongoing research being planned with KB Securities.\n[figure2]\n\nThe presentation covered two main research areas: 1) analyzing how diverse individual investors are and what different characteristics they possess, and 2) research on how to utilize optimization and machine learning to assist such diverse individual investors in their investment decisions.",
+      "figure1": "./public/news/240826_1.png",
+      "figure2": "./public/news/240826_2.png",
       "tags": ["conference", "KDD", "invited talk"],
-      "links": []
+      "links": [
+        {
+        "text": "KDD 2024 Finance Day Website",
+        "url": "https://kddfinanceday2024.github.io/program/",
+        "type": "website"
+        },
+        {
+        "text": "Presentation Slides",
+        "url": "https://www.dropbox.com/scl/fi/xoikjjwime9qlmz7u44nq/240826-Investment-Recommendation-for-Individual-Invesotrs-Yongjae-Lee-UNIST.pdf",
+        "type": "slides"
+        }
+      ]
     },
     {
       "id": "kams-best-paper-2024",

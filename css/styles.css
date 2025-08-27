@@ -80,6 +80,45 @@ body {
     transform: translateX(0);
 }
 
+/* News Modal Styling */
+#news-detail-modal .news-modal-title {
+    color: white !important;
+}
+
+#news-detail-modal .news-modal-subtitle {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Image Modal Styling */
+#image-modal {
+    backdrop-filter: blur(4px);
+}
+
+#image-modal img {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+/* News Modal Content */
+#news-detail-modal .prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+
+#news-detail-modal .figure-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#news-detail-modal .figure-container img {
+    transition: all 0.3s ease;
+}
+
+#news-detail-modal .figure-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 /* Accordion Styling */
 .accordion-content {
     max-height: 0;
