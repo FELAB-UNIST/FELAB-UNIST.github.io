@@ -1,5 +1,108 @@
 {
   "news": [
+    
+    {
+      "id": "maeil-business-paper-award-2025",
+      "date": "2025-08-20",
+      "category": "award",
+      "featured": false,
+      "title": "Prof. Lee Receives Maeil Business Young Scholar Paper Award",
+      "title_kr": "이용재 교수, 한국경영학회 융합학술대회 매경신진학자 논문상 수상",
+      "summary": "Professor Lee received the Maeil Business Young Scholar Paper Award at the Korean Academic Society of Business Administration for his research on Decision-informed Neural Networks with LLM integration for portfolio optimization.",
+      "content": "Professor Lee received the Maeil Business Young Scholar Paper Award at the Korean Academic Society of Business Administration Convergence Conference.\n\nThe award-winning paper, \"Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization,\" was led by <strong>Dr. Yoontae Hwang</strong> and is currently under review at an academic journal.\n\nThe paper combines two main components:\n- LLM-based time-series forecasting\n- Decision-focused learning for portfolio optimization\n\nThe key contribution is creating a prediction model that utilizes broader context than general time-series forecasting, focusing not on reducing simple metrics like MSE, but on building forecasts that enhance portfolio optimization performance.\n\n<strong>Authors:</strong> <strong>Yoontae Hwang</strong>, <strong>Yaxuan Kong</strong>, <strong>Stefan Zohren</strong> (University of Oxford), <strong>Yongjae Lee</strong> (UNIST)\n\nThis recognition was made possible through the recommendation of the Korean Financial Engineering Society. Congratulations to Dr. Yoontae Hwang as well![figure1]",
+      "figure1": "/public/news/250820_1.jpg",
+      "tags": ["award", "paper award", "Korean Academic Society", "portfolio optimization", "LLM"],
+      "links": [
+      {
+      "text": "Paper Link",
+      "url": "https://lnkd.in/guUESHnS",
+      "type": "paper"
+      }
+      ]
+    },
+    {
+      "id": "ucl-financial-math-seminar-2025",
+      "date": "2025-08-04",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Presents 'LLMs for Portfolio Selection' at UCL Financial Mathematics Seminar",
+      "title_kr": "이용재 교수, UCL Financial Mathematics Seminar에서 'LLMs for Portfolio Selection' 발표",
+      "summary": "Professor Lee delivered a talk on applying Large Language Models to portfolio selection at the UCL Financial Mathematics Seminar, discussing three ongoing research studies on LLM applications in investment management.",
+      "content": "Professor Lee delivered a talk titled \"LLMs for Portfolio Selection\" at the <strong>UCL</strong> Financial Mathematics Seminar.\n\nThe presentation addressed the challenges of applying LLMs to high-stakes financial decisions, particularly in portfolio selection, and was based on three ongoing research studies:\n\n<strong>1. \"Your AI, Not Your View: The View of LLMs in Investment Analysis\"</strong>\n(with <strong>Hoyoung Lee</strong>, Junhyeok Seo, Suhwan Park, <strong>Junhyeong Lee</strong>, <strong>Wonbin Ahn</strong>, <strong>Jacob Chanyeol Choi</strong>, <strong>Alejandro Lopez-Lira</strong>)\n\nThis study explored how LLMs can form implicit investment preferences or \"views\" shaped by their training data, which may diverge from user preferences. The research examined how various LLMs express different sector, size, and momentum preferences, finding that models like GPT and Gemini were more neutral while others like LLaMA and DeepSeek exhibited stronger investment views.\n\n<strong>2. \"THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics\"</strong>\n(with <strong>Hoyoung Lee</strong>, <strong>Wonbin Ahn</strong>, Suhwan Park, <strong>Jaehoon Lee</strong>, <strong>minjae kim</strong>, <strong>Sungdong Yoo</strong>, <strong>Tae Yoon Lim</strong>, <strong>Woohyung Lim</strong>)\n\nRecently accepted to CIKM'25 Applied Research Track, this work introduces a two-stage contrastive learning method for building financial asset embeddings: constituent-based alignment and temporal alignment.\n\n<strong>3. \"Integrating LLM-Generated Views into Mean-Variance Optimization using the Black-Litterman Model\"</strong>\n(with <strong>Youngbin Lee</strong>, <strong>Yejin Kim</strong>, <strong>Juhyeong Kim</strong>, Suin Kim)\n\nThis research explored how LLM views can be integrated into portfolio construction through the Black-Litterman model, focusing on using existing views in a robust and systematic way rather than extracting the best view from an LLM.\n\nThe seminar was hosted by <strong>Hao Ni</strong> and <strong>Alex Tse</strong>, with engaging discussions continuing through the drinks reception and dinner with attendees including <strong>Andrea Macrina</strong>, <strong>Daniel Schwarz</strong>, and <strong>Arman Khaledian</strong>.",
+      "tags": ["UCL", "seminar", "LLM", "portfolio selection", "financial mathematics"],
+      "links": [
+        {
+          "text": "Paper 1: Your AI, Not Your View",
+          "url": "https://lnkd.in/gZYWiC8p",
+          "type": "paper"
+        },
+        {
+          "text": "Paper 3: Black-Litterman Model",
+          "url": "https://lnkd.in/gzwjA5Ha",
+          "type": "paper"
+        }
+      ]
+    },
+    {
+      "id": "hwang-professor-appointment-2025",
+      "date": "2025-07-20",
+      "category": "achievement",
+      "featured": false,
+      "title": "Dr. Yoontae Hwang Appointed Assistant Professor at Pusan National University",
+      "title_kr": "황윤태 박사, 부산대학교 데이터사이언스학과 조교수 임용",
+      "summary": "Dr. Yoontae Hwang, the first Ph.D. student of UNIST FE Lab, has been appointed as Assistant Professor in the Department of Data Science at Pusan National University after completing his postdoctoral research at Oxford University.",
+      "content": "Dr. <strong>Yoontae Hwang</strong>, the first Ph.D. student of our lab, will be appointed as an Assistant Professor in the Department of Data Science at Pusan National University!\n\nIt was thanks to Dr. Hwang that our lab was able to naturally expand from portfolio optimization research into the broader field of financial ML/AI. After completing his integrated M.S./Ph.D. program in just four and a half years, he spent a year as a postdoctoral researcher at Oxford under the supervision of Prof. <strong>Stefan Zohren</strong> and is now returning to Korea as a faculty member.\n\nWe are confident that he will become an excellent researcher and educator. Please join us in supporting and encouraging him as he embarks on this new journey.",
+      "tags": ["appointment", "professor", "Pusan National University", "achievement"],
+      "links": [
+        {
+          "text": "Yoontae's Website",
+          "url": "https://lnkd.in/gTUVAS-v",
+          "type": "website"
+        }
+      ]
+    },
+    {
+      "id": "sigir-2025-tutorial-workshop",
+      "date": "2025-07-15",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Presents at SIGIR 2025 Tutorial and FinIR Workshop",
+      "title_kr": "이용재 교수, SIGIR 2025 튜토리얼 및 FinIR 워크샵 발표",
+      "summary": "Professor Lee co-presented an Information Retrieval in Finance tutorial and delivered a keynote at the FinIR Workshop, discussing LLM applications and limitations in investment management.",
+      "content": "[figure3]\n\nProfessor Lee successfully wrapped up all sessions at SIGIR 2025 and presented in two key events \n\n<strong>1. Information Retrieval in Finance Tutorial</strong>\n\nCo-presented alongside <strong>Chung-Chi Chen</strong> (AIST), <strong>Richard McCreadie</strong>, <strong>Javier Sanz-Cruzado Puig</strong> (University of Glasgow), <strong>Jacob Chanyeol Choi</strong> (LinqAlpha), and <strong>Alejandro Lopez-Lira</strong> (University of Florida). The tutorial covered various aspects of LLM and IR applications in finance, including LLM agents, investment analysis, and financial recommendation systems.\n\n[figure2] \n\n<strong>2. FinIR Workshop Keynote</strong>\n\nDelivered a keynote presentation discussing the limitations of LLMs in investment management—particularly in portfolio construction—and how to address them. The presentation briefly shared ongoing collaborative research with <strong>LG AI Research</strong>, <strong>LinqAlpha</strong> and <strong>Alejandro</strong>.\n\n[figure1]\n\nDuring the trip, Professor Lee had the opportunity to meet many researchers who share similar research interests, opening possibilities for future collaborations.",
+      "figure1": "/public/news/250715_1.jpg",
+      "figure2": "/public/news/250715_2.jpg",
+      "figure3": "/public/news/250715_3.jpg",
+      "tags": ["SIGIR", "tutorial", "workshop", "LLM", "finance"],
+      "links": [
+        {
+          "text": "Tutorial Website",
+          "url": "https://lnkd.in/grJnbdpF",
+          "type": "website"
+        },
+        {
+          "text": "Presentation Slides",
+          "url": "https://lnkd.in/gKbP2YPu",
+          "type": "slides"
+        }
+      ]
+    },
+    {
+      "id": "iclr-financial-ai-workshop-2025",
+      "date": "2025-04-28",
+      "category": "event",
+      "featured": true,
+      "title": "ICLR 2025 Workshop on Advances in Financial AI Successfully Held in Singapore",
+      "title_kr": "ICLR 2025 Workshop on Advances in Financial AI 싱가포르에서 성공적으로 개최",
+      "summary": "Professor Lee co-organized the ICLR 2025 Workshop on Advances in Financial AI in Singapore, featuring six invited talks spanning fundamental research to practical applications, with around 50 poster presentations from researchers worldwide.",
+      "content": "[figure1]\n\nOur Financial AI workshop, held in Singapore, concluded successfully! The program featured six invited talks that spanned a wide spectrum—from fundamental academic research to practical insights drawn from real-world deployments.\n\n[figure2]\n\n<strong>Invited Speakers:</strong>\n\n<strong>Chung-Chi Chen</strong> (AIST Japan): Introduced a wide range of NLP applications in finance\n\n<strong>Masashi Sugiyama</strong> (University of Tokyo): Discussed approaches for addressing distribution shift\n\n<strong>Weiqing Liu</strong> (Microsoft Research Asia): Demonstrated a model for simulating order flow\n\n<strong>Ariel Neufeld</strong> (Nanyang Technological University): Presented methods for solving high-dimensional PDEs using deep learning\n\n<strong>Chi Seng Pun</strong> (Nanyang Technological University): Explored what kinds of policies deep reinforcement learning learns under cumulative prospect theory\n\n<strong>Joo Lee</strong> (Arrowpoint Investment Partners) & <strong>Jacob Chanyeol Choi</strong> (LinqAlpha): Shared key insights from developing LLM agents in hedge fund workflows, along with a demo of workflow automation\n\n[figure3]\n\nIn addition to the invited talks, three contributed papers were selected for oral presentations, and around 50 were presented in poster sessions. It was inspiring to see so many passionate researchers from around the world actively engaging in discussions.\n\n[figure4]\n\nRecordings of the oral presentations will be made available online in about four weeks, and most slides will be uploaded to our workshop website.\n\nA big thank you to fellow co-organizers <strong>Eric Jiawei He</strong>, <strong>Nazanin Mehrasa</strong>, <strong>Sharon Yixuan Li</strong>, <strong>Bo An</strong>, and <strong>Alberto Pozanco Lancho</strong> for their amazing work in putting this event together!",
+      "figure1": "/public/news/250428_1.jpg",
+      "figure2": "/public/news/250428_2.jpg",
+      "figure3": "/public/news/250428_3.jpg",
+      "figure4": "/public/news/250428_4.jpg",
+      "tags": ["workshop", "ICLR", "Financial AI", "Singapore"],
+      "links": []
+    },
     {
       "id": "tae-nrf-grant-2024",
       "date": "2024-09-01",
@@ -115,7 +218,7 @@
       "id": "sejong-fellowship-2024",
       "date": "2024-05-17",
       "category": "achievement",
-      "featured": true,
+      "featured": false,
       "title": "Yoontae Hwang and Dr. Hyungwoo Kong Selected for Sejong Science Fellowship",
       "title_kr": "석박통합과정 황윤태, 박사후연구원 공형우 박사 세종과학펠로우십 선정!",
       "summary": "PhD candidate Yoontae Hwang and postdoctoral researcher Dr. Hyungwoo Kong have been selected for the prestigious Sejong Science Fellowship. This highly competitive fellowship recognizes outstanding early-career researchers and provides substantial research funding for independent research projects. Their selection reflects the excellence of research conducted at our lab.",
