@@ -13,7 +13,7 @@
     },
     {
       "id": "dynamic-embedding-tae-2024",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "(태인우) 금융 텍스트 데이터의 시간적 변화를 포착하는 동적 임베딩 기법 개발 및 분석",
       "title_en": "Dynamic Embedding Techniques for Capturing Temporal Changes in Financial Text Data",
       "funding_agency": "한국연구재단 (NRF of Korea)",
@@ -25,7 +25,7 @@
     },
     {
       "id": "aml-ai-system-2024",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "자금세탁 등 의심거래 분석 시스템 인공지능(AI) 적용방안 연구",
       "title_en": "Study on the Application of Artificial Intelligence (AI) in Suspicious Transaction Monitoring Systems for Money Laundering",
       "funding_agency": "금융위원회",
@@ -36,7 +36,7 @@
     },
     {
       "id": "household-finance-ai-2022",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "가계 금융활동 분석을 위한 인공지능 모델 및 맞춤형 생애주기 자산관리 최적화 모형 개발",
       "title_en": "Development of AI Models for Household Financial Activity Analysis and Personalized Life-cycle Asset Management Optimization",
       "funding_agency": "한국연구재단 (NRF of Korea)",

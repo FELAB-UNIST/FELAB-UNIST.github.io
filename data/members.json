@@ -23,7 +23,7 @@
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
         "position": "Ph.D-M.S Combined",
-        "image": "./public/images/members/iwtae.png",
+        "image": "./public/images/members/iwtae.jpg",
         "bio": "Ph.D-M.S Combined Student",
         "email": "vitainu0104@unist.ac.kr"
       },
@@ -58,7 +58,8 @@
       {
         "id": "sangjin-jin",
         "name": "Sangjin Jin",
-        "position": "Undergraduate Research Intern",
+        "name_kr": "진상진",
+        "position": "Undergraduate Intern",
         "image": "./public/images/members/sangjin.jpg",
         "bio": "Undergraduate Research Intern",
         "email": "jsj9185@unist.ac.kr"
@@ -66,7 +67,8 @@
       {
         "id": "suhwan-park",
         "name": "Suhwan Park",
-        "position": "Undergraduate Research Intern",
+        "name_kr": "박수환",
+        "position": "Undergraduate Intern",
         "image": "public/images/members/shpark.jpeg",
         "bio": "Undergraduate Research Intern",
         "email": "suhwan@unist.ac.kr"
@@ -150,7 +152,7 @@
         "period": "2021.01 - 2023.02",
         "current_position": "Software Research Engineer, LIG Nex1",
         "links": {
-          "notion": "https://www.notion.so/b204363e14da45b59db347739f5e84ec?pvs=21"
+          "linkedin": "https://www.linkedin.com/in/minjoo-choi-33b941205/"
         }
       }
     ],

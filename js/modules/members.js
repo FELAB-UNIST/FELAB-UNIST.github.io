@@ -62,7 +62,7 @@ const MembersManager = {
         if (current.interns) {
             const container = document.getElementById('interns-container');
             if (container) {
-                container.innerHTML = this.createInternCards(current.interns);
+                container.innerHTML = this.createMemberCards(current.interns);
             }
         }
     },
@@ -94,32 +94,6 @@ const MembersManager = {
                            onclick="event.stopPropagation()">
                            Website
                         </a>
-                    ` : ''}
-                </div>
-            </div>
-        `).join('');
-    },
-    
-    createInternCards(interns) {
-        return interns.map(intern => `
-            <div class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow p-6 cursor-pointer border-l-4 border-brand-teal" 
-                 onclick="openDrawer('member-${intern.id}')">
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="${intern.image}" 
-                             alt="${intern.name}" 
-                             class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-gray-100"
-                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/0BB37F/F7F9FC?text=${this.getInitials(intern.name)}'">
-                    </div>
-                    <h5 class="font-semibold text-brand-navy text-lg">${intern.name}</h5>
-                    <p class="text-sm text-gray-600 mt-1">${intern.position}</p>
-                    ${intern.university ? `
-                        <p class="text-xs text-gray-500 mt-1">${intern.university}</p>
-                    ` : ''}
-                    ${intern.duration ? `
-                        <span class="inline-block mt-2 px-2 py-1 text-xs bg-brand-teal text-white rounded-full">
-                            ${intern.duration}
-                        </span>
                     ` : ''}
                 </div>
             </div>
