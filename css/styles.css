@@ -27,6 +27,68 @@ body {
 .bg-brand-teal { background-color: var(--brand-teal); }
 .text-brand-teal { color: var(--brand-teal); }
 
+/* Fix for grid-cols-4 if Tailwind is not working properly */
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Home page card grid specific fixes */
+.home-cards-grid {
+    display: grid !important;
+    gap: 1.5rem !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+    .home-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-cards-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Card styling fallback */
+.home-card {
+    display: block;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.home-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+}
+
+/* Fix for bg-blue-100 if not working */
+.bg-blue-100 {
+    background-color: #DBEAFE !important;
+}
+
+/* Fix for transform utilities */
+.hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem) !important;
+}
+
 /* Publication Author Colors */
 .text-author-pi, 
 .text-author-lab { 

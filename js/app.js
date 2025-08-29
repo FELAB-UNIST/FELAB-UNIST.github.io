@@ -1,4 +1,4 @@
-// Main Application Controller - Updated Version
+// Main Application Controller - Updated with News Carousel
 const App = {
     currentTab: 'home',
     isInitialized: false,
@@ -227,24 +227,37 @@ const App = {
         
         // Initialize page-specific JavaScript modules
         switch(tabId) {
+            case 'home':
+                // Initialize news carousel for home page
+                if (typeof NewsCarousel !== 'undefined') {
+                    NewsCarousel.reset(); // Reset state
+                    NewsCarousel.init();
+                } else {
+                    console.warn('NewsCarousel module not found');
+                }
+                break;
+                
             case 'publications':
                 if (typeof PublicationsManager !== 'undefined') {
                     PublicationsManager.initialized = false; // Reset state
                     PublicationsManager.init();
                 }
                 break;
+                
             case 'members':
                 if (typeof MembersManager !== 'undefined') {
                     MembersManager.initialized = false; // Reset state
                     MembersManager.init();
                 }
                 break;
+                
             case 'projects':
                 if (typeof ProjectsManager !== 'undefined') {
                     ProjectsManager.initialized = false; // Reset state
                     ProjectsManager.init();
                 }
                 break;
+                
             case 'journal-club':
                 console.log('Initializing Journal Club Manager...');
                 if (typeof JournalClubManager !== 'undefined') {
@@ -254,6 +267,7 @@ const App = {
                     console.warn('JournalClubManager not found');
                 }
                 break;
+                
             case 'news':
                 if (typeof NewsManager !== 'undefined') {
                     NewsManager.initialized = false; // Reset state
@@ -274,6 +288,11 @@ const App = {
                 input.parentNode.replaceChild(newInput, input);
             }
         });
+        
+        // Clean up news carousel if leaving home page
+        if (this.currentTab === 'home' && typeof NewsCarousel !== 'undefined') {
+            NewsCarousel.reset();
+        }
     },
     
     initMobileMenu() {

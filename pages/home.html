@@ -1,10 +1,10 @@
 <!-- Home Page -->
 <section class="py-16 md:py-24">
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left">
-                <!-- 메인 타이틀 영역 -->
-                 
+                <!-- Main Title -->
                 <h1 class="font-bold text-brand-navy tracking-tight leading-tight">
                     <span class="block text-2xl md:text-3xl lg:text-4xl mb-2">Welcome to the webpage of</span>
                     <span class="block text-4xl md:text-5xl lg:text-6xl text-brand-accent">
@@ -17,59 +17,123 @@
                     UNIST 금융공학연구실에 오신 것을 환영합니다 🤗
                 </p>
                 
-                <div class="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
-                    <p class="font-semibold text-brand-navy mb-3">Our Focus:</p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="text-brand-accent mr-2">•</span>
-                            <span>Quantitative research in financial markets</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-accent mr-2">•</span>
-                            <span>Developing robust mathematical models</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-accent mr-2">•</span>
-                            <span>Advanced computational methods for complex challenges</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-accent mr-2">•</span>
-                            <span>Machine learning applications in finance</span>
-                        </li>
-                    </ul>
+                <!-- Key Research Areas -->
+                <div class="mt-12 space-y-3">
+                    <h3 class="text-lg font-semibold text-brand-navy">Our Research Focus</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full text-sm font-medium">
+                            Portfolio Optimization
+                        </span>
+                        <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full text-sm font-medium">
+                            Machine Learning
+                        </span>
+                        <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full text-sm font-medium">
+                            Risk Management
+                        </span>
+                        <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full text-sm font-medium">
+                            LLM in Finance
+                        </span>
+                        <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent rounded-full text-sm font-medium">
+                            Financial Data Science
+                        </span>
+                    </div>
                 </div>
-
             </div>
-            <div>
+            
+            <!-- Image with Decorative Elements -->
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-brand-accent/20 to-brand-teal/20 rounded-2xl blur-2xl opacity-30"></div>
                 <img src="./public/images/main.png" 
                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/2563EB/0B1220?text=Lab+Image';"
                     alt="UNIST Financial Engineering Lab" 
-                    class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    class="relative rounded-2xl shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Recent News Carousel Section -->
+        <div class="mt-24">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-brand-navy">Recent News</h2>
+                <div class="flex gap-2">
+                    <button id="news-prev" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="news-next" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <svg class="w-5 h-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <div id="news-carousel" class="flex transition-transform duration-500 ease-out gap-6">
+                    <!-- News items will be dynamically loaded here -->
+                </div>
+            </div>
+            
+            <div class="text-center mt-6">
+                <a href="#" data-tab-link="news" class="text-brand-accent font-semibold hover:underline">
+                    View All News →
+                </a>
             </div>
         </div>
         
-        <div class="mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <a href="#" data-tab-link="members" class="group block bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                <h3 class="text-xl font-bold text-brand-navy">About Us</h3>
-                <p class="mt-2 text-gray-500">Learn about our mission, values, and the people behind our research.</p>
-                <span class="mt-4 inline-block text-brand-accent font-semibold group-hover:underline">Meet the Team →</span>
-            </a>
-            <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                <h3 class="text-xl font-bold text-brand-navy">What We Do</h3>
-                <p class="mt-2 text-gray-500">Discover our ongoing projects and core research areas.</p>
-                <div class="mt-4 flex flex-col space-y-2">
-                    <a href="#" data-tab-link="publications" class="text-brand-accent font-semibold hover:underline">Publications →</a>
-                    <a href="#" data-tab-link="projects" class="text-brand-accent font-semibold hover:underline">Projects →</a>
-                </div>
-            </div>
-            <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all transform hover:-translate-y-1">
-                <h3 class="text-xl font-bold text-brand-navy">Learn With Us</h3>
-                <p class="mt-2 text-gray-500">Join our academic discussions and access learning resources.</p>
-                <div class="mt-4 flex flex-col space-y-2">
-                    <a href="#" data-tab-link="news" class="text-brand-accent font-semibold hover:underline">Latest News →</a>
-                    <a href="#" data-tab-link="journal-club" class="text-brand-accent font-semibold hover:underline">Journal Club →</a>
-                </div>
+        <!-- Info Cards Section with CSS classes -->
+        <div class="mt-20">
+            <div class="home-cards-grid">
+                <!-- Card 1: Our Team -->
+                <a href="#" data-tab-link="members" class="home-card group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">👥</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Our Team</h3>
+                    <p class="mt-2 text-sm text-gray-500">Meet our talented researchers</p>
+                    <span class="mt-3 inline-block text-brand-accent text-sm font-semibold group-hover:underline">Learn more</span>
+                </a>
+                
+                <!-- Card 2: Publications -->
+                <a href="#" data-tab-link="publications" class="home-card group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">📄</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Publications</h3>
+                    <p class="mt-2 text-sm text-gray-500">Our latest research papers</p>
+                    <span class="mt-3 inline-block text-brand-accent text-sm font-semibold group-hover:underline">View all</span>
+                </a>
+                
+                <!-- Card 3: Projects -->
+                <a href="#" data-tab-link="projects" class="home-card group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Projects</h3>
+                    <p class="mt-2 text-sm text-gray-500">Ongoing research initiatives</p>
+                    <span class="mt-3 inline-block text-brand-accent text-sm font-semibold group-hover:underline">Explore</span>
+                </a>
+                
+                <!-- Card 4: Journal Club -->
+                <a href="#" data-tab-link="journal-club" class="home-card group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">📚</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Journal Club</h3>
+                    <p class="mt-2 text-sm text-gray-500">Weekly paper discussions</p>
+                    <span class="mt-3 inline-block text-brand-accent text-sm font-semibold group-hover:underline">Join us</span>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- News carousel will be initialized by main.js -->
