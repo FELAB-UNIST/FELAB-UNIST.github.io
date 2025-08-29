@@ -108,8 +108,13 @@ const App = {
                 // Scroll to top
                 window.scrollTo(0, 0);
                 
-                // Initialize page-specific functionality
-                this.initializePage(page);
+                // IMPORTANT: Wait for DOM to be fully rendered before initializing page
+                // Use requestAnimationFrame to ensure DOM is painted
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        this.initializePage(page);
+                    });
+                });
                 
                 // Update browser history
                 if (updateHistory) {
@@ -157,10 +162,28 @@ const App = {
         switch(page) {
             case 'home':
                 // Initialize news carousel for home page
-                if (typeof NewsCarousel !== 'undefined') {
-                    NewsCarousel.reset();
-                    NewsCarousel.init();
-                }
+                // Use MutationObserver to wait for carousel element
+                const waitForCarousel = () => {
+                    const carouselElement = document.getElementById('news-carousel');
+                    
+                    if (carouselElement && typeof NewsCarousel !== 'undefined') {
+                        console.log('Carousel element found, initializing...');
+                        NewsCarousel.reset();
+                        
+                        // Give it a moment to reset, then initialize
+                        setTimeout(() => {
+                            NewsCarousel.init();
+                        }, 100);
+                    } else if (typeof NewsCarousel !== 'undefined') {
+                        // Element not found yet, try again
+                        console.log('Waiting for carousel element...');
+                        setTimeout(waitForCarousel, 200);
+                    } else {
+                        console.warn('NewsCarousel module not loaded');
+                    }
+                };
+                
+                waitForCarousel();
                 break;
                 
             case 'publications':

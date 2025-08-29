@@ -1,4 +1,4 @@
-// News Carousel Module for Home Page - Save as js/modules/carousel.js
+// News Carousel Module for Home Page
 const NewsCarousel = {
     currentIndex: 0,
     newsData: [],
@@ -8,14 +8,33 @@ const NewsCarousel = {
     
     async init() {
         // Prevent multiple initializations
-        if (this.initialized) return;
+        if (this.initialized) {
+            console.log('Carousel already initialized, skipping...');
+            return;
+        }
         
-        console.log('Initializing News Carousel...');
+        console.log('Starting News Carousel initialization...');
+        
+        // First check if the carousel element exists
+        const carousel = document.querySelector('#news-carousel');
+        if (!carousel) {
+            console.error('Carousel element not found! Looking in:', document.getElementById('main-content'));
+            console.log('Current HTML:', document.getElementById('main-content')?.innerHTML.substring(0, 500));
+            return;
+        }
+        
+        console.log('Carousel element found, proceeding with initialization');
         
         this.updateItemsToShow();
-        await this.loadNewsData();
-        this.setupEventListeners();
-        this.initialized = true;
+        
+        try {
+            await this.loadNewsData();
+            this.setupEventListeners();
+            this.initialized = true;
+            console.log('News Carousel initialized successfully');
+        } catch (error) {
+            console.error('Failed to initialize carousel:', error);
+        }
     },
     
     // Update number of items to show based on screen size
@@ -34,7 +53,13 @@ const NewsCarousel = {
     // Load news data from JSON file
     async loadNewsData() {
         try {
+            console.log('Loading news data from ./data/news.json...');
             const response = await fetch('./data/news.json');
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
             const data = await response.json();
             
             // Get the 9 most recent news items
@@ -53,11 +78,13 @@ const NewsCarousel = {
     
     // Render the carousel
     render() {
-        const carousel = document.getElementById('news-carousel');
+        const carousel = document.querySelector('#news-carousel');
         if (!carousel) {
-            console.warn('News carousel element not found');
+            console.error('News carousel element not found during render');
             return;
         }
+        
+        console.log('Rendering carousel with', this.newsData.length, 'items');
         
         carousel.innerHTML = this.newsData.map(news => this.createNewsCard(news)).join('');
         this.updatePosition();
@@ -87,7 +114,7 @@ const NewsCarousel = {
     
     // Update carousel position based on current index
     updatePosition() {
-        const carousel = document.getElementById('news-carousel');
+        const carousel = document.querySelector('#news-carousel');
         if (!carousel) return;
         
         const offset = -(this.currentIndex * (100 / this.itemsToShow));
@@ -146,7 +173,7 @@ const NewsCarousel = {
         }
         
         // News card clicks - use event delegation
-        const carousel = document.getElementById('news-carousel');
+        const carousel = document.querySelector('#news-carousel');
         if (carousel) {
             carousel.addEventListener('click', (e) => {
                 const newsItem = e.target.closest('.news-carousel-item');
@@ -199,7 +226,7 @@ const NewsCarousel = {
     
     // Show error state if data fails to load
     showErrorState() {
-        const carousel = document.getElementById('news-carousel');
+        const carousel = document.querySelector('#news-carousel');
         if (carousel) {
             carousel.innerHTML = `
                 <div class="w-full text-center py-8 text-gray-500">
@@ -253,6 +280,7 @@ const NewsCarousel = {
     
     // Reset carousel to initial state
     reset() {
+        console.log('Resetting carousel...');
         this.currentIndex = 0;
         this.newsData = [];
         this.initialized = false;
