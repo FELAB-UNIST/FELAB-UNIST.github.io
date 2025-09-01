@@ -125,6 +125,7 @@ const App = {
                 const titles = {
                     'home': 'Home',
                     'members': 'Members',
+                    'activities': 'Activities',
                     'publications': 'Publications', 
                     'projects': 'Research Projects',
                     'journal-club': 'Journal Club',
@@ -210,6 +211,12 @@ const App = {
             case 'members':
                 if (typeof MembersManager !== 'undefined') {
                     MembersManager.init();
+                }
+                break;
+
+            case 'activities':
+                if (typeof ActivitiesManager !== 'undefined') {
+                    ActivitiesManager.init();
                 }
                 break;
                 

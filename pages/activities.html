@@ -1,0 +1,65 @@
+<!-- Activities Page -->
+<section class="py-16 md:py-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <h2 class="text-3xl font-bold text-brand-navy text-center">Lab Activities</h2>
+        <p class="text-lg text-gray-600 text-center mt-4 max-w-3xl mx-auto">
+            Explore our conferences, workshops, social events, and academic activities that shape our research culture.
+        </p>
+        
+        <!-- Filter Section -->
+        <div class="mt-12 flex flex-wrap justify-center gap-4">
+            <!-- Year Filter -->
+            <div class="flex gap-2">
+                <button class="year-filter active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg" data-year="all">
+                    All Years
+                </button>
+                <button class="year-filter px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300" data-year="2024">
+                    2024
+                </button>
+                <button class="year-filter px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300" data-year="2023">
+                    2023
+                </button>
+            </div>
+            
+            <!-- Category Filter -->
+            <div id="category-filters" class="flex gap-2">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+        
+        <!-- Featured Activity (Optional) -->
+        <div id="featured-activity" class="mt-12">
+            <!-- Will be populated if there's a featured activity -->
+        </div>
+        
+        <!-- Activities Grid -->
+        <div class="mt-16">
+            <div id="activities-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Activities will be dynamically loaded here -->
+                <div class="text-center py-8 col-span-full">
+                    <div class="inline-flex items-center">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-brand-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Loading activities...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistics -->
+        <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-brand-navy mb-6 text-center">Activity Statistics</h3>
+            <div id="activity-stats" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Activity Detail Modal (hidden by default) -->
+<div id="activity-detail-modal" class="hidden">
+    <!-- Modal content will be dynamically inserted here -->
+</div>

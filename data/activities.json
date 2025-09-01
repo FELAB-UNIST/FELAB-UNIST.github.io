@@ -1,0 +1,262 @@
+{
+  "activities": [
+    {
+        "id": "icaif-2024-nyc",
+        "date": "2024-11-13",
+        "title": "2024 ICAIF (NYC🗽)",
+        "title_kr": "2024 ICAIF (NYC🗽)",
+        "location": "Brooklyn, New York, USA",
+        "type": "conference",
+        "featured": true,
+        "thumbnail": "./images/activities/icaif-2024-thumb.jpg",
+        "summary": "2024년 11월 13일부터 2024년 11월 19일까지 뉴욕에서 열린 5th ACM International Conference on AI in Finance (ICAIF'24)에 참여하였습니다.",
+        
+        "participants": [
+        {"name": "Yongjae Lee", "role": "Professor"},
+        {"name": "Junhyeong Lee", "role": "Ph.D Student"},
+        {"name": "Inwoo Tae", "role": "M.S Student"},
+        {"name": "Juchan Kim", "role": "M.S Student / Presenter"},
+        {"name": "Kangmin Kim", "role": "Ph.D Student"}
+        ],
+        
+        "content": {
+        "overview": "2024년 11월 13일부터 2024년 11월 19일까지 뉴욕에서 열린 5th ACM International Conference on AI in Finance (ICAIF'24)에 참여하였습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가자",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-1.jpg",
+                "caption": "왼쪽부터 김강민(박사), 이준형(박사), 태인우(석사), 김주찬(석사), 이용재(교수님)이 학회장 로비에서 사진을 찍었습니다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "11/13 - 출발",
+            "content": "11월 13일 인천공항에서 뉴욕으로 출발했습니다. 저는 감사하게도 교수님 덕에 작년에도 뉴욕을 다녀왔는데요, 다시 가도 처음 가는 것 처럼 설레었습니다 ㅎㅎ\n저희는 학회 시작 하루 전에 뉴욕에 도착하였습니다. 도착 하자마자 바로 호텔 근처로 이동 후, 교수님과 함께 점심 식사 및 브루클린 브릿지에서의 사진 촬영 시간을 가졌습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "11/13 사진",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-2.jpg",
+                "caption": "준형, 주찬, 인우 (인우 옆자리는 모르는 사람이라 윤태 스티커로 가렸습니다.)"
+                },
+                {
+                "url": "./images/activities/icaif-2024-3.jpg",
+                "caption": "출발 전 공항에서"
+                },
+                {
+                "url": "./images/activities/icaif-2024-4.jpg",
+                "caption": "브루클린 브릿지에서 근처에서 찍은 야경"
+                },
+                {
+                "url": "./images/activities/icaif-2024-5.jpg",
+                "caption": "맛집으로 유명한 RAKU에서 첫 저녁 식사를 하였습니다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "11/14 - 학회 1일차",
+            "content": "학회 1일차가 시작되었습니다. 초반에는 각자 듣고 싶은 세션을 들으면서 시간을 알차게 보냈습니다. 저의 경우에는 이곳 저곳들 돌아다니면서 궁금한 내용들을 골라서 들었는데요, 특히 BlackRock에서 XAI를 어떠한 관점으로 접근하는지가 궁금해서 다음과 같은 세션도 들어보았습니다.\n\n1일 차 부터 다양한 이벤트가 있었는데요.\n이날은,\n1. LLMs and Generative AI for Finance workshop 준비 도움 및 참석\n2. Frank Fabozzi 교수님과의 만남\n위 두가지가 가장 큰 이벤트였습니다.\n\n해당 workshop에서는 훌륭하신 분들께서 좋은 이야기를 많이 해주셨습니다. 저는 개인적으로 Andrew Lo 교수님의 키노트를 아주 인상깊게 들었고, 시작 전에 개인적으로 만나 이런 저런 이야기를 짧게 나누었는데 굉장히 잘 들어주시고 반응해주셔서 매우 보람 찬 대화 중 하나였던 것 같습니다.(Andrew 교수님 책에 싸인을 받아야 했는데, 못가져갔습니다…ㅠ)\n\n해당 워크샵으로 당일 학회 일정을 마무리 하고, Frank Fabozzi 교수님과의 만남을 위해 The Union League Club으로 향했습니다. 매우 fancy하고 멋진 공간이었습니다!\n\nFabozzi 교수님은 저희 연구실과도 활발히 연구 중이신 학계에서는 전설적인 교수님으로, 저희에게 정말 좋은 말씀을 많이 해주셨습니다. 개인적인 질문들까지 많이 드렸었는데, 유쾌하면서도 진지하게 좋은 말씀을 많이 해주셔서 깊은 감명을 받았습니다. 이런 좋은 기회를 주신 교수님께도 다시 한번 감사의 말씀 드립니다!"
+            },
+            {
+            "type": "gallery",
+            "title": "11/14 사진",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-6.jpg",
+                "caption": "BlackRock XAI 세션"
+                },
+                {
+                "url": "./images/activities/icaif-2024-7.jpg",
+                "caption": "LLMs and Generative AI for Finance"
+                },
+                {
+                "url": "./images/activities/icaif-2024-8.jpg",
+                "caption": "LLMs and Generative AI for Finance 포스터 세션. 사진 속 FE Lab 학생을 찾아보세요!"
+                },
+                {
+                "url": "./images/activities/icaif-2024-9.jpg",
+                "caption": "The Union League Club"
+                },
+                {
+                "url": "./images/activities/icaif-2024-10.jpg",
+                "caption": "저희 연구실 인턴 출신인 김다함씨(Cornell Univ)와 함께 저녁 식사에 참여했습니다. (식당은 그리스 음식은 안 파는 그리스 음식점.)"
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "The Taxonomy of Retail Investors",
+                "presenter": "Juchan Kim",
+                "session": "Machine Learning for Financial Wellness: Human-Centric Recommender System workshop",
+                "time": "11월 15일 아침"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "11/15 - 학회 2일차",
+            "content": "학회 2일차 아침, 저희 연구실 석사과정 김주찬 학생이 The Taxonomy of Retail Investors 라는 제목으로 Machine Learning for Financial Wellness: Human-Centric Recommender System workshop에서 멋진 발표를 했습니다!\n\n당일을 제외하면 일정 상 뉴욕을 구경할 시간이 많지 않아, 2일차에 스테이크 하우스에서 저녁식사와 뮤지컬 관람을 하였습니다. 대학원생들끼리 이런 저런 이야기를 하며 친목을 다질 수 있었습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "11/15 사진",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-11.jpg",
+                "caption": "김주찬 학생 발표 장면"
+                },
+                {
+                "url": "./images/activities/icaif-2024-12.jpg",
+                "caption": "발표 세션"
+                },
+                {
+                "url": "./images/activities/icaif-2024-13.jpg",
+                "caption": "스테이크 하우스에서 저녁"
+                },
+                {
+                "url": "./images/activities/icaif-2024-14.jpg",
+                "caption": "저녁 식사"
+                },
+                {
+                "url": "./images/activities/icaif-2024-15.jpg",
+                "caption": "기분 좋은 김주찬 학생."
+                },
+                {
+                "url": "./images/activities/icaif-2024-16.jpg",
+                "caption": "브로드웨이에서 뮤지컬 Chicago를 관람하였습니다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "11/16 - 학회 3일차",
+            "content": "학회 3일차가 되었습니다. 대학원생들 별로 각자 관심 있는 분야가 상이하기 때문에 나눠져서 세션을 들었습니다.\n\n이 날은 reception이 있는 날이라서 행사에 참여했습니다. AAAI, IJCAI 등 다양한 국제 컨퍼런스에 참여해보았지만, ICAIF의 경우는 진짜 AI in Finance를 하는 사람들 위주로 모여 있다보니, 대화 나누는 것이 더욱 재밌고 네트워킹 하기에도 더욱 쉬운 것 같습니다. 특히, 매년 오는 사람들이 또 오기 때문에 슬슬 친분이 생기는 사람들이 꽤나 생기는 것 같습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "11/16 사진",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-17.jpg",
+                "caption": "학회 세션"
+                },
+                {
+                "url": "./images/activities/icaif-2024-18.jpg",
+                "caption": "세션 발표"
+                },
+                {
+                "url": "./images/activities/icaif-2024-19.jpg",
+                "caption": "이런 상큼한 마무리는 학회기간 동안 처음 봐서 찍어봤습니다 ㅎㅎ"
+                },
+                {
+                "url": "./images/activities/icaif-2024-20.jpg",
+                "caption": "황윤태 박사와도 친분이 있는, 영국에서 박사 과정 중인 Rachael과 같이 찍은 사진."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "11/17 - 학회 4일차",
+            "content": "학회 4일차에는 다양한 분들과 점심 식사를 같이 했습니다. 이용재 교수님과 저희 연구실 학생들 외로, KAIST에서 오신 다른 분들도 초청해서, 그 유명한 그리말디 피자를 함께 즐겼습니다!\n\nRama Cont 교수님의 스피치도 있어서 연구실 학생들과 같이 경청했습니다. 정말 인상깊은 발표 중 하나 였던 것 같습니다. (4일동안 다른 세션들도 많이 들었는데, 사진으로 남은게 많이 없네요…ㅠ 다음 학회 출장에서는 기록겸 많이 남겨와야겠습니다…)\n\n뉴욕을 떠날 시간이 가까워져서, 짬을 내서 우버로 거금을 들여 The Met도 아주 짧게 훑어보는 시간을 가졌습니다. 1시간도 채 못둘러봤던 것 같은데, 그럼에도 불구하고 생각보다 많은 것들을 둘러볼 수 있어서 좋은 시간이었습니다.\n\n이날은 한국으로 돌아오는 비행기를 밤에 탑승하는 일정이었습니다. 그래서 금융결제원 분들이 뉴욕의 3대 스테이크 중 하나인 울프강 스테이크를 먹자고 제안해주셔서, 저녁은 해당 식당에서 금융결제원 분들과 좋은 대화 나누면서 맛있게 먹었습니다.\n\n돌아오는 비행기에서, 저랑 인우 학생은 무려 비상구 좌석에 앉았기 때문에 전혀 피곤함 없이 편안한게 돌아올 수 있었습니다 ㅎㅎ"
+            },
+            {
+            "type": "gallery",
+            "title": "11/17 사진",
+            "images": [
+                {
+                "url": "./images/activities/icaif-2024-21.jpg",
+                "caption": "그리말디 피자"
+                },
+                {
+                "url": "./images/activities/icaif-2024-22.jpg",
+                "caption": "KAIST 연구진과 점심"
+                },
+                {
+                "url": "./images/activities/icaif-2024-23.jpg",
+                "caption": "Rama Cont 교수님 발표"
+                },
+                {
+                "url": "./images/activities/icaif-2024-24.jpg",
+                "caption": "The Met 박물관"
+                },
+                {
+                "url": "./images/activities/icaif-2024-25.jpg",
+                "caption": "The Met에서"
+                },
+                {
+                "url": "./images/activities/icaif-2024-26.jpg",
+                "caption": "울프강 스테이크"
+                },
+                {
+                "url": "./images/activities/icaif-2024-27.jpg",
+                "caption": "울프강 스테이크에서 저녁"
+                },
+                {
+                "url": "./images/activities/icaif-2024-28.jpg",
+                "caption": "금융결제원 분들과 식사"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "후기",
+            "content": "논문을 읽고, 논문을 쓰는 과정에서 수 많은 정보와 마주하게 됩니다. 분야, 저자, 방법론, 연구기관, 이론 등 정말 다양한 요소들이 연구/논문 속에 녹아 있습니다.\n\nICAIF는 이러한 다양한 정보들을 기반으로, 많은 사람들과 대화를 나눌 수 있는 멋진 컨퍼런스 중 하나라고 생각합니다. 작년에 이어 두 번째로 방문하였는데, 여전히 다양한 사람들과 금융에 대한 이야기를 나눌 수 있어서 행복한 시간이었습니다. 연구적인 자극도 많이 받았으며, 무엇보다 AI in Finance라는 분야에서 연구하고 적용하는 전세계 연구자들의 일원 이라는 강한 소속감을 느꼈습니다.\n\n우리 연구실 모두, 올해도 열심히 정진하여 내년 ICAIF'25에서도 큰 영감과 자극을 받을 수 있기를 바랍니다.\n\n그리고 항상 좋은 기회를 주시는 교수님께도 감사드립니다! 😊"
+            }
+        ],
+        
+        "highlights": [
+            "김주찬 학생의 'The Taxonomy of Retail Investors' 발표",
+            "Andrew Lo 교수님과의 대화",
+            "Frank Fabozzi 교수님과의 만남",
+            "LLMs and Generative AI for Finance workshop 참여",
+            "AAAI, IJCAI 대비 AI in Finance 전문 연구자들과의 네트워킹",
+            "브로드웨이 뮤지컬 Chicago 관람",
+            "The Met 박물관 방문",
+            "KAIST 연구진과의 교류"
+        ]
+        },
+        
+        "links": [
+            {
+                "text": "ICAIF 2024 Official Website",
+                "url": "https://ai-finance.org/"
+            }
+        ]
+    }
+  
+
+    ],
+  "categories": {
+    "conference": {
+      "name": "Conferences",
+      "icon": "🎓",
+      "color": "blue"
+    },
+    "workshop": {
+      "name": "Workshops",
+      "icon": "💡",
+      "color": "purple"
+    },
+    "social": {
+      "name": "Social Events",
+      "icon": "🎉",
+      "color": "green"
+    },
+    "seminar": {
+      "name": "Seminars",
+      "icon": "📚",
+      "color": "orange"
+    }
+  }
+}
