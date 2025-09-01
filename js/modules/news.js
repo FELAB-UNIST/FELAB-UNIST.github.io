@@ -6,7 +6,7 @@ const NewsManager = {
     currentNewsId: null,
     
     async init() {
-        if (this.initialized) return;
+        this.initialized = false;
         
         await this.loadData();
         this.render();

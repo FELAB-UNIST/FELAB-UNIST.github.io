@@ -162,28 +162,43 @@ const App = {
         switch(page) {
             case 'home':
                 // Initialize news carousel for home page
-                // Use MutationObserver to wait for carousel element
-                const waitForCarousel = () => {
-                    const carouselElement = document.getElementById('news-carousel');
+                // Add more robust checking and logging
+                const initCarousel = () => {
+                    console.log('Attempting to initialize carousel...');
                     
-                    if (carouselElement && typeof NewsCarousel !== 'undefined') {
-                        console.log('Carousel element found, initializing...');
+                    // Check if NewsCarousel module is loaded
+                    if (typeof NewsCarousel === 'undefined') {
+                        console.error('NewsCarousel module not loaded!');
+                        return;
+                    }
+                    
+                    // Check if the main content has the carousel element
+                    const mainContent = document.getElementById('main-content');
+                    console.log('Main content innerHTML length:', mainContent ? mainContent.innerHTML.length : 0);
+                    
+                    const carouselElement = document.getElementById('news-carousel');
+                    console.log('Carousel element found:', !!carouselElement);
+                    
+                    if (carouselElement) {
+                        console.log('Found carousel, resetting and initializing...');
                         NewsCarousel.reset();
                         
-                        // Give it a moment to reset, then initialize
-                        setTimeout(() => {
-                            NewsCarousel.init();
-                        }, 100);
-                    } else if (typeof NewsCarousel !== 'undefined') {
-                        // Element not found yet, try again
-                        console.log('Waiting for carousel element...');
-                        setTimeout(waitForCarousel, 200);
+                        // Use a promise to ensure async operations complete
+                        Promise.resolve().then(() => {
+                            NewsCarousel.init().then(() => {
+                                console.log('Carousel initialized successfully');
+                            }).catch(err => {
+                                console.error('Carousel init failed:', err);
+                            });
+                        });
                     } else {
-                        console.warn('NewsCarousel module not loaded');
+                        console.log('Carousel element not found, retrying in 500ms...');
+                        setTimeout(initCarousel, 500);
                     }
                 };
                 
-                waitForCarousel();
+                // Start initialization after a brief delay
+                setTimeout(initCarousel, 300);
                 break;
                 
             case 'publications':

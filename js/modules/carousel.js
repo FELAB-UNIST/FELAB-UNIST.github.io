@@ -86,14 +86,41 @@ const NewsCarousel = {
         
         console.log('Rendering carousel with', this.newsData.length, 'items');
         
-        carousel.innerHTML = this.newsData.map(news => this.createNewsCard(news)).join('');
+        // Set up carousel HTML with proper flex container
+        let html = '';
+        this.newsData.forEach(news => {
+            html += this.createNewsCard(news);
+        });
+        
+        carousel.innerHTML = html;
+        
+        // Apply inline styles to ensure proper flex layout
+        carousel.style.display = 'flex';
+        carousel.style.gap = '1.5rem'; // 24px gap
+        carousel.style.transition = 'transform 500ms ease-out';
+        
+        // Set widths for all items based on items to show
+        const items = carousel.querySelectorAll('.news-carousel-item');
+        items.forEach(item => {
+            item.style.flex = '0 0 auto'; // Prevent flex shrinking
+            if (this.itemsToShow === 1) {
+                item.style.width = '100%';
+            } else if (this.itemsToShow === 2) {
+                // For 2 items: (100% - 1 gap) / 2
+                item.style.width = 'calc((100% - 1.5rem) / 2)';
+            } else {
+                // For 3 items: (100% - 2 gaps) / 3
+                item.style.width = 'calc((100% - 3rem) / 3)';
+            }
+        });
+        
         this.updatePosition();
     },
     
     // Create individual news card HTML
     createNewsCard(news) {
         return `
-            <div class="flex-none w-full sm:w-1/2 lg:w-1/3 news-carousel-item" data-news-id="${news.id}">
+            <div class="news-carousel-item" data-news-id="${news.id}">
                 <div class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all h-full group cursor-pointer">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
@@ -117,8 +144,24 @@ const NewsCarousel = {
         const carousel = document.querySelector('#news-carousel');
         if (!carousel) return;
         
-        const offset = -(this.currentIndex * (100 / this.itemsToShow));
-        carousel.style.transform = `translateX(${offset}%)`;
+        const container = carousel.parentElement;
+        if (!container) return;
+        
+        // Get the actual computed width of the first item
+        const firstItem = carousel.querySelector('.news-carousel-item');
+        if (!firstItem) return;
+        
+        // Get the actual rendered width including gap
+        const itemStyle = window.getComputedStyle(firstItem);
+        const itemWidth = firstItem.offsetWidth;
+        const gap = parseFloat(window.getComputedStyle(carousel).gap) || 24;
+        
+        // Calculate total width to move per index (item width + gap)
+        const moveDistance = itemWidth + gap;
+        
+        // Calculate translation in pixels
+        const translateX = -(this.currentIndex * moveDistance);
+        carousel.style.transform = `translateX(${translateX}px)`;
         
         this.updateButtonStates();
     },
@@ -205,7 +248,8 @@ const NewsCarousel = {
                 this.currentIndex, 
                 Math.max(0, this.newsData.length - this.itemsToShow)
             );
-            this.updatePosition();
+            // Re-render with new dimensions
+            this.render();
         }
     },
     
@@ -291,4 +335,4 @@ const NewsCarousel = {
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = NewsCarousel;
-}
+}   

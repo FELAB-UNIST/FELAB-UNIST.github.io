@@ -9,7 +9,7 @@ const JournalClubManager = {
     searchQuery: '',
     
     async init() {
-        if (this.initialized) return;
+        this.initialized = false;
         
         console.log('Initializing Journal Club Manager...');
         try {
