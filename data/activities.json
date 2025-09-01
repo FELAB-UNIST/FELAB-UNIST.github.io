@@ -221,6 +221,247 @@
                 "url": "https://ai-finance.org/"
             }
         ]
+    },
+
+    {
+        "id": "ijcai-2024-jeju",
+        "date": "2024-08-02",
+        "title": "2024 IJCAI (Jeju)",
+        "title_kr": "2024년 IJCAI @제주",
+        "location": "Jeju, South Korea",
+        "type": "conference",
+        "featured": true,
+        "thumbnail": "./public/images/activities/ijcai-2024-1.png",
+        "summary": "2024년 8월 2일부터 8월 8일까지 제주에서 열린 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024)에 참여하였습니다.",
+        
+        "content": {
+        "overview": "FE LAB은 제주에서 열린 인공지능 탑 컨퍼런스인 IJCAI 2024, the 33rd International Joint Conference on Artificial Intelligence에 다녀 왔습니다.\n\n기간: 8월 2일 ~ 8월 8일 (7일)\n인원: 대학원생 및 포닥 + 교수님 (9명)",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가자",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-1.png",
+                "caption": "FE LAB 참가자들"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "1일차",
+            "content": "각자 비행기를 타고 오후에 제주에 도착한 FE lab 멤버들은 저녁을 먹고 숙소에서 쉬었습니다."
+            },
+            {
+            "type": "text",
+            "title": "2일차",
+            "content": "이 날엔 학회가 시작되었고, FE lab 멤버들은 학회 등록을 한 후 금융 NLP 워크샵에 참석했습니다.\n\n이용재 교수님이 이 날 밤에 도착하였고 연구실 멤버들과 올림픽 경기를 보며 야식을 먹었습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "2일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-2.png",
+                "caption": "워크샵에 입장하는 김예진 석사"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-3.png",
+                "caption": "워크샵에서 질문하는 글래스고 대학 리차드 교수님"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-4.jpg",
+                "caption": "숙소에서 파리올림픽 체조경기를 시청하는 랩 구성원들과 교수님"
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "개인투자자를 위한 주식 추천 시스템",
+                "presenter": "김예진",
+                "session": "금융 RecSys 워크샵",
+                "time": "8월 4일"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "3일차",
+            "content": "이 날은 FE lab 이용재 교수님이 주최한 금융 RecSys 워크샵이 열렸습니다. 연구실에서는 김예진 석사과정이 \"개인투자자를 위한 주식 추천 시스템\"을 주제로 발표했습니다. 이는 temporal graph learning을 기반으로 한 그래프 협업 필터링인데, 기존의 negative sampling 방식을 mean-variance efficient하게 디자인한 방법입니다.\n\n점심식사는 글래스고 대학교의 Richard 교수님 및 Lubingzhi 박사과정과 함께 했습니다. 교수님께서 전복돌솥밥을 사 주셨습니다.\n\n저녁식사는 한양대학교 송재욱 교수님과 박사과정 두 분과 함께 했습니다. (바베큐)\n\n저녁식사 후에는 교수님의 비밀공방에 둘러 앉아 진솔한 이야기를 나누었답니다."
+            },
+            {
+            "type": "gallery",
+            "title": "3일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-5.jpg",
+                "caption": "Fin-RecSys 워크샵을 빛낸 사람들"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-6.png",
+                "caption": "워크샵을 진행 중인 이용재 교수님. 옆으로 리차드 교수님의 모습이 보인다."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-7.jpg",
+                "caption": "주식추천을 주제로 발표 중인 김예진 석사. 이 날 발표가 끝나고 뉴욕에서 온 한 참가자가 김예진 학생에게 많은 질문을 하였고 링크드인 맞팔을 하였다."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-8.jpg",
+                "caption": "가람돌솥밥에서 점심식사 중 한 컷."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-9.jpg",
+                "caption": "CMU AI 프로그램 동기인 정주호(성균관대), 최민영(카이스트) 학생들과 만난 이영빈, 김예진 석사"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-10.png",
+                "caption": "CMU AI 프로그램 동기인 나윤진(서울대), 강주언(서강대) 학생들과 만난 이영빈, 김예진 석사"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-11.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-12.jpg",
+                "caption": "공방에 앉아 사진을 몰래 찍는 황윤태 박사를 김예진 석사가 샛침하게 쳐다보고 있다."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-13.jpg",
+                "caption": "황윤태 박사와 이영빈 석사생"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "4일차",
+            "content": "점심식사는 황윤태 박사님께서 뼈 없는 갈치조림을 쾌척하셨습니다. (갈치왕)\n\n저녁식사는 학회 리셉션에서 해결했습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "4일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-14.jpg",
+                "caption": "여섯 명이서 8인분을 먹었습니다."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-15.jpg",
+                "caption": "학회 리셉션에서 좋은 시간을 보내고 있는 랩 구성원들. 토론토 AI 프로그램 출신 학생들의 모습도 보인다."
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-16.jpg",
+                "caption": "학회 리셉션에서 음식을 담고 있는 황윤태 박사. 그 뒤로 이영빈 석사의 모습도 보인다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "5일차",
+            "content": "학회의 메인 세션이 시작 된 날입니다.\n\n점심식사는 이용재 교수님께서 맛있는 양식을 사 주셨습니다 (함쉐프). 식사 후에는 망고빙수를 먹었습니다 (바당 카페)\n\n학회에서는 그래프, 머신러닝 등 다양한 주제의 논문이 발표되었고 포스터 세션에도 재밌는 연구가 많았습니다. 또 여러 기업에서 연 부스들도 있었습니다 (주로 중국 기업, 대학교)."
+            },
+            {
+            "type": "gallery",
+            "title": "5일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-17.jpg",
+                "caption": "카페 전경"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-18.jpg",
+                "caption": "카페 전경"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-19.png",
+                "caption": "맛있고 비싼 망고빙수"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-20.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-21.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-22.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-23.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "6일차",
+            "content": "이 날은 오전에 finance 세션이 있어서 이용재 교수님이 좌장으로 참여하셨고, FE lab 멤버들이 참석했습니다.\n\n점심식사는 공형우 박사님께서 제주 전통요리인 뼈국을 쾌척 해 주셨습니다 (누이밥상)\n\n오후에는 industrial AI 세션 및 포스터 세션을 돌아다녔습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "6일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-24.png",
+                "caption": "#IJCAI2024 MTA: Finance"
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-25.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-26.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-27.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/ijcai-2024-28.png",
+                "caption": "Tabular model 관련 연구를 보고 질문하는 황윤태 박사"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "7일차",
+            "content": "마지막 날에는 아침 일찍 일어나 제주 공항으로 향했습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "7일차 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/ijcai-2024-29.jpg",
+                "caption": ""
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "김예진 학생의 '개인투자자를 위한 주식 추천 시스템' 발표",
+            "이용재 교수님이 주최한 금융 RecSys 워크샵",
+            "금융 NLP 워크샵 참여",
+            "글래스고 대학교 Richard 교수님과의 교류",
+            "한양대학교 송재욱 교수님과의 네트워킹",
+            "Finance 세션에서 이용재 교수님 좌장 참여",
+            "CMU AI 프로그램 동기들과의 만남"
+        ]
+        },
+        
+        "links": [
+        {
+            "text": "IJCAI 2024 Official Website",
+            "url": "https://ijcai24.org/"
+        }
+        ]
     }
   
 
