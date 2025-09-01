@@ -20,7 +20,7 @@
             "title": "학회 참가자",
             "images": [
                 {
-                "url": "./public/public/images/activities/icaif-2024-1.jpg",
+                "url": "./public/images/activities/icaif-2024-1.jpg",
                 "caption": "왼쪽부터 김강민(박사), 이준형(박사), 태인우(석사), 김주찬(석사), 이용재(교수님)이 학회장 로비에서 사진을 찍었습니다."
                 }
             ]
@@ -462,6 +462,119 @@
             "url": "https://ijcai24.org/"
         }
         ]
+    },
+
+    {
+        "id": "felab-graduation-2024",
+        "date": "2024-06-13",
+        "title": "UNIST FE Lab First PhD Graduate + MS Graduates!",
+        "title_kr": "UNIST FE Lab 첫 박사생(황윤태) + 김석사(김예진) +이석사(이영빈, 온라인) 배출!",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "gathering",
+        "featured": true,
+        "thumbnail": "./public/images/activities/graduation-2024-1.png",
+        "summary": "2024년 6월 13일 황윤태 박사님께서 디펜스를 성공적으로 끝내시고 FE Lab의 첫 박사 졸업생이 되셨습니다. 김예진, 이영빈 석사도 함께 졸업하였습니다.",
+        
+        "content": {
+        "overview": "2024.06.13 황윤태 박사님께서 디펜스를 성공적으로 끝내셨습니다🎉🎉🎉",
+        
+        "sections": [
+            {
+                "type": "gallery",
+                "title": "졸업 디펜스",
+                "images": [
+                    {
+                    "url": "./public/images/activities/graduation-2024-1.png",
+                    "caption": "이용재 교수님과 그의 첫 박사 졸업생 황.윤.태."
+                    },
+                    {
+                    "url": "./public/images/activities/graduation-2024-2.jpg",
+                    "caption": "엄청난 그의 업적"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "title": "황윤태 박사 졸업",
+                "content": "황윤태 박사님께서는 엄청난 업적을 자랑하시며 멋지게 졸업하셨습니다…"
+            },
+            {
+                "type": "text",
+                "title": "졸업 기념 회식",
+                "content": "황윤태 박사 & 김예진 석사의 디펜스 기념으로 랩실 회식을 했습니다👩🏻‍🎓👨🏻‍🎓"
+            },
+            {
+                "type": "gallery",
+                "title": "졸업 기념 회식",
+                "images": [
+                    {
+                    "url": "./public/images/activities/graduation-2024-3.jpg",
+                    "caption": "2024년 1학기 FE Lab 멤버들(+ 이준형 석박통합, 김강민 인턴)"
+                    },
+                    {
+                    "url": "./public/images/activities/graduation-2024-4.jpg",
+                    "caption": "1차 소소 (소고기)"
+                    },
+                    {
+                    "url": "./public/images/activities/graduation-2024-5.jpg",
+                    "caption": "2차 호맥 (호떡+맥주)"
+                    },
+                    {
+                    "url": "./public/images/activities/graduation-2024-6.jpg",
+                    "caption": "교수님께서 사오신 발렌타인 30년산 🔥"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "title": "FE Lab 전통",
+                "content": "이제 FE Lab 박사 졸업생들은 이렇게 가보를 남기시면 됩니다…"
+            },
+            {
+                "type": "gallery",
+                "title": "박사 졸업 전통",
+                "images": [
+                    {
+                        "url": "./public/images/activities/graduation-2024-7.jpg",
+                        "caption": "발렌타인 30년산에 싸인과 한마디를 남긴 황윤티(Yoontea) 박사님"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "title": "졸업 축하 파티",
+                "content": "성심당 망고시루 케이크로 소소한 파티를 했습니다"
+            },
+            {
+                "type": "gallery",
+                "title": "축하 파티",
+                "images": [
+                    {
+                        "url": "./public/images/activities/graduation-2024-8.png",
+                        "caption": "김주찬 석사과정생이 아침 일찍 성심당에 오픈런을 해서 사온 성심당 망고시루"
+                    },
+                    {
+                        "url": "./public/images/activities/graduation-2024-9.jpg",
+                        "caption": "FE Lab 2024년 1학기 졸업생들"
+                    },
+                    {
+                        "url": "./public/images/activities/graduation-2024-10.jpg",
+                        "caption": "맛있는 케이크 감사합니다 ☺️"
+                    }
+                ]
+            }
+        ],
+        
+        "highlights": [
+            "FE Lab 첫 박사 졸업생 배출 (황윤태 박사)",
+            "김예진 석사 졸업",
+            "이영빈 석사 졸업 (온라인)",
+            "발렌타인 30년산 위스키에 박사 졸업생 싸인 전통 시작",
+            "성심당 망고시루 케이크 축하 파티"
+        ]
+        },
+        
+        "links": []
     }
   
 
@@ -477,7 +590,7 @@
       "icon": "💡",
       "color": "purple"
     },
-    "social": {
+    "gathering": {
       "name": "Social Events",
       "icon": "🎉",
       "color": "green"
