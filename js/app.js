@@ -48,22 +48,19 @@ const App = {
     },
     
     setupNavigation() {
-        // Handle all navigation links - but NOT cards on home page
+        // Handle all navigation links
         document.addEventListener('click', async (e) => {
             // Check if clicked element or its parent is a nav-link
             const navLink = e.target.closest('.nav-link');
             
             if (navLink && navLink.dataset.tab) {
                 e.preventDefault();
-                e.stopPropagation();
                 
                 const targetPage = navLink.dataset.tab;
                 console.log('Navigation clicked:', targetPage);
                 
-                // Don't reload if we're already on that page (unless it's a card click on home page)
-                if (this.currentPage !== targetPage || this.currentPage === 'home') {
-                    await this.loadPage(targetPage);
-                }
+                // Always load the page when navigation is clicked
+                await this.loadPage(targetPage);
                 
                 // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobile-menu');

@@ -77,7 +77,7 @@ const ActivitiesManager = {
         
         container.innerHTML = `
             <div class="bg-gradient-to-r from-brand-accent/10 to-brand-teal/10 rounded-2xl p-8 cursor-pointer hover:shadow-lg transition-all"
-                 onclick="ActivitiesManager.openActivityDetail('${featured.id}')">
+                 onclick="event.stopPropagation(); ActivitiesManager.openActivityDetail('${featured.id}'); return false;">
                 <div class="flex flex-col md:flex-row gap-8 items-center">
                     <div class="md:w-1/3">
                         <img src="${featured.thumbnail}" 
@@ -142,7 +142,7 @@ const ActivitiesManager = {
         
         return `
             <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer overflow-hidden group"
-                     onclick="ActivitiesManager.openActivityDetail('${activity.id}')">
+                     onclick="event.stopPropagation(); ActivitiesManager.openActivityDetail('${activity.id}'); return false;">
                 <div class="h-48 overflow-hidden bg-gray-100">
                     <img src="${activity.thumbnail}" 
                          alt="${activity.title}"
@@ -177,26 +177,43 @@ const ActivitiesManager = {
     },
     
     openActivityDetail(activityId) {
-        const activity = this.data.activities.find(a => a.id === activityId);
-        if (!activity) return;
+        console.log('Opening activity detail for:', activityId);
         
-        this.currentActivityId = activityId;
-        
-        // Create or get modal
-        let modal = document.getElementById('activity-detail-modal');
-        if (!modal) {
-            modal = document.createElement('div');
-            modal.id = 'activity-detail-modal';
-            modal.className = 'fixed inset-0 z-50 overflow-y-auto hidden';
-            document.body.appendChild(modal);
+        if (!this.data || !this.data.activities) {
+            console.error('Activities data not loaded');
+            return;
         }
         
+        const activity = this.data.activities.find(a => a.id === activityId);
+        if (!activity) {
+            console.error('Activity not found:', activityId);
+            return;
+        }
+        
+        console.log('Found activity:', activity);
+        this.currentActivityId = activityId;
+        
+        // Remove any existing modal first
+        let existingModal = document.getElementById('activity-detail-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Create new modal
+        const modal = document.createElement('div');
+        modal.id = 'activity-detail-modal';
+        modal.className = 'fixed inset-0 z-[100] overflow-y-auto';
+        modal.style.display = 'block';
+        modal.style.willChange = 'transform'; // Optimize for animations
+        
         modal.innerHTML = this.createActivityDetailModal(activity);
-        modal.classList.remove('hidden');
+        document.body.appendChild(modal);
         document.body.style.overflow = 'hidden';
         
-        // Add hash to URL for minimal sharing capability
-        window.location.hash = activityId;
+        // Force reflow for smooth animation
+        modal.offsetHeight;
+        
+        console.log('Modal created and should be visible');
         
         // Initialize gallery if exists
         this.initGallery(activity);
@@ -206,19 +223,18 @@ const ActivitiesManager = {
         const category = this.data.categories[activity.type];
         
         return `
-            <div class="fixed inset-0 bg-black bg-opacity-50 z-40" onclick="ActivitiesManager.closeActivityDetail()"></div>
-            <div class="relative min-h-screen flex items-start justify-center p-4 pt-8 z-50">
-                <div class="relative bg-white rounded-xl max-w-5xl w-full max-h-[90vh] overflow-hidden">
+            <div class="fixed inset-0 bg-black bg-opacity-50" onclick="ActivitiesManager.closeActivityDetail()"></div>
+            <div class="fixed inset-0 flex items-start justify-center overflow-y-auto">
+                <div class="relative bg-white rounded-xl max-w-5xl w-full m-4 mt-8">
                     <!-- Close button -->
                     <button onclick="ActivitiesManager.closeActivityDetail()" 
-                            class="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow">
+                            class="absolute top-4 right-4 z-20 bg-white/90 backdrop-blur rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow">
                         <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    
                     <!-- Scrollable Content -->
-                    <div class="overflow-y-auto max-h-[90vh]">
+                    <div class="overflow-y-auto max-h-[85vh]">
                         <!-- Hero Image -->
                         ${activity.thumbnail ? `
                             <div class="h-64 md:h-80 overflow-hidden bg-gray-100">
@@ -292,7 +308,7 @@ const ActivitiesManager = {
         // Overview
         if (activity.content.overview) {
             html += `
-                <div class="mb-8">
+                <div class="mb-10">
                     <p class="text-gray-700 leading-relaxed">${activity.content.overview}</p>
                 </div>
             `;
@@ -301,12 +317,12 @@ const ActivitiesManager = {
         // Highlights
         if (activity.content.highlights && activity.content.highlights.length > 0) {
             html += `
-                <div class="mb-8 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
-                    <h3 class="font-semibold text-brand-navy mb-3">Key Highlights</h3>
-                    <ul class="space-y-2">
+                <div class="mb-10 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                    <h3 class="font-semibold text-brand-navy mb-4">Key Highlights</h3>
+                    <ul class="space-y-3">
                         ${activity.content.highlights.map(h => `
                             <li class="flex items-start">
-                                <span class="text-yellow-600 mr-2">✓</span>
+                                <span class="text-yellow-600 mr-3">✓</span>
                                 <span class="text-gray-700">${h}</span>
                             </li>
                         `).join('')}
@@ -331,22 +347,22 @@ const ActivitiesManager = {
         switch(section.type) {
             case 'text':
                 html = `
-                    <div class="mb-8">
-                        ${section.title ? `<h3 class="font-semibold text-brand-navy mb-3">${section.title}</h3>` : ''}
-                        <p class="text-gray-700 leading-relaxed">${section.content}</p>
+                    <div class="mb-10">
+                        ${section.title ? `<h3 class="font-semibold text-brand-navy mb-4">${section.title}</h3>` : ''}
+                        <p class="text-gray-700 leading-relaxed whitespace-pre-line">${section.content}</p>
                     </div>
                 `;
                 break;
                 
             case 'presentations':
                 html = `
-                    <div class="mb-8">
-                        <h3 class="font-semibold text-brand-navy mb-4">${section.title}</h3>
+                    <div class="mb-10">
+                        <h3 class="font-semibold text-brand-navy mb-5">${section.title}</h3>
                         <div class="space-y-4">
                             ${section.items.map(item => `
-                                <div class="p-4 bg-white border border-gray-200 rounded-lg">
-                                    <h4 class="font-medium text-gray-900 mb-2">${item.title}</h4>
-                                    <div class="text-sm text-gray-600 space-y-1">
+                                <div class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm">
+                                    <h4 class="font-medium text-gray-900 mb-3">${item.title}</h4>
+                                    <div class="text-sm text-gray-600 space-y-2">
                                         <p>👤 Presenter: ${item.presenter}</p>
                                         <p>📅 Session: ${item.session}</p>
                                         <p>🕒 Time: ${item.time}</p>
@@ -359,19 +375,56 @@ const ActivitiesManager = {
                 break;
                 
             case 'gallery':
+                const imageCount = section.images.length;
+                
                 html = `
-                    <div class="mb-8">
-                        <h3 class="font-semibold text-brand-navy mb-4">${section.title}</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            ${section.images.map((img, idx) => `
-                                <div class="cursor-pointer group" onclick="ActivitiesManager.openImageModal('${img.url}', ${idx})">
-                                    <img src="${img.url}" 
-                                         alt="${img.caption || ''}"
-                                         class="w-full h-40 object-cover rounded-lg group-hover:opacity-90 transition-opacity"
-                                         onerror="this.parentElement.style.display='none'">
-                                    ${img.caption ? `<p class="text-xs text-gray-600 mt-2">${img.caption}</p>` : ''}
-                                </div>
-                            `).join('')}
+                    <div class="mb-10">
+                        <h3 class="font-semibold text-brand-navy mb-6">${section.title}</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            ${section.images.map((img, idx) => {
+                                // 홀수 개수일 때 마지막 아이템 체크
+                                const isLast = idx === imageCount - 1;
+                                const isOddTotal = imageCount % 2 === 1;
+                                const shouldSpanFull = isLast && isOddTotal;
+                                
+                                // 1개일 때는 전체 너비 사용
+                                if (imageCount === 1) {
+                                    return `
+                                        <div class="cursor-pointer group col-span-2" 
+                                             onclick="event.stopPropagation(); ActivitiesManager.openImageModal('${img.url.replace(/'/g, "\\'")}', ${idx})">
+                                            <div class="max-w-4xl mx-auto">
+                                                <div class="relative h-72 sm:h-96 bg-gray-100 rounded-xl overflow-hidden">
+                                                    <img src="${img.url}" 
+                                                         alt="${img.caption || ''}"
+                                                         loading="lazy"
+                                                         decoding="async"
+                                                         class="w-full h-full object-cover shadow-lg hover:shadow-2xl transition-all duration-300 transform-gpu"
+                                                         onerror="this.parentElement.parentElement.parentElement.style.display='none'">
+                                                </div>
+                                                ${img.caption ? `<p class="text-sm text-gray-600 mt-4 px-2">${img.caption}</p>` : ''}
+                                            </div>
+                                        </div>
+                                    `;
+                                }
+                                
+                                // 일반적인 경우와 홀수 마지막 처리
+                                return `
+                                    <div class="cursor-pointer group ${shouldSpanFull ? 'col-span-2' : 'col-span-1'}" 
+                                         onclick="event.stopPropagation(); ActivitiesManager.openImageModal('${img.url.replace(/'/g, "\\'")}', ${idx})">
+                                        <div class="${shouldSpanFull ? 'max-w-4xl mx-auto' : ''}">
+                                            <div class="relative ${shouldSpanFull ? 'h-72 sm:h-96' : 'h-56 sm:h-72'} bg-gray-100 rounded-xl overflow-hidden">
+                                                <img src="${img.url}" 
+                                                     alt="${img.caption || ''}"
+                                                     loading="lazy"
+                                                     decoding="async"
+                                                     class="w-full h-full object-cover shadow-lg hover:shadow-2xl transition-all duration-300 transform-gpu"
+                                                     onerror="this.parentElement.parentElement.parentElement.style.display='none'">
+                                            </div>
+                                            ${img.caption ? `<p class="text-sm text-gray-600 mt-4 px-2">${img.caption}</p>` : ''}
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
                         </div>
                     </div>
                 `;
@@ -382,12 +435,11 @@ const ActivitiesManager = {
     },
     
     openImageModal(imageSrc, index) {
-        // Similar to NewsManager's image modal
         let imageModal = document.getElementById('activity-image-modal');
         if (!imageModal) {
             imageModal = document.createElement('div');
             imageModal.id = 'activity-image-modal';
-            imageModal.className = 'fixed inset-0 z-[60] hidden';
+            imageModal.className = 'fixed inset-0 z-[150] hidden';
             document.body.appendChild(imageModal);
         }
         
@@ -422,19 +474,16 @@ const ActivitiesManager = {
         const imageModal = document.getElementById('activity-image-modal');
         
         if (modal) {
-            modal.classList.add('hidden');
+            modal.remove();
         }
         if (imageModal) {
-            imageModal.classList.add('hidden');
+            imageModal.remove();
         }
         
         document.body.style.overflow = '';
         this.currentActivityId = null;
         
-        // Remove hash from URL
-        if (window.location.hash) {
-            history.pushState('', document.title, window.location.pathname + window.location.search);
-        }
+        console.log('Modal closed');
     },
     
     filterActivities() {
@@ -500,29 +549,8 @@ const ActivitiesManager = {
             }
         });
         
-        // Handle hash changes (for direct links)
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.slice(1);
-            if (hash && this.data) {
-                const activity = this.data.activities.find(a => a.id === hash);
-                if (activity) {
-                    this.openActivityDetail(hash);
-                }
-            }
-        });
-        
-        // Check for hash on initial load
-        if (window.location.hash) {
-            const hash = window.location.hash.slice(1);
-            setTimeout(() => {
-                if (this.data) {
-                    const activity = this.data.activities.find(a => a.id === hash);
-                    if (activity) {
-                        this.openActivityDetail(hash);
-                    }
-                }
-            }, 500);
-        }
+        // Don't handle hash changes anymore to avoid navigation conflicts
+        // Removed hashchange event listener
     },
     
     initGallery(activity) {

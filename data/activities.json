@@ -8,16 +8,8 @@
         "location": "Brooklyn, New York, USA",
         "type": "conference",
         "featured": true,
-        "thumbnail": "./images/activities/icaif-2024-thumb.jpg",
+        "thumbnail": "./public/images/activities/icaif-2024-1.jpg",
         "summary": "2024년 11월 13일부터 2024년 11월 19일까지 뉴욕에서 열린 5th ACM International Conference on AI in Finance (ICAIF'24)에 참여하였습니다.",
-        
-        "participants": [
-        {"name": "Yongjae Lee", "role": "Professor"},
-        {"name": "Junhyeong Lee", "role": "Ph.D Student"},
-        {"name": "Inwoo Tae", "role": "M.S Student"},
-        {"name": "Juchan Kim", "role": "M.S Student / Presenter"},
-        {"name": "Kangmin Kim", "role": "Ph.D Student"}
-        ],
         
         "content": {
         "overview": "2024년 11월 13일부터 2024년 11월 19일까지 뉴욕에서 열린 5th ACM International Conference on AI in Finance (ICAIF'24)에 참여하였습니다.",
@@ -28,7 +20,7 @@
             "title": "학회 참가자",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-1.jpg",
+                "url": "./public/public/images/activities/icaif-2024-1.jpg",
                 "caption": "왼쪽부터 김강민(박사), 이준형(박사), 태인우(석사), 김주찬(석사), 이용재(교수님)이 학회장 로비에서 사진을 찍었습니다."
                 }
             ]
@@ -43,19 +35,19 @@
             "title": "11/13 사진",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-2.jpg",
+                "url": "./public/images/activities/icaif-2024-2.jpg",
                 "caption": "준형, 주찬, 인우 (인우 옆자리는 모르는 사람이라 윤태 스티커로 가렸습니다.)"
                 },
                 {
-                "url": "./images/activities/icaif-2024-3.jpg",
+                "url": "./public/images/activities/icaif-2024-3.jpg",
                 "caption": "출발 전 공항에서"
                 },
                 {
-                "url": "./images/activities/icaif-2024-4.jpg",
+                "url": "./public/images/activities/icaif-2024-4.jpg",
                 "caption": "브루클린 브릿지에서 근처에서 찍은 야경"
                 },
                 {
-                "url": "./images/activities/icaif-2024-5.jpg",
+                "url": "./public/images/activities/icaif-2024-5.jpg",
                 "caption": "맛집으로 유명한 RAKU에서 첫 저녁 식사를 하였습니다."
                 }
             ]
@@ -70,23 +62,23 @@
             "title": "11/14 사진",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-6.jpg",
+                "url": "./public/images/activities/icaif-2024-6.jpg",
                 "caption": "BlackRock XAI 세션"
                 },
                 {
-                "url": "./images/activities/icaif-2024-7.jpg",
+                "url": "./public/images/activities/icaif-2024-7.jpg",
                 "caption": "LLMs and Generative AI for Finance"
                 },
                 {
-                "url": "./images/activities/icaif-2024-8.jpg",
+                "url": "./public/images/activities/icaif-2024-8.jpg",
                 "caption": "LLMs and Generative AI for Finance 포스터 세션. 사진 속 FE Lab 학생을 찾아보세요!"
                 },
                 {
-                "url": "./images/activities/icaif-2024-9.jpg",
+                "url": "./public/images/activities/icaif-2024-9.jpg",
                 "caption": "The Union League Club"
                 },
                 {
-                "url": "./images/activities/icaif-2024-10.jpg",
+                "url": "./public/images/activities/icaif-2024-10.jpg",
                 "caption": "저희 연구실 인턴 출신인 김다함씨(Cornell Univ)와 함께 저녁 식사에 참여했습니다. (식당은 그리스 음식은 안 파는 그리스 음식점.)"
                 }
             ]
@@ -113,27 +105,27 @@
             "title": "11/15 사진",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-11.jpg",
+                "url": "./public/images/activities/icaif-2024-11.jpg",
                 "caption": "김주찬 학생 발표 장면"
                 },
                 {
-                "url": "./images/activities/icaif-2024-12.jpg",
+                "url": "./public/images/activities/icaif-2024-12.jpg",
                 "caption": "발표 세션"
                 },
                 {
-                "url": "./images/activities/icaif-2024-13.jpg",
+                "url": "./public/images/activities/icaif-2024-13.jpg",
                 "caption": "스테이크 하우스에서 저녁"
                 },
                 {
-                "url": "./images/activities/icaif-2024-14.jpg",
+                "url": "./public/images/activities/icaif-2024-14.jpg",
                 "caption": "저녁 식사"
                 },
                 {
-                "url": "./images/activities/icaif-2024-15.jpg",
+                "url": "./public/images/activities/icaif-2024-15.jpg",
                 "caption": "기분 좋은 김주찬 학생."
                 },
                 {
-                "url": "./images/activities/icaif-2024-16.jpg",
+                "url": "./public/images/activities/icaif-2024-16.jpg",
                 "caption": "브로드웨이에서 뮤지컬 Chicago를 관람하였습니다."
                 }
             ]
@@ -148,19 +140,19 @@
             "title": "11/16 사진",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-17.jpg",
+                "url": "./public/images/activities/icaif-2024-17.jpg",
                 "caption": "학회 세션"
                 },
                 {
-                "url": "./images/activities/icaif-2024-18.jpg",
+                "url": "./public/images/activities/icaif-2024-18.jpg",
                 "caption": "세션 발표"
                 },
                 {
-                "url": "./images/activities/icaif-2024-19.jpg",
+                "url": "./public/images/activities/icaif-2024-19.jpg",
                 "caption": "이런 상큼한 마무리는 학회기간 동안 처음 봐서 찍어봤습니다 ㅎㅎ"
                 },
                 {
-                "url": "./images/activities/icaif-2024-20.jpg",
+                "url": "./public/images/activities/icaif-2024-20.jpg",
                 "caption": "황윤태 박사와도 친분이 있는, 영국에서 박사 과정 중인 Rachael과 같이 찍은 사진."
                 }
             ]
@@ -175,36 +167,32 @@
             "title": "11/17 사진",
             "images": [
                 {
-                "url": "./images/activities/icaif-2024-21.jpg",
-                "caption": "그리말디 피자"
+                "url": "./public/images/activities/icaif-2024-21.png",
+                "caption": "그리말디 피자 with KAIST"
                 },
                 {
-                "url": "./images/activities/icaif-2024-22.jpg",
-                "caption": "KAIST 연구진과 점심"
-                },
-                {
-                "url": "./images/activities/icaif-2024-23.jpg",
+                "url": "./public/images/activities/icaif-2024-22.jpg",
                 "caption": "Rama Cont 교수님 발표"
                 },
                 {
-                "url": "./images/activities/icaif-2024-24.jpg",
-                "caption": "The Met 박물관"
+                "url": "./public/images/activities/icaif-2024-23.jpg",
+                "caption": "The Met(1)"
                 },
                 {
-                "url": "./images/activities/icaif-2024-25.jpg",
-                "caption": "The Met에서"
+                "url": "./public/images/activities/icaif-2024-24.jpg",
+                "caption": "The Met(2)"
                 },
                 {
-                "url": "./images/activities/icaif-2024-26.jpg",
-                "caption": "울프강 스테이크"
+                "url": "./public/images/activities/icaif-2024-25.jpg",
+                "caption": ""
                 },
                 {
-                "url": "./images/activities/icaif-2024-27.jpg",
-                "caption": "울프강 스테이크에서 저녁"
+                "url": "./public/images/activities/icaif-2024-26.jpg",
+                "caption": ""
                 },
                 {
-                "url": "./images/activities/icaif-2024-28.jpg",
-                "caption": "금융결제원 분들과 식사"
+                "url": "./public/images/activities/icaif-2024-27.jpg",
+                "caption": "울프강 스테이크 with 금융결제원"
                 }
             ]
             },
