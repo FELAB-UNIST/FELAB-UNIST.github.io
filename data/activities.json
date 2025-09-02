@@ -575,30 +575,265 @@
         },
         
         "links": []
-    }
+    },
+
+    {
+        "id": "teachers-day-2024",
+        "date": "2024-05-15",
+        "title": "2024 Teacher's Day",
+        "title_kr": "2024 스승의 날",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/teachers-day-2024-1.png",
+        "summary": "2024년 5월 15일 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "content": {
+        "overview": "🙇🏻‍♀️ 이용재 교수님\n스승의날 축하드립니다!\n-FE Lab 일동",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "스승의 날 축하",
+            "images": [
+                {
+                    "url": "./public/images/activities/teachers-day-2024-1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "./public/images/activities/teachers-day-2024-2.png",
+                    "caption": "교수님의 코멘트"
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "FE Lab 학생들의 스승의 날 축하",
+            "이용재 교수님께 감사 인사 전달"
+        ]
+        },
+        
+        "links": []
+    },
   
+    {
+        "id": "kiie-2024-yeosu",
+        "date": "2024-05-03",
+        "title": "2024 KIIE Spring Conference (Yeosu)",
+        "title_kr": "2024년 대한산업공학회 (여수)",
+        "location": "Yeosu Expo Convention Center, Yeosu, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kiie-2024-1.jpeg",
+        "summary": "2024년 5월 2일부터 5월 3일까지 여수엑스포컨벤션센터에서 개최된 한국경영과학회/대한산업공학회 2024 춘계공동학술대회에 참여하였습니다.",
+        
+        "content": {
+        "overview": "FE LAB 2024 산업공학회에 가다.\n\n2024년 5월 2일 ~ 5월 3일까지 여수엑스포컨벤션센터에서 개최된 한국경영과학회/대한산업공학회 2024 춘계공동학술대회에 다녀왔습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가자",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-1.jpeg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "DAY 1 : 5월 2일",
+            "content": "학회 첫번째 날은 좌장 ✨이용재교수님✨께서 진행하신 산업인공지능 응용분야에서 총 4명의 학생이 발표를 진행하였습니다.\n\n총 4명의 학생(태인우, 이영빈, 김주찬, 김예진)들이 성공적으로 발표를 마쳤습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "DAY 1 - 발표",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-2.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-3.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-4.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-5.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-6.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "저녁 식사",
+            "content": "저녁엔 콩박사님 픽 맛집에서 저녁식사를 했습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "저녁 식사",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-7.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-8.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "여수의 밤",
+            "content": "밤에는 여수의 낭만을 즐겼습니다"
+            },
+            {
+            "type": "gallery",
+            "title": "여수 밤 나들이",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-9.jpg",
+                "caption": "여수 낭만포차 앞에서 사진을 찍는 황박사"
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-10.jpg",
+                "caption": "맛있었던 에그와플"
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-11.jpg",
+                "caption": "하멜등대 앞에서"
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-12.jpg",
+                "caption": "여수에서 여수 밤바다 노래를 부르는 태인우 이영빈"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "DAY 2 : 5월 3일",
+            "content": "학회 두번째 날은 황윤태 박사생의 발표가 있었습니다.\n\n많은 사람들 앞에서 성공적으로 발표를 마쳤습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "DAY 2 - 발표",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-13.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-14.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "저녁 회식",
+            "content": "저녁에는 교수님의 교수님과, 교수님의 교수님의 제자분들과, 교수님과, 교수님의 제자분들이 만나 맛있는 고기를 먹었습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "저녁 회식",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-15.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "Special Note",
+            "content": "교수님의 교수님의 membership training을 위한 구매 리스트를 공유합니다."
+            },
+            {
+            "type": "gallery",
+            "title": "Membership Training 구매 리스트",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2024-16.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-17.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2024-18.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "산업인공지능 응용분야 발표",
+                "presenter": "태인우, 이영빈, 김주찬, 김예진",
+                "session": "산업인공지능 응용분야 세션",
+                "time": "5월 2일"
+                },
+                {
+                "title": "박사과정 연구 발표",
+                "presenter": "황윤태",
+                "session": "일반 세션",
+                "time": "5월 3일"
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "이용재 교수님 좌장으로 산업인공지능 응용분야 세션 진행",
+            "FE Lab 학생 5명 발표 (태인우, 이영빈, 김주찬, 김예진, 황윤태)",
+            "여수 낭만포차, 하멜등대 등 여수 관광",
+            "교수님의 교수님과 함께한 저녁 회식"
+        ]
+        },
+        
+        "links": []
+    }
+
 
     ],
-  "categories": {
+    "categories": {
     "conference": {
-      "name": "Conferences",
-      "icon": "🎓",
-      "color": "blue"
+        "name": "Conferences",
+        "icon": "🎓",
+        "color": "blue"
     },
     "workshop": {
-      "name": "Workshops",
-      "icon": "💡",
-      "color": "purple"
+        "name": "Workshops",
+        "icon": "💡",
+        "color": "purple"
     },
     "gathering": {
-      "name": "Social Events",
-      "icon": "🎉",
-      "color": "green"
+        "name": "Social Events",
+        "icon": "🎉",
+        "color": "green"
     },
     "seminar": {
-      "name": "Seminars",
-      "icon": "📚",
-      "color": "orange"
+        "name": "Seminars",
+        "icon": "📚",
+        "color": "orange"
+    },
+    "celebration": {
+        "name": "Celebrations",
+        "icon": "🎊",
+        "color": "yellow"
     }
-  }
+    }
 }
