@@ -21,6 +21,11 @@ const App = {
         window.addEventListener('popstate', (e) => {
             this.handleRoute();
         });
+        
+        // Handle hash changes (when user types in address bar)
+        window.addEventListener('hashchange', (e) => {
+            this.handleRoute();
+        });
     },
     
     async loadComponents() {
@@ -43,8 +48,26 @@ const App = {
     
     handleInitialRoute() {
         const hash = window.location.hash.slice(1); // Remove #
-        if (hash.startsWith('profile/')) {
-            const parts = hash.split('/');
+        
+        // Clean up hash - remove trailing slashes and handle members/xxx format
+        const cleanHash = hash.replace(/\/$/, ''); // Remove trailing slash
+        
+        if (cleanHash.startsWith('members/')) {
+            const parts = cleanHash.split('/');
+            const memberId = parts[1];
+            if (memberId) {
+                // Load members page first, then navigate to profile
+                this.loadPage('members').then(() => {
+                    setTimeout(() => {
+                        this.loadProfile(memberId);
+                    }, 100);
+                });
+            } else {
+                // Just members/ without ID - load members page
+                this.loadPage('members');
+            }
+        } else if (cleanHash.startsWith('profile/')) {
+            const parts = cleanHash.split('/');
             const memberId = parts[1];
             // Load members page first, then navigate to profile
             this.loadPage('members').then(() => {
@@ -52,21 +75,34 @@ const App = {
                     this.loadProfile(memberId);
                 }, 100);
             });
-        } else if (hash) {
-            this.loadPage(hash);
+        } else if (cleanHash) {
+            this.loadPage(cleanHash);
         } else {
             this.loadPage('home');
         }
     },
-    
+
+    // handleRoute() 함수도 수정
     handleRoute() {
         const hash = window.location.hash.slice(1);
-        if (hash.startsWith('profile/')) {
-            const parts = hash.split('/');
+        
+        // Clean up hash - remove trailing slashes
+        const cleanHash = hash.replace(/\/$/, '');
+        
+        if (cleanHash.startsWith('members/')) {
+            const parts = cleanHash.split('/');
+            const memberId = parts[1];
+            if (memberId) {
+                this.loadProfile(memberId);
+            } else {
+                this.loadPage('members', false);
+            }
+        } else if (cleanHash.startsWith('profile/')) {
+            const parts = cleanHash.split('/');
             const memberId = parts[1];
             this.loadProfile(memberId);
-        } else if (hash) {
-            this.loadPage(hash, false);
+        } else if (cleanHash) {
+            this.loadPage(cleanHash, false);
         } else {
             this.loadPage('home', false);
         }
