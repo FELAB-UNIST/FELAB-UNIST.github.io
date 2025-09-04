@@ -201,7 +201,7 @@
         "image": "./public/images/members/jhlee.png",
         "email": "jun.lee@unist.ac.kr",
         "advisor": "Yongjae Lee",
-        "start_date": "2020-09",
+        "start_date": "2023-03",
         
         "bio_short": "Working on machine learning and mathematical optimization for financial decision-making",
         "bio_full": "I am a Ph.D. student in Industrial Engineering at Ulsan National Institute of Science and Technology (UNIST), working in the Financial Engineering Lab under the supervision of Prof. Yongjae Lee. My research focuses on bridging machine learning and mathematical optimization for financial decision-making.",
@@ -218,14 +218,14 @@
             "degree": "Ph.D.-M.S. Combined",
             "field": "Industrial Engineering",
             "institution": "UNIST",
-            "period": "2020 - Present",
+            "period": "2023 - Present",
             "advisor": "Yongjae Lee"
           },
           {
             "degree": "B.S.",
             "field": "Financial Engineering",
             "institution": "Ajou University",
-            "year": "2020"
+            "year": "2023"
           }
         ],
         
