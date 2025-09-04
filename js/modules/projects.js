@@ -1,6 +1,7 @@
 // Projects Manager Module
 const ProjectsManager = {
     data: [],
+    membersData: null,
     initialized: false,
     currentFilter: 'all',
     
@@ -8,6 +9,7 @@ const ProjectsManager = {
         this.initialized = false;
         
         await this.loadData();
+        await this.loadMembersData();
         this.render();
         this.initSearch();
         this.initFilters();
@@ -24,6 +26,35 @@ const ProjectsManager = {
             console.error('Failed to load projects data:', error);
             this.data = [];
         }
+    },
+    
+    async loadMembersData() {
+        try {
+            const response = await fetch('./data/members.json');
+            const jsonData = await response.json();
+            this.membersData = jsonData;
+        } catch (error) {
+            console.error('Failed to load members data:', error);
+            this.membersData = null;
+        }
+    },
+    
+    getMemberNameById(memberId) {
+        if (!this.membersData) return null;
+        
+        // Search in all member categories
+        const allMembers = [
+            ...(this.membersData.current?.professor || []),
+            ...(this.membersData.current?.phd_students || []),
+            ...(this.membersData.current?.ms_students || []),
+            ...(this.membersData.current?.interns || []),
+            ...(this.membersData.alumni?.phd || []),
+            ...(this.membersData.alumni?.ms || []),
+            ...(this.membersData.alumni?.research_professors || [])
+        ];
+        
+        const member = allMembers.find(m => m.id === memberId);
+        return member ? member.name_kr || member.name : null;
     },
     
     render() {
@@ -94,6 +125,7 @@ const ProjectsManager = {
             : '<span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">✓ 완료</span>';
             
         const keywordsHtml = this.formatKeywords(project.keywords);
+        const participantsHtml = this.formatParticipants(project.participants);
         
         return `
             <div class="project-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-6 border-l-4 ${statusClass}">
@@ -117,10 +149,14 @@ const ProjectsManager = {
                         <span class="text-sm font-medium text-gray-700 w-20 flex-shrink-0">기관:</span>
                         <span class="text-sm text-gray-600 project-agency">${project.funding_agency}</span>
                     </div>
-                    <div class="flex items-start">
-                        <span class="text-sm font-medium text-gray-700 w-20 flex-shrink-0">역할:</span>
-                        <span class="text-sm text-gray-600">${project.role}</span>
-                    </div>
+                    ${participantsHtml ? `
+                        <div class="flex items-start">
+                            <span class="text-sm font-medium text-gray-700 w-20 flex-shrink-0">참여자:</span>
+                            <div class="text-sm text-gray-600 flex flex-wrap gap-2">
+                                ${participantsHtml}
+                            </div>
+                        </div>
+                    ` : ''}
                     ${project.project_number ? `
                         <div class="flex items-start">
                             <span class="text-sm font-medium text-gray-700 w-20 flex-shrink-0">과제번호:</span>
@@ -142,6 +178,18 @@ const ProjectsManager = {
                 ` : ''}
             </div>
         `;
+    },
+    
+    formatParticipants(participants) {
+        if (!participants || participants.length === 0) return '';
+        
+        return participants.map(participantId => {
+            const name = this.getMemberNameById(participantId);
+            if (name) {
+                return `<span class="inline-flex items-center bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs font-medium">${name}</span>`;
+            }
+            return '';
+        }).filter(html => html !== '').join('');
     },
     
     formatKeywords(keywords) {

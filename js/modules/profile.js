@@ -1,7 +1,8 @@
-    // Profile Manager Module
+// Profile Manager Module
     const ProfileManager = {
         memberData: null,
         publicationsData: null,
+        projectsData: null,
         currentMemberId: null,
         
         async init(memberId) {
@@ -33,6 +34,10 @@
                 // Load publications data
                 const pubsResponse = await fetch('./data/publications.json');
                 this.publicationsData = await pubsResponse.json();
+                
+                // Load projects data
+                const projectsResponse = await fetch('./data/projects.json');
+                this.projectsData = await projectsResponse.json();
             } catch (error) {
                 console.error('Failed to load data:', error);
             }
@@ -41,17 +46,32 @@
         findMember(memberId) {
             if (!this.memberData) return null;
             
-            const { current } = this.memberData;
+            const { current, alumni } = this.memberData;
             
-            // Search in all categories
-            const categories = ['professor', 'phd_students', 'ms_students', 'interns'];
+            // Search in current members
+            const currentCategories = ['professor', 'phd_students', 'ms_students', 'interns'];
             
-            for (const category of categories) {
+            for (const category of currentCategories) {
                 if (current[category]) {
                     const member = current[category].find(m => m.id === memberId);
                     if (member) {
                         member.category = category;
                         return member;
+                    }
+                }
+            }
+            
+            // Search in alumni
+            if (alumni) {
+                const alumniCategories = ['phd', 'ms', 'research_professors'];
+                
+                for (const category of alumniCategories) {
+                    if (alumni[category]) {
+                        const member = alumni[category].find(m => m.id === memberId);
+                        if (member) {
+                            member.category = 'alumni_' + category;
+                            return member;
+                        }
                     }
                 }
             }
@@ -320,21 +340,62 @@
             const section = document.getElementById('projects-section');
             const content = document.getElementById('projects-content');
             
-            if (member.projects && member.projects.length > 0) {
+            // Get projects from projectsData where member is a participant
+            let memberProjects = [];
+            
+            if (this.projectsData && this.projectsData.projects) {
+                memberProjects = this.projectsData.projects.filter(project => {
+                    return project.participants && project.participants.includes(member.id);
+                });
+                
+                // Sort projects by year (most recent first)
+                memberProjects.sort((a, b) => {
+                    const yearA = this.extractProjectYear(a.duration);
+                    const yearB = this.extractProjectYear(b.duration);
+                    return yearB - yearA;
+                });
+            }
+            
+            if (memberProjects.length > 0) {
                 section.classList.remove('hidden');
-                content.innerHTML = member.projects.map(project => `
-                    <div class="border-l-4 border-purple-500 pl-4">
-                        <h4 class="font-semibold text-brand-navy">${project.title}</h4>
-                        ${project.organization ? `<p class="text-gray-600">${project.organization}</p>` : ''}
-                        <div class="flex gap-4 mt-1">
-                            ${project.period || project.year ? `<span class="text-sm text-gray-500">${project.period || project.year}</span>` : ''}
-                            ${project.type ? `<span class="text-sm px-2 py-1 bg-gray-100 rounded">${project.type}</span>` : ''}
+                
+                content.innerHTML = memberProjects.map(project => {
+                    const statusColor = project.status === 'ongoing' ? 'border-green-500' : 'border-gray-400';
+                    const statusBadge = project.status === 'ongoing' ? 
+                        '<span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Ongoing</span>' : 
+                        '<span class="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">Completed</span>';
+                    
+                    return `
+                        <div class="border-l-4 ${statusColor} pl-4">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-brand-navy">${project.title_en}</h4>
+                                    <p class="text-gray-600">${project.funding_agency}</p>
+                                    <div class="flex gap-3 mt-1">
+                                        <span class="text-sm text-gray-500">${project.duration}</span>
+                                        ${statusBadge}
+                                    </div>
+                                    ${project.keywords && project.keywords.length > 0 ? `
+                                        <div class="flex flex-wrap gap-1 mt-2">
+                                            ${project.keywords.slice(0, 3).map(kw => 
+                                                `<span class="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 rounded">${kw}</span>`
+                                            ).join('')}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                `).join('');
+                    `;
+                }).join('');
             } else {
                 section.classList.add('hidden');
             }
+        },
+        
+        extractProjectYear(duration) {
+            if (!duration) return 0;
+            const match = duration.match(/(\d{4})/);
+            return match ? parseInt(match[1]) : 0;
         },
         
         renderAwards(member) {

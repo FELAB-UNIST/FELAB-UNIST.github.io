@@ -3,7 +3,7 @@
     {
       "id": "pub_2025_cikm_theme",
       "year": 2025,
-      "authors": "Hoyoung Lee†,Jahoon Lee,Minjae Kim,Suhwan Park,Sundong You,Taeyoon Lim,Wonbin Ahn†,Woohyung Lim*,Yongjae Lee*",
+      "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim,  Sundong You, Taeyoon Lim, Woohyung Lim, Yongjae Lee",
       "author_ids": ["hoyoung-lee", "suhwan-park", "yongjae-lee"],
       "venue": "The 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)",
       "title": "THEME : Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics",

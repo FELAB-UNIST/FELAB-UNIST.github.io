@@ -8,8 +8,8 @@
       "funding_agency": "한국신용정보원 (Korea Credit Information Services)",
       "duration": "2024.10 ~ 2025.04",
       "project_number": "2.241136.01",
-      "role": "연구책임자",
-      "keywords": ["Synthetic Data", "Credit Information", "Machine Learning"]
+      "keywords": ["Synthetic Data", "Credit Information", "Machine Learning"],
+      "participants": ["hyungwoo-kong", "kangmin-kim"]
     },
     {
       "id": "dynamic-embedding-tae-2024",
@@ -19,9 +19,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2024.09 ~ 2025.08",
       "project_number": "RS-2024-00465403",
-      "role": "지도교수",
       "notes": "석사과정생연구장려금지원사업. 태인우 석사과정",
-      "keywords": ["NLP", "Dynamic Embedding", "Financial Text", "Temporal Analysis"]
+      "keywords": ["NLP", "Dynamic Embedding", "Financial Text", "Temporal Analysis"],
+      "participants": ["inwoo-tae"]
     },
     {
       "id": "aml-ai-system-2024",
@@ -31,8 +31,8 @@
       "funding_agency": "금융위원회",
       "duration": "2024.08 ~ 2024.12",
       "project_number": "2.240899.01",
-      "role": "연구책임자",
-      "keywords": ["AML", "AI", "Financial Crime", "Transaction Monitoring"]
+      "keywords": ["AML", "AI", "Financial Crime", "Transaction Monitoring"],
+      "participants": ["inwoo-tae", "kangmin-kim", "hyungwoo-kong"]
     },
     {
       "id": "household-finance-ai-2022",
@@ -42,9 +42,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2022.06 ~ 2025.05",
       "project_number": "2022R1I1A4069163",
-      "role": "연구책임자",
       "notes": "학제간융합연구. UNIST 장현진 교수님, 서울대학교 이정혜 교수님과 공동",
-      "keywords": ["Household Finance", "AI", "Life-cycle Planning", "Optimization"]
+      "keywords": ["Household Finance", "AI", "Life-cycle Planning", "Optimization"],
+      "participants": ["inwoo-tae", "hyungwoo-kong"]
     },
     {
       "id": "kb-trading-classification-2024",
@@ -54,8 +54,8 @@
       "funding_agency": "KB증권",
       "duration": "2024.09 ~ 2024.11",
       "project_number": "2.241015.01",
-      "role": "연구책임자",
-      "keywords": ["Investment Behavior", "Classification", "Individual Investors"]
+      "keywords": ["Investment Behavior", "Classification", "Individual Investors"],
+      "participants": ["juchan-kim", "junhyeong-lee", "hyungwoo-kong"]
     },
     {
       "id": "policy-mortgage-xai-2023",
@@ -65,8 +65,8 @@
       "funding_agency": "한국주택금융공사 (Korea Housing Finance Corporation)",
       "duration": "2023.04 ~ 2023.08",
       "project_number": "2.230685.01",
-      "role": "연구책임자",
-      "keywords": ["XAI", "Policy Mortgage", "Financial Services"]
+      "keywords": ["XAI", "Policy Mortgage", "Financial Services"],
+      "participants": ["juchan-kim", "junhyeong-lee", "hyungwoo-kong"]
     },
     {
       "id": "news-keyword-extraction-2023",
@@ -76,9 +76,9 @@
       "funding_agency": "UNIST, 허그랩 (HuGraph)",
       "duration": "2023.02 ~ 2023.12",
       "project_number": "1.230064.01",
-      "role": "연구책임자",
       "notes": "UNIST AI 산학과제지원사업",
-      "keywords": ["NLP", "News Analysis", "Keyword Extraction", "AI"]
+      "keywords": ["NLP", "News Analysis", "Keyword Extraction", "AI"],
+      "participants": []
     },
     {
       "id": "direct-indexing-ncsoft-2022",
@@ -88,9 +88,9 @@
       "funding_agency": "NC Soft",
       "duration": "2022.07 ~ 2022.12",
       "project_number": "2.220943.01",
-      "role": "연구책임자",
       "notes": "Financial Intelligence Team, Knowledge AI Lab",
-      "keywords": ["Direct Indexing", "Index Tracking", "AI", "Portfolio Management"]
+      "keywords": ["Direct Indexing", "Index Tracking", "AI", "Portfolio Management"],
+      "participants": ["juchan-kim", "junhyeong-lee","sohyeon-kwon","seyoung-kim"]
     },
     {
       "id": "financial-health-hwang-2022",
@@ -100,9 +100,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2022.06 ~ 2024.05",
       "project_number": "2022R1A6A3A13065309",
-      "role": "지도교수",
       "notes": "박사과정생연구장려금. 황윤태 박사과정",
-      "keywords": ["Financial Health", "Asset Management", "Household Finance"]
+      "keywords": ["Financial Health", "Asset Management", "Household Finance"],
+      "participants": ["yoontae-hwang"]
     },
     {
       "id": "crypto-nft-bithumb-2022",
@@ -112,8 +112,8 @@
       "funding_agency": "빗썸코리아 (Bithumb Korea)",
       "duration": "2022.05 ~ 2023.04",
       "project_number": "2.220782.01",
-      "role": "연구책임자",
-      "keywords": ["Cryptocurrency", "NFT", "Clustering", "Recommendation System"]
+      "keywords": ["Cryptocurrency", "NFT", "Clustering", "Recommendation System"],
+      "participants": []
     },
     {
       "id": "energy-demand-keei-2021",
@@ -123,9 +123,9 @@
       "funding_agency": "에너지경제연구원 (KEEI)",
       "duration": "2021.10 ~ 2021.11",
       "project_number": "2.211068.01",
-      "role": "연구책임자",
       "notes": "에너지수급연구팀",
-      "keywords": ["Energy Forecasting", "Deep Learning", "Demand Prediction"]
+      "keywords": ["Energy Forecasting", "Deep Learning", "Demand Prediction"],
+      "participants": []
     },
     {
       "id": "market-simulator-ncsoft-2021",
@@ -135,9 +135,9 @@
       "funding_agency": "NC Soft",
       "duration": "2021.07 ~ 2021.10",
       "project_number": "2.210910.01",
-      "role": "연구책임자",
       "notes": "Financial Intelligence Team, Knowledge AI Lab",
-      "keywords": ["Generative Models", "Market Simulation", "Financial Modeling"]
+      "keywords": ["Generative Models", "Market Simulation", "Financial Modeling"],
+      "participants": []
     },
     {
       "id": "individual-investor-nrf-2021",
@@ -147,9 +147,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2021.05 ~ 2024.04",
       "project_number": "2021S1A5A8070533",
-      "role": "연구책임자",
       "notes": "인문계열 신진연구. 개인연구",
-      "keywords": ["Behavioral Economics", "Individual Investors", "Big Data", "Trading Patterns"]
+      "keywords": ["Behavioral Economics", "Individual Investors", "Big Data", "Trading Patterns"],
+      "participants": []
     },
     {
       "id": "medical-expenditure-ai-2021",
@@ -159,9 +159,9 @@
       "funding_agency": "UNIST",
       "duration": "2021.01 ~ 2022.12",
       "project_number": "1.210087.01",
-      "role": "연구책임자",
       "notes": "AI보급확산 지원과제. UNIST 산업공학과 이정혜 교수님과 공동 진행",
-      "keywords": ["AI", "Healthcare Finance", "Life-cycle Management"]
+      "keywords": ["AI", "Healthcare Finance", "Life-cycle Management"],
+      "participants": []
     },
     {
       "id": "mobile-clinic-kaist-2020",
@@ -171,9 +171,9 @@
       "funding_agency": "KAIST 과학기술뉴딜사업단",
       "duration": "2020.06 ~ 2020.12",
       "project_number": "2.200993.01",
-      "role": "세부연구책임자",
       "notes": "KAIST 과학기술뉴딜사업 세부과제",
-      "keywords": ["Healthcare", "Decision Making", "Optimization", "COVID-19"]
+      "keywords": ["Healthcare", "Decision Making", "Optimization", "COVID-19"],
+      "participants": []
     },
     {
       "id": "disaster-recovery-kdata-2020",
@@ -183,9 +183,9 @@
       "funding_agency": "한국데이터산업진흥원 (K-DATA)",
       "duration": "2020.06 ~ 2020.11",
       "project_number": "",
-      "role": "연구책임자",
       "notes": "UNIST 산업공학과 이정혜 교수님과 공동 진행",
-      "keywords": ["Disaster Recovery", "Financial Health", "AI", "Social Policy"]
+      "keywords": ["Disaster Recovery", "Financial Health", "AI", "Social Policy"],
+      "participants": []
     },
     {
       "id": "maritime-logistics-upa-2019",
@@ -195,9 +195,9 @@
       "funding_agency": "울산항만공사 (Ulsan Port Authority)",
       "duration": "2019.04 ~ 2019.12",
       "project_number": "2.190533.01",
-      "role": "참여연구원",
       "notes": "세부 연구책임",
-      "keywords": ["Maritime Logistics", "Economic Index", "Port Management"]
+      "keywords": ["Maritime Logistics", "Economic Index", "Port Management"],
+      "participants": []
     },
     {
       "id": "wealth-management-fintech-2019",
@@ -207,9 +207,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2019.03 ~ 2022.02",
       "project_number": "2019R1C1C1010456",
-      "role": "연구책임자",
       "notes": "이공계열 신진연구. 개인연구",
-      "keywords": ["FinTech", "Wealth Management", "Stochastic Programming", "Optimization"]
+      "keywords": ["FinTech", "Wealth Management", "Stochastic Programming", "Optimization"],
+      "participants": []
     },
     {
       "id": "financial-engineering-theory-2018",
@@ -219,9 +219,9 @@
       "funding_agency": "UNIST",
       "duration": "2018.11 ~ 2021.10",
       "project_number": "1.180089.01",
-      "role": "연구책임자",
       "notes": "신임교원 정착연구",
-      "keywords": ["Financial Engineering", "Data Economy", "Quantitative Finance"]
+      "keywords": ["Financial Engineering", "Data Economy", "Quantitative Finance"],
+      "participants": []
     },
     {
       "id": "individual-investment-activation-2016",
@@ -231,9 +231,9 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2016.09 ~ 2017.08",
       "project_number": "2016R1A6A3A01007620",
-      "role": "연구책임자",
       "notes": "개인연구",
-      "keywords": ["Stock Market", "Individual Investment", "Market Policy"]
+      "keywords": ["Stock Market", "Individual Investment", "Market Policy"],
+      "participants": []
     }
   ]
 }

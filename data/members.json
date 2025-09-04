@@ -229,32 +229,6 @@
           }
         ],
         
-        "projects": [
-          {
-            "title": "Development of an Investment Recommendation System Utilizing Both Investor and Stock & Fund Data",
-            "organization": "KB Securities",
-            "period": "Sep-Nov 2024",
-            "type": "Industry"
-          },
-          {
-            "title": "Wild Fire Prediction and Explainable Factor Analysis using Machine Learning",
-            "organization": "University of Toronto / Canadian Coalition for Green Health Care",
-            "period": "May-Jul 2024",
-            "type": "International Collaboration"
-          },
-          {
-            "title": "Development of AI Model for Predicting Mortgage Delinquency and Bankruptcy",
-            "organization": "Korea Housing Finance Corporation",
-            "period": "Dec 2022 - Sep 2023",
-            "type": "Industry"
-          },
-          {
-            "title": "Implementation of an Asset Selection Model's Backtesting Module for Index Tracking",
-            "organization": "NCSOFT",
-            "period": "Aug-Dec 2022",
-            "type": "Industry"
-          }
-        ],
         
         "links": {
           "google_scholar": "https://scholar.google.com/citations?user=PTTU9p0AAAAJ&hl",
@@ -296,31 +270,6 @@
             "field": "Computer Science",
             "institution": "UNIST",
             "period": "2018.03 - 2024.02"
-          }
-        ],
-        
-        "projects": [
-          {
-            "title": "Dynamic Embedding Techniques for Capturing Temporal Changes in Financial Text Data",
-            "year": "2025",
-            "type": "Research"
-          },
-          {
-            "title": "Group-Robust Reweighting for Fraud Detection across Financial Domain",
-            "organization": "Financial Services Commission",
-            "year": "2024",
-            "type": "Industry"
-          },
-          {
-            "title": "Lifetime Medical Expense Management via Artificial Intelligence",
-            "organization": "National Health Insurance Service",
-            "year": "2023",
-            "type": "Industry"
-          },
-          {
-            "title": "Analysis of the Relationship Between Stock Indices of Different Countries Using the Attention Mechanism",
-            "year": "2022",
-            "type": "Research"
           }
         ],
         
@@ -389,27 +338,6 @@
           }
         ],
         
-        "projects": [
-          {
-            "title": "Development of Model for Defining Retail Investor's Investment Tendency and Classifying Stock Sectors",
-            "organization": "KB Securities",
-            "period": "2024.09 - 2024.11",
-            "type": "Industry"
-          },
-          {
-            "title": "Development of AI Model for Predicting Mortgage Delinquency and Bankruptcy",
-            "organization": "Korea Housing Finance Corporation",
-            "period": "2023.04 - 2023.08",
-            "type": "Industry"
-          },
-          {
-            "title": "Implement Backtesting Module about Asset Selection Model for Index Tracking",
-            "organization": "NCSoft",
-            "period": "2022.06 - 2022.12",
-            "type": "Industry"
-          }
-        ],
-        
         "ta_experience": [
           {
             "course": "IE313 Time Series Analysis",
@@ -456,7 +384,8 @@
         
         "links": {
           "google_scholar": "https://scholar.google.com/citations?hl=ko&user=rxmr19sAAAAJ",
-          "linkedin": "https://www.linkedin.com/in/juchan-kim-11a846249/"
+          "linkedin": "https://www.linkedin.com/in/juchan-kim-11a846249/",
+          "website" : "https://jkim621.github.io/"
         }
       },
       
@@ -495,15 +424,8 @@
           }
         ],
         
-        "projects": [
-          {
-            "title": "Development and Evaluation of a Synthetic Data Generation Model for Credit Information",
-            "period": "2024 - 2025",
-            "type": "Research"
-          }
-        ],
-        
         "links": {
+          "linkedin":"https://www.linkedin.com/in/kangmin-kim-40410a279/  "
         }
       }
     ],
