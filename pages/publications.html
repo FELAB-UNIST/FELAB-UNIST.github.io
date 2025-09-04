@@ -38,5 +38,62 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Statistics Section -->
+        <div class="mt-20 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-brand-navy mb-8 text-center">Publication Statistics</h3>
+            
+            <!-- Main Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                    <div id="total-publications" class="text-4xl font-bold text-brand-accent mb-2">-</div>
+                    <p class="text-sm text-gray-600 font-medium">Total Publications</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                    <div id="journal-papers" class="text-4xl font-bold text-blue-600 mb-2">-</div>
+                    <p class="text-sm text-gray-600 font-medium">Journal Papers</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                    <div id="conference-papers" class="text-4xl font-bold text-purple-600 mb-2">-</div>
+                    <p class="text-sm text-gray-600 font-medium">Conference Papers</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                    <div id="working-papers" class="text-4xl font-bold text-gray-600 mb-2">-</div>
+                    <p class="text-sm text-gray-600 font-medium">Working Papers</p>
+                </div>
+            </div>
+            
+            <!-- Year Distribution -->
+            <div class="bg-white rounded-xl p-6 shadow-sm mb-8">
+                <h4 class="font-semibold text-brand-navy mb-4">Publications by Year</h4>
+                <div id="year-distribution" class="flex flex-wrap gap-3">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Top Venues -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h4 class="font-semibold text-brand-navy mb-4">Top Journals</h4>
+                    <div id="top-journals" class="space-y-2">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h4 class="font-semibold text-brand-navy mb-4">Top Conferences</h4>
+                    <div id="top-conferences" class="space-y-2">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Research Keywords Cloud -->
+            <div class="bg-white rounded-xl p-6 shadow-sm mt-6">
+                <h4 class="font-semibold text-brand-navy mb-4">Research Keywords</h4>
+                <div id="keyword-cloud" class="flex flex-wrap gap-2">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
     </div>
 </section>

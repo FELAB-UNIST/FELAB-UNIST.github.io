@@ -265,5 +265,194 @@ const PublicationsManager = {
         } else if (noResultsEl) {
             noResultsEl.style.display = 'none';
         }
+    },
+    
+    updateStatistics() {
+        // Calculate statistics
+        const stats = this.calculateStatistics();
+        
+        // Update main counts
+        const totalEl = document.getElementById('total-publications');
+        const journalEl = document.getElementById('journal-papers');
+        const conferenceEl = document.getElementById('conference-papers');
+        const workingEl = document.getElementById('working-papers');
+        
+        if (totalEl) totalEl.textContent = stats.total;
+        if (journalEl) journalEl.textContent = stats.journals;
+        if (conferenceEl) conferenceEl.textContent = stats.conferences;
+        if (workingEl) workingEl.textContent = stats.workingPapers;
+        
+        // Update year distribution
+        this.updateYearDistribution(stats.yearDistribution);
+        
+        // Update top venues
+        this.updateTopVenues(stats.topJournals, stats.topConferences);
+        
+        // Update keyword cloud
+        this.updateKeywordCloud(stats.keywordFrequency);
+    },
+    
+    calculateStatistics() {
+        const stats = {
+            total: 0,
+            journals: 0,
+            conferences: 0,
+            workingPapers: 0,
+            yearDistribution: {},
+            venues: {},
+            keywords: {},
+            topJournals: [],
+            topConferences: []
+        };
+        
+        this.data.forEach(pub => {
+            // Count total
+            stats.total++;
+            
+            // Count by type
+            if (pub.year === 'working_paper') {
+                stats.workingPapers++;
+            } else if (pub.venue && pub.venue.toLowerCase().includes('conference')) {
+                stats.conferences++;
+            } else if (pub.venue && (pub.venue.toLowerCase().includes('journal') || 
+                                     pub.venue.toLowerCase().includes('letters') ||
+                                     pub.venue.toLowerCase().includes('annals'))) {
+                stats.journals++;
+            } else if (pub.venue && (pub.venue.toLowerCase().includes('aaai') || 
+                                     pub.venue.toLowerCase().includes('icaif') ||
+                                     pub.venue.toLowerCase().includes('aistats') ||
+                                     pub.venue.toLowerCase().includes('pakdd') ||
+                                     pub.venue.toLowerCase().includes('cikm') ||
+                                     pub.venue.toLowerCase().includes('iclr'))) {
+                stats.conferences++;
+            } else {
+                // Default to journal if not clear
+                stats.journals++;
+            }
+            
+            // Count by year
+            if (pub.year !== 'working_paper') {
+                stats.yearDistribution[pub.year] = (stats.yearDistribution[pub.year] || 0) + 1;
+            }
+            
+            // Count venues (excluding working papers)
+            if (pub.venue && pub.year !== 'working_paper') {
+                const cleanVenue = pub.venue.split('(')[0].trim();
+                stats.venues[cleanVenue] = (stats.venues[cleanVenue] || 0) + 1;
+            }
+            
+            // Count keywords
+            if (pub.keywords && Array.isArray(pub.keywords)) {
+                pub.keywords.forEach(keyword => {
+                    stats.keywords[keyword] = (stats.keywords[keyword] || 0) + 1;
+                });
+            }
+        });
+        
+        // Get top venues
+        const sortedVenues = Object.entries(stats.venues)
+            .sort((a, b) => b[1] - a[1]);
+        
+        // Separate journals and conferences
+        sortedVenues.forEach(([venue, count]) => {
+            if (venue.toLowerCase().includes('journal') || 
+                venue.toLowerCase().includes('letters') ||
+                venue.toLowerCase().includes('annals') ||
+                venue.toLowerCase().includes('quantitative finance') ||
+                venue.toLowerCase().includes('operations research') ||
+                venue.toLowerCase().includes('applied economics') ||
+                venue.toLowerCase().includes('sustainability') ||
+                venue.toLowerCase().includes('ieee access')) {
+                stats.topJournals.push({ venue, count });
+            } else {
+                stats.topConferences.push({ venue, count });
+            }
+        });
+        
+        // Limit to top 5
+        stats.topJournals = stats.topJournals.slice(0, 5);
+        stats.topConferences = stats.topConferences.slice(0, 5);
+        
+        // Calculate keyword frequency
+        stats.keywordFrequency = Object.entries(stats.keywords)
+            .sort((a, b) => b[1] - a[1]);
+        
+        return stats;
+    },
+    
+    updateYearDistribution(yearDist) {
+        const container = document.getElementById('year-distribution');
+        if (!container) return;
+        
+        const sortedYears = Object.entries(yearDist)
+            .sort((a, b) => b[0] - a[0])
+            .slice(0, 10); // Show last 10 years
+        
+        container.innerHTML = sortedYears.map(([year, count]) => `
+            <div class="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg">
+                <span class="text-sm font-semibold text-gray-700">${year}:</span>
+                <span class="text-sm text-brand-accent font-bold">${count}</span>
+            </div>
+        `).join('');
+    },
+    
+    updateTopVenues(topJournals, topConferences) {
+        // Update journals
+        const journalsContainer = document.getElementById('top-journals');
+        if (journalsContainer) {
+            if (topJournals.length > 0) {
+                journalsContainer.innerHTML = topJournals.map((item, index) => `
+                    <div class="flex items-center justify-between py-2 ${index < topJournals.length - 1 ? 'border-b' : ''}">
+                        <span class="text-sm text-gray-700 flex-1 pr-2">${item.venue}</span>
+                        <span class="text-sm font-semibold text-blue-600">${item.count}</span>
+                    </div>
+                `).join('');
+            } else {
+                journalsContainer.innerHTML = '<p class="text-sm text-gray-500">No journal data available</p>';
+            }
+        }
+        
+        // Update conferences
+        const conferencesContainer = document.getElementById('top-conferences');
+        if (conferencesContainer) {
+            if (topConferences.length > 0) {
+                conferencesContainer.innerHTML = topConferences.map((item, index) => `
+                    <div class="flex items-center justify-between py-2 ${index < topConferences.length - 1 ? 'border-b' : ''}">
+                        <span class="text-sm text-gray-700 flex-1 pr-2">${item.venue}</span>
+                        <span class="text-sm font-semibold text-purple-600">${item.count}</span>
+                    </div>
+                `).join('');
+            } else {
+                conferencesContainer.innerHTML = '<p class="text-sm text-gray-500">No conference data available</p>';
+            }
+        }
+    },
+    
+    updateKeywordCloud(keywords) {
+        const container = document.getElementById('keyword-cloud');
+        if (!container) return;
+        
+        // Define size classes based on frequency
+        const getSizeClass = (count, max) => {
+            const ratio = count / max;
+            if (ratio > 0.7) return 'text-lg font-bold';
+            if (ratio > 0.4) return 'text-base font-semibold';
+            return 'text-sm';
+        };
+        
+        const getColorClass = (keyword) => {
+            if (keyword.toLowerCase().includes('finance')) return 'text-brand-accent';
+            if (keyword.toLowerCase().includes('machine learning')) return 'text-purple-600';
+            if (keyword.toLowerCase().includes('optimization')) return 'text-blue-600';
+            return 'text-gray-700';
+        };
+        
+        const maxCount = keywords.length > 0 ? keywords[0][1] : 1;
+        
+        container.innerHTML = keywords.slice(0, 15).map(([keyword, count]) => `
+            <span class="px-3 py-1 bg-gray-50 rounded-full ${getSizeClass(count, maxCount)} ${getColorClass(keyword)}">
+                ${keyword} (${count})
+            </span>
+        `).join('');
     }
 };
