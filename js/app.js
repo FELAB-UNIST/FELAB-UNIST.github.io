@@ -182,7 +182,7 @@ const App = {
                 window.scrollTo(0, 0);
                 
                 // Update URL
-                history.pushState({ profile: memberId }, '', `#profile/${memberId}`);
+                history.pushState({ profile: memberId }, '', `#members/${memberId}`);
                 
                 // Initialize profile with member data
                 requestAnimationFrame(() => {

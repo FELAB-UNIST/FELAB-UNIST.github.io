@@ -163,11 +163,11 @@ const MembersManager = {
             }
             
             return `
-                <a href="#profile/${member.id}" 
-                   class="member-card block bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow p-6 cursor-pointer"
-                   data-member-id="${member.id}"
-                   data-category="${category}">
-                    <div class="text-center">
+            <a href="#members/${member.id}" 
+                class="member-card block bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow p-6 cursor-pointer"
+                data-member-id="${member.id}"
+                data-category="${category}">
+                <div class="text-center">
                         <div class="mb-4">
                             <img src="${member.image}" 
                                  alt="${member.name}" 
