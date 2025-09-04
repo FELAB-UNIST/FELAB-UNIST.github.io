@@ -1220,8 +1220,534 @@
         },
         
         "links": []
-    }
+    },
 
+    {
+        "id": "icaif-2022-nyc",
+        "date": "2022-11-02",
+        "title": "ICAIF'22 in New York",
+        "title_kr": "ICAIF'22 in New York",
+        "location": "Times Square, New York, USA",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/icaif-2022-1.png",
+        "summary": "뉴욕 타임스퀘어 근처에서 열린 the 3rd ACM International Conference on AI in Finance (ICAIF'22)에 참여하였습니다.",
+        
+        "content": {
+            "overview": "뉴욕 타임스퀘어 근처에서 열린 the 3rd ACM International Conference on AI in Finance (ICAIF'22)에 다녀왔습니다 🗽\n\n이용재 교수는 ML for Investor Modeling Workshop에 참석하여 발표하고 패널 토론에 참여하였습니다. 현재 연구실에서 진행 중인 개인의 금융 데이터 분석 관련된 연구 중 일부를 소개하였고, Blackrock의 Client Data Science 부서장과 패널 토론에서 investor modeling의 중요성과 방향에 대하여 이야기 나누었습니다.\n\n전반적으로 학회에서는 RL, NLP, time-series 관련된 연구가 주를 이뤘고, 연구자들 뿐만 아니라 JP Morgan, Blackrock 등 유수의 기업에서 일하고 있는 분들도 많이 만나 볼 수 있었습니다.",
+            
+            "sections": [
+            {
+                "type": "gallery",
+                "title": "학회 사진",
+                "images": [
+                {
+                    "url": "./public/images/activities/icaif-2022-1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "./public/images/activities/icaif-2022-2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "./public/images/activities/icaif-2022-3.png",
+                    "caption": ""
+                },
+                {
+                    "url": "./public/images/activities/icaif-2022-4.png",
+                    "caption": ""
+                }
+                ]
+            }
+            ]
+        },
+        
+        "links": [
+            {
+            "text": "ICAIF'22 Official Website",
+            "url": "https://ai-finance.org"
+            },
+            {
+            "text": "ML for Investor Modeling Workshop",
+            "url": "https://sites.google.com/view/mlforinvestormodelling/"
+            }
+        ]
+    },
+
+    {
+        "id": "felab-mt-2022",
+        "date": "2022-07-16",
+        "title": "1st FE Lab MT",
+        "title_kr": "제1회 연구실 엠티",
+        "location": "South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/mt-2022-1.png",
+        "summary": "2022년 7월 16일, FE Lab의 첫 번째 MT를 개최했습니다.",
+        
+        "content": {
+        "overview": "FE Lab의 첫 번째 MT를 개최했습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "MT 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/mt-2022-1.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "eonyang-tulip-festival-2022",
+        "date": "2022-06-24",
+        "title": "2022 Eonyang Tulip Festival",
+        "title_kr": "2022년 언양 튤립 축제",
+        "location": "Eonyang, Ulsan, South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/tulip-2022-1.png",
+        "summary": "2022년 6월 24일, FE Lab 구성원들이 언양 튤립 축제를 방문했습니다.",
+        
+        "content": {
+        "overview": "FE Lab 구성원들이 언양 튤립 축제를 방문했습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "튤립 축제",
+            "images": [
+                {
+                "url": "./public/images/activities/tulip-2022-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/tulip-2022-2.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "kiie-2022-jeju",
+        "date": "2022-06-02",
+        "title": "2022 KIIE Spring Conference (Jeju)",
+        "title_kr": "2022년 대한산업공학회 (제주)",
+        "location": "Ramada Plaza Hotel, Jeju, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kiie-2022-1.png",
+        "summary": "2022년 6월 1일부터 4일까지 제주 라마다프라자호텔에서 개최된 한국경영과학회/대한산업공학회 2022 춘계공동학술대회에 참여하였습니다.",
+        
+        "content": {
+        "overview": "2022년 6월 1일 ~ 4일까지 제주 라마다프라자호텔에서 개최된 한국경영과학회/대한산업공학회 2022 춘계공동학술대회에 다녀왔습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2022-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2022-2.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2022-3.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "적대적 생성 신경망의 금융 시계열 특성 학습 능력에 대한 고찰",
+                "presenter": "권소현",
+                "session": "금융 AI 세션",
+                "time": "6월 2일"
+                },
+                {
+                "title": "딥 클러스터링을 통한 가계 금융 다양성 분석",
+                "presenter": "이용재",
+                "session": "금융 AI 세션",
+                "time": "6월 2일"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "발표 세션",
+            "content": "석사과정 권소현 학생이 \"적대적 생성 신경망의 금융 시계열 특성 학습 능력에 대한 고찰\"을 주제로 발표하였고, 이용재 교수가 \"딥 클러스터링을 통한 가계 금융 다양성 분석\"을 주제로 발표 하였습니다. 꽤 많은 분들이 세션에 찾아와 주셔서 뒤에 서서 듣는 분들도 계셨을 정도였고, 발표 후 질문도 다양하게 많이 있었습니다."
+            },
+            {
+            "type": "text",
+            "title": "제주 여행",
+            "content": "학회 마지막 날 오후에는 애월 바닷가 구경도 하고 도너츠도 사고 저녁에는 야외 바베큐도 하며 즐거운 시간을 보냈습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "제주에서의 시간",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2022-4.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2022-5.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "teachers-day-2022",
+        "date": "2022-05-13",
+        "title": "2022 Teacher's Day",
+        "title_kr": "2022년 스승의날",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/teachers-day-2022-1.png",
+        "summary": "2022년 5월 13일, FE Lab 학생들이 스승의 날을 맞아 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "content": {
+        "overview": "2022년 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "스승의 날",
+            "images": [
+                {
+                "url": "./public/images/activities/teachers-day-2022-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/teachers-day-2022-2.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "birthday-parties-2022",
+        "date": "2022-01-18",
+        "title": "2022 FE Lab Birthday Parties",
+        "title_kr": "2022년 FE Lab 생일 파티 모음",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/birthday-2022-1.png",
+        "summary": "2022년 한 해 동안 FE Lab 구성원들의 생일을 축하하는 파티들을 개최했습니다.",
+        
+        "content": {
+        "overview": "2022년 한 해 동안 FE Lab 구성원들의 생일을 축하하는 특별한 파티들을 개최했습니다.",
+        
+        "sections": [
+            {
+            "type": "text",
+            "title": "2022.01.18 준표 학생 & 윤태 학생 생일 파티",
+            "content": "연구실의 두 믿음직한 박사과정 준표 학생 (1월 18일), 윤태 학생 (1월 30일) 생일을 기념하여 생일 파티를 하였습니다. 특별히 윤태 학생이 좋아하는 민트색 케익입니다 🎂"
+            },
+            {
+            "type": "gallery",
+            "title": "1월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2022-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-2.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-3.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-4.jpeg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2022.03.08 영빈 학생 생일 파티",
+            "content": "연구실의 듬직한 석사과정 영빈학생의 생일(3월 8일)을 맞아 무려 단독 생일 파티를 진행했습니다. 아름다운 케익에는 영빈 학생의 이름으로 삼행시도 적혀있답니다. 학생들이 롤링페이퍼도 준비해 당사자는 매우 행복했다고 합니다."
+            },
+            {
+            "type": "gallery",
+            "title": "3월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2022-5.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-6.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2022.04.28 세영 학생 & 연수 학생 생일 파티",
+            "content": "4월에는 석사과정 세영 학생 (4월 17일)과 인턴 연수 학생 (4월 30일)의 생일이 있었습니다. 세영 학생은 애석하게도 본인 생일에 코로나 격리를 하게 되었다고 하네요 ㅠ.ㅠ 그래도 격리 해제 후 모두가 모여 생일 파티를 진행했답니다."
+            },
+            {
+            "type": "gallery",
+            "title": "4월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2022-7.jpeg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2022.05.23 소현 학생, 선미 학생, & 성근 학생 생일 파티",
+            "content": "5월에는 석사과정 소현 학생, 선미 학생, 그리고 인턴 성근 학생의 생일이 있었습니다. 이번에는 레터링 케이크에 욕심을 버리고 맛있는 아이스크림 케이크와 랑콩뜨레의 딸기 케이크를 나눠 먹었습니다 😆"
+            },
+            {
+            "type": "gallery",
+            "title": "5월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2022-8.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-9.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2022-10.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2022.08.25 교수님 & 민주 학생 생일 파티",
+            "content": "8월은 교수님과 민주 학생 생일 파티가 있었습니다. 이번에는 루이 모양 케이크와 민주 학생이 좋아하는 랑꽁뜨레의 과일 타르트로 준비해서 나눠 먹었습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "8월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2022-11.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "first-dinner-2021",
+        "date": "2021-10-07",
+        "title": "First Lab Dinner",
+        "title_kr": "연구실 첫 회식",
+        "location": "Ulsan, South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/first-dinner-2021-1.png",
+        "summary": "2021년 10월 7일, FE Lab의 첫 번째 회식을 가졌습니다.",
+        
+        "content": {
+        "overview": "FE Lab의 첫 번째 회식을 가졌습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "첫 회식",
+            "images": [
+                {
+                "url": "./public/images/activities/first-dinner-2021-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/first-dinner-2021-2.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "kiie-2021-jeju",
+        "date": "2021-06-03",
+        "title": "2021 KIIE Spring Conference (Jeju)",
+        "title_kr": "2021 대한산업공학회 (제주)",
+        "location": "Jeju International Convention Center, Jeju, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kiie-2021-1.png",
+        "summary": "2021년 6월 2일부터 5일까지 제주 국제컨벤션센터에서 열린 대한산업공학회 춘계공동학술대회에 참여했습니다. FE Lab의 첫 학회 발표가 있었던 역사적인 순간입니다.",
+        
+        "content": {
+        "overview": "2021년 6월 2일부터 5일까지 제주 국제컨벤션센터에서 열린 대한산업공학회 춘계공동학술대회에 다녀왔습니다. 황윤태 랩장님이 'Manifold 기반 클러스터링을 활용한 가계금융 이질성 분석'이라는 내용으로 UNIST 금융공학연구실 학생의 첫 번째 학회 발표를 성공리에 마쳤습니다 🎉",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2021-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2021-2.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "Manifold 기반 클러스터링을 활용한 가계금융 이질성 분석",
+                "presenter": "황윤태",
+                "session": "금융공학 세션",
+                "time": "6월 3일"
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "birthday-parties-2021",
+        "date": "2021-05-23",
+        "title": "2021 FE Lab Birthday Parties",
+        "title_kr": "2021년 FE Lab 생일 파티 모음",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/birthday-2021-1.png",
+        "summary": "2021년 한 해 동안 FE Lab 구성원들의 생일을 축하하는 파티들을 개최했습니다.",
+        
+        "content": {
+        "overview": "2021년 한 해 동안 FE Lab 구성원들의 생일을 축하하는 특별한 파티들을 개최했습니다.",
+        
+        "sections": [
+            {
+            "type": "text",
+            "title": "2021.05.23 소현 학생 생일 파티",
+            "content": "권소현 학생의 생일을 맞아 조촐하게 파티를 하였습니다 🎂 황윤태 랩장님은 서울 출장으로 부득이하게 참석하지 못하였고, 이용재 교수는 연구실에 있었지만 초대받지 못하였습니다 😭"
+            },
+            {
+            "type": "gallery",
+            "title": "5월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2021-1.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2021.06.18 가헌쒸 생일 파티 + 송별회",
+            "content": "2020년 가을부터 2021년 봄까지 학부 인턴으로 연구실에서 함께했던 김가헌 학생이 군입대를 위해 잠시 떠나게 되어 생일 파티 겸 송별회를 하였습니다. 하지만 여전히 온라인으로 저널 클럽에 참여 중이고 훈련소 퇴소 후에도 참여하겠다고 학업에 대한 강한 의지를 드러내주었습니다. 예비군이 되어 돌아오는 날 까지 포스트잍은 마지막 잎새처럼 잘 관리하도록 하겠습니다 👍"
+            },
+            {
+            "type": "text",
+            "title": "2021.07.27 영석 학생 생일 파티",
+            "content": "학부 인턴 영석 학생 생일을 맞아 케익과 커피와 함께 간단하게 담소를 나눴습니다 🎂 ☕"
+            },
+            {
+            "type": "gallery",
+            "title": "7월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2021-2.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2021-3.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2021-4.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2021-5.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2021.08.26 이교수, 민주 학생 합동 생일 파티",
+            "content": "연구실 인원이 많아지면서 생일 파티가 너무 많아지는 것 같아 월별로 모아서 하기로 했습니다. 8월에는 이용재 교수와 민주 학생 생일이 있어서 함께 간단히 파티를 진행했습니다 😃"
+            },
+            {
+            "type": "gallery",
+            "title": "8월 생일 파티",
+            "images": [
+                {
+                "url": "./public/images/activities/birthday-2021-6.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2021-7.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/birthday-2021-8.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    }
 
     ],
     "categories": {
@@ -1230,20 +1756,10 @@
         "icon": "🎓",
         "color": "blue"
     },
-    "workshop": {
-        "name": "Workshops",
-        "icon": "💡",
-        "color": "purple"
-    },
     "gathering": {
         "name": "Social Events",
         "icon": "🎉",
         "color": "green"
-    },
-    "seminar": {
-        "name": "Seminars",
-        "icon": "📚",
-        "color": "orange"
     },
     "celebration": {
         "name": "Celebrations",
