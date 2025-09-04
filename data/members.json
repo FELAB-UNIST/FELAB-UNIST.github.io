@@ -257,6 +257,7 @@
         ],
         
         "links": {
+          "google_scholar": "https://scholar.google.com/citations?user=PTTU9p0AAAAJ&hl",
           "linkedin": "https://www.linkedin.com/in/junhyeong-lee-137b56202/",
           "website": "https://finjun.github.io/"
         }
@@ -332,6 +333,7 @@
         ],
         
         "links": {
+          "google_scholar": "https://scholar.google.com/citations?hl=ko&user=QcLeQXQAAAAJ",
           "github": "https://www.linkedin.com/in/inwoo-tae-1a417626b/"
         }
       },
@@ -453,6 +455,7 @@
         ],
         
         "links": {
+          "google_scholar": "https://scholar.google.com/citations?hl=ko&user=rxmr19sAAAAJ",
           "github": "https://www.linkedin.com/in/juchan-kim-11a846249/"
         }
       },
@@ -580,7 +583,7 @@
         
         "links": {
           "linkedin": "https://www.linkedin.com/in/hoyoung-lee/",
-          "google_scholar": "https://scholar.google.com/citations?user=hoyounglee"
+          "google_scholar": "https://scholar.google.com/citations?user=12kx1B4AAAAJ&hl=ko&oi=sra"
         }
       }
     ],
