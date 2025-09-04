@@ -201,18 +201,8 @@
             "title": "후기",
             "content": "논문을 읽고, 논문을 쓰는 과정에서 수 많은 정보와 마주하게 됩니다. 분야, 저자, 방법론, 연구기관, 이론 등 정말 다양한 요소들이 연구/논문 속에 녹아 있습니다.\n\nICAIF는 이러한 다양한 정보들을 기반으로, 많은 사람들과 대화를 나눌 수 있는 멋진 컨퍼런스 중 하나라고 생각합니다. 작년에 이어 두 번째로 방문하였는데, 여전히 다양한 사람들과 금융에 대한 이야기를 나눌 수 있어서 행복한 시간이었습니다. 연구적인 자극도 많이 받았으며, 무엇보다 AI in Finance라는 분야에서 연구하고 적용하는 전세계 연구자들의 일원 이라는 강한 소속감을 느꼈습니다.\n\n우리 연구실 모두, 올해도 열심히 정진하여 내년 ICAIF'25에서도 큰 영감과 자극을 받을 수 있기를 바랍니다.\n\n그리고 항상 좋은 기회를 주시는 교수님께도 감사드립니다! 😊"
             }
-        ],
-        
-        "highlights": [
-            "김주찬 학생의 'The Taxonomy of Retail Investors' 발표",
-            "Andrew Lo 교수님과의 대화",
-            "Frank Fabozzi 교수님과의 만남",
-            "LLMs and Generative AI for Finance workshop 참여",
-            "AAAI, IJCAI 대비 AI in Finance 전문 연구자들과의 네트워킹",
-            "브로드웨이 뮤지컬 Chicago 관람",
-            "The Met 박물관 방문",
-            "KAIST 연구진과의 교류"
         ]
+        
         },
         
         "links": [
@@ -443,17 +433,8 @@
                 }
             ]
             }
-        ],
-        
-        "highlights": [
-            "김예진 학생의 '개인투자자를 위한 주식 추천 시스템' 발표",
-            "이용재 교수님이 주최한 금융 RecSys 워크샵",
-            "금융 NLP 워크샵 참여",
-            "글래스고 대학교 Richard 교수님과의 교류",
-            "한양대학교 송재욱 교수님과의 네트워킹",
-            "Finance 세션에서 이용재 교수님 좌장 참여",
-            "CMU AI 프로그램 동기들과의 만남"
         ]
+      
         },
         
         "links": [
@@ -563,14 +544,6 @@
                     }
                 ]
             }
-        ],
-        
-        "highlights": [
-            "FE Lab 첫 박사 졸업생 배출 (황윤태 박사)",
-            "김예진 석사 졸업",
-            "이영빈 석사 졸업 (온라인)",
-            "발렌타인 30년산 위스키에 박사 졸업생 싸인 전통 시작",
-            "성심당 망고시루 케이크 축하 파티"
         ]
         },
         
@@ -794,13 +767,6 @@
                 }
             ]
             }
-        ],
-        
-        "highlights": [
-            "이용재 교수님 좌장으로 산업인공지능 응용분야 세션 진행",
-            "FE Lab 학생 5명 발표 (태인우, 이영빈, 김주찬, 김예진, 황윤태)",
-            "여수 낭만포차, 하멜등대 등 여수 관광",
-            "교수님의 교수님과 함께한 저녁 회식"
         ]
         },
         
@@ -976,15 +942,6 @@
                 }
             ]
             }
-        ],
-        
-        "highlights": [
-            "이용재 교수님이 Machine Learning for Investor Modelling and Recommender Systems Workshop organizer로 참여",
-            "FE Lab 학생 4편의 논문 발표",
-            "Best Poster Award 수상",
-            "Bloomberg 본사 방문 및 터미널 체험",
-            "JP Morgan Asset Management 연구 교류",
-            "하나융기원, NC SOFT, 카카오뱅크와의 네트워킹"
         ]
         },
         
@@ -998,6 +955,271 @@
             "url": "https://ai-finance.org/"
         }
         ]
+    },
+
+    {
+        "id": "kiie-2023-jeju",
+        "date": "2023-05-31",
+        "title": "2023 KIIE Spring Conference (Jeju)",
+        "title_kr": "2023년 대한산업공학회 (제주)",
+        "location": "Shinhwa World, Jeju, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kiie-2023-1.jpg",
+        "summary": "2023년 5월 31일부터 6월 2일까지 제주 신화월드에서 개최된 한국경영과학회/대한산업공학회 2023 춘계공동학술대회에 참여하였습니다.",
+        
+        "content": {
+        "overview": "2023년 5월 31일 ~ 6월 2일까지 제주 신화월드에서 개최된 한국경영과학회/대한산업공학회 2023 춘계공동학술대회에 다녀왔습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2023-1.jpg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "학회 발표",
+            "content": "총 6명의 학생이 수많은 사람들 앞에서 성공적으로 발표를 마쳤습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "학회 발표 현장",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2023-2.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2023-3.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2023-4.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2023-5.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2023-6.jpeg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/kiie-2023-7.jpeg",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "학회 마지막 날",
+            "content": "학회 마지막 날 저녁에는 중문에서 칵테일도 마시고 밤에는 호텔에 옹기종기 모여 진솔한 이야기를 나누며 즐거운 시간을 보냈습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "저녁 시간",
+            "images": [
+                {
+                "url": "./public/images/activities/kiie-2023-8.png",
+                "caption": ""
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "FE Lab 학생 6명 발표",
+            "제주 신화월드에서 3일간 학회 진행",
+            "중문에서의 칵테일 타임",
+            "연구실 멤버들과의 친목 시간"
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "teachers-day-2023",
+        "date": "2023-05-15",
+        "title": "2023 Teacher's Day",
+        "title_kr": "2023년 스승의날",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/teachers-day-2023-1.png",
+        "summary": "2023년 5월 15일 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "content": {
+        "overview": "FE LAB 일동: 존경하는 교수님 항상 감사합니다 !!",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "스승의 날 축하",
+            "images": [
+                {
+                "url": "./public/images/activities/teachers-day-2023-1.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "felab-group-photo-2023",
+        "date": "2023-03-30",
+        "title": "UNIST FE LAB Group Photo",
+        "title_kr": "UNIST FE LAB 단체사진 찍다",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/group-photo-2023-1.png",
+        "summary": "2023년 3월 30일, FE Lab 구성원들이 모여 단체사진을 촬영했습니다.",
+        
+        "content": {
+        "overview": "간만에 단체사진을 찍었습니다",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "단체사진",
+            "images": [
+                {
+                "url": "./public/images/activities/group-photo-2023-1.png",
+                "caption": ""
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "FE Lab 전체 구성원 단체사진 촬영"
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "felab-first-graduates-2023",
+        "date": "2023-02-16",
+        "title": "UNIST FE Lab First Graduates! (MS Kwon So-hyun, Choi Min-joo)",
+        "title_kr": "UNIST FE Lab 첫 졸업생 배출! (석사 권소현, 최민주)",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "gathering",
+        "featured": true,
+        "thumbnail": "./public/images/activities/first-graduates-2023-1.png",
+        "summary": "2023년 2월 16일, FE Lab의 첫 졸업생인 권소현, 최민주 석사가 학위를 받고 졸업했습니다.",
+        
+        "content": {
+        "overview": "🎉 석사과정 권소현, 최민주 학생이 2023년 2월 16일자로 석사 학위👩‍🎓를 받고 졸업하였습니다! 🎊\n\n연구실 첫 졸업생이라 하나하나 모든 것이 쉽지 않았을텐데 정말 고생 많았습니다. 앞으로도 항상 건강하고 모든 일 잘 되기를 기원합니다!",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "졸업식",
+            "images": [
+                {
+                "url": "./public/images/activities/first-graduates-2023-1.png",
+                "caption": ""
+                }
+            ]
+            },
+            {
+            "type": "gallery",
+            "title": "AAAI'23 AI for Financial Services Bridge",
+            "images": [
+                {
+                "url": "./public/images/activities/first-graduates-2023-2.png",
+                "caption": "AAAI'23 AI for Financial Services Bridge에 참가한 NFT, index tracking 팀 별 사진도 찍었습니다."
+                },
+                {
+                "url": "./public/images/activities/first-graduates-2023-3.png",
+                "caption": "AAAI'23 AI for Financial Services Bridge에 참가한 NFT, index tracking 팀 별 사진도 찍었습니다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "특별한 순간",
+            "content": "최민주 학생은 산업공학과 석사과정 대표로 단상에 나가 학위기를 받기도 하였습니다 👩‍🎓"
+            },
+            {
+            "type": "gallery",
+            "title": "학위수여식",
+            "images": [
+                {
+                "url": "./public/images/activities/first-graduates-2023-4.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/first-graduates-2023-5.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/first-graduates-2023-6.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "felab-workshop-2023",
+        "date": "2023-02-05",
+        "title": "1st FE Lab Workshop",
+        "title_kr": "제1회 연구실 워크숍",
+        "location": "Yangsan Ski Resort, South Korea",
+        "type": "gathering",
+        "featured": false,
+        "thumbnail": "./public/images/activities/workshop-2023-1.png",
+        "summary": "겨울방학을 맞이해서 양산의 한 스키장으로 가 좋은 시간을 보냈습니다",
+        
+        "content": {
+        "overview": "겨울방학을 맞이해서 양산의 한 스키장으로 가 좋은 시간을 보냈습니다",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "워크숍 사진",
+            "images": [
+                {
+                "url": "./public/images/activities/workshop-2023-1.png",
+                "caption": "(오른쪽) 석사과정 김예진(23) 학생이 얼굴을 찡그리고 있다 (왼쪽) 학부인턴 태인우(22) 학생이 그윽하게 쳐다보고 있다"
+                },
+                {
+                "url": "./public/images/activities/workshop-2023-2.png",
+                "caption": "석사과정 김세영(24) 학생과 김예진(23) 학생이 스키타러 가기 전 찍은 사진"
+                },
+                {
+                "url": "./public/images/activities/workshop-2023-3.png",
+                "caption": "석사과정 이영빈(25) 학생이 스키를 즐기는 모습"
+                },
+                {
+                "url": "./public/images/activities/workshop-2023-4.png",
+                "caption": "석박통합과정 이준형(23), 석사과정 김선미(26), 학부인턴 김주현(22), 태인우(22) 학생이 의기양양 하고 있다"
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
     }
 
 
