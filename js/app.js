@@ -14,13 +14,12 @@ const App = {
         // Initialize mobile menu
         this.setupMobileMenu();
         
-        // Load initial page (home)
-        await this.loadPage('home');
+        // Handle initial URL
+        this.handleInitialRoute();
         
         // Handle browser back/forward
         window.addEventListener('popstate', (e) => {
-            const page = e.state?.page || 'home';
-            this.loadPage(page, false);
+            this.handleRoute();
         });
     },
     
@@ -36,14 +35,40 @@ const App = {
             const footerHTML = await footerResponse.text();
             document.getElementById('footer-container').innerHTML = footerHTML;
             
-            // Load drawer
-            const drawerResponse = await fetch('./components/drawer.html');
-            const drawerHTML = await drawerResponse.text();
-            document.getElementById('drawer-container-wrapper').innerHTML = drawerHTML;
-            
             console.log('Components loaded successfully');
         } catch (error) {
             console.error('Error loading components:', error);
+        }
+    },
+    
+    handleInitialRoute() {
+        const hash = window.location.hash.slice(1); // Remove #
+        if (hash.startsWith('profile/')) {
+            const parts = hash.split('/');
+            const memberId = parts[1];
+            // Load members page first, then navigate to profile
+            this.loadPage('members').then(() => {
+                setTimeout(() => {
+                    this.loadProfile(memberId);
+                }, 100);
+            });
+        } else if (hash) {
+            this.loadPage(hash);
+        } else {
+            this.loadPage('home');
+        }
+    },
+    
+    handleRoute() {
+        const hash = window.location.hash.slice(1);
+        if (hash.startsWith('profile/')) {
+            const parts = hash.split('/');
+            const memberId = parts[1];
+            this.loadProfile(memberId);
+        } else if (hash) {
+            this.loadPage(hash, false);
+        } else {
+            this.loadPage('home', false);
         }
     },
     
@@ -140,6 +165,40 @@ const App = {
         }
     },
     
+    async loadProfile(memberId) {
+        console.log(`Loading profile: ${memberId}`);
+        
+        try {
+            // Load the profile template
+            const response = await fetch('./pages/profile.html');
+            if (!response.ok) {
+                throw new Error('Failed to load profile template');
+            }
+            
+            const html = await response.text();
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.innerHTML = html;
+                window.scrollTo(0, 0);
+                
+                // Update URL
+                history.pushState({ profile: memberId }, '', `#profile/${memberId}`);
+                
+                // Initialize profile with member data
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        if (typeof ProfileManager !== 'undefined') {
+                            ProfileManager.init(memberId);
+                        }
+                    });
+                });
+            }
+        } catch (error) {
+            console.error('Error loading profile:', error);
+            this.loadPage('members');
+        }
+    },
+    
     updateActiveNav(activePage) {
         // Remove all active classes
         document.querySelectorAll('.nav-link').forEach(link => {
@@ -160,28 +219,19 @@ const App = {
         switch(page) {
             case 'home':
                 // Initialize news carousel for home page
-                // Add more robust checking and logging
                 const initCarousel = () => {
                     console.log('Attempting to initialize carousel...');
                     
-                    // Check if NewsCarousel module is loaded
                     if (typeof NewsCarousel === 'undefined') {
                         console.error('NewsCarousel module not loaded!');
                         return;
                     }
                     
-                    // Check if the main content has the carousel element
-                    const mainContent = document.getElementById('main-content');
-                    console.log('Main content innerHTML length:', mainContent ? mainContent.innerHTML.length : 0);
-                    
                     const carouselElement = document.getElementById('news-carousel');
-                    console.log('Carousel element found:', !!carouselElement);
-                    
                     if (carouselElement) {
                         console.log('Found carousel, resetting and initializing...');
                         NewsCarousel.reset();
                         
-                        // Use a promise to ensure async operations complete
                         Promise.resolve().then(() => {
                             NewsCarousel.init().then(() => {
                                 console.log('Carousel initialized successfully');
@@ -195,7 +245,6 @@ const App = {
                     }
                 };
                 
-                // Start initialization after a brief delay
                 setTimeout(initCarousel, 300);
                 break;
                 

@@ -4,56 +4,587 @@
       {
         "id": "yongjae-lee",
         "name": "Yongjae Lee",
-        "position": "Professor",
+        "name_kr": "이용재",
+        "position": "Associate Professor",
+        "department": "Department of Industrial Engineering, Artificial Intelligence Graduate School",
+        "institution": "UNIST",
         "image": "./public/images/members/yjlee.png",
-        "bio": "Professor at UNIST Financial Engineering Lab",
-        "email": "yongjae.lee@unist.ac.kr"
+        "email": "yongjae.lee@unist.ac.kr",
+        "office": "Building 112, Room 301-7",
+        
+        "bio_short": "Associate Professor specializing in Financial Engineering, Optimization, and Machine Learning for Finance",
+        "bio_full": "Dr. Yongjae Lee is an Associate Professor at UNIST, jointly appointed in the Department of Industrial Engineering and the Artificial Intelligence Graduate School. His research bridges machine learning, optimization, and financial engineering to solve complex financial decision-making problems.",
+        
+        "research_interests": [
+          "Financial Engineering",
+          "Optimization",
+          "Machine Learning",
+          "Household and Personal Finance",
+          "AI for Finance"
+        ],
+        
+        "education": [
+          {
+            "degree": "Ph.D.",
+            "field": "Industrial & Systems Engineering",
+            "institution": "KAIST",
+            "year": "2016",
+            "thesis": "Demystifying Diversification Strategies by using Portfolio Optimization Techniques",
+            "advisor": "Professor Woo Chang Kim",
+            "note": "Best Management Science Ph.D. Thesis Award in 2016 by KORMS"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Computer Science",
+            "institution": "KAIST",
+            "year": "2011"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Mathematical Sciences",
+            "institution": "KAIST",
+            "year": "2011"
+          }
+        ],
+        
+        "experience": [
+          {
+            "position": "Associate Professor",
+            "institution": "Department of Industrial Engineering, UNIST",
+            "period": "2024 - Present"
+          },
+          {
+            "position": "Associate Professor",
+            "institution": "Artificial Intelligence Graduate School, UNIST",
+            "period": "2024 - Present"
+          },
+          {
+            "position": "Assistant Professor",
+            "institution": "Department of Industrial Engineering, UNIST",
+            "period": "2018 - 2024"
+          },
+          {
+            "position": "BK Assistant Professor",
+            "institution": "Department of Transdisciplinary Studies, Seoul National University",
+            "period": "2017 - 2018"
+          },
+          {
+            "position": "Post-doctoral Researcher",
+            "institution": "KAIST Center for Wealth Management Technologies",
+            "period": "2016 - 2017"
+          },
+          {
+            "position": "Visiting Researcher",
+            "institution": "Department of Operations Research and Financial Engineering, Princeton University",
+            "period": "2014, 2012",
+            "advisor": "Professors John M. Mulvey and Frank J. Fabozzi"
+          }
+        ],
+        
+        "service": {
+          "journals": [
+            {
+              "role": "Editorial Advisory Board Member",
+              "journal": "The Journal of Financial Data Science",
+              "period": "2020 - Present"
+            },
+            {
+              "role": "Guest Editor",
+              "journal": "The Journal of Behavioral Finance",
+              "special_issue": "Statistical and Machine Learning for Investor Modelling",
+              "period": "2023 - 2024"
+            }
+          ],
+          "conferences": [
+            {
+              "role": "Senior Program Committee",
+              "conference": "The 6th International Conference on AI in Finance (ICAIF'25)",
+              "location": "Singapore",
+              "date": "November 2025"
+            },
+            {
+              "role": "Workshop Chair",
+              "conference": "The 5th International Conference on AI in Finance (ICAIF'24)",
+              "location": "New York, US",
+              "date": "November 2024"
+            }
+          ],
+          "workshops": [
+            "Gen AI in Finance @ NeurIPS 2025",
+            "Financial Time-Series @ ICAIF'25",
+            "LLM and Gen AI for Finance @ ICAIF'25",
+            "Emerging Markets @ ICAIF'25",
+            "Financial AI @ CIKM 2025",
+            "IR in Finance Tutorial @ SIGIR 2025",
+            "Financial AI @ ICLR 2025",
+            "AI for Social Impact @ AAAI-25",
+            "RecSys in Finance @ IJCAI-24",
+            "ML for Investor Modelling @ ICAIF'23"
+          ],
+          "society": [
+            {
+              "role": "Executive Director and Chair of Financial AI Committee",
+              "organization": "The Korean Association of Financial Engineering (한국금융공학회)",
+              "period": "2023 - Present"
+            }
+          ],
+          "advisory": [
+            {
+              "role": "Advisor (자문교수)",
+              "organization": "LinqAlpha",
+              "period": "2024 - Present"
+            },
+            {
+              "role": "위원",
+              "organization": "금융위원회 금융권 AI 협의회",
+              "period": "2024 - Present"
+            },
+            {
+              "role": "위원",
+              "organization": "한국주택금융공사 와이즈맨 클럽",
+              "period": "2024 - Present"
+            },
+            {
+              "role": "Co-founder and Advisor",
+              "organization": "Veranos Technologies",
+              "period": "2017 - 2023"
+            }
+          ]
+        },
+        
+        "awards": [
+          {
+            "title": "Maeil Business Young Scholar Best Paper Award (매경신진학자논문상)",
+            "organization": "Korean Academic Society of Business Administration",
+            "year": "2025",
+            "paper": "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization"
+          },
+          {
+            "title": "Best Paper Award",
+            "organization": "Korean Academic Society of Business Administration",
+            "year": "2024",
+            "paper": "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management"
+          },
+          {
+            "title": "Best Poster Award",
+            "organization": "4th ACM International Conference on AI in Finance (ICAIF'23)",
+            "year": "2023"
+          },
+          {
+            "title": "Outstanding Faculty Award (in Education)",
+            "organization": "UNIST",
+            "year": "2022"
+          },
+          {
+            "title": "KT Best Management Science Ph.D. Thesis Award",
+            "organization": "The Korean Operations Research and Management Science Society (KORMS)",
+            "year": "2016"
+          }
+        ],
+        
+        "links": {
+          "google_scholar": "https://scholar.google.com/citations?user=dAMXPRcAAAAJ&hl=ko&oi=ao",
+          "linkedin": "https://www.linkedin.com/in/yongjae-lee-548982107/",
+          "facebook": "https://www.facebook.com/profile.php?id=100001609021456",
+          "notion": "https://notion.so/yongjaelee"
+        }
       }
     ],
+    
     "phd_students": [
       {
         "id": "junhyeong-lee",
         "name": "Junhyeong Lee",
+        "name_kr": "이준형",
         "position": "Ph.D-M.S Combined",
+        "program": "Ph.D.-M.S. Combined program in Industrial Engineering",
         "image": "./public/images/members/jhlee.png",
-        "bio": "Ph.D-M.S Combined Student",
-        "email": "jun.lee@unist.ac.kr"
+        "email": "jun.lee@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2020-09",
+        
+        "bio_short": "Working on machine learning and mathematical optimization for financial decision-making",
+        "bio_full": "I am a Ph.D. student in Industrial Engineering at Ulsan National Institute of Science and Technology (UNIST), working in the Financial Engineering Lab under the supervision of Prof. Yongjae Lee. My research focuses on bridging machine learning and mathematical optimization for financial decision-making.",
+        
+        "research_interests": [
+          "Machine Learning in Optimization",
+          "Decision-Focused Learning",
+          "Portfolio Optimization",
+          "LLMs & Agents in Finance"
+        ],
+        
+        "education": [
+          {
+            "degree": "Ph.D.-M.S. Combined",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2020 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Financial Engineering",
+            "institution": "Ajou University",
+            "year": "2020"
+          }
+        ],
+        
+        "projects": [
+          {
+            "title": "Development of an Investment Recommendation System Utilizing Both Investor and Stock & Fund Data",
+            "organization": "KB Securities",
+            "period": "Sep-Nov 2024",
+            "type": "Industry"
+          },
+          {
+            "title": "Wild Fire Prediction and Explainable Factor Analysis using Machine Learning",
+            "organization": "University of Toronto / Canadian Coalition for Green Health Care",
+            "period": "May-Jul 2024",
+            "type": "International Collaboration"
+          },
+          {
+            "title": "Development of AI Model for Predicting Mortgage Delinquency and Bankruptcy",
+            "organization": "Korea Housing Finance Corporation",
+            "period": "Dec 2022 - Sep 2023",
+            "type": "Industry"
+          },
+          {
+            "title": "Implementation of an Asset Selection Model's Backtesting Module for Index Tracking",
+            "organization": "NCSOFT",
+            "period": "Aug-Dec 2022",
+            "type": "Industry"
+          }
+        ],
+        
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/junhyeong-lee-137b56202/",
+          "website": "https://finjun.github.io/"
+        }
       },
+      
       {
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
+        "name_kr": "태인우",
         "position": "Ph.D-M.S Combined",
+        "program": "M.S. student in Industrial Engineering",
         "image": "./public/images/members/iwtae.jpg",
-        "bio": "Ph.D-M.S Combined Student",
-        "email": "vitainu0104@unist.ac.kr"
+        "email": "vitainu0104@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2024-02",
+        
+        "bio_short": "Working on portfolio theory, machine learning, and knowledge graphs",
+        "bio_full": "Currently pursuing M.S. in Industrial Engineering at UNIST, with a background in Computer Science. Interested in portfolio theory, machine learning, and knowledge graph applications in finance.",
+        
+        "research_interests": [
+          "Portfolio Theory",
+          "Machine Learning",
+          "Knowledge Graph"
+        ],
+        
+        "education": [
+          {
+            "degree": "M.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2024.02 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Computer Science",
+            "institution": "UNIST",
+            "period": "2018.03 - 2024.02"
+          }
+        ],
+        
+        "projects": [
+          {
+            "title": "Dynamic Embedding Techniques for Capturing Temporal Changes in Financial Text Data",
+            "year": "2025",
+            "type": "Research"
+          },
+          {
+            "title": "Group-Robust Reweighting for Fraud Detection across Financial Domain",
+            "organization": "Financial Services Commission",
+            "year": "2024",
+            "type": "Industry"
+          },
+          {
+            "title": "Lifetime Medical Expense Management via Artificial Intelligence",
+            "organization": "National Health Insurance Service",
+            "year": "2023",
+            "type": "Industry"
+          },
+          {
+            "title": "Analysis of the Relationship Between Stock Indices of Different Countries Using the Attention Mechanism",
+            "year": "2022",
+            "type": "Research"
+          }
+        ],
+        
+        "ta_experience": [
+          {
+            "course": "IE412 AI for Finance",
+            "semester": "Spring 2024",
+            "institution": "UNIST"
+          }
+        ],
+        
+        "links": {
+          "github": "https://www.linkedin.com/in/inwoo-tae-1a417626b/"
+        }
       },
+      
       {
         "id": "juchan-kim",
         "name": "Juchan Kim",
+        "name_kr": "김주찬",
         "position": "Ph.D-M.S Combined",
+        "program": "M.S. Student in Dept. of Industrial Engineering",
         "image": "./public/images/members/jckim.jpg",
-        "bio": "Ph.D-M.S Combined Student",
-        "email": "joc6021@unist.ac.kr"
+        "email": "joc6021@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2024-02",
+        
+        "bio_short": "Working on portfolio optimization for retail investors and machine learning applications",
+        "bio_full": "M.S. student in Industrial Engineering at UNIST, working under Prof. Yongjae Lee. Research focuses on portfolio optimization, especially for retail investors, and machine learning applications in finance.",
+        
+        "research_interests": [
+          "Portfolio Optimization (especially for retail investors)",
+          "Machine Learning"
+        ],
+        
+        "education": [
+          {
+            "degree": "M.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2024.02 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Mathematics",
+            "institution": "UNIST",
+            "period": "2018.03 - 2024.02",
+            "honors": "Summa Cum Laude"
+          }
+        ],
+        
+        "publications": [
+          {
+            "authors": "Kwon, Sohyeon; Kim, Juchan; Kim, Seyoung; Lee, Junhyeong; Lee, Yongjae",
+            "title": "Index Tracking for Direct Indexing Services: A Deep Representation Learning Approach",
+            "venue": "AAAI-23 Bridge Program",
+            "year": "2023"
+          },
+          {
+            "authors": "Kim, Juchan; Lee, Yongjae",
+            "title": "Taxonomy of Individual Investors",
+            "venue": "ICAIF'24 Workshop on Machine Learning for Financial Wellness: Human-Centric Recommender Systems",
+            "year": "2024"
+          }
+        ],
+        
+        "projects": [
+          {
+            "title": "Development of Model for Defining Retail Investor's Investment Tendency and Classifying Stock Sectors",
+            "organization": "KB Securities",
+            "period": "2024.09 - 2024.11",
+            "type": "Industry"
+          },
+          {
+            "title": "Development of AI Model for Predicting Mortgage Delinquency and Bankruptcy",
+            "organization": "Korea Housing Finance Corporation",
+            "period": "2023.04 - 2023.08",
+            "type": "Industry"
+          },
+          {
+            "title": "Implement Backtesting Module about Asset Selection Model for Index Tracking",
+            "organization": "NCSoft",
+            "period": "2022.06 - 2022.12",
+            "type": "Industry"
+          }
+        ],
+        
+        "ta_experience": [
+          {
+            "course": "IE313 Time Series Analysis",
+            "semester": "Fall 2024",
+            "institution": "UNIST"
+          },
+          {
+            "course": "IE412 AI for Finance",
+            "semester": "Spring 2024",
+            "institution": "UNIST"
+          },
+          {
+            "course": "MTH111 Calculus I",
+            "semester": "Spring 2019, Spring 2022",
+            "institution": "UNIST"
+          },
+          {
+            "course": "MTH112 Calculus II",
+            "semester": "Fall 2019, Fall 2022",
+            "institution": "UNIST"
+          }
+        ],
+        
+        "awards": [
+          {
+            "title": "Dean's Award Winner",
+            "organization": "Department of Mathematical Science, UNIST",
+            "year": "2023.02"
+          },
+          {
+            "title": "Development Scholarship Student",
+            "organization": "Department of Mathematical Science, UNIST",
+            "year": "2022.12"
+          }
+        ],
+        
+        "experience": [
+          {
+            "position": "Undergraduate Intern",
+            "organization": "Financial Engineering Lab, UNIST",
+            "period": "2022.06 - 2024.02"
+          }
+        ],
+        
+        "links": {
+          "github": "https://www.linkedin.com/in/juchan-kim-11a846249/"
+        }
       },
+      
       {
         "id": "kangmin-kim",
         "name": "Kangmin Kim",
+        "name_kr": "김강민",
         "position": "Ph.D-M.S Combined",
+        "program": "Ph.D-M.S combined Program in Industrial Engineering",
         "image": "./public/images/members/kmkim.jpg",
-        "bio": "Ph.D-M.S Combined Student",
-        "email": "kmin1015@unist.ac.kr"
+        "email": "kmin1015@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2024-09",
+        
+        "bio_short": "Working on portfolio theory and machine learning applications in finance",
+        "bio_full": "Ph.D-M.S combined student in Industrial Engineering at UNIST. Research interests include portfolio theory and machine learning applications.",
+        
+        "research_interests": [
+          "Portfolio Theory",
+          "Machine Learning"
+        ],
+        
+        "education": [
+          {
+            "degree": "Ph.D-M.S Combined",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2024.09 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Economics and Trade",
+            "institution": "Kyungpook National University",
+            "period": "2020.03 - 2024.08"
+          }
+        ],
+        
+        "projects": [
+          {
+            "title": "Development and Evaluation of a Synthetic Data Generation Model for Credit Information",
+            "period": "2024 - 2025",
+            "type": "Research"
+          }
+        ],
+        
+        "links": {
+          "github": "https://www.linkedin.com/in/like-zero/"
+        }
       }
     ],
+    
     "ms_students": [
       {
         "id": "hoyoung-lee",
         "name": "Hoyoung Lee",
+        "name_kr": "이호영",
         "position": "M.S. Student",
+        "program": "M.S. Student in Industrial Engineering",
         "image": "./public/images/members/hylee.jpg",
-        "bio": "M.S. Student",
-        "email": "hoyounglee@unist.ac.kr"
+        "email": "hoyounglee@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2025-01",
+        
+        "bio_short": "Working on Large Language Models and AI applications in finance",
+        "bio_full": "M.S. Student in Industrial Engineering at UNIST. Research focuses on Large Language Models, Financial NLP, and Trustworthy AI applications in finance.",
+        
+        "research_interests": [
+          "Large Language Models",
+          "AI in Finance",
+          "Financial NLP",
+          "Trustworthy AI"
+        ],
+        
+        "education": [
+          {
+            "degree": "M.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2025 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Computer Science",
+            "institution": "Hankuk University of Foreign Studies",
+            "period": "2019 - 2025"
+          },
+          {
+            "degree": "B.B.A.",
+            "field": "Actuarial Science",
+            "institution": "Hankuk University of Foreign Studies",
+            "period": "2019 - 2025"
+          }
+        ],
+        
+        "publications": [
+          {
+            "authors": "Son, Guijin; Ko, Hyunwoo; Lee, Hoyoung; Kim, Yewon; Hong, Seunghyeok",
+            "title": "Multilingual Challenges in Automated Evaluators: A Case Study on English and Korean",
+            "venue": "AAAI 2025 Workshop on Preparing Good Data for Generative AI (Good-Data)",
+            "year": "2025"
+          },
+          {
+            "authors": "Lee, Hoyoung; Choi, Youngsoo; Kwon Yuhee",
+            "title": "Quantifying Qualitative Insights: Leveraging LLMs to Market Predict",
+            "venue": "ICAIF'24 Workshop on LLMs and Generative AI for Finance (AI4F)",
+            "year": "2024"
+          }
+        ],
+        
+        "awards": [
+          {
+            "title": "ACM-ICAIF'24 FinanceRAG Challenge Winner",
+            "organization": "ICAIF",
+            "year": "2024"
+          },
+          {
+            "title": "NH Investment & Securities Big Data Competition Award",
+            "organization": "NH Investment & Securities",
+            "year": "2023"
+          }
+        ],
+        
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/hoyoung-lee/",
+          "google_scholar": "https://scholar.google.com/citations?user=hoyounglee"
+        }
       }
     ],
+    
     "interns": [
       {
         "id": "sangjin-jin",
@@ -62,7 +593,10 @@
         "position": "Undergraduate Intern",
         "image": "./public/images/members/sangjin.jpg",
         "bio": "Undergraduate Research Intern",
-        "email": "jsj9185@unist.ac.kr"
+        "bio_short": "Undergraduate Research Intern",
+        "email": "jsj9185@unist.ac.kr",
+        "research_interests": [],
+        "links": {}
       },
       {
         "id": "suhwan-park",
@@ -71,7 +605,10 @@
         "position": "Undergraduate Intern",
         "image": "public/images/members/shpark.jpeg",
         "bio": "Undergraduate Research Intern",
-        "email": "suhwan@unist.ac.kr"
+        "bio_short": "Undergraduate Research Intern",
+        "email": "suhwan@unist.ac.kr",
+        "research_interests": [],
+        "links": {}
       }
     ]
   },
