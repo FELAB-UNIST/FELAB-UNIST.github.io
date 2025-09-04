@@ -3,7 +3,7 @@
     {
       "id": "pub_2025_cikm_theme",
       "year": 2025,
-      "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim, Sundong You, Taeyoon Lim, Woohyung Lim, Yongjae Lee",
+      "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim, Sundong You, Taeyoon Lim, Woohyung Lim* , Yongjae Lee**",
       "author_ids": ["hoyoung-lee", "suhwan-park", "yongjae-lee"],
       "venue": "The 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)",
       "title": "THEME : Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics",
@@ -36,7 +36,7 @@
     {
       "id": "pub_2025_aaai_geodesic",
       "year": 2025,
-      "authors": "Yoontae Hwang, Yongjae Lee",
+      "authors": "Yoontae Hwang, Yongjae Lee**",
       "author_ids": ["yoontae-hwang", "yongjae-lee"],
       "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25)",
       "title": "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset",
@@ -80,7 +80,7 @@
     {
       "id": "pub_2024_icaif_stock_recommendations",
       "year": 2024,
-      "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie, Yongjae Lee*",
+      "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie*, Yongjae Lee**",
       "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee"],
       "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
