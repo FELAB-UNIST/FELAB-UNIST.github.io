@@ -805,6 +805,199 @@
         },
         
         "links": []
+    },
+
+    {
+        "id": "icaif-2023-nyc",
+        "date": "2023-11-27",
+        "title": "2023 ICAIF (NYC🗽)",
+        "title_kr": "2023년 ICAIF (뉴욕🗽)",
+        "location": "New York, USA",
+        "type": "conference",
+        "featured": true,
+        "thumbnail": "./public/images/activities/icaif-2023-1.jpeg",
+        "summary": "2023년 11월 26일부터 2023년 12월 1일까지 뉴욕에서 열렸던 4th ACM International Conference on AI in Finance (ICAIF-23) 학회에 참여하였습니다.",
+        
+        "content": {
+        "overview": "2023년 11월 26일부터 2023년 12월 1일까지 뉴욕에서 열렸던 4th ACM International Conference on AI in Finance (ICAIF-23) 학회에 다녀왔습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "학회 참가자",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-1.jpeg",
+                "caption": "왼쪽부터 황윤태(박사), 이준형(박사), 김세영(석사), 김예진(석사), 김선미(석사), 이용재(교수님) 그리고 이영빈(석사)이 ICAIF'23에 참여하였습니다."
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2023년 11월 27일 - Workshop Day",
+            "content": "ICAIF'23의 첫번째 날!\n이 날은 Workshop이 열리는 날이었습니다.\n\n오전에는 저희 랩실 모두 이용재 교수님께서 organizers로 참여하신 ✨Machine Learning for Investor Modelling and Recommender Systems✨에 참여했습니다.\n\n이영빈, 김예진 학생이 작성한 'Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning'이 워크샵에 억셉되었습니다. 그래서 쟁쟁한 사람들 사이에서 이영빈 학생이 발표를 진행하였습니다.\n\n저녁에는 icaif에 참여하신 하나융기원, NC SOFT, 카카오뱅크 그리고 교수님들과 함께 식사를 했습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "Workshop 발표",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-2.jpg",
+                "caption": "발표를 하고 있는 이영빈(석사) 학생"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-3.png",
+                "caption": "Workshop을 빛낸 사람들"
+                }
+            ]
+            },
+            {
+            "type": "presentations",
+            "title": "우리 연구실 발표",
+            "items": [
+                {
+                "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning",
+                "presenter": "이영빈",
+                "session": "Machine Learning for Investor Modelling and Recommender Systems Workshop",
+                "time": "11월 27일"
+                },
+                {
+                "title": "A GANs-Based Approach for Stock Price Anomaly Detection and Investment Risk Management",
+                "presenter": "김세영",
+                "session": "Main Conference",
+                "time": "11월 28일"
+                },
+                {
+                "title": "SimStock: Representation Model for Stock Similarities",
+                "presenter": "황윤태",
+                "session": "Main Conference",
+                "time": "11월 28일"
+                },
+                {
+                "title": "LLMs Analyzing the Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?",
+                "presenter": "김선미, 김세영, 김예진",
+                "session": "Poster Session",
+                "time": "11월 29일"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2023년 11월 28일 - Main Conference",
+            "content": "두번째 날은 김세영, 황윤태 학생의 발표가 있었던 날이었습니다.\n\n두 학생 모두 엄청나게 많은 사람들 앞에서 영어로 발표를 진행하였습니다. 🤩\n\n저녁에는 Hilton Hotel에서 conference reception이 있었습니다. 엄청난 분들과 함께 연구에 대해 이야기를 나눌 수 있는 좋은 시간이었습니다."
+            },
+            {
+            "type": "gallery",
+            "title": "Main Conference 발표",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-4.jpg",
+                "caption": "발표를 하고 있는 김세영(석사) 학생"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-5.jpg",
+                "caption": "발표를 하고 있는 황윤태(박사) 학생"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2023년 11월 29일 - Poster Session & Bloomberg Visit",
+            "content": "이 날은 김선미, 김세영, 김예진 학생의 poster session이 있었던 날이었습니다. 많은 분들이 저희 포스터에 관심을 가져주셨답니다 ㅎㅎ\n\n이날 참가자들의 투표를 받아 Best Poster Award를 수상하였습니다! 🥇\n\n오후에는 블룸버그 본사에 다녀왔습니다. 블룸버그 본사 CTO office에서 일하시는 분께서 저희 연구가 흥미롭다고 하셨습니다 ㅎㅎ\n\n저녁에는 빛용재 교수님께서 맛있는 샤오롱바오를 사주셨습니다 😋"
+            },
+            {
+            "type": "gallery",
+            "title": "Poster Session",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-6.jpg",
+                "caption": "발표를 하고 있는 김예진(석사) 학생"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-7.jpg",
+                "caption": "발표를 하고 있는 김선미(석사) 학생"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-8.jpg",
+                "caption": "설명을 하고 있는 김세영(석사) 학생"
+                }
+            ]
+            },
+            {
+            "type": "gallery",
+            "title": "Bloomberg 방문",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-9.jpg",
+                "caption": "블룸버그에서 가장 경치가 좋다는 곳에서 사진을 찍고 있는 FE Lab 학생들"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-10.jpg",
+                "caption": "블룸버그 회의실에서 블룸버그 터미널을 써보는 FE Lab 학생들"
+                }
+            ]
+            },
+            {
+            "type": "text",
+            "title": "2023년 11월 30일 - JP Morgan Visit",
+            "content": "이 날은 JP Morgan 본사에 다녀왔습니다. JP Morgan Asset Management에 Wonseok Choi 박사님이랑 금융인공지능 연구 교류를 했습니다.\n\n오후에는 학생들끼리 Financial District에 다녀왔습니다. Charging Bull 동상 앞에서 사진도 찍었습니다 ㅎㅎ"
+            },
+            {
+            "type": "gallery",
+            "title": "JP Morgan 방문 & Financial District",
+            "images": [
+                {
+                "url": "./public/images/activities/icaif-2023-11.jpg",
+                "caption": "회의를 나누고 있는 모습..."
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-12.jpg",
+                "caption": "Wonseok Choi 박사님과 행복한 시간을 보내고 있는 FE Lab 학생들"
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-13.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-14.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-15.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-16.jpg",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/icaif-2023-17.png",
+                "caption": "(원조: 지도교수님의 2012년 대학원생 시절)"
+                }
+            ]
+            }
+        ],
+        
+        "highlights": [
+            "이용재 교수님이 Machine Learning for Investor Modelling and Recommender Systems Workshop organizer로 참여",
+            "FE Lab 학생 4편의 논문 발표",
+            "Best Poster Award 수상",
+            "Bloomberg 본사 방문 및 터미널 체험",
+            "JP Morgan Asset Management 연구 교류",
+            "하나융기원, NC SOFT, 카카오뱅크와의 네트워킹"
+        ]
+        },
+        
+        "links": [
+        {
+            "text": "LLMs Analyzing the Analysts Paper",
+            "url": "https://dl.acm.org/doi/10.1145/3604237.3627721"
+        },
+        {
+            "text": "ICAIF 2023 Official Website",
+            "url": "https://ai-finance.org/"
+        }
+        ]
     }
 
 
