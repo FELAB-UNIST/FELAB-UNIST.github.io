@@ -78,7 +78,7 @@
       "project_number": "1.230064.01",
       "notes": "UNIST AI 산학과제지원사업",
       "keywords": ["NLP", "News Analysis", "Keyword Extraction", "AI"],
-      "participants": []
+      "participants": ["yejin-kim","seyoung-kim"]
     },
     {
       "id": "direct-indexing-ncsoft-2022",
@@ -113,7 +113,7 @@
       "duration": "2022.05 ~ 2023.04",
       "project_number": "2.220782.01",
       "keywords": ["Cryptocurrency", "NFT", "Clustering", "Recommendation System"],
-      "participants": []
+      "participants": ["yejin-kim","youngbin-lee","seonmi-kim"]
     },
     {
       "id": "energy-demand-keei-2021",
@@ -125,7 +125,7 @@
       "project_number": "2.211068.01",
       "notes": "에너지수급연구팀",
       "keywords": ["Energy Forecasting", "Deep Learning", "Demand Prediction"],
-      "participants": []
+      "participants": ["yoontae-hwang"]
     },
     {
       "id": "market-simulator-ncsoft-2021",
@@ -161,7 +161,7 @@
       "project_number": "1.210087.01",
       "notes": "AI보급확산 지원과제. UNIST 산업공학과 이정혜 교수님과 공동 진행",
       "keywords": ["AI", "Healthcare Finance", "Life-cycle Management"],
-      "participants": []
+      "participants": ["youngbin-lee","minjoo-choi"]
     },
     {
       "id": "mobile-clinic-kaist-2020",
