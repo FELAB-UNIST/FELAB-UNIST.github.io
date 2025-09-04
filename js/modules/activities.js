@@ -565,8 +565,8 @@ const ActivitiesManager = {
         const stats = {
             total: this.data.activities.length,
             conferences: this.data.activities.filter(a => a.type === 'conference').length,
-            workshops: this.data.activities.filter(a => a.type === 'workshop').length,
-            social: this.data.activities.filter(a => a.type === 'social').length
+            celebration: this.data.activities.filter(a => a.type === 'celebration').length,
+            gathering: this.data.activities.filter(a => a.type === 'gathering').length
         };
         
         container.innerHTML = `
@@ -579,11 +579,11 @@ const ActivitiesManager = {
                 <div class="text-sm text-gray-600">Conferences</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-purple-600">${stats.workshops}</div>
-                <div class="text-sm text-gray-600">Workshops</div>
+                <div class="text-3xl font-bold text-purple-600">${stats.celebration}</div>
+                <div class="text-sm text-gray-600">Celebration</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-green-600">${stats.social}</div>
+                <div class="text-3xl font-bold text-green-600">${stats.gathering}</div>
                 <div class="text-sm text-gray-600">Social Events</div>
             </div>
         `;

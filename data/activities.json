@@ -1664,7 +1664,7 @@
         "title": "2021 FE Lab Birthday Parties",
         "title_kr": "2021년 FE Lab 생일 파티 모음",
         "location": "UNIST, Ulsan, South Korea",
-        "type": "gathering",
+        "type": "celebration",
         "featured": false,
         "thumbnail": "./public/images/activities/birthday-2021-1.png",
         "summary": "2021년 한 해 동안 FE Lab 구성원들의 생일을 축하하는 파티들을 개최했습니다.",
@@ -1739,6 +1739,41 @@
                 },
                 {
                 "url": "./public/images/activities/birthday-2021-8.png",
+                "caption": ""
+                }
+            ]
+            }
+        ]
+        },
+        
+        "links": []
+    },
+
+    {
+        "id": "teachers-day-2021",
+        "date": "2021-05-13",
+        "title": "2021 Teacher's Day",
+        "title_kr": "2021년 스승의 날",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/teachers-day-2021-1.png",
+        "summary": "2021년 5월 13일, FE Lab 학생들이 스승의 날을 맞아 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "content": {
+        "overview": "2021년 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+        
+        "sections": [
+            {
+            "type": "gallery",
+            "title": "스승의 날",
+            "images": [
+                {
+                "url": "./public/images/activities/teachers-day-2021-1.png",
+                "caption": ""
+                },
+                {
+                "url": "./public/images/activities/teachers-day-2021-2.png",
                 "caption": ""
                 }
             ]
