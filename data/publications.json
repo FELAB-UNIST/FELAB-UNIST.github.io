@@ -674,8 +674,8 @@
     {
       "id": "pub_wp_gr_fraud",
       "year": 2025,
-      "authors": "Inwoo Tae, Hyungwoo Kong*, Yongjae Lee**",
-      "author_ids": ["inwoo-tae", "yongjae-lee"],
+      "authors": "Inwoo Tae, Kangmin Kim, Hyungwoo Kong*, Yongjae Lee**",
+      "author_ids": ["inwoo-tae", "yongjae-lee","kangmin-kim"],
       "venue": "",
       "title": "Group-Robust Reweighting for Fraud Detection across Financial Domains",
       "keywords": ["Finance", "Fraud Detection", "Robust Learning"],
