@@ -49,19 +49,32 @@ const NewsManager = {
         // Filter out categories with 0 items
         const activeCategories = categories.filter(([key, cat]) => categoryCounts[key] > 0);
         
+        // Define category colors with proper Tailwind classes
+        const categoryColors = {
+            award: { bg: 'bg-amber-100', text: 'text-amber-800', hover: 'hover:bg-amber-200' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800', hover: 'hover:bg-green-200' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800', hover: 'hover:bg-purple-200' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800', hover: 'hover:bg-orange-200' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800', hover: 'hover:bg-teal-200' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800', hover: 'hover:bg-gray-200' }
+        };
+        
         filterContainer.innerHTML = `
             <button onclick="NewsManager.filterByCategory('all')" 
                     data-category="all"
-                    class="filter-btn active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg shadow-md">
+                    class="filter-btn active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg shadow-md hover:bg-opacity-90 transition-all">
                 All (${this.data.news.length})
             </button>
-            ${activeCategories.map(([key, cat]) => `
-                <button onclick="NewsManager.filterByCategory('${key}')" 
-                        data-category="${key}"
-                        class="filter-btn px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
-                    ${cat.name} (${categoryCounts[key]})
-                </button>
-            `).join('')}
+            ${activeCategories.map(([key, cat]) => {
+                const colors = categoryColors[key] || categoryColors.general;
+                return `
+                    <button onclick="NewsManager.filterByCategory('${key}')" 
+                            data-category="${key}"
+                            class="filter-btn px-4 py-2 text-sm font-medium ${colors.bg} ${colors.text} rounded-lg ${colors.hover} transition-all">
+                        ${cat.name} (${categoryCounts[key]})
+                    </button>
+                `;
+            }).join('')}
         `;
     },
     
@@ -90,11 +103,23 @@ const NewsManager = {
         
         const category = this.data.categories[news.category] || this.data.categories.general;
         
+        // Define category colors
+        const categoryColors = {
+            award: { bg: 'bg-amber-100', text: 'text-amber-800' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800' }
+        };
+        
+        const colors = categoryColors[news.category] || categoryColors.general;
+        
         container.innerHTML = `
             <div class="bg-gradient-to-br from-gray-100 to-white rounded-2xl p-8 shadow-xl border border-gray-200">
                 <div class="flex flex-wrap items-center gap-3 mb-4">
                     ${news.featured ? '<span class="bg-brand-teal text-white text-xs px-3 py-1 rounded-full font-semibold shadow-md">Featured</span>' : ''}
-                    <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+                    <span class="${colors.bg} ${colors.text} text-xs px-3 py-1 rounded-full font-semibold">
                         ${category.name}
                     </span>
                     <span class="text-gray-600 text-sm font-medium">${this.formatDate(news.date)}</span>
@@ -148,15 +173,18 @@ const NewsManager = {
     
     createNewsCard(news) {
         const category = this.data.categories[news.category] || this.data.categories.general;
+        
+        // Define category colors with proper Tailwind classes
         const categoryColors = {
-            publication: 'blue',
-            achievement: 'green',
-            collaboration: 'purple',
-            event: 'orange',
-            grant: 'teal',
-            general: 'gray'
+            award: { bg: 'bg-amber-100', text: 'text-amber-800' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800' }
         };
-        const color = categoryColors[news.category] || 'gray';
+        
+        const colors = categoryColors[news.category] || categoryColors.general;
         
         return `
             <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden cursor-pointer"
@@ -171,7 +199,7 @@ const NewsManager = {
                 ` : ''}
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-${color}-100 text-${color}-800 text-xs px-2 py-1 rounded">
+                        <span class="${colors.bg} ${colors.text} text-xs px-2 py-1 rounded font-medium">
                             ${category.name}
                         </span>
                         <time class="ml-auto text-sm text-gray-500">${this.formatDate(news.date)}</time>
@@ -225,13 +253,25 @@ const NewsManager = {
     createArchiveItem(news) {
         const category = this.data.categories[news.category] || this.data.categories.general;
         
+        // Define category colors with proper Tailwind classes
+        const categoryColors = {
+            award: { bg: 'bg-amber-100', text: 'text-amber-800' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800' }
+        };
+        
+        const colors = categoryColors[news.category] || categoryColors.general;
+        
         return `
             <a href="#" onclick="event.preventDefault(); NewsManager.openNewsDetail('${news.id}')" 
                class="block hover:bg-gray-50 p-6 transition-colors">
                 <div class="flex items-center justify-between">
                     <div class="flex-1">
                         <div class="flex items-center mb-2">
-                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">${category.name}</span>
+                            <span class="${colors.bg} ${colors.text} text-xs px-2 py-1 rounded font-medium">${category.name}</span>
                             <time class="ml-3 text-sm text-gray-500">${this.formatDate(news.date)}</time>
                         </div>
                         <h4 class="font-semibold text-brand-navy">${news.title}</h4>
@@ -248,14 +288,38 @@ const NewsManager = {
     filterByCategory(category) {
         this.currentFilter = category;
         
+        // Define category colors for active/inactive states
+        const categoryColors = {
+            award: { bg: 'bg-amber-100', text: 'text-amber-800', hover: 'hover:bg-amber-200' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800', hover: 'hover:bg-green-200' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800', hover: 'hover:bg-purple-200' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800', hover: 'hover:bg-orange-200' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800', hover: 'hover:bg-teal-200' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800', hover: 'hover:bg-gray-200' }
+        };
+        
         // Update filter button states
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            if (btn.dataset.category === category) {
-                btn.classList.add('active', 'bg-brand-accent', 'text-white');
-                btn.classList.remove('bg-gray-200', 'text-gray-700');
+            const btnCategory = btn.dataset.category;
+            
+            if (btnCategory === category) {
+                // Active state - use brand accent color
+                btn.classList.remove(...btn.classList);
+                btn.classList.add('filter-btn', 'active', 'px-4', 'py-2', 'text-sm', 'font-medium', 
+                                 'bg-brand-accent', 'text-white', 'rounded-lg', 'shadow-md', 
+                                 'hover:bg-opacity-90', 'transition-all');
+            } else if (btnCategory === 'all') {
+                // Inactive "All" button
+                btn.classList.remove(...btn.classList);
+                btn.classList.add('filter-btn', 'px-4', 'py-2', 'text-sm', 'font-medium',
+                                 'bg-gray-200', 'text-gray-700', 'rounded-lg', 
+                                 'hover:bg-gray-300', 'transition-all');
             } else {
-                btn.classList.remove('active', 'bg-brand-accent', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
+                // Inactive category buttons - use their specific colors
+                const colors = categoryColors[btnCategory] || categoryColors.general;
+                btn.classList.remove(...btn.classList);
+                btn.classList.add('filter-btn', 'px-4', 'py-2', 'text-sm', 'font-medium',
+                                 colors.bg, colors.text, 'rounded-lg', colors.hover, 'transition-all');
             }
         });
         
@@ -292,6 +356,18 @@ const NewsManager = {
     createNewsDetailModal(news) {
         const category = this.data.categories[news.category] || this.data.categories.general;
         
+        // Define category colors
+        const categoryColors = {
+            award: { bg: 'bg-amber-100', text: 'text-amber-800' },
+            achievement: { bg: 'bg-green-100', text: 'text-green-800' },
+            collaboration: { bg: 'bg-purple-100', text: 'text-purple-800' },
+            event: { bg: 'bg-orange-100', text: 'text-orange-800' },
+            grant: { bg: 'bg-teal-100', text: 'text-teal-800' },
+            general: { bg: 'bg-gray-100', text: 'text-gray-800' }
+        };
+        
+        const colors = categoryColors[news.category] || categoryColors.general;
+        
         return `
             <div class="fixed inset-0 bg-black bg-opacity-50 z-40" onclick="NewsManager.closeNewsDetail()"></div>
             <div class="relative min-h-screen flex items-start justify-center p-4 pt-8 z-50">
@@ -309,7 +385,7 @@ const NewsManager = {
                         <!-- Header -->
                         <div class="bg-white p-8 rounded-t-xl border-b border-gray-200">
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="bg-${this.getCategoryColor(news.category)}-100 text-${this.getCategoryColor(news.category)}-800 text-xs px-3 py-1 rounded-full">
+                                <span class="${colors.bg} ${colors.text} text-xs px-3 py-1 rounded-full">
                                     ${category.name}
                                 </span>
                                 <time class="text-gray-500 text-sm">${this.formatDate(news.date)}</time>
@@ -525,6 +601,18 @@ const NewsManager = {
             'paper': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>`,
+            'video': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>`,
+            'news': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2" />
+                    </svg>`,
+            'blog': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                    </svg>`,
+            'announcement': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                             </svg>`,
             'external': `<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                          </svg>`
@@ -574,7 +662,9 @@ const NewsManager = {
         });
     },
     
-    // ... (keep all other existing methods: render, renderFilters, etc.)
+    initFilters() {
+        // Already handled in renderFilters
+    },
     
     formatDate(dateString) {
         const date = new Date(dateString);
@@ -596,16 +686,16 @@ const NewsManager = {
     },
 
     getCategoryColor(category) {
-    const categoryColors = {
-        award: 'amber',
-        achievement: 'green', 
-        collaboration: 'purple',
-        event: 'orange',
-        grant: 'teal',
-        general: 'gray'
-    };
-    return categoryColors[category] || 'gray';
-},
+        const categoryColors = {
+            award: 'amber',
+            achievement: 'green', 
+            collaboration: 'purple',
+            event: 'orange',
+            grant: 'teal',
+            general: 'gray'
+        };
+        return categoryColors[category] || 'gray';
+    },
 };
 
 // Export for use in other modules
