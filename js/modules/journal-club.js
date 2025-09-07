@@ -1,4 +1,4 @@
-// Journal Club Manager Module - Fixed Version
+// Journal Club Manager Module with Modal Support
 const JournalClubManager = {
     data: [],
     filteredData: [],
@@ -7,6 +7,7 @@ const JournalClubManager = {
     currentPage: 1,
     itemsPerPage: 20,
     searchQuery: '',
+    currentPaper: null,
     
     async init() {
         this.initialized = false;
@@ -48,7 +49,9 @@ const JournalClubManager = {
                 keywords: this.extractKeywords(item.title, item.reason),
                 paper_link: item.url,
                 why: item.reason,
-                status: 'discussed'
+                status: 'discussed',
+                // Store original date format for display
+                originalDate: item.date
             }));
             
             // Sort by date (newest first)
@@ -70,7 +73,7 @@ const JournalClubManager = {
                 "date": "2025년 08월 21일",
                 "title": "Retrieval augmented diffusion models for time series forecasting",
                 "presenter": "Juchan Kim",
-                "reason": "Retrieval + Time series forecasting 컨셉을 가져왔지만 백본으로 디퓨전 모델을 사용했다는 점에서 신기해서 가져와봤습니다.",
+                "reason": "Retrieval + Time series forecasting 컨셉을 가져왔지만 백본으로 디퓨전 모델을 사용했다는 점에서 신기해서 가져와봤습니다. 논문에서도 diffusion model을 historical time series를 refer하는 retrieval algorithm로부터 모델에 conditioning을 주는 방법을 주로 논하고, 실험적으로 해당 방법론의 성능을 확인하였습니다.",
                 "url": "https://arxiv.org/abs/2410.18712"
             },
             {
@@ -99,7 +102,8 @@ const JournalClubManager = {
             keywords: this.extractKeywords(item.title, item.reason),
             paper_link: item.url,
             why: item.reason,
-            status: 'discussed'
+            status: 'discussed',
+            originalDate: item.date
         }));
         
         // Sort by date (newest first)
@@ -157,7 +161,7 @@ const JournalClubManager = {
             'Machine Learning': ['machine learning', 'ML', '머신러닝', 'embedding'],
             'Computer Vision': ['visual', 'image', '이미지', '시각'],
             'Optimization': ['optimization', '최적화'],
-            'Finance': ['financial', 'portfolio', '금융', '포트폴리오']
+            'Finance': ['financial', 'portfolio', '금융', '포트폴리오', 'Black-Litterman', 'investment']
         };
         
         const searchText = (title + ' ' + (reasonText || '')).toLowerCase();
@@ -178,7 +182,8 @@ const JournalClubManager = {
         const keywordPatterns = [
             'diffusion', 'retrieval', 'time series', 'forecasting', 'rag',
             'multimodal', 'knowledge graph', 'neural network', 'transformer',
-            'deep learning', 'machine learning', 'llm', 'embedding', 'visual'
+            'deep learning', 'machine learning', 'llm', 'embedding', 'visual',
+            'optimization', 'portfolio', 'finance', 'causal', 'agent'
         ];
         
         keywordPatterns.forEach(pattern => {
@@ -215,25 +220,26 @@ const JournalClubManager = {
         let html = '';
         recentPapers.forEach(paper => {
             html += `
-                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group cursor-pointer"
+                     onclick="JournalClubManager.showPaperDetails('${paper.id}')">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
                             ${this.formatDate(paper.date)}
                         </span>
+                        <span class="text-xs ${this.getTopicColor(paper.topic)} px-2 py-1 rounded">
+                            ${paper.topic}
+                        </span>
                     </div>
-                    <h4 class="font-semibold text-brand-navy mb-3 group-hover:text-brand-accent transition-colors leading-snug">
+                    <h4 class="font-semibold text-brand-navy mb-3 group-hover:text-brand-accent transition-colors leading-snug line-clamp-2">
                         ${paper.title}
                     </h4>
                     <div class="mt-4 flex items-center justify-between">
                         <p class="text-sm text-gray-500">
                             Presenter: <span class="font-medium">${paper.presenter}</span>
                         </p>
-                        ${paper.paper_link ? `
-                            <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
-                               class="text-brand-accent hover:underline text-sm font-medium">
-                                Paper →
-                            </a>
-                        ` : ''}
+                        <span class="text-brand-accent text-sm font-medium group-hover:underline">
+                            View Details →
+                        </span>
                     </div>
                 </div>
             `;
@@ -243,8 +249,7 @@ const JournalClubManager = {
     },
     
     renderTopicFilters() {
-        // Topic filters are no longer needed, so this function can be empty
-        // or we can remove the filter container from the HTML
+        // Topic filters are hidden as requested
         const container = document.getElementById('topic-filters');
         if (container) {
             container.style.display = 'none';
@@ -285,8 +290,8 @@ const JournalClubManager = {
                             <th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider w-36">
                                 Presenter
                             </th>
-                            <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider w-20">
-                                Link
+                            <th class="px-6 py-3 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider w-24">
+                                Actions
                             </th>
                         </tr>
                     </thead>
@@ -300,11 +305,12 @@ const JournalClubManager = {
                         ${this.formatDate(paper.date)}
                     </td>
                     <td class="px-6 py-4">
-                        <p class="text-sm font-medium text-brand-navy paper-title">
+                        <p class="text-sm font-medium text-brand-navy paper-title cursor-pointer hover:text-brand-accent"
+                           onclick="JournalClubManager.showPaperDetails('${paper.id}')">
                             ${this.highlightSearch(paper.title)}
                         </p>
                         ${paper.why ? `
-                            <p class="text-xs text-gray-500 mt-2 line-clamp-3">
+                            <p class="text-xs text-gray-500 mt-2 line-clamp-2">
                                 ${this.truncateText(paper.why, 150)}
                             </p>
                         ` : ''}
@@ -312,15 +318,26 @@ const JournalClubManager = {
                     <td class="px-6 py-4 text-sm text-gray-600 paper-presenter w-36">
                         ${this.highlightSearch(paper.presenter)}
                     </td>
-                    <td class="px-6 py-4 text-center w-20">
-                        ${paper.paper_link ? `
-                            <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
-                               class="text-brand-accent hover:underline text-sm font-medium">
-                                <svg class="w-5 h-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <td class="px-6 py-4 text-center w-24">
+                        <div class="flex items-center justify-center space-x-2">
+                            <button onclick="JournalClubManager.showPaperDetails('${paper.id}')"
+                                    class="text-brand-accent hover:text-brand-navy transition-colors"
+                                    title="View Details">
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
-                            </a>
-                        ` : '<span class="text-gray-400">-</span>'}
+                            </button>
+                            ${paper.paper_link ? `
+                                <a href="${paper.paper_link}" target="_blank" rel="noopener noreferrer" 
+                                   class="text-gray-500 hover:text-brand-accent transition-colors"
+                                   title="Open Paper">
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            ` : ''}
+                        </div>
                     </td>
                 </tr>
             `;
@@ -393,6 +410,129 @@ const JournalClubManager = {
         `;
         
         return html;
+    },
+    
+    // Modal Functions
+    showPaperDetails(paperId) {
+        const paper = this.data.find(p => p.id === paperId);
+        if (!paper) return;
+        
+        this.currentPaper = paper;
+        
+        // Show modal
+        const modal = document.getElementById('paper-detail-modal');
+        if (!modal) return;
+        
+        modal.classList.remove('hidden');
+        
+        // Update modal content
+        const contentContainer = document.getElementById('paper-modal-content');
+        if (!contentContainer) return;
+        
+        // Format the detailed content
+        let modalContent = `
+            <div class="space-y-6">
+                <!-- Paper Title and Meta -->
+                <div>
+                    <h2 class="text-2xl font-bold text-brand-navy mb-4">${paper.title}</h2>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700">
+                            <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            ${paper.originalDate || this.formatDate(paper.date)}
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm ${this.getTopicColor(paper.topic)}">
+                            ${paper.topic}
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Presenter Information -->
+                <div class="border-l-4 border-brand-accent pl-4">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Presenter</h3>
+                    <p class="text-lg font-medium text-brand-navy">${paper.presenter}</p>
+                </div>
+                
+                <!-- Selection Reason -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Why This Paper?</h3>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-gray-700 leading-relaxed whitespace-pre-line">${paper.why}</p>
+                    </div>
+                </div>
+                
+                <!-- Keywords -->
+                ${paper.keywords && paper.keywords.length > 0 ? `
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Keywords</h3>
+                        <div class="flex flex-wrap gap-2">
+                            ${paper.keywords.map(keyword => `
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                                    ${keyword}
+                                </span>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                
+                <!-- Paper Link -->
+                ${paper.paper_link ? `
+                    <div class="pt-4 border-t border-gray-200">
+                        <a href="${paper.paper_link}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-6 py-3 bg-brand-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-all">
+                            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            View Full Paper
+                        </a>
+                        <p class="mt-2 text-sm text-gray-500">
+                            ${this.extractDomain(paper.paper_link)}
+                        </p>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+        
+        contentContainer.innerHTML = modalContent;
+        
+        // Add escape key listener
+        document.addEventListener('keydown', this.handleEscapeKey);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    },
+    
+    closePaperModal() {
+        const modal = document.getElementById('paper-detail-modal');
+        if (modal) {
+            modal.classList.add('hidden');
+        }
+        
+        // Remove escape key listener
+        document.removeEventListener('keydown', this.handleEscapeKey);
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
+        
+        this.currentPaper = null;
+    },
+    
+    handleEscapeKey(e) {
+        if (e.key === 'Escape') {
+            JournalClubManager.closePaperModal();
+        }
+    },
+    
+    extractDomain(url) {
+        try {
+            const urlObj = new URL(url);
+            return urlObj.hostname;
+        } catch (e) {
+            return 'External Link';
+        }
     },
     
     initSearch() {
