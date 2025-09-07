@@ -1,6 +1,28 @@
 {
   "publications": [
     {
+      "id": "pub_2025_sigir_kpi",
+      "year": 2025,
+      "authors": "Chanyeol Choi, Alejandro Lopez-Lira, Yongjae Lee, Jihoon Kwon, Minjae Kim, Juneha Hwang, Minsoo Ha, Chaewoon Kim, Jaeseon Ha, Suyeol Yun, Jin Kim",
+      "author_ids": ["yongjae-lee"],
+      "venue": "SIGIR 2025 Workshop on Financial Information Retrieval in the Era of Generative AI",
+      "title": "Structuring the Unstructured: A Multi-Agent System for Extracting and Querying Financial KPIs and Guidance",
+      "keywords": ["Finance", "Information Retrieval", "Generative AI", "Multi-Agent Systems"],
+      "notes": "Workshop paper",
+      "link": ""
+    }, 
+    {
+      "id": "pub_2025_annor_mvgan",
+      "year": 2025,
+      "authors": "Jang Ho Kim, Seyoung Kim, Yongjae Lee*, Woo Chang Kim, Frank J. Fabozzi",
+      "author_ids": ["seyoung-kim", "yongjae-lee"],
+      "venue": "Annals of Operations Research, Special Issue on Investment: The Century of Markowitz",
+      "title": "Enhancing mean-variance portfolio optimization through GANs-based anomaly detection",
+      "keywords": ["Finance", "Portfolio Optimization", "GANs"],
+      "notes": "Volume 346, Pages 217–244",
+      "link": ""
+    },
+    {
       "id": "pub_2025_cikm_theme",
       "year": 2025,
       "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim, Sundong You, Taeyoon Lim, Woohyung Lim* , Yongjae Lee**",
@@ -14,7 +36,7 @@
     {
       "id": "pub_2025_iclr_llm_blacklitterman",
       "year": 2025,
-      "authors": "Youngbin Lee†, Yejin Kim†, Suin Kim, Yongjae Lee",
+      "authors": "Youngbin Lee†, Yejin Kim†, Suin Kim, Yongjae Lee*",
       "author_ids": ["yejin-kim", "yongjae-lee", "youngbin-lee"],
       "venue": "ICLR 2025 Workshop on Advances in Financial AI: Opportunities, Innovations and Responsible AI",
       "title": "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model",
@@ -81,7 +103,7 @@
       "id": "pub_2024_icaif_stock_recommendations",
       "year": 2024,
       "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie*, Yongjae Lee**",
-      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee"],
+      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee**"],
       "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -91,7 +113,7 @@
     {
       "id": "pub_2024_icaif_workshop_taxonomy",
       "year": 2024,
-      "authors": "Juchan Kim, Yongjae Lee*",
+      "authors": "Juchan Kim, Yongjae Lee**",
       "author_ids": ["juchan-kim", "yongjae-lee"],
       "venue": "ICAIF'24 Workshop on Machine Learning for Financial Wellness: Human-Centric Recommender Systems",
       "title": "The Taxonomy of Retail Investors",
@@ -104,7 +126,7 @@
       "year": 2024,
       "authors": "Sanghyeon Bae, Yongjae Lee*, Woo Chang Kim*, Jang Ho Kim, Frank J. Fabozzi",
       "author_ids": ["yongjae-lee"],
-      "venue": "Annals of Operations Research",
+      "venue": "Annals of Operations Research, Special Issue in Memory of William T. Ziemba",
       "title": "Goal-Based Investment with an Option to Postpone a Goal: Multistage Stochastic Mixed-Integer Programming Approach",
       "keywords": ["Finance", "Optimization"],
       "notes": "Special Issue in Memory of William T. Ziemba, online published",
@@ -113,7 +135,7 @@
     {
       "id": "pub_2024_eaai_nft",
       "year": 2024,
-      "authors": "Yejin Kim†, Seonmi Kim†, Youngbin Lee†, Joohwan Hong*, Yongjae Lee*",
+      "authors": "Yejin Kim†, Seonmi Kim†, Youngbin Lee†, Joohwan Hong*, Yongjae Lee**",
       "author_ids": ["youngbin-lee", "seonmi-kim", "yejin-kim", "joohwan-hong", "yongjae-lee"],
       "venue": "Engineering Applications of Artificial Intelligence",
       "title": "Multi-Attention Recommender System for NFTs",
@@ -125,7 +147,7 @@
       "id": "pub_2024_ijcai_workshop",
       "year": 2024,
       "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie, Yongjae Lee*",
-      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee"],
+      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee**"],
       "venue": "IJCAI-24 Workshop on Recommeder Systems in Finance (Fin-RecSys)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -140,13 +162,13 @@
       "venue": "The 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024)",
       "title": "Neural Marked Hawkes Process for Limit Order Book Modeling and Prediction",
       "keywords": ["Finance", "Machine Learning"],
-      "notes": "Poster presentation (acceptance rate 24.6%)",
+      "notes": "Poster presentation (acceptance rate <30%)",
       "link": "https://doi.org/10.1007/978-981-97-2259-4_15"
     },
     {
       "id": "pub_2024_frl_heterogeneous",
       "year": 2024,
-      "authors": "Yoontae Hwang, Junpyo Park, Jang Ho Kim*, Yongjae Lee*, Frank J. Fabozzi",
+      "authors": "Yoontae Hwang, Junpyo Park, Jang Ho Kim*, Yongjae Lee**, Frank J. Fabozzi",
       "author_ids": ["yoontae-hwang", "yongjae-lee"],
       "venue": "Finance Research Letters",
       "title": "Heterogeneous Trading Behaviors of Individual Investors: A Deep Clustering Approach",
@@ -179,7 +201,7 @@
     {
       "id": "pub_2023_icaif_simstock",
       "year": 2023,
-      "authors": "Yoontae Hwang, Junhyeong Lee, Daham Kim, Seunghwan Noh, Joohwan Hong*, Yongjae Lee*",
+      "authors": "Yoontae Hwang, Junhyeong Lee, Daham Kim, Seunghwan Noh, Joohwan Hong*, Yongjae Lee**",
       "author_ids": ["yoontae-hwang", "junhyeong-lee", "joohwan-hong", "yongjae-lee"],
       "venue": "4th ACM International Conference on AI in Finance (ICAIF'23)",
       "title": "SimStock: Representation Model for Stock Similarities",
@@ -190,12 +212,12 @@
     {
       "id": "pub_2023_icaif_llms_best_poster",
       "year": 2023,
-      "authors": "Seonmi Kim†, Seyoung Kim†, Yejin Kim†, Junpyo Park, Seongjin Kim, Moolkyeol Kim, Chang Hwan Sung, Joohwan Hong*, Yongjae Lee*",
+      "authors": "Seonmi Kim†, Seyoung Kim†, Yejin Kim†, Junpyo Park, Seongjin Kim, Moolkyeol Kim, Chang Hwan Sung, Joohwan Hong*, Yongjae Lee**",
       "author_ids": ["joohwan-hong", "seonmi-kim", "seyoung-kim", "yejin-kim", "yongjae-lee"],
       "venue": "4th ACM International Conference on AI in Finance (ICAIF'23)",
       "title": "LLMs Analyzing Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?",
       "keywords": ["Finance", "Machine Learning"],
-      "notes": "* Best Poster Award at ICAIF'23",
+      "notes": "* Best Poster Award at ICAIF'23 (acceptance rate 40%)",
       "link": "https://dl.acm.org/doi/10.1145/3604237.3627721"
     },
     {
@@ -267,7 +289,7 @@
     {
       "id": "pub_2023_frl_stoploss",
       "year": 2023,
-      "authors": "Yoontae Hwang, Junpyo Park, Yongjae Lee*, Dong-Young Lim*",
+      "authors": "Yoontae Hwang, Junpyo Park, Dong-Young Lim*, Yongjae Lee**",
       "author_ids": ["yoontae-hwang", "yongjae-lee"],
       "venue": "Finance Research Letters",
       "title": "Stop-loss Adjusted Labels for Machine Learning-based Trading of Risky Assets",
@@ -311,7 +333,7 @@
     {
       "id": "pub_2023_aaai_index",
       "year": 2023,
-      "authors": "Sohyeon Kwon, Juchan Kim, Seyoung Kim, Junhyeong Lee, Yongjae Lee*",
+      "authors": "Sohyeon Kwon, Juchan Kim, Seyoung Kim, Junhyeong Lee, Yongjae Lee**",
       "author_ids": ["juchan-kim", "junhyeong-lee", "seyoung-kim", "sohyeon-kwon", "yongjae-lee"],
       "venue": "AI in Finance Bridge Program at AAAI-23",
       "title": "Index Tracking for Direct Indexing Services: A Deep Representation Learning Approach",
@@ -322,7 +344,7 @@
     {
       "id": "pub_2023_aaai_nft",
       "year": 2023,
-      "authors": "Minjoo Choi†, Seonmi Kim†, Yejin Kim†, Youngbin Lee†, Joohwan Hong*, Yongjae Lee*",
+      "authors": "Minjoo Choi†, Seonmi Kim†, Yejin Kim†, Youngbin Lee†, Joohwan Hong*, Yongjae Lee**",
       "author_ids": ["joohwan-hong", "minjoo-choi", "seonmi-kim", "yejin-kim", "yongjae-lee", "youngbin-lee"],
       "venue": "AI in Finance Bridge Program at AAAI-23",
       "title": "An NFT Collectibles Recommender System with Content Features",
@@ -375,6 +397,17 @@
       "link": "https://link.springer.com/article/10.1007/s10479-021-04473-7"
     },
     {
+      "id": "pub_2022_icaif_investor",
+      "year": 2022,
+      "authors": "Yongjae Lee",
+      "author_ids": ["yongjae-lee"],
+      "venue": "ICAIF'22 Workshop on Machine Learning for Investor Modelling",
+      "title": "A Paradigm Shift in Investor Modeling: From Organization-Centric to User-Centric",
+      "keywords": ["Finance", "Investor Modeling", "Machine Learning"],
+      "notes": "Workshop paper",
+      "link": ""
+    },
+    {
       "id": "pub_2021_jpm_korean",
       "year": 2021,
       "authors": "Jang Ho Kim, Yongjae Lee, Jaekyu Bae, Woo Chang Kim*,",
@@ -399,7 +432,7 @@
     {
       "id": "pub_2020_sustainability",
       "year": 2020,
-      "authors": "Yongjae Lee, Woo Chang Kim, Jang Ho Kim*",
+      "authors": "Yongjae Lee, Jang Ho Kim*, Woo Chang Kim",
       "author_ids": ["yongjae-lee"],
       "venue": "Sustainability",
       "title": "Achieving Portfolio Diversification for Individuals with Low Financial Sustainability",
@@ -410,7 +443,7 @@
     {
       "id": "pub_2020_ieee_bayesian",
       "year": 2020,
-      "authors": "Hyunghun Cho, Yongjin Kim, Eunjung Lee, Daeyoung Choi, Yongjae Lee, Wonjong Rhee",
+      "authors": "Hyunghun Cho, Yongjin Kim, Eunjung Lee, Daeyoung Choi, Yongjae Lee, Wonjong Rhee*",
       "author_ids": ["yongjae-lee"],
       "venue": "IEEE Access",
       "title": "Basic Enhancement Strategies When Using Bayesian Optimization for Hyperparameter Tuning of Deep Neural Networks",
@@ -465,7 +498,7 @@
     {
       "id": "pub_2018_ae_malkiel",
       "year": 2018,
-      "authors": "Yongjae Lee, Do-Gyun Kwon, Woo Chang Kim, Frank J. Fabozzi",
+      "authors": "Yongjae Lee, Do-Gyun Kwon, Woo Chang Kim*, Frank J. Fabozzi",
       "author_ids": ["yongjae-lee"],
       "venue": "Applied Economics",
       "title": "An Alternative Approach for Portfolio Performance Evaluation: Enabling Fund Evaluation Relative to Peer Group via Malkiel's Monkey",
@@ -476,7 +509,7 @@
     {
       "id": "pub_2017_kiie_etf",
       "year": 2017,
-      "authors": "Beomhyeon Kim, Yongjae Lee, Do-Gyun Kwon, Woo Chang Kim,",
+      "authors": "Beomhyeon Kim, Yongjae Lee*, Do-Gyun Kwon, Woo Chang Kim,",
       "author_ids": ["yongjae-lee"],
       "venue": "대한산업공학회지",
       "title": "A Study on the Korean ETF market: Systemic Risk and the Optimal ETF Introduction Sequence",
@@ -498,7 +531,7 @@
     {
       "id": "pub_2016_orl_sparse",
       "year": 2016,
-      "authors": "Min Jeong Kim, Yongjae Lee, Jang Ho Kim, Woo Chang Kim",
+      "authors": "Min Jeong Kim, Yongjae Lee, Jang Ho Kim, Woo Chang Kim*",
       "author_ids": ["yongjae-lee"],
       "venue": "Operations Research Letters",
       "title": "Sparse Tangent Portfolio Selection via Semi-Definite Relaxation",
@@ -531,7 +564,7 @@
     {
       "id": "pub_2013_msfe_stochastic",
       "year": 2013,
-      "authors": "Yongjae Lee, Woo Chang Kim",
+      "authors": "Yongjae Lee, Woo Chang Kim*",
       "author_ids": ["yongjae-lee"],
       "venue": "Management Science and Financial Engineering",
       "title": "A Stochastic Model for Order Book Dynamics: An Application to Korean Stock Index Futures",
@@ -542,7 +575,7 @@
     {
       "id": "pub_wp_collaborative",
       "year": "working_paper",
-      "authors": "Munki Chung, Junhyeong Lee, Yongjae Lee, Woo Chang Kim",
+      "authors": "Munki Chung†, Junhyeong Lee†, Yongjae Lee*, Woo Chang Kim*",
       "author_ids": ["yongjae-lee"],
       "venue": "",
       "title": "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation",
@@ -553,7 +586,7 @@
     {
       "id": "pub_wp_temporal",
       "year": "working_paper",
-      "authors": "Yoontae Hwang, Stefan Zohren, Yongjae Lee",
+      "authors": "Yoontae Hwang, Stefan Zohren, Yongjae Lee**",
       "author_ids": ["yoontae-hwang", "yongjae-lee"],
       "venue": "",
       "title": "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management",
@@ -564,7 +597,7 @@
     {
       "id": "pub_wp_anatomy",
       "year": "working_paper",
-      "authors": "Junhyeong Lee, Haeun Jeon, Hyunglip Bae, Yongjae Lee",
+      "authors": "Junhyeong Lee†, Haeun Jeon†, Hyunglip Bae*, Yongjae Lee**",
       "author_ids": ["junhyeong-lee", "yongjae-lee"],
       "venue": "",
       "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models",
@@ -581,6 +614,72 @@
       "title": "A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization",
       "keywords": ["Finance", "Optimization"],
       "notes": "submitted",
+      "link": ""
+    },
+    {
+      "id": "pub_wp_disease_cost",
+      "year": 2024,
+      "authors": "Inwoo Tae, Hyungwoo Kong*, Junghye Lee, Yongjae Lee**",
+      "author_ids": ["inwoo-tae", "yongjae-lee"],
+      "venue": "",
+      "title": "Machine Learning for Disease-Specific Prediction of High-Cost Patients",
+      "keywords": ["Healthcare", "Finance", "Machine Learning"],
+      "notes": "Submitted",
+      "link": ""
+    },
+    {
+      "id": "pub_wp_taxonomy",
+      "year": 2025,
+      "authors": "Juchan Kim, Yongjae Lee**",
+      "author_ids": ["juchan-kim","yongjae-lee"],
+      "venue": "",
+      "title": "Taxonomy of Individual Investors",
+      "keywords": ["Finance", "Investor Behavior"],
+      "notes": "Working paper",
+      "link": ""
+    },
+    {
+      "id": "pub_wp_preference_po",
+      "year": 2025,
+      "authors": "Juchan Kim, Yoontae Hwang, Yongjae Lee**",
+      "author_ids": ["juchan-kim","yongjae-lee"],
+      "venue": "",
+      "title": "Preference-Informed Portfolio Optimization",
+      "keywords": ["Finance", "Portfolio Optimization"],
+      "notes": "Working paper",
+      "link": ""
+    },
+    {
+      "id": "pub_wp_end2end_mm",
+      "year": 2025,
+      "authors": "Guhyuk Chung, Yongjae Lee*, Woo Chang Kim*",
+      "author_ids": ["yongjae-lee"],
+      "venue": "",
+      "title": "End-to-End Market Making via Non-skipping Recurrent Proximal Policy Optimization",
+      "keywords": ["Finance", "Reinforcement Learning", "Market Making"],
+      "notes": "Working paper",
+      "link": ""
+    },
+    {
+      "id": "pub_wp_decision_llm",
+      "year": 2025,
+      "authors": "Yoontae Hwang, Yaxuan Kong, Stefan Zohren*, Yongjae Lee**",
+      "author_ids": ["yongtae-hwang", "yongjae-lee"],
+      "venue": "",
+      "title": "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization",
+      "keywords": ["Finance", "Machine Learning", "Large Language Models"],
+      "notes": "Submitted",
+      "link": "https://arxiv.org/abs/2502.00828"
+    },
+    {
+      "id": "pub_wp_gr_fraud",
+      "year": 2025,
+      "authors": "Inwoo Tae, Hyungwoo Kong*, Yongjae Lee**",
+      "author_ids": ["inwoo-tae", "yongjae-lee"],
+      "venue": "",
+      "title": "Group-Robust Reweighting for Fraud Detection across Financial Domains",
+      "keywords": ["Finance", "Fraud Detection", "Robust Learning"],
+      "notes": "Working paper",
       "link": ""
     }
   ]
