@@ -220,8 +220,8 @@ const JournalClubManager = {
         let html = '';
         recentPapers.forEach(paper => {
             html += `
-                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group cursor-pointer"
-                     onclick="JournalClubManager.showPaperDetails('${paper.id}')">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group cursor-pointer paper-card"
+                     data-paper-id="${paper.id}">
                     <div class="flex justify-between items-start mb-3">
                         <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
                             ${this.formatDate(paper.date)}
@@ -246,6 +246,15 @@ const JournalClubManager = {
         });
         
         container.innerHTML = html;
+        
+        // Add event listeners after rendering
+        container.querySelectorAll('.paper-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const paperId = card.dataset.paperId;
+                console.log('Paper card clicked:', paperId);
+                this.showPaperDetails(paperId);
+            });
+        });
     },
     
     renderTopicFilters() {
@@ -306,7 +315,7 @@ const JournalClubManager = {
                     </td>
                     <td class="px-6 py-4">
                         <p class="text-sm font-medium text-brand-navy paper-title cursor-pointer hover:text-brand-accent"
-                           onclick="JournalClubManager.showPaperDetails('${paper.id}')">
+                           data-paper-id="${paper.id}">
                             ${this.highlightSearch(paper.title)}
                         </p>
                         ${paper.why ? `
@@ -320,8 +329,8 @@ const JournalClubManager = {
                     </td>
                     <td class="px-6 py-4 text-center w-24">
                         <div class="flex items-center justify-center space-x-2">
-                            <button onclick="JournalClubManager.showPaperDetails('${paper.id}')"
-                                    class="text-brand-accent hover:text-brand-navy transition-colors"
+                            <button class="view-details-btn text-brand-accent hover:text-brand-navy transition-colors"
+                                    data-paper-id="${paper.id}"
                                     title="View Details">
                                 <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -353,6 +362,25 @@ const JournalClubManager = {
         html += this.renderPaginationControls();
         
         container.innerHTML = html;
+        
+        // Add event listeners after rendering
+        // For paper titles
+        container.querySelectorAll('.paper-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const paperId = title.dataset.paperId;
+                console.log('Paper title clicked:', paperId);
+                this.showPaperDetails(paperId);
+            });
+        });
+        
+        // For view details buttons
+        container.querySelectorAll('.view-details-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const paperId = btn.dataset.paperId;
+                console.log('View details button clicked:', paperId);
+                this.showPaperDetails(paperId);
+            });
+        });
     },
     
     renderPaginationControls() {
@@ -414,20 +442,34 @@ const JournalClubManager = {
     
     // Modal Functions
     showPaperDetails(paperId) {
+        console.log('showPaperDetails called with paperId:', paperId);
+        
         const paper = this.data.find(p => p.id === paperId);
-        if (!paper) return;
+        if (!paper) {
+            console.error('Paper not found:', paperId);
+            return;
+        }
         
         this.currentPaper = paper;
+        console.log('Current paper:', paper);
         
-        // Show modal
-        const modal = document.getElementById('paper-detail-modal');
-        if (!modal) return;
+        // Check if modal exists, if not create it
+        let modal = document.getElementById('paper-detail-modal');
+        if (!modal) {
+            console.log('Modal not found, creating...');
+            this.createModal();
+            return;
+        }
         
+        console.log('Modal found, showing...');
         modal.classList.remove('hidden');
         
         // Update modal content
         const contentContainer = document.getElementById('paper-modal-content');
-        if (!contentContainer) return;
+        if (!contentContainer) {
+            console.error('Modal content container not found!');
+            return;
+        }
         
         // Format the detailed content
         let modalContent = `
@@ -503,6 +545,51 @@ const JournalClubManager = {
         
         // Prevent body scroll
         document.body.style.overflow = 'hidden';
+    },
+    
+    createModal() {
+        console.log('Creating modal dynamically...');
+        
+        const modalHTML = `
+            <div id="paper-detail-modal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+                <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <!-- Background overlay -->
+                    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onclick="JournalClubManager.closePaperModal()"></div>
+
+                    <!-- Modal panel -->
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full">
+                        <!-- Modal header -->
+                        <div class="bg-brand-navy px-6 py-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-white">Paper Details</h3>
+                                <button onclick="JournalClubManager.closePaperModal()" 
+                                        class="text-white hover:text-gray-300 transition-colors">
+                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal content -->
+                        <div id="paper-modal-content" class="px-6 py-6 max-h-[70vh] overflow-y-auto">
+                            <!-- Content will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Add modal to body
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        console.log('Modal created successfully');
+        
+        // Try showing the paper details again
+        setTimeout(() => {
+            if (this.currentPaper) {
+                this.showPaperDetails(this.currentPaper.id);
+            }
+        }, 100);
     },
     
     closePaperModal() {
