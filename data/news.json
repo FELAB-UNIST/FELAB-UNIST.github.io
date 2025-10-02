@@ -1,6 +1,24 @@
 {
   "news": [
-    
+    {
+      "id": "national-ai-strategy-committee-2025",
+      "date": "2025-10-01",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee Appointed as a Subdepartment Member of National AI Stragey Committee of Korea",
+      "title_kr": "이용재 교수, 국가인공지능전략위원회 분과위원 위촉",
+      "summary": "Professor Yongjae Lee has been appointed as a subdepartment member of the National AI Strategy Committee of Korea.",
+      "content": "Professor Yongjae Lee has been appointed as a subdepartment member of the Education Task Force (TF) within the National AI Strategy Committee of Korea, and he will also be involved in projects concerning Financial AI within the committee.",
+      "figure1": "/public/news/250820_1.jpg",
+      "tags": ["National AI Strategy Committee of Korea", "AI in Finance"],
+      "links": [
+      {
+      "text": "Paper Link",
+      "url": "https://lnkd.in/guUESHnS",
+      "type": "paper"
+      }
+      ]
+    }
     {
       "id": "maeil-business-paper-award-2025",
       "date": "2025-08-20",
@@ -47,7 +65,7 @@
       "id": "hwang-professor-appointment-2025",
       "date": "2025-07-20",
       "category": "achievement",
-      "featured": false,
+      "featured": true,
       "title": "Dr. Yoontae Hwang Appointed Assistant Professor at Pusan National University",
       "title_kr": "황윤태 박사, 부산대학교 데이터사이언스학과 조교수 임용",
       "summary": "Dr. Yoontae Hwang, the first Ph.D. student of UNIST FE Lab, has been appointed as Assistant Professor in the Department of Data Science at Pusan National University after completing his postdoctoral research at Oxford University.",
@@ -91,7 +109,7 @@
       "id": "iclr-financial-ai-workshop-2025",
       "date": "2025-04-28",
       "category": "event",
-      "featured": true,
+      "featured": false,
       "title": "ICLR 2025 Workshop on Advances in Financial AI Successfully Held in Singapore",
       "title_kr": "ICLR 2025 Workshop on Advances in Financial AI 싱가포르에서 성공적으로 개최",
       "summary": "Professor Lee co-organized the ICLR 2025 Workshop on Advances in Financial AI in Singapore, featuring six invited talks spanning fundamental research to practical applications, with around 50 poster presentations from researchers worldwide.",
