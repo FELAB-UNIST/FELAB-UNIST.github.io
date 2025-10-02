@@ -6,7 +6,7 @@
         "name": "Yongjae Lee",
         "name_kr": "이용재",
         "position": "Associate Professor",
-        "department": "Department of Industrial Engineering, Artificial Intelligence Graduate School",
+        "department": "Department of Industrial Engineering and Artificial Intelligence Graduate School",
         "institution": "UNIST",
         "image": "./public/images/members/yjlee.png",
         "email": "yongjaelee@unist.ac.kr",
@@ -31,17 +31,11 @@
             "year": "2016",
             "thesis": "Demystifying Diversification Strategies by using Portfolio Optimization Techniques",
             "advisor": "Professor Woo Chang Kim",
-            "note": "Best Management Science Ph.D. Thesis Award in 2016 by KORMS"
+            "note": "*Best Management Science Ph.D. Thesis Award in 2016 by KORMS"
           },
           {
             "degree": "B.S.",
-            "field": "Computer Science",
-            "institution": "KAIST",
-            "year": "2011"
-          },
-          {
-            "degree": "B.S.",
-            "field": "Mathematical Sciences",
+            "field": "Computer Science and Mathematical Sciences",
             "institution": "KAIST",
             "year": "2011"
           }
@@ -50,12 +44,7 @@
         "experience": [
           {
             "position": "Associate Professor",
-            "institution": "Department of Industrial Engineering, UNIST",
-            "period": "2024 - Present"
-          },
-          {
-            "position": "Associate Professor",
-            "institution": "Artificial Intelligence Graduate School, UNIST",
+            "institution": "Department of Industrial Engineering and Artificial Intelligence Graduate School, UNIST",
             "period": "2024 - Present"
           },
           {
@@ -129,6 +118,11 @@
             }
           ],
           "advisory": [
+            {
+              "role": "분과위원",
+              "organization": "국가인공지능전략위원회",
+              "period": "2025 - Present"
+            },
             {
               "role": "Advisor (자문교수)",
               "organization": "LinqAlpha",
