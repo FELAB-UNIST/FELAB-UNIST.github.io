@@ -1,6 +1,94 @@
 {
   "publications": [
     {
+      "id": "pub_2025_icaif_finder",
+      "year": 2025,
+      "authors": "Chanyeol Choi*, Jihoon Kwon*, Jaeseon Ha, Hojun Choi, Chaewoon Kim, Yongjae Lee, Jy-yong Sohn, Alejandro Lopez-Lira*",
+      "author_ids": ["yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
+      "keywords": ["Finance", "Question Answering", "Retrieval-Augmented Generation"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/gvgXWqtX"
+    },
+    {
+      "id": "pub_2025_icaif_finagentbench",
+      "year": 2025,
+      "authors": "Chanyeol Choi*, Jihoon Kwon, Alejandro Lopez-Lira, Chaewoon Kim, Minjae Kim, Juneha Hwang, Jaeseon Ha, Hojun Choi, Suyeol Yun, Yongjin Kim, Yongjae Lee",
+      "author_ids": ["yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering",
+      "keywords": ["Finance", "Agentic Retrieval", "Question Answering", "Benchmark"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/gs2pEyMY"
+    },
+    {
+      "id": "pub_2025_icaif_bias_llm",
+      "year": 2025,
+      "authors": "Hoyoung Lee, Junhyuk Seo, Suhwan Park, Junhyeong Lee, Wonbin Ahn, Chanyeol Choi, Alejandro Lopez-Lira, Yongjae Lee†",
+      "author_ids": ["hoyoung-lee", "suhwan-park", "junhyeong-lee", "yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "Your AI, Not Your View: The Bias of LLMs in Investment Analysis",
+      "keywords": ["Finance", "LLMs", "Bias", "Investment Analysis"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/gZYWiC8p"
+    },
+    {
+      "id": "pub_2025_icaif_covariance",
+      "year": 2025,
+      "authors": "Juchan Kim*, Inwoo Tae*, Yongjae Lee†",
+      "author_ids": ["juchan-kim", "inwoo-tae", "yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "Estimating Covariance for Global Minimum Variance Portfolio: A Decision-Focused Learning Approach",
+      "keywords": ["Finance", "Portfolio Optimization", "Decision-Focused Learning"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/giKz429W"
+    },
+    {
+      "id": "pub_2025_icaif_return_prediction",
+      "year": 2025,
+      "authors": "Junhyeong Lee*, Haeun Jeon*, Hyunglip Bae†, Yongjae Lee†",
+      "author_ids": ["junhyeong-lee", "yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models",
+      "keywords": ["Finance", "Portfolio Selection", "Decision-Focused Learning", "Return Prediction"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/gfYk_s5Y"
+    },
+    {
+      "id": "pub_2025_icaif_collaborative_filtering",
+      "year": 2025,
+      "authors": "Munki Chung*, Junhyeong Lee*, Yongjae Lee†, Woo Chang Kim†",
+      "author_ids": ["junhyeong-lee", "yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "Mean Variance Efficient Collaborative Filtering for Stock Recommendations",
+      "keywords": ["Finance", "Collaborative Filtering", "Stock Recommendations"],
+      "notes": "Conference paper",
+      "link": "https://lnkd.in/gDTuDWm7"
+    },
+    {
+      "id": "pub_2025_icaif_shock_biased",
+      "year": 2025,
+      "authors": "Sukmin Hwang, Sungho Lee, Chanyeong Kim, Yongjae Lee†, Woo Chang Kim†",
+      "author_ids": ["yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "Shock-Biased Attention: Enhancing Transformer Hawkes Processes with Amplitude-Driven Temporal Kernels",
+      "keywords": ["Transformer", "Hawkes Processes", "Temporal Kernels"],
+      "notes": "Conference paper",
+      "link": ""
+    },
+    {
+      "id": "pub_2025_icaif_order_flow",
+      "year": 2025,
+      "authors": "Sungho Lee, Sukmin Hwang, Chanyeong Kim, Mingyu Yang, Yongjae Lee†, Woo Chang Kim†",
+      "author_ids": ["yongjae-lee"],
+      "venue": "The 6th ACM International Conference on AI in Finance (ICAIF'25)",
+      "title": "From Constituents to Index: Interpretable Price Movement Prediction via Cross-Asset Order Flow",
+      "keywords": ["Finance", "Price Movement Prediction", "Order Flow"],
+      "notes": "Conference paper",
+      "link": ""
+    },
+    {
       "id": "pub_2025_sigir_kpi",
       "year": 2025,
       "authors": "Chanyeol Choi, Alejandro Lopez-Lira, Yongjae Lee, Jihoon Kwon, Minjae Kim, Juneha Hwang, Minsoo Ha, Chaewoon Kim, Jaeseon Ha, Suyeol Yun, Jin Kim",
