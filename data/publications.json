@@ -166,7 +166,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "Applied Research Track, acceptance rate: 30.1%",
       "link": "",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2025_aaai_geodesic",
@@ -178,7 +178,7 @@
       "keywords": ["Machine Learning"],
       "notes": "acceptance rate: 23.4%",
       "link": "https://ojs.aaai.org/index.php/AAAI/article/view/33928",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2025_annor_mvgan",
@@ -190,7 +190,7 @@
       "keywords": ["Finance", "Portfolio Optimization", "GANs"],
       "notes": "",
       "link": "",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2024_icaif_stock_recommendations",
@@ -202,7 +202,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "poster presentation, acceptance rate: 39.3%",
       "link": "https://doi.org/10.1145/3677052.3698662",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2024_icaif_gans",
@@ -214,7 +214,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "oral presentation, top 18.7%",
       "link": "https://doi.org/10.1145/3677052.3698661",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2024_jpm_ml_overview",
@@ -226,7 +226,7 @@
       "keywords": ["Finance", "Machine Learning", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.3905/jpm.2024.1.639",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2024_jpm_optimization_overview",
@@ -238,7 +238,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.3905/jpm.2024.1.643",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2024_eaai_nft",
@@ -250,7 +250,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://doi.org/10.1016/j.engappai.2024.109179",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2024_aor_goal_based",
@@ -262,7 +262,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.1007/s10479-024-06146-7",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2024_frl_heterogeneous",
@@ -274,7 +274,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://doi.org/10.1016/j.frl.2024.105481",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2024_pakdd_hawkes",
@@ -286,7 +286,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "poster presentation, acceptance rate: <30%",
       "link": "https://doi.org/10.1007/978-981-97-2259-4_15",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2023_icaif_simstock",
@@ -298,7 +298,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "oral presentation, top 27%",
       "link": "https://dl.acm.org/doi/10.1145/3604237.3626888",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2023_icaif_gans_anomaly",
@@ -310,7 +310,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "oral presentation, top 27%",
       "link": "https://dl.acm.org/doi/10.1145/3604237.3626892",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2023_icaif_llms_best_poster",
@@ -322,7 +322,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "Best Poster Award, acceptance rate: 40%",
       "link": "https://dl.acm.org/doi/10.1145/3604237.3627721",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2023_qf_household",
@@ -334,7 +334,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://doi.org/10.1080/14697688.2023.2254335",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_qf_couples",
@@ -346,7 +346,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://www.tandfonline.com/doi/full/10.1080/14697688.2023.2252852",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_frl_stoploss",
@@ -358,7 +358,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://doi.org/10.1016/j.frl.2023.104285",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_jpm_ml_asset",
@@ -370,7 +370,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://www.pm-research.com/content/iijpormgmt/early/2023/07/30/jpm20231526",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_jpm_robustness",
@@ -382,7 +382,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://www.pm-research.com/content/iijpormgmt/early/2023/07/19/jpm20231522",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_qf_largescale",
@@ -394,7 +394,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.1080/14697688.2023.2221296",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_aistats_deepvalue",
@@ -406,7 +406,7 @@
       "keywords": ["Machine Learning", "Optimization"],
       "notes": "acceptance rate: 29.4%",
       "link": "https://proceedings.mlr.press/v206/bae23a.html",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2023_ejor_gradient",
@@ -418,7 +418,7 @@
       "keywords": ["Machine Learning", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.1016/j.ejor.2022.10.011",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2023_aor_household",
@@ -430,7 +430,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://link.springer.com/article/10.1007/s10479-022-04900-3",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2022_icaif_market",
@@ -442,7 +442,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "oral presentation, acceptance rate: 42.0%",
       "link": "https://dl.acm.org/doi/abs/10.1145/3533271.3561789",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2022_qf_effects",
@@ -454,7 +454,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.1080/14697688.2022.2083009",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2022_aor_goalbased",
@@ -466,7 +466,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://link.springer.com/article/10.1007/s10479-021-04473-7",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2021_jpm_korean",
@@ -478,7 +478,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://jpm.pm-research.com/content/47/7/172",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2021_jpm_meanvariance",
@@ -490,7 +490,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://jpm.pm-research.com/content/47/5/24",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2020_sustainability",
@@ -502,7 +502,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://www.mdpi.com/2071-1050/12/17/7073",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2020_ieee_bayesian",
@@ -514,7 +514,7 @@
       "keywords": ["Machine Learning"],
       "notes": "",
       "link": "https://ieeexplore.ieee.org/document/9037259",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2020_qf_personalized",
@@ -526,7 +526,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://www.tandfonline.com/doi/full/10.1080/14697688.2019.1662079",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2020_jors_sparse",
@@ -538,7 +538,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "https://doi.org/10.1080/01605682.2019.1581408",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2019_kiie_lifetime",
@@ -550,7 +550,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09218524",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2018_ijferm_smartbeta",
@@ -562,7 +562,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://www.inderscienceonline.com/doi/abs/10.1504/IJFERM.2018.094034",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2018_ae_malkiel",
@@ -574,7 +574,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://www.tandfonline.com/doi/full/10.1080/00036846.2018.1444263",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2017_kiie_etf",
@@ -586,7 +586,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "",
       "link": "http://doi.org/10.7232/JKIIE.2017.43.6.482",
-      "type": "Journal/Conference Papers"
+      "type": "Conference"
     },
     {
       "id": "pub_2017_irfa_dynamics",
@@ -598,7 +598,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "http://www.sciencedirect.com/science/article/pii/S1057521916301624",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2016_orl_sparse",
@@ -610,7 +610,7 @@
       "keywords": ["Finance", "Optimization"],
       "notes": "Outstanding Paper Award in 2016 by KIIE",
       "link": "http://www.sciencedirect.com/science/article/pii/S0167637716300396",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2016_qf_uniform",
@@ -622,7 +622,7 @@
       "keywords": ["Finance"],
       "notes": "Outstanding Paper Award in 2016 by KIIE",
       "link": "http://www.tandfonline.com/doi/abs/10.1080/14697688.2015.1114360",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2014_jpm_cost",
@@ -634,7 +634,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "http://jpm.iijournals.com/content/41/1/34",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2013_msfe_stochastic",
@@ -646,7 +646,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://doi.org/10.7737/MSFE.2013.19.1.037",
-      "type": "Journal/Conference Papers"
+      "type": "Journal"
     },
     {
       "id": "pub_2025_sigir_kpi",
@@ -658,7 +658,7 @@
       "keywords": ["Finance", "Information Retrieval", "Generative AI", "Multi-Agent Systems"],
       "notes": "",
       "link": "",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2025_iclr_finder",
@@ -670,7 +670,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2025_iclr_llm_blacklitterman",
@@ -682,7 +682,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2024_icaif_workshop_taxonomy",
@@ -694,7 +694,7 @@
       "keywords": ["Finance"],
       "notes": "",
       "link": "https://sites.google.com/view/ml-for-financial-wellness/home?authuser=0",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2024_ijcai_workshop",
@@ -706,7 +706,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "http://arxiv.org/abs/2404.07223",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2024_aaai_workshop_tgn",
@@ -718,7 +718,7 @@
       "keywords": ["Machine Learning"],
       "notes": "",
       "link": "https://sites.google.com/view/recommender-ecosystems/home",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2024_aaai_workshop_anomaly",
@@ -730,7 +730,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://sites.google.com/view/aifin-aaai2024/home",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2023_icaif_workshop_contrastive",
@@ -742,7 +742,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://sites.google.com/view/ml-for-investor-recsys",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2023_aaai_index",
@@ -754,7 +754,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://drive.google.com/file/d/1bQ43MLaNjZdIdIY16ILjWg80_uHKUMcp/view?usp=share_link",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Bridge Paper"
     },
     {
       "id": "pub_2023_aaai_nft",
@@ -766,7 +766,7 @@
       "keywords": ["Finance", "Machine Learning"],
       "notes": "",
       "link": "https://drive.google.com/file/d/1G2E_gwvHKwm9WZlWppq01SZHk9zCNJuo/view?usp=share_link",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Bridge Paper"
     },
     {
       "id": "pub_2022_icaif_investor",
@@ -778,7 +778,7 @@
       "keywords": ["Finance", "Investor Modeling", "Machine Learning"],
       "notes": "",
       "link": "",
-      "type": "Conference Workshop/Bridge Papers"
+      "type": "Conference Workshop"
     },
     {
       "id": "non_ref_2015_anatomy",
