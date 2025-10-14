@@ -550,19 +550,34 @@
                 `;
                 
                 pubsByYear[year].forEach(pub => {
+                    // Determine badge color based on type
+                    const typeBadge = this.getTypeBadge(pub.type);
+                    
                     html += `
                         <div class="publication-item p-4 hover:bg-gray-50 rounded-lg transition-colors">
                             <div class="text-sm">
-                                <div class="mb-2">
+                                <!-- Type badge -->
+                                ${typeBadge}
+                                <div class="mb-2 mt-2">
                                     ${this.formatAuthors(pub.authors, member.id)}
                                 </div>
                                 <div class="font-semibold text-brand-navy mb-1">
-                                    ${pub.link ? `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors">${pub.title}</a>` : pub.title}
+                                    ${pub.link ? 
+                                        `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors inline-flex items-center gap-1 group">
+                                            <span class="underline decoration-gray-400 underline-offset-2 group-hover:decoration-gray-900">
+                                                ${pub.title}
+                                            </span>
+                                            <svg class="w-3 h-3 text-gray-400 group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </a>` : 
+                                        pub.title
+                                    }
                                 </div>
                                 ${pub.venue ? `<div class="text-gray-600 italic">${pub.venue}</div>` : ''}
                                 ${pub.notes ? `<div class="text-gray-500 text-xs mt-1">${pub.notes}</div>` : ''}
                                 ${pub.keywords ? `
-                                    <div class="flex gap-2 mt-2">
+                                    <div class="flex flex-wrap gap-2 mt-2">
                                         ${pub.keywords.map(keyword => 
                                             `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${keyword}</span>`
                                         ).join('')}
@@ -580,6 +595,32 @@
             });
             
             container.innerHTML = html;
+        },
+
+        getTypeBadge(type) {
+            if (!type) return '';
+            
+            const badgeColors = {
+                'Journal': 'bg-blue-100 text-blue-700',
+                'Conference': 'bg-green-100 text-green-700',
+                'Conference Workshop': 'bg-purple-100 text-purple-700',
+                'Bridge Paper': 'bg-orange-100 text-orange-700',
+                'Working Papers': 'bg-gray-100 text-gray-700',
+                'Non-Refereed Papers': 'bg-yellow-100 text-yellow-700',
+                'Book in Progress': 'bg-indigo-100 text-indigo-700'
+            };
+            
+            const color = badgeColors[type] || 'bg-gray-100 text-gray-700';
+            
+            // Simplify display name for some types
+            const displayName = type === 'Conference Workshop' ? 'Workshop' : 
+                            type === 'Bridge Paper' ? 'Bridge' :
+                            type === 'Working Papers' ? 'Working' :
+                            type === 'Non-Refereed Papers' ? 'Non-Refereed' :
+                            type === 'Book in Progress' ? 'Book' :
+                            type;
+            
+            return `<span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full ${color}">${displayName}</span>`;
         },
         
         formatAuthors(authorsString, currentMemberId) {
