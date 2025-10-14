@@ -7,7 +7,7 @@ const PublicationsManager = {
     labMembers: [
         'Yongjae Lee', 'Hoyoung Lee', 'Junhyeong Lee', 'Inwoo Tae', 'Juchan Kim', 'Kangmin Kim',
         'Yejin Kim', 'Seonmi Kim', 'Seyoung Kim', 'Youngbin Lee', 'Sohyeon Kwon', 'Minjoo Choi',
-        'Yoontae Hwang', 'Joohwan Hong', 'Hyungwoo Kong'
+        'Yoontae Hwang', 'Joohwan Hong', 'Hyungwoo Kong', 'Suhwan Park', 'Wonbin Ahn'
     ],
     
     async init() {
@@ -16,7 +16,7 @@ const PublicationsManager = {
         await this.loadData();
         this.render();
         this.initSearch();
-        this.updateSimpleStats();
+        this.updateDetailedStats();
         this.initialized = true;
     },
     
@@ -35,26 +35,58 @@ const PublicationsManager = {
         const container = document.getElementById('publication-list');
         if (!container) return;
         
-        // Group publications by year
-        const groupedByYear = this.groupByYear(this.data);
+        // Group publications by type first, then by year
+        const groupedByType = this.groupByType(this.data);
         
         let html = '';
-        const sortedYears = this.getSortedYears(groupedByYear);
+        const typeOrder = [
+            'Book in Progress',
+            'Journal/Conference Papers', 
+            'Conference Workshop/Bridge Papers',
+            'Non-Refereed Papers',
+            'Working Papers'
+        ];
         
-        sortedYears.forEach(year => {
-            const sectionTitle = year === 'working_paper' ? 'Submitted & Working Papers' : year;
-            html += `<div class="publication-year-section">
-                <h3 class="font-bold text-xl text-brand-navy">${sectionTitle}</h3>
-                <div class="space-y-6 mt-4">`;
+        typeOrder.forEach(type => {
+            if (!groupedByType[type] || groupedByType[type].length === 0) return;
             
-            groupedByYear[year].forEach(pub => {
-                html += this.createPublicationHTML(pub);
+            html += `<div class="publication-type-section mb-12">
+                <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
+                    ${type} (${groupedByType[type].length})
+                </h2>`;
+            
+            // Group by year within type
+            const groupedByYear = this.groupByYear(groupedByType[type]);
+            const sortedYears = this.getSortedYears(groupedByYear);
+            
+            sortedYears.forEach(year => {
+                const yearTitle = year === 'working_paper' ? 'In Progress' : year;
+                html += `<div class="publication-year-section mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">${yearTitle}</h3>
+                    <div class="space-y-4">`;
+                
+                groupedByYear[year].forEach(pub => {
+                    html += this.createPublicationHTML(pub);
+                });
+                
+                html += `</div></div>`;
             });
             
-            html += `</div></div>`;
+            html += `</div>`;
         });
         
         container.innerHTML = html;
+    },
+    
+    groupByType(publications) {
+        return publications.reduce((acc, pub) => {
+            const type = pub.type || 'Journal/Conference Papers';
+            if (!acc[type]) {
+                acc[type] = [];
+            }
+            acc[type].push(pub);
+            return acc;
+        }, {});
     },
     
     groupByYear(publications) {
@@ -85,12 +117,12 @@ const PublicationsManager = {
                 class="text-brand-teal hover:underline">[Paper]</a>` : '';
         
         return `
-            <div class="publication-item p-4 rounded-lg hover:bg-gray-50">
+            <div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <div class="flex items-start gap-4">
                     <div class="flex-1">
                         <p class="font-semibold text-brand-navy text-lg pub-title">${pub.title}</p>
                         <p class="text-sm mt-1 pub-authors">${authorsHtml}</p>
-                        <p class="text-sm text-gray-500 italic mt-1 pub-venue">${pub.venue}</p>
+                        <p class="text-sm text-gray-500 italic mt-1 pub-venue">${pub.venue || ''}</p>
                         ${pub.keywords && pub.keywords.length > 0 ? 
                             `<div class="mt-3 flex flex-wrap gap-2">${keywordsHtml}</div>` : ''}
                         ${pub.notes ? 
@@ -105,24 +137,36 @@ const PublicationsManager = {
         `;
     },
     
-    getSearchableText(pub) {
-        const cleanAuthors = pub.authors.replace(/[*†]/g, '').toLowerCase();
-        const cleanKeywords = pub.keywords ? pub.keywords.join(' ').toLowerCase() : '';
-        return `${pub.title.toLowerCase()} ${cleanAuthors} ${pub.venue.toLowerCase()} ${cleanKeywords}`;
-    },
-    
     formatAuthors(authorsString) {
         return authorsString.split(',').map(author => {
             const trimmedAuthor = author.trim();
+            
+            // Extract symbols (*, **, †)
+            const symbols = [];
+            if (trimmedAuthor.includes('**')) {
+                symbols.push('**');
+            } else if (trimmedAuthor.includes('*')) {
+                symbols.push('*');
+            }
+            if (trimmedAuthor.includes('†')) {
+                symbols.push('†');
+            }
+            
+            // Clean name for checking membership
             const cleanName = trimmedAuthor.replace(/[*†]/g, '').trim();
             
-            // Simple check for lab members
+            // Check if lab member
             const isLabMember = this.labMembers.some(member => 
                 cleanName.toLowerCase().includes(member.toLowerCase())
             );
             
             const authorClass = isLabMember ? 'text-author-pi' : 'text-author-external';
-            return `<span class="${authorClass}">${cleanName}</span>`;
+            
+            // Reconstruct with symbols
+            const symbolsHtml = symbols.length > 0 ? 
+                `<sup class="text-xs">${symbols.join('')}</sup>` : '';
+            
+            return `<span class="${authorClass}">${cleanName}${symbolsHtml}</span>`;
         }).join(', ');
     },
     
@@ -136,14 +180,14 @@ const PublicationsManager = {
     },
     
     formatAward(notes) {
-        if (notes && notes.toLowerCase().includes('best poster award')) {
+        if (notes && notes.toLowerCase().includes('best') && notes.toLowerCase().includes('award')) {
             return `
                 <div class="flex-shrink-0">
                     <span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full">
                         <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M9 2a.75.75 0 01.75.75v1.25a.75.75 0 01-1.5 0V2.75A.75.75 0 019 2zM10.75 18a.75.75 0 01.75-.75h1.25a.75.75 0 010 1.5H11.5a.75.75 0 01-.75-.75zM2 9.75A.75.75 0 012.75 9h1.25a.75.75 0 010 1.5H2.75A.75.75 0 012 9.75zM15 11.75a.75.75 0 01.75-.75h1.25a.75.75 0 010 1.5H15.75a.75.75 0 01-.75-.75zM4.094 15.906a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM14.846 6.154a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM15.906 15.906a.75.75 0 01-1.06 0l-.884-.884a.75.75 0 111.06-1.06l.884.884a.75.75 0 010 1.06zM5.154 6.154a.75.75 0 01-1.06 0l-.884-.884a.75.75 0 111.06-1.06l.884.884a.75.75 0 010 1.06zM10 4a6 6 0 100 12 6 6 0 000-12z" clip-rule="evenodd" />
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
-                        Best Poster Award
+                        Award
                     </span>
                 </div>
             `;
@@ -151,6 +195,57 @@ const PublicationsManager = {
         return '';
     },
     
+    updateDetailedStats() {
+        // Calculate statistics
+        const stats = {
+            total: this.data.length,
+            byType: {},
+            byKeyword: {
+                finance: 0,
+                ml: 0,
+                optimization: 0
+            }
+        };
+        
+        // Count by type
+        this.data.forEach(pub => {
+            const type = pub.type || 'Journal/Conference Papers';
+            stats.byType[type] = (stats.byType[type] || 0) + 1;
+            
+            // Count by keywords
+            if (pub.keywords && Array.isArray(pub.keywords)) {
+                pub.keywords.forEach(keyword => {
+                    const kw = keyword.toLowerCase();
+                    if (kw.includes('finance')) stats.byKeyword.finance++;
+                    if (kw.includes('machine learning') || kw.includes('deep learning')) stats.byKeyword.ml++;
+                    if (kw.includes('optimization')) stats.byKeyword.optimization++;
+                });
+            }
+        });
+        
+        // Update HTML elements
+        const totalEl = document.getElementById('total-pubs');
+        if (totalEl) {
+            totalEl.textContent = stats.total;
+        }
+        
+        const financeEl = document.getElementById('finance-pubs');
+        if (financeEl) {
+            financeEl.textContent = stats.byKeyword.finance;
+        }
+        
+        const mlEl = document.getElementById('ml-pubs');
+        if (mlEl) {
+            mlEl.textContent = stats.byKeyword.ml;
+        }
+        
+        const optimizationEl = document.getElementById('optimization-pubs');
+        if (optimizationEl) {
+            optimizationEl.textContent = stats.byKeyword.optimization;
+        }
+    },
+    
+    // ... (나머지 search 관련 함수들은 동일)
     initSearch() {
         const searchInput = document.getElementById('publication-search');
         if (!searchInput) return;
@@ -168,17 +263,17 @@ const PublicationsManager = {
     
     performSearch(query) {
         const publicationItems = document.querySelectorAll('.publication-item');
+        const typeSections = document.querySelectorAll('.publication-type-section');
         const yearSections = document.querySelectorAll('.publication-year-section');
         
-        // Clear previous highlights
         this.clearHighlights();
         
         if (!query) {
-            // Show all items when search is empty
             publicationItems.forEach(item => {
                 item.style.display = 'block';
                 item.classList.remove('highlight-match');
             });
+            typeSections.forEach(section => section.style.display = 'block');
             yearSections.forEach(section => section.style.display = 'block');
             this.toggleNoResultsMessage(false);
             return;
@@ -187,7 +282,6 @@ const PublicationsManager = {
         let hasVisibleItems = false;
         
         publicationItems.forEach(item => {
-            // Get text content directly from DOM elements
             const title = item.querySelector('.pub-title')?.textContent?.toLowerCase() || '';
             const authors = item.querySelector('.pub-authors')?.textContent?.toLowerCase() || '';
             const venue = item.querySelector('.pub-venue')?.textContent?.toLowerCase() || '';
@@ -195,7 +289,6 @@ const PublicationsManager = {
             
             const searchableText = `${title} ${authors} ${venue} ${keywords}`;
             
-            // Simple substring search
             if (searchableText.includes(query)) {
                 item.style.display = 'block';
                 item.classList.add('highlight-match');
@@ -207,7 +300,12 @@ const PublicationsManager = {
             }
         });
         
-        // Show/hide year sections
+        // Show/hide sections based on visible items
+        typeSections.forEach(section => {
+            const visibleItems = section.querySelectorAll('.publication-item[style*="display: block"], .publication-item:not([style*="display: none"])');
+            section.style.display = visibleItems.length > 0 ? 'block' : 'none';
+        });
+        
         yearSections.forEach(section => {
             const visibleItems = section.querySelectorAll('.publication-item[style*="display: block"], .publication-item:not([style*="display: none"])');
             section.style.display = visibleItems.length > 0 ? 'block' : 'none';
@@ -217,7 +315,6 @@ const PublicationsManager = {
     },
     
     highlightText(item, query) {
-        // Simple highlighting for title only
         const titleElement = item.querySelector('.pub-title');
         if (titleElement) {
             const text = titleElement.textContent;
@@ -258,33 +355,6 @@ const PublicationsManager = {
             noResultsEl.style.display = 'block';
         } else if (noResultsEl) {
             noResultsEl.style.display = 'none';
-        }
-    },
-    
-    updateSimpleStats() {
-        // Calculate simple keyword-based statistics
-        const stats = {
-            total: this.data.length,
-            finance: 0,
-            ml: 0,
-            optimization: 0
-        };
-        
-        this.data.forEach(pub => {
-            if (pub.keywords && Array.isArray(pub.keywords)) {
-                pub.keywords.forEach(keyword => {
-                    const kw = keyword.toLowerCase();
-                    if (kw.includes('finance')) stats.finance++;
-                    if (kw.includes('machine learning')) stats.ml++;
-                    if (kw.includes('optimization')) stats.optimization++;
-                });
-            }
-        });
-        
-        // Update the stats in HTML if elements exist
-        const totalEl = document.getElementById('total-pubs');
-        if (totalEl) {
-            totalEl.textContent = stats.total;
         }
     }
 };
