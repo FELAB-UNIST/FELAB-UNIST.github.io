@@ -629,16 +629,28 @@
             
             return authors.map(author => {
                 // Check if this author is the current member
-                // Look for special markers like *, †, or check if it matches member name
                 const isCurrentMember = this.isAuthorCurrentMember(author, currentMemberId);
                 const isLabMember = this.isLabMember(author);
                 
+                // Extract symbols (*, **, †)
+                const symbols = [];
+                const cleanAuthor = author.replace(/\*+|†/g, (match) => {
+                    symbols.push(match);
+                    return '';
+                }).trim();
+                
+                const symbolsHtml = symbols.length > 0 ? 
+                    `<sup class="text-xs">${symbols.join('')}</sup>` : '';
+                
                 if (isCurrentMember) {
-                    return `<span class="font-semibold text-brand-accent">${author}</span>`;
+                    // 본인은 진한 파란색과 굵은 글씨
+                    return `<span class="font-bold text-blue-600">${cleanAuthor}${symbolsHtml}</span>`;
                 } else if (isLabMember) {
-                    return `<span class="text-author-pi">${author}</span>`;
+                    // 연구실 멤버는 인디고색 (보라빛 파란색)
+                    return `<span class="text-indigo-600 font-medium">${cleanAuthor}${symbolsHtml}</span>`;
                 } else {
-                    return `<span class="text-author-external">${author}</span>`;
+                    // 외부 저자는 회색
+                    return `<span class="text-gray-700">${cleanAuthor}${symbolsHtml}</span>`;
                 }
             }).join(', ');
         },
