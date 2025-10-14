@@ -1,8 +1,19 @@
 {
   "projects": [
     {
-      "id": "credit-synthetic-data-2024",
+      "id": "seed-2025",
       "status": "ongoing",
+      "title_kr": "개인투자자의 다양한 투자 선호를 고려한 개인 맞춤형 자산관리 모형 개발",
+      "title_en": "Development and Evaluation of a Synthetic Data Generation Model for Credit Information",
+      "funding_agency": "한국연구재단 (NRF of Korea)",
+      "duration": "2025.09 ~ 2026.08",
+      "project_number": "2.251152.01",
+      "keywords": ["Behavioral Economics", "Individual Investors", "Big Data", "Trading Patterns"],
+      "participants": []
+    },
+    {
+      "id": "credit-synthetic-data-2024",
+      "status": "completed",
       "title_kr": "신용정보 합성데이터 생성 모형 개발 및 평가",
       "title_en": "Development and Evaluation of a Synthetic Data Generation Model for Credit Information",
       "funding_agency": "한국신용정보원 (Korea Credit Information Services)",
