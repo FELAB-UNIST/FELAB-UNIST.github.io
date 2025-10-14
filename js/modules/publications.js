@@ -31,38 +31,51 @@ const PublicationsManager = {
         }
     },
     
+
+
     render() {
         const container = document.getElementById('publication-list');
         if (!container) return;
         
-        // Group publications by type first, then by year
-        const groupedByType = this.groupByType(this.data);
+        // Group publications by detailed type
+        const groupedByDetailedType = this.groupByDetailedType(this.data);
         
         let html = '';
-        const typeOrder = [
-            'Book in Progress',
-            'Journal/Conference Papers', 
-            'Conference Workshop/Bridge Papers',
-            'Non-Refereed Papers',
-            'Working Papers'
-        ];
         
-        typeOrder.forEach(type => {
-            if (!groupedByType[type] || groupedByType[type].length === 0) return;
+        // Book in Progress 먼저
+        if (groupedByDetailedType['Book in Progress']) {
+            html += this.renderTypeSection('Book in Progress', groupedByDetailedType['Book in Progress']);
+        }
+        
+        // Journal과 Conference를 섞어서 표시 (연도별로 정렬 후 섞기)
+        const journalAndConf = [];
+        if (groupedByDetailedType['Journal']) {
+            journalAndConf.push(...groupedByDetailedType['Journal'].map(p => ({...p, subtype: 'Journal'})));
+        }
+        if (groupedByDetailedType['Conference']) {
+            journalAndConf.push(...groupedByDetailedType['Conference'].map(p => ({...p, subtype: 'Conference'})));
+        }
+        
+        if (journalAndConf.length > 0) {
+            // 연도별로 정렬 후 섞어서 표시
+            journalAndConf.sort((a, b) => {
+                if (a.year === 'working_paper') return 1;
+                if (b.year === 'working_paper') return -1;
+                if (a.year !== b.year) return b.year - a.year;
+                return 0;
+            });
             
             html += `<div class="publication-type-section mb-12">
                 <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
-                    ${type} (${groupedByType[type].length})
+                    Journal & Conference Papers (${journalAndConf.length})
                 </h2>`;
             
-            // Group by year within type
-            const groupedByYear = this.groupByYear(groupedByType[type]);
+            const groupedByYear = this.groupByYear(journalAndConf);
             const sortedYears = this.getSortedYears(groupedByYear);
             
             sortedYears.forEach(year => {
-                const yearTitle = year === 'working_paper' ? 'In Progress' : year;
                 html += `<div class="publication-year-section mb-8">
-                    <h3 class="font-semibold text-lg text-gray-700 mb-4">${yearTitle}</h3>
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">${year}</h3>
                     <div class="space-y-4">`;
                 
                 groupedByYear[year].forEach(pub => {
@@ -73,39 +86,119 @@ const PublicationsManager = {
             });
             
             html += `</div>`;
-        });
+        }
+        
+        // Workshop과 Bridge Papers 섞어서 표시
+        const workshopAndBridge = [];
+        if (groupedByDetailedType['Conference Workshop']) {
+            workshopAndBridge.push(...groupedByDetailedType['Conference Workshop'].map(p => ({...p, subtype: 'Workshop'})));
+        }
+        if (groupedByDetailedType['Bridge Paper']) {
+            workshopAndBridge.push(...groupedByDetailedType['Bridge Paper'].map(p => ({...p, subtype: 'Bridge'})));
+        }
+        
+        if (workshopAndBridge.length > 0) {
+            workshopAndBridge.sort((a, b) => {
+                if (a.year === 'working_paper') return 1;
+                if (b.year === 'working_paper') return -1;
+                if (a.year !== b.year) return b.year - a.year;
+                return 0;
+            });
+            
+            html += `<div class="publication-type-section mb-12">
+                <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
+                    Conference Workshop & Bridge Papers (${workshopAndBridge.length})
+                </h2>`;
+            
+            const groupedByYear = this.groupByYear(workshopAndBridge);
+            const sortedYears = this.getSortedYears(groupedByYear);
+            
+            sortedYears.forEach(year => {
+                html += `<div class="publication-year-section mb-8">
+                    <h3 class="font-semibold text-lg text-gray-700 mb-4">${year}</h3>
+                    <div class="space-y-4">`;
+                
+                groupedByYear[year].forEach(pub => {
+                    html += this.createPublicationHTML(pub);
+                });
+                
+                html += `</div></div>`;
+            });
+            
+            html += `</div>`;
+        }
+        
+        // Non-Refereed Papers
+        if (groupedByDetailedType['Non-Refereed Papers']) {
+            html += this.renderTypeSection('Non-Refereed Papers', groupedByDetailedType['Non-Refereed Papers']);
+        }
+        
+        // Working Papers
+        if (groupedByDetailedType['Working Papers']) {
+            html += this.renderTypeSection('Working Papers', groupedByDetailedType['Working Papers']);
+        }
         
         container.innerHTML = html;
     },
     
-    groupByType(publications) {
-        return publications.reduce((acc, pub) => {
-            const type = pub.type || 'Journal/Conference Papers';
-            if (!acc[type]) {
-                acc[type] = [];
-            }
-            acc[type].push(pub);
-            return acc;
-        }, {});
-    },
-    
-    groupByYear(publications) {
-        return publications.reduce((acc, pub) => {
-            const year = pub.year;
-            if (!acc[year]) {
-                acc[year] = [];
-            }
-            acc[year].push(pub);
-            return acc;
-        }, {});
-    },
-    
-    getSortedYears(groupedByYear) {
-        return Object.keys(groupedByYear).sort((a, b) => {
-            if (a === 'working_paper') return 1;
-            if (b === 'working_paper') return -1;
-            return b - a;
+    renderTypeSection(type, publications) {
+        let html = `<div class="publication-type-section mb-12">
+            <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
+                ${type} (${publications.length})
+            </h2>`;
+        
+        const groupedByYear = this.groupByYear(publications);
+        const sortedYears = this.getSortedYears(groupedByYear);
+        
+        sortedYears.forEach(year => {
+            const yearTitle = year === 'working_paper' ? 'In Progress' : year;
+            html += `<div class="publication-year-section mb-8">
+                <h3 class="font-semibold text-lg text-gray-700 mb-4">${yearTitle}</h3>
+                <div class="space-y-4">`;
+            
+            groupedByYear[year].forEach(pub => {
+                html += this.createPublicationHTML(pub);
+            });
+            
+            html += `</div></div>`;
         });
+        
+        html += `</div>`;
+        return html;
+    },
+    
+    groupByDetailedType(publications) {
+        return publications.reduce((acc, pub) => {
+            let detailedType = pub.type || 'Journal/Conference Papers';
+            
+            // Journal/Conference Papers를 세분화
+            if (detailedType === 'Journal/Conference Papers') {
+                // venue를 보고 Journal인지 Conference인지 구분
+                const venue = pub.venue.toLowerCase();
+                if (venue.includes('conference') || venue.includes('icaif') || venue.includes('aaai') || 
+                    venue.includes('cikm') || venue.includes('aistats') || venue.includes('pakdd')) {
+                    detailedType = 'Conference';
+                } else {
+                    detailedType = 'Journal';
+                }
+            }
+            
+            // Conference Workshop/Bridge Papers를 세분화
+            if (detailedType === 'Conference Workshop/Bridge Papers') {
+                const venue = pub.venue.toLowerCase();
+                if (venue.includes('bridge')) {
+                    detailedType = 'Bridge Paper';
+                } else {
+                    detailedType = 'Conference Workshop';
+                }
+            }
+            
+            if (!acc[detailedType]) {
+                acc[detailedType] = [];
+            }
+            acc[detailedType].push(pub);
+            return acc;
+        }, {});
     },
     
     createPublicationHTML(pub) {
@@ -116,11 +209,23 @@ const PublicationsManager = {
             `<a href="${pub.link}" target="_blank" rel="noopener noreferrer" 
                 class="text-brand-teal hover:underline">[Paper]</a>` : '';
         
+        // subtype 표시 (Journal/Conference/Workshop/Bridge)
+        const subtypeHtml = pub.subtype ? 
+            `<span class="text-xs font-medium px-2 py-0.5 rounded-full ${
+                pub.subtype === 'Journal' ? 'bg-blue-100 text-blue-700' :
+                pub.subtype === 'Conference' ? 'bg-green-100 text-green-700' :
+                pub.subtype === 'Workshop' ? 'bg-purple-100 text-purple-700' :
+                'bg-orange-100 text-orange-700'
+            }">${pub.subtype}</span>` : '';
+        
         return `
             <div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <div class="flex items-start gap-4">
                     <div class="flex-1">
-                        <p class="font-semibold text-brand-navy text-lg pub-title">${pub.title}</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            ${subtypeHtml}
+                            <p class="font-semibold text-brand-navy text-lg pub-title flex-1">${pub.title}</p>
+                        </div>
                         <p class="text-sm mt-1 pub-authors">${authorsHtml}</p>
                         <p class="text-sm text-gray-500 italic mt-1 pub-venue">${pub.venue || ''}</p>
                         ${pub.keywords && pub.keywords.length > 0 ? 
@@ -136,6 +241,10 @@ const PublicationsManager = {
             </div>
         `;
     },
+    
+
+
+
     
     formatAuthors(authorsString) {
         return authorsString.split(',').map(author => {
