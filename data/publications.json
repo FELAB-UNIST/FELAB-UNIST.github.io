@@ -9,7 +9,7 @@
       "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
       "keywords": ["Finance", "Question Answering", "Retrieval-Augmented Generation"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/gvgXWqtX"
+      "link": "https://arxiv.org/abs/2504.15800"
     },
     {
       "id": "pub_2025_icaif_finagentbench",
@@ -20,7 +20,7 @@
       "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering",
       "keywords": ["Finance", "Agentic Retrieval", "Question Answering", "Benchmark"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/gs2pEyMY"
+      "link": "https://arxiv.org/abs/2508.14052"
     },
     {
       "id": "pub_2025_icaif_bias_llm",
@@ -31,7 +31,7 @@
       "title": "Your AI, Not Your View: The Bias of LLMs in Investment Analysis",
       "keywords": ["Finance", "LLMs", "Bias", "Investment Analysis"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/gZYWiC8p"
+      "link": "https://arxiv.org/abs/2507.20957"
     },
     {
       "id": "pub_2025_icaif_covariance",
@@ -42,7 +42,7 @@
       "title": "Estimating Covariance for Global Minimum Variance Portfolio: A Decision-Focused Learning Approach",
       "keywords": ["Finance", "Portfolio Optimization", "Decision-Focused Learning"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/giKz429W"
+      "link": "https://arxiv.org/abs/2508.10776"
     },
     {
       "id": "pub_2025_icaif_return_prediction",
@@ -53,7 +53,7 @@
       "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models",
       "keywords": ["Finance", "Portfolio Selection", "Decision-Focused Learning", "Return Prediction"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/gfYk_s5Y"
+      "link": "https://arxiv.org/abs/2409.09684"
     },
     {
       "id": "pub_2025_icaif_collaborative_filtering",
@@ -64,7 +64,7 @@
       "title": "Mean Variance Efficient Collaborative Filtering for Stock Recommendations",
       "keywords": ["Finance", "Collaborative Filtering", "Stock Recommendations"],
       "notes": "Conference paper",
-      "link": "https://lnkd.in/gDTuDWm7"
+      "link": "https://arxiv.org/abs/2306.06590"
     },
     {
       "id": "pub_2025_icaif_shock_biased",
@@ -87,6 +87,17 @@
       "keywords": ["Finance", "Price Movement Prediction", "Order Flow"],
       "notes": "Conference paper",
       "link": ""
+    },
+    {
+      "id": "pub_2025_eaai_disease_cost",
+      "year": 2025,
+      "authors": "Inwoo Tae, Hyungwoo Kong*, Junghye Lee, Yongjae Lee†",
+      "author_ids": ["inwoo-tae", "yongjae-lee"],
+      "venue": "Engineering Applications of Artificial Intelligence",
+      "title": "Machine Learning for Disease-Specific Prediction of High-Cost Patients",
+      "keywords": ["Healthcare", "Finance", "Machine Learning", "High-Cost Patients", "Disease-Specific Prediction"],
+      "notes": "Journal paper",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0952197625022080"
     },
     {
       "id": "pub_2025_sigir_kpi",
@@ -661,17 +672,6 @@
       "link": "https://doi.org/10.7737/MSFE.2013.19.1.037"
     },
     {
-      "id": "pub_wp_collaborative",
-      "year": "working_paper",
-      "authors": "Munki Chung†, Junhyeong Lee†, Yongjae Lee*, Woo Chang Kim*",
-      "author_ids": ["yongjae-lee"],
-      "venue": "",
-      "title": "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation",
-      "keywords": ["Finance", "Machine Learning"],
-      "notes": "submitted",
-      "link": "https://arxiv.org/abs/2306.06590"
-    },
-    {
       "id": "pub_wp_temporal",
       "year": "working_paper",
       "authors": "Yoontae Hwang, Stefan Zohren, Yongjae Lee**",
@@ -683,17 +683,6 @@
       "link": "https://arxiv.org/abs/2407.13751"
     },
     {
-      "id": "pub_wp_anatomy",
-      "year": "working_paper",
-      "authors": "Junhyeong Lee†, Haeun Jeon†, Hyunglip Bae*, Yongjae Lee**",
-      "author_ids": ["junhyeong-lee", "yongjae-lee"],
-      "venue": "",
-      "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models",
-      "keywords": ["Finance", "Machine Learning", "Optimization"],
-      "notes": "Submitted",
-      "link": ""
-    },
-    {
       "id": "pub_wp_cholesky",
       "year": "working_paper",
       "authors": "Hyunglip Bae, Haeun Jeon, Minsu Park, Yongjae Lee, Woo Chang Kim",
@@ -702,17 +691,6 @@
       "title": "A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization",
       "keywords": ["Finance", "Optimization"],
       "notes": "submitted",
-      "link": ""
-    },
-    {
-      "id": "pub_wp_disease_cost",
-      "year": "working_paper",
-      "authors": "Inwoo Tae, Hyungwoo Kong*, Junghye Lee, Yongjae Lee**",
-      "author_ids": ["inwoo-tae", "yongjae-lee"],
-      "venue": "",
-      "title": "Machine Learning for Disease-Specific Prediction of High-Cost Patients",
-      "keywords": ["Healthcare", "Finance", "Machine Learning"],
-      "notes": "Submitted",
       "link": ""
     },
     {
