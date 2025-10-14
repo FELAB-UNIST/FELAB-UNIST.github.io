@@ -6,14 +6,14 @@
         "name": "Yongjae Lee",
         "name_kr": "이용재",
         "position": "Associate Professor",
-        "department": "Department of Industrial Engineering, Artificial Intelligence Graduate School",
+        "department": "Department of Industrial Engineering and Artificial Intelligence Graduate School",
         "institution": "UNIST",
         "image": "./public/images/members/yjlee.png",
         "email": "yongjaelee@unist.ac.kr",
         "office": "Building 112, Room 301-7",
         
-        "bio_short": "Associate Professor specializing in Financial Engineering, Optimization, and Machine Learning for Finance",
-        "bio_full": "Dr. Yongjae Lee is an Associate Professor at UNIST, jointly appointed in the Department of Industrial Engineering and the Artificial Intelligence Graduate School. His research bridges machine learning, optimization, and financial engineering to solve complex financial decision-making problems.",
+        "bio_short": "Associate Professor at UNIST IE & AIGS",
+        "bio_full": "Yongjae Lee is an Associate Professor in the Department of Industrial Engineering and Artificial Intelligence Graduate School at Ulsan National Institute of Science and Technology (UNIST). Dr. Lee utilizes quantitative techniques such as ML/AI and optimization to analyze financial data and derive optimal decisions. He is particularly interested in analyzing individual and household financial activities to draw useful insights and design customized services. He is an advisory editorial board member for the Journal of Financial Data Science and served as an organizing committee member(workshop chair) of ICAIF'24. He has applied ML/AI techniques to develop financial services through projects with several financial and IT companies and government agencies. Dr. Lee is an advisor professor of LinqAlpha and a member of AI in Finance Committee of Financial Services Commission of Korea. He received his B.S. degree in computer science and mathematical sciences and Ph.D. degree in industrial and systems engineering from KAIST.",
         
         "research_interests": [
           "Financial Engineering",
@@ -31,17 +31,11 @@
             "year": "2016",
             "thesis": "Demystifying Diversification Strategies by using Portfolio Optimization Techniques",
             "advisor": "Professor Woo Chang Kim",
-            "note": "Best Management Science Ph.D. Thesis Award in 2016 by KORMS"
+            "note": "*Best Management Science Ph.D. Thesis Award in 2016 by KORMS"
           },
           {
             "degree": "B.S.",
-            "field": "Computer Science",
-            "institution": "KAIST",
-            "year": "2011"
-          },
-          {
-            "degree": "B.S.",
-            "field": "Mathematical Sciences",
+            "field": "Computer Science and Mathematical Sciences",
             "institution": "KAIST",
             "year": "2011"
           }
@@ -50,12 +44,7 @@
         "experience": [
           {
             "position": "Associate Professor",
-            "institution": "Department of Industrial Engineering, UNIST",
-            "period": "2024 - Present"
-          },
-          {
-            "position": "Associate Professor",
-            "institution": "Artificial Intelligence Graduate School, UNIST",
+            "institution": "Department of Industrial Engineering and Artificial Intelligence Graduate School, UNIST",
             "period": "2024 - Present"
           },
           {
@@ -130,6 +119,11 @@
           ],
           "advisory": [
             {
+              "role": "분과위원",
+              "organization": "국가인공지능전략위원회",
+              "period": "2025 - Present"
+            },
+            {
               "role": "Advisor (자문교수)",
               "organization": "LinqAlpha",
               "period": "2024 - Present"
@@ -185,8 +179,7 @@
         "links": {
           "google_scholar": "https://scholar.google.com/citations?user=dAMXPRcAAAAJ&hl=ko&oi=ao",
           "linkedin": "https://www.linkedin.com/in/yongjae-lee-548982107/",
-          "facebook": "https://www.facebook.com/profile.php?id=100001609021456",
-          "notion": "https://notion.so/yongjaelee"
+          "facebook": "https://www.facebook.com/profile.php?id=100001609021456"
         }
       }
     ],

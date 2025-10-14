@@ -103,7 +103,7 @@
       "id": "pub_2024_icaif_stock_recommendations",
       "year": 2024,
       "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie*, Yongjae Lee**",
-      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee**"],
+      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee"],
       "venue": "The 5th ACM International Conference on AI in Finance (ICAIF'24)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -147,7 +147,7 @@
       "id": "pub_2024_ijcai_workshop",
       "year": 2024,
       "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie, Yongjae Lee*",
-      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee**"],
+      "author_ids": ["youngbin-lee", "yejin-kim", "yongjae-lee"],
       "venue": "IJCAI-24 Workshop on Recommeder Systems in Finance (Fin-RecSys)",
       "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
       "keywords": ["Finance", "Machine Learning"],
@@ -618,7 +618,7 @@
     },
     {
       "id": "pub_wp_disease_cost",
-      "year": 2024,
+      "year": "working_paper",
       "authors": "Inwoo Tae, Hyungwoo Kong*, Junghye Lee, Yongjae Lee**",
       "author_ids": ["inwoo-tae", "yongjae-lee"],
       "venue": "",
@@ -629,7 +629,7 @@
     },
     {
       "id": "pub_wp_taxonomy",
-      "year": 2025,
+      "year": "working_paper",
       "authors": "Juchan Kim, Yongjae Lee**",
       "author_ids": ["juchan-kim","yongjae-lee"],
       "venue": "",
@@ -640,7 +640,7 @@
     },
     {
       "id": "pub_wp_preference_po",
-      "year": 2025,
+      "year": "working_paper",
       "authors": "Juchan Kim, Yoontae Hwang, Yongjae Lee**",
       "author_ids": ["juchan-kim","yongjae-lee"],
       "venue": "",
@@ -651,7 +651,7 @@
     },
     {
       "id": "pub_wp_end2end_mm",
-      "year": 2025,
+      "year": "working_paper",
       "authors": "Guhyuk Chung, Yongjae Lee*, Woo Chang Kim*",
       "author_ids": ["yongjae-lee"],
       "venue": "",
@@ -662,7 +662,7 @@
     },
     {
       "id": "pub_wp_decision_llm",
-      "year": 2025,
+      "year": "working_paper",
       "authors": "Yoontae Hwang, Yaxuan Kong, Stefan Zohren*, Yongjae Lee**",
       "author_ids": ["yongtae-hwang", "yongjae-lee"],
       "venue": "",
@@ -673,7 +673,7 @@
     },
     {
       "id": "pub_wp_gr_fraud",
-      "year": 2025,
+      "year": "working_paper",
       "authors": "Inwoo Tae, Kangmin Kim, Hyungwoo Kong*, Yongjae Lee**",
       "author_ids": ["inwoo-tae", "yongjae-lee","kangmin-kim"],
       "venue": "",
