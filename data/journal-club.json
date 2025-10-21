@@ -1,5 +1,26 @@
 [
   {
+    "date": "2025년 10월 15일",
+    "title": "Context is Key: A Benchmark for Forecasting with Essential Textual Information",
+    "presenter": "Hoyoung Lee",
+    "reason" : "이번에 소개할 논문은 ICML 25에 억셉된 논문입니다. 전통적인 시계열 예측 연구들이 모델 구조나 성능 향상 기법에 주로 초점을 맞춰온 것과 달리, context의 중요성에 초점을 맞춘 점이 독특합니다. 기존 예측 모델들은 대부분 과거의 수치 데이터에만 의존해왔습니다. 하지만 사람은 실제 예측을 할 때 배경지식, 도메인 제약 조건, 혹은 예상치 못한 이벤트 같은 부가 정보를 자연어 형태로 활용하여 훨씬 정확한 판단을 내립니다. 이 논문은 바로 이 지점에서 발생하는 기계와 사람의 예측 방식 간의 근본적인 차이에 주목합니다. 특히 LLM을 예측에 활용하려는 시도는 있었지만, 모델이 정말로 텍스트 정보를 의미있게 활용하는지를 체계적으로 평가할 방법이 없었습니다. 이 논문은 이 문제를 해결하기 위해 새로운 벤치마크를 제시합니다. 벤치마크 연구라 모델링 아이디어는 많이 없지만 context를 활용하는 연구 아이디어는 생각해볼 수 있는게 좀 있을 것 같습니다. context를 활용하는 연구를 시작하려고 하고 있어서 읽으면 흥미로울 것 같아 선정하였습니다. 테크니컬한 부분은 많이 없으니 이걸 financial context로 연구로 나아가게 된다면 어떨지 아이디어 위주 토론이 이뤄졌으면 좋겠습니다!",
+    "url" : "https://arxiv.org/pdf/2410.18959"
+  },
+  {
+    "date": "2025년 09월 24일",
+    "title": "Basis Assets",
+    "presenter": "Yongjae Lee",
+    "reason" : "얼마 전 자본시장연구원 컨퍼런스에서 서울대학교 경제학과 안동현 교수님을 뵈었습니다. 제가 대학원생 때 처음으로 쓴 국제학술지 논문인 Journal of Portfolio Management에 실린 Cost of Asset Allocation을 쓸 때 철학적(?) 기반이 되었던 논문이 바로 안동현 교수님의 Basis Assets였습니다. 대략적인 내용은 아주 간단명료 합니다. asset pricing model은 자산 수익률을 여러 factor들로 설명하려 하는데, 사실 이 factor라는 것은 실제 거래 가능한 상품은 아닙니다. 안동현 교수님의 Basis Assets의 아이디어는 factor 대신에 실제 거래 가능한 portfolio들로 asset pricing model을 만들 수 있지 않겠느냐 하는 것입니다. 김우창 교수님과 제가 쓴 cost of asset allocation 논문은 비슷하지만 좀 다른 부분이 전체 주식 시장을 n개의 group으로 나누고 싶은데, 각 group을 equal-weight portfolio로 만들어 자산배분을 했을 때 가장 Sharpe ratio가 높은 그룹이 무엇이겠느냐 하는 것이었습니다. 여튼 이번에 안동현 교수님과 행사 후 오찬 자리에서 잠깐 말씀을 나누었는데 이 basis asset을 ML/AI를 활용해서 다시 쓰려고 하고 계시다고 합니다. 이걸 너무 asset pricing이 잘되는 방향으로만 최적화 해버리면 너무 corner solution 같이 실제로 쓰기 어려운게 나오고, 그렇다고 그렇게 하지 않으려고 하면 과연 어떻게 해야 좋은 basis asset을 얻었다고 할 수 있는건지 등등 애매한 포인트가 많다고 하셨습니다. 사실 이는 저도 cost of asset allocation 논문부터 이후에 여러 clustering 연구 또는 representation 연구를 해오면서 느낀바였습니다. 결국엔 어떤 clustering, 어떤 representation이 좋은걸까라는 질문으로 귀결됩니다. finance 논문 답게 꽤나 길기 때문에 journal club 때는 핵심 내용 위주로 소개를 하고, 제가 그동안 해왔던 고민을 같이 이야기 나눠보는 시간을 가지면 좋을 듯 합니다.",
+    "url" : "https://academic.oup.com/rfs/article/22/12/5133/1577250"
+  },
+  {
+    "date": "2025년 09월 17일",
+    "title": "Disparate Impact in Differential Privacy from Gradient Misalignment",
+    "presenter": "Kangmin Kim",
+    "reason" : "신용정보원 프로젝트 및 연구를 진행하면서 개인신용정보 자체의 프라이버시가 매우 중요하다보니 privacy preserving machine learning에 대해서도 찾아보다가 본 논문이고, ICLR 2023년에 억셉 되었습니다. gradient update과정에서 privacy를 보호하는 방법론 중에서 가장 대표적인 것이 DP-SGD라는 방법론이 있습니다. 이 논문에서는 DP-SGD를 사용헤 gradient update를 하는 과정에서 gradient가 misalign되어 suboptimal로 수렴하고, 모델 성능 자체가 저하되는 현상이 발생한다고 주장하고 있고, 특히 minor한 데이터의 성능이 크게 저하되는 fairness 이슈가 있다고 합니다. 이 논문에서는 adaptive한 Z를 하나 두어 이 문제를 간단한 구조로 어느정도 완화할 수 있는 방법론을 제시합니다. 나온지 좀 된 논문이긴 하지만 프라이버시 보호 기계학습에서도 fairness 이슈가 있다는 것이 재미있어 선정해보았습니다.",
+    "url" : "https://arxiv.org/abs/2206.07737"
+  },
+  {
     "date": "2025년 08월 21일",
     "title": "Retrieval augmented diffusion models for time series forecasting",
     "presenter": "Juchan Kim",

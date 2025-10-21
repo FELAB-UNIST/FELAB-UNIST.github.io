@@ -552,35 +552,47 @@
                 pubsByYear[year].forEach(pub => {
                     // Determine badge color based on type
                     const typeBadge = this.getTypeBadge(pub.type);
+                    const oralBadge = this.getOralBadge(pub.notes);
+                    const awardBadge = this.getAwardBadge(pub.notes);
                     
                     html += `
                         <div class="publication-item p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="text-sm">
-                                <!-- Type badge -->
-                                ${typeBadge}
-                                <div class="mb-2 mt-2">
-                                    ${this.formatAuthors(pub.authors, member.id)}
+                            <div class="flex items-start gap-4">
+                                <div class="flex-1">
+                                    <div class="text-sm">
+                                        <!-- Type badge -->
+                                        ${typeBadge}
+                                        <div class="mb-2 mt-2">
+                                            ${this.formatAuthors(pub.authors, member.id)}
+                                        </div>
+                                        <div class="font-semibold text-brand-navy mb-1">
+                                            ${pub.link ? 
+                                                `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors inline-flex items-center gap-1 group">
+                                                    <span class="underline decoration-gray-400 underline-offset-2 group-hover:decoration-gray-900">
+                                                        ${pub.title}
+                                                    </span>
+                                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                    </svg>
+                                                </a>` : 
+                                                pub.title
+                                            }
+                                        </div>
+                                        ${pub.venue ? `<div class="text-gray-600 italic">${pub.venue}</div>` : ''}
+                                        ${pub.notes ? `<div class="text-gray-500 text-xs mt-1">${pub.notes}</div>` : ''}
+                                        ${pub.keywords ? `
+                                            <div class="flex flex-wrap gap-2 mt-2">
+                                                ${pub.keywords.map(keyword => 
+                                                    `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${keyword}</span>`
+                                                ).join('')}
+                                            </div>
+                                        ` : ''}
+                                    </div>
                                 </div>
-                                <div class="font-semibold text-brand-navy mb-1">
-                                    ${pub.link ? 
-                                        `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors inline-flex items-center gap-1 group">
-                                            <span class="underline decoration-gray-400 underline-offset-2 group-hover:decoration-gray-900">
-                                                ${pub.title}
-                                            </span>
-                                            <svg class="w-3 h-3 text-gray-400 group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                            </svg>
-                                        </a>` : 
-                                        pub.title
-                                    }
-                                </div>
-                                ${pub.venue ? `<div class="text-gray-600 italic">${pub.venue}</div>` : ''}
-                                ${pub.notes ? `<div class="text-gray-500 text-xs mt-1">${pub.notes}</div>` : ''}
-                                ${pub.keywords ? `
-                                    <div class="flex flex-wrap gap-2 mt-2">
-                                        ${pub.keywords.map(keyword => 
-                                            `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${keyword}</span>`
-                                        ).join('')}
+                                ${awardBadge || oralBadge ? `
+                                    <div class="flex-shrink-0 flex flex-col gap-2">
+                                        ${awardBadge}
+                                        ${oralBadge}
                                     </div>
                                 ` : ''}
                             </div>
@@ -621,6 +633,34 @@
                             type;
             
             return `<span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full ${color}">${displayName}</span>`;
+        },
+        
+        getAwardBadge(notes) {
+            if (notes && notes.toLowerCase().includes('best') && notes.toLowerCase().includes('award')) {
+                return `
+                    <span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full">
+                        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        Award
+                    </span>
+                `;
+            }
+            return '';
+        },
+        
+        getOralBadge(notes) {
+            if (notes && notes.toLowerCase().includes('oral')) {
+                return `
+                    <span class="inline-flex items-center gap-1.5 bg-rose-100 text-rose-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                        Oral
+                    </span>
+                `;
+            }
+            return '';
         },
         
         formatAuthors(authorsString, currentMemberId) {

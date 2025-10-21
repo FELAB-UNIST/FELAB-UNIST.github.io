@@ -25,7 +25,7 @@ const PublicationsManager = {
             const response = await fetch('./data/publications.json');
             const jsonData = await response.json();
             this.data = jsonData.publications;
-            console.log('Publications loaded:', this.data.length); // 디버깅용
+            console.log('Publications loaded:', this.data.length);
         } catch (error) {
             console.error('Failed to load publications data:', error);
             this.data = [];
@@ -38,7 +38,7 @@ const PublicationsManager = {
         
         // Group publications by type
         const groupedByType = this.groupByType(this.data);
-        console.log('Grouped by type:', groupedByType); // 디버깅용
+        console.log('Grouped by type:', groupedByType);
         
         let html = '';
         
@@ -168,7 +168,6 @@ const PublicationsManager = {
     },
     
     groupByType(publications) {
-        // 이미 type이 정확히 지정되어 있으므로 그대로 사용
         return publications.reduce((acc, pub) => {
             const type = pub.type;
             if (!acc[type]) {
@@ -202,6 +201,7 @@ const PublicationsManager = {
         const authorsHtml = this.formatAuthors(pub.authors);
         const keywordsHtml = this.formatKeywords(pub.keywords);
         const awardHtml = this.formatAward(pub.notes);
+        const oralHtml = this.formatOral(pub.notes);
         const linkHtml = pub.link ? 
             `<a href="${pub.link}" target="_blank" rel="noopener noreferrer" 
                 class="text-brand-teal hover:underline">[Paper]</a>` : '';
@@ -215,12 +215,20 @@ const PublicationsManager = {
                 'bg-orange-100 text-orange-700'
             }">${pub.subtype}</span>` : '';
         
+        // Right side badges (award and oral)
+        const rightBadgesHtml = (awardHtml || oralHtml) ? `
+            <div class="flex-shrink-0 flex flex-col gap-2">
+                ${awardHtml}
+                ${oralHtml}
+            </div>
+        ` : '';
+        
         return `
             <div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
                 <div class="flex items-start gap-4">
                     <div class="flex-1">
                         ${subtypeHtml ? `
-                        <div class="flex items-center gap-2 mb-2">
+                        <div class="flex items-center gap-2 mb-2 flex-wrap">
                             ${subtypeHtml}
                             <p class="font-semibold text-brand-navy text-lg pub-title flex-1">${pub.title}</p>
                         </div>` : `
@@ -235,7 +243,7 @@ const PublicationsManager = {
                             ${linkHtml}
                         </div>
                     </div>
-                    ${awardHtml}
+                    ${rightBadgesHtml}
                 </div>
             </div>
         `;
@@ -299,6 +307,20 @@ const PublicationsManager = {
         return '';
     },
     
+    formatOral(notes) {
+        if (notes && notes.toLowerCase().includes('oral')) {
+            return `
+                <span class="inline-flex items-center gap-1.5 bg-rose-100 text-rose-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                    <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                    Oral
+                </span>
+            `;
+        }
+        return '';
+    },
+    
     updateDetailedStats() {
         // Calculate statistics
         const stats = {
@@ -344,7 +366,6 @@ const PublicationsManager = {
         }
     },
     
-    // Search functions remain the same...
     initSearch() {
         const searchInput = document.getElementById('publication-search');
         if (!searchInput) return;
