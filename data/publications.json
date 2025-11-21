@@ -57,7 +57,7 @@
       "title": "Your AI, Not Your View: The Bias of LLMs in Investment Analysis",
       "keywords": ["Finance", "LLMs", "Bias", "Investment Analysis"],
       "notes": "acceptance rate: 32.4%, oral presentation: 15.5%",
-      "link": "https://arxiv.org/abs/2507.20957",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770375",
       "type": "Conference"
     },
     {
@@ -69,7 +69,7 @@
       "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models",
       "keywords": ["Finance", "Portfolio Selection", "Decision-Focused Learning", "Return Prediction"],
       "notes": "acceptance rate: 32.4%, oral presentation: 15.5%",
-      "link": "https://arxiv.org/abs/2409.09684",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770423",
       "type": "Conference"
     },
     {
@@ -81,7 +81,7 @@
       "title": "Estimating Covariance for Global Minimum Variance Portfolio: A Decision-Focused Learning Approach",
       "keywords": ["Finance", "Portfolio Optimization", "Decision-Focused Learning"],
       "notes": "acceptance rate: 32.4%, oral presentation: 15.5%",
-      "link": "https://arxiv.org/abs/2508.10776",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770378",
       "type": "Conference"
     },
     {
@@ -93,7 +93,7 @@
       "title": "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation",
       "keywords": ["Finance", "Collaborative Filtering", "Stock Recommendations"],
       "notes": "acceptance rate: 32.4%",
-      "link": "https://arxiv.org/abs/2306.06590",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770427",
       "type": "Conference"
     },
     {
@@ -105,7 +105,7 @@
       "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
       "keywords": ["Finance", "Question Answering", "Retrieval-Augmented Generation"],
       "notes": "acceptance rate: 32.4%",
-      "link": "https://arxiv.org/abs/2504.15800",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770361",
       "type": "Conference"
     },
     {
@@ -117,7 +117,7 @@
       "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering",
       "keywords": ["Finance", "Agentic Retrieval", "Question Answering", "Benchmark"],
       "notes": "acceptance rate: 32.4%",
-      "link": "https://arxiv.org/abs/2508.14052",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770362",
       "type": "Conference"
     },
     {
@@ -129,7 +129,7 @@
       "title": "Shock-Biased Attention: Enhancing Transformer Hawkes Processes with Amplitude-Driven Temporal Kernels",
       "keywords": ["Transformer", "Hawkes Processes", "Temporal Kernels"],
       "notes": "acceptance rate: 32.4%",
-      "link": "",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770431",
       "type": "Conference"
     },
     {
@@ -141,7 +141,7 @@
       "title": "From Constituents to Index: Interpretable Price Movement Prediction via Cross-Asset Order Flow",
       "keywords": ["Finance", "Price Movement Prediction", "Order Flow"],
       "notes": "acceptance rate: 32.4%",
-      "link": "",
+      "link": "https://dl.acm.org/doi/10.1145/3768292.3770432",
       "type": "Conference"
     },
     {
