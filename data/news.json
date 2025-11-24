@@ -1,6 +1,29 @@
 {
   "news": [
     {
+      "id": "ytn-ai-investment-research-2025",
+      "date": "2025-11-22",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee's Research on LLM Investment Bias Featured on YTN News",
+      "title_kr": "이용재 교수 LLM 투자 편향성 연구, YTN 뉴스 보도",
+      "summary": "Professor Lee's research on LLM investment biases was featured on YTN News, discussing how different AI models like GPT, Gemini, and DeepSeek show distinct investment preferences and trading behaviors. The study reveals that open-source models tend to be more conservative in trading decisions compared to commercial models.",
+      "content": "Professor Yongjae Lee's research on LLM investment analysis was featured on YTN News on November 22, 2025.\n\n[youtube:UZDV8_MxPSQ]\n\nThe news report highlighted the lab's research findings on how different AI models exhibit unique investment biases and trading characteristics. The study found that open-source models like Meta's LLaMA and DeepSeek show more conservative trading behavior compared to commercial models like GPT and Gemini, which tend to be more accommodating to user preferences.\n\nAll models showed a common preference for large-cap and technology stocks, demonstrating systematic biases in their investment decision-making processes.\n\nThis research contributes to understanding AI behavior in financial markets and the development of more sophisticated autonomous trading systems.",
+      "tags": ["YTN", "news coverage", "LLM", "investment bias", "media"],
+      "links": [
+        {
+          "text": "YTN News Video",
+          "url": "https://www.youtube.com/watch?v=UZDV8_MxPSQ",
+          "type": "video"
+        },
+        {
+          "text": "Research Paper: Your AI, Not Your View",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770375",
+          "type": "paper"
+        }
+      ]
+    },
+    {
       "id": "icaif-2025-singapore",
       "date": "2025-11-18",
       "category": "event",

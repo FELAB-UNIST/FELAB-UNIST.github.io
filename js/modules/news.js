@@ -431,7 +431,7 @@ const NewsManager = {
         
         let html = '<div class="mt-8">';
         
-        // Handle content with embedded figures
+        // Handle content with embedded figures and YouTube videos
         if (news.content) {
             let contentParts = news.content;
             let figureHtmls = [];
@@ -459,17 +459,42 @@ const NewsManager = {
                 contentParts = contentParts.replace(new RegExp(`\\${placeholder}`, 'g'), html);
             });
             
+            // Handle YouTube embeds: [youtube:VIDEO_ID] or [youtube:https://youtube.com/watch?v=VIDEO_ID]
+            contentParts = contentParts.replace(/\[youtube:([^\]]+)\]/g, (match, videoId) => {
+                // Extract video ID from full URL if provided
+                let extractedId = videoId;
+                if (videoId.includes('youtube.com') || videoId.includes('youtu.be')) {
+                    const urlMatch = videoId.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+                    if (urlMatch) {
+                        extractedId = urlMatch[1];
+                    }
+                }
+                
+                return `<div class="my-8 youtube-container">
+                    <div class="relative w-full max-w-4xl mx-auto" style="padding-bottom: 56.25%;">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                            src="https://www.youtube.com/embed/${extractedId}" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>`;
+            });
+            
             // Remove any remaining unreplaced figure placeholders
             contentParts = contentParts.replace(/\[figure\d+\]/g, '');
             
-            // Split content into parts and process
-            const contentSegments = contentParts.split(/(<div class="my-8 figure-container"[\s\S]*?<\/div>)/).filter(part => part.trim());
+            // Split content into parts and process (including YouTube containers)
+            const contentSegments = contentParts.split(/(<div class="my-8 (?:figure-container|youtube-container)"[\s\S]*?<\/div>\s*<\/div>|<div class="my-8 figure-container"[\s\S]*?<\/div>)/).filter(part => part.trim());
             
             html += '<div class="prose prose-lg max-w-none">';
             
             contentSegments.forEach(segment => {
-                if (segment.includes('figure-container')) {
-                    // Close prose div, add figure, then reopen prose div
+                if (segment.includes('figure-container') || segment.includes('youtube-container')) {
+                    // Close prose div, add media, then reopen prose div
                     html += '</div>' + segment + '<div class="prose prose-lg max-w-none">';
                 } else if (segment.trim()) {
                     // Process text paragraphs
