@@ -67,43 +67,43 @@
           "type": "website"
         },
         {
-          "text": "Paper: Covariance Estimation",
-          "url": "https://arxiv.org/abs/2508.10776",
+          "text": "Paper: Your AI, Not Your View",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770375",
           "type": "paper"
         },
         {
           "text": "Paper: Return Prediction",
-          "url": "https://arxiv.org/abs/2409.09684",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770423",
           "type": "paper"
         },
         {
-          "text": "Paper: FinDER",
-          "url": "https://arxiv.org/abs/2504.15800",
-          "type": "paper"
-        },
-        {
-          "text": "Paper: FinAgentBench",
-          "url": "https://arxiv.org/abs/2509.13438",
-          "type": "paper"
-        },
-        {
-          "text": "Paper: Your AI, Not Your View",
-          "url": "https://arxiv.org/abs/2507.20957",
+          "text": "Paper: Covariance Estimation",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770378",
           "type": "paper"
         },
         {
           "text": "Paper: Stock Recommendations",
-          "url": "https://arxiv.org/abs/2411.15103",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770427",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: FinDER",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770361",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: FinAgentBench",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770362",
           "type": "paper"
         },
         {
           "text": "Paper: Shock-Biased Attention",
-          "url": "https://arxiv.org/abs/2411.15161",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770431",
           "type": "paper"
         },
         {
           "text": "Paper: Order Flow Prediction",
-          "url": "https://arxiv.org/abs/2411.15162",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770432",
           "type": "paper"
         }
       ]
