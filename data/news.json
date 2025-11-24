@@ -1,6 +1,137 @@
 {
   "news": [
     {
+      "id": "icaif-2025-singapore",
+      "date": "2025-11-18",
+      "category": "event",
+      "featured": true,
+      "title": "UNIST FE Lab Presents Record-Breaking 10 Papers at ACM ICAIF 2025 in Singapore",
+      "title_kr": "UNIST FE Lab, 싱가포르 ACM ICAIF 2025에서 최다 10편의 논문 발표",
+      "summary": "Professor Lee and lab members presented a record 10 papers (3 oral, 5 poster, 2 workshop) at ACM ICAIF 2025 in Singapore, marking the highest number of main-track papers from a single author. The lab also organized 3 workshops, 1 competition, and 1 tutorial, demonstrating Korea's growing presence in Financial AI research with 14% of accepted papers.",
+      "content": "After successfully wrapping up the CIKM 2025 Workshop on Advances in Financial AI in Seoul, Professor Lee and lab members traveled to Singapore to participate in the 6th ACM International Conference on AI in Finance (ICAIF 2025), where they made a remarkable impact on the conference.\n\n<strong>Record-Breaking Participation</strong>\n\nOur group organized 3 workshops, 1 competition, and 1 tutorial, while presenting a total of 10 papers (3 oral presentations, 5 poster presentations, and 2 workshop papers). Professor Lee was recognized as the author with the most main-track papers at this year's conference—a meaningful milestone from his first paper submission in 2022 to joining the organizing committee as workshop chair last year.\n\n<strong>Korea's Growing Presence</strong>\n\n[figure6]\n\nThis year's conference received around 350 submissions with approximately 110 papers accepted. Notably, 14% of accepted papers—based on corresponding author affiliation—came from Korea, ranking third globally following the United States (31%) and the United Kingdom (27%). This demonstrates Korea's significant and growing contribution to Financial AI research.\n\n[figure7]\n\n<strong>Day 1 (November 15): Workshops, Competition, and Tutorial</strong>\n\n[figure1]\n\n<strong>Workshop:</strong> LLMs and Generative AI for Finance\n\n<strong>Competition:</strong> Agentic Retrieval for Financial Documents\n\n<strong>Tutorial:</strong> Decision-Focused Learning in Financial Optimization\nPresented comprehensive approaches to integrating decision-making objectives directly into machine learning model training for financial optimization problems.\n\n<strong>Workshop Paper:</strong> \"Practical QA Benchmark of Financial Security Knowledge for Measuring Capabilities of LLMs\"\nAuthors: 박대영†, Jongyeop Lee†, Yongjae Lee*, In-Young Ko*\n\n<strong>Day 2 (November 16): Additional Workshops</strong>\n\n[figure2]\n\n<strong>Workshop:</strong> Rethinking Financial Time-Series\n\n<strong>Workshop:</strong> AI for Financial Inclusion, Risk Modeling, and Resilience in Emerging Markets\n\n<strong>Workshop Paper:</strong> \"LLM-guided Factor Generation for Explainable Coal Price Forecasting\"\nAuthors: Sangjin Jin†, Suhwan Park†, Kangmin Kim, Inwoo Tae, Juchan Kim, Hoyoung Lee, Junhyeong Lee, Yongjae Lee*\n\n<strong>Day 3 (November 17): Oral and Poster Presentations</strong>\n\n[figure3]\n\n<strong>Oral Presentation:</strong> \"Estimating Covariance for Global Minimum Variance Portfolio: A Decision-Focused Learning Approach\"\nAuthors: Juchan Kim†, Inwoo Tae†, Yongjae Lee*\nThis work demonstrates how decision-focused learning can improve covariance estimation for portfolio optimization.\n\n[figure4]\n\n<strong>Oral Presentation:</strong> \"Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models\"\nAuthors: Junhyeong Lee†, Haeun Jeon†, Hyunglip Bae*, Yongjae Lee*\nExplores how integrating portfolio optimization objectives into return prediction models enhances investment performance.\n\n<strong>Poster Presentation:</strong> \"FinDER: Financial Dataset for QA and Evaluating RAG\"\nAuthors: Jacob Chanyeol Choi*, Jihoon Kwon, Jaeseon Ha, Hojun Choi, Chaewoon Kim, Yongjae Lee, Jy-yong Sohn, Alejandro Lopez-Lira\n\n<strong>Poster Presentation:</strong> \"FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial QA\"\nAuthors: Jacob Chanyeol Choi*, Jihoon Kwon, Alejandro Lopez-Lira, Chaewoon Kim, Minjae Kim, Juneha Hwang, Jaeseon Ha, Hojun Choi, Suyeol Yun, Jin (Yongjin) Kim, Yongjae Lee\n\n<strong>Day 4 (November 18): Final Presentations</strong>\n\n[figure5]\n\n<strong>Oral Presentation:</strong> \"Your AI, Not Your View: The Bias of LLMs in Investment Analysis\"\nAuthors: Hoyoung Lee, Junhyuk Seo, Suhwan Park, Junhyeong Lee, Wonbin Ahn, Jacob Chanyeol Choi, Alejandro Lopez-Lira, Yongjae Lee\nExamines how different LLMs exhibit distinct investment biases shaped by their training data.\n\n<strong>Poster Presentation:</strong> \"Mean Variance Efficient Collaborative Filtering for Stock Recommendations\"\nAuthors: Munki Chung†, Junhyeong Lee†, Yongjae Lee*, Woo Chang Kim*\n\n<strong>Poster Presentation:</strong> \"Shock-Biased Attention: Enhancing Transformer Hawkes Processes with Amplitude-Driven Temporal Kernels\"\nAuthors: Sukmin Hwang, Sungho Lee, Chanyeong Kim, Yongjae Lee*, Woo Chang Kim*\n\n<strong>Poster Presentation:</strong> \"From Constituents to Index: Interpretable Price Movement Prediction via Cross-Asset Order Flow\"\nAuthors: Sungho Lee, Sukmin Hwang, Chanyeong Kim, Mingyu Yang, Yongjae Lee*, Woo Chang Kim*\n\nProfessor Lee expressed gratitude to all students and collaborators, noting that one of the greatest joys of ICAIF is meeting familiar faces that now feel like old friends while making many new connections each year. The conference will return to Milan 🇮🇹 next year.",
+      "figure1": "/public/news/251115_1.jpg",
+      "figure2": "/public/news/251116_1.jpg",
+      "figure3": "/public/news/251117_1.jpg",
+      "figure4": "/public/news/251117_2.jpg",
+      "figure5": "/public/news/251118_1.jpg",
+      "figure6": "/public/news/251118_2.jpg",
+      "figure7": "/public/news/251118_3.jpg",
+      "tags": ["ICAIF", "Singapore", "conference", "record", "Financial AI", "oral presentation", "workshop"],
+      "links": [
+        {
+          "text": "Workshop: LLMs and Generative AI for Finance",
+          "url": "https://ai4f.org/",
+          "type": "website"
+        },
+        {
+          "text": "Competition: Agentic Retrieval",
+          "url": "https://ai4f.org/",
+          "type": "website"
+        },
+        {
+          "text": "Tutorial: Decision-Focused Learning",
+          "url": "https://bridge-po.github.io/",
+          "type": "website"
+        },
+        {
+          "text": "Workshop: Rethinking Financial Time-Series",
+          "url": "https://icaif-25-rtfs.github.io/",
+          "type": "website"
+        },
+        {
+          "text": "Workshop: AI for Emerging Markets",
+          "url": "https://icaif25-finrem.framer.website/",
+          "type": "website"
+        },
+        {
+          "text": "Paper: Covariance Estimation",
+          "url": "https://arxiv.org/abs/2508.10776",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: Return Prediction",
+          "url": "https://arxiv.org/abs/2409.09684",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: FinDER",
+          "url": "https://arxiv.org/abs/2504.15800",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: FinAgentBench",
+          "url": "https://arxiv.org/abs/2509.13438",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: Your AI, Not Your View",
+          "url": "https://arxiv.org/abs/2507.20957",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: Stock Recommendations",
+          "url": "https://arxiv.org/abs/2411.15103",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: Shock-Biased Attention",
+          "url": "https://arxiv.org/abs/2411.15161",
+          "type": "paper"
+        },
+        {
+          "text": "Paper: Order Flow Prediction",
+          "url": "https://arxiv.org/abs/2411.15162",
+          "type": "paper"
+        }
+      ]
+    },
+    {
+      "id": "cikm-financial-ai-workshop-2025",
+      "date": "2025-11-14",
+      "category": "event",
+      "featured": false,
+      "title": "CIKM 2025 Workshop on Advances in Financial AI Successfully Held in Seoul",
+      "title_kr": "CIKM 2025 Workshop on Advances in Financial AI 서울에서 성공적으로 개최",
+      "summary": "Professor Lee co-organized the ACM CIKM 2025 Workshop on Advances in Financial AI at COEX in Seoul, bringing together leading Financial AI researchers from academia, industry, and public agencies to discuss innovations, risk, and responsibility in the era of LLMs.",
+      "content": "[figure1]\n\nThe ACM CIKM 2025 Workshop on Advances in Financial AI: Innovations, Risk, and Responsibility in the Era of LLMs was successfully held at COEX in Gangnam, Seoul.\n\n[figure2]\n\nThe workshop brought together many of the world's leading Financial AI researchers in Korea for an exceptional gathering filled with deep insights, rigorous discussions, and inspiring exchanges across academia, industry, and public agencies. The conversations spanned from foundational perspectives on LLM behavior in financial analysis to practical guidance on deploying Responsible AI in real financial systems.\n\n[figure3]\n\n<strong>Keynote Speakers:</strong>\n\nAlejandro Lopez-Lira (University of Florida): Shared insights on LLM applications in financial analysis\n\nDhagash Mehta (BlackRock): Discussed industry perspectives on Financial AI deployment\n\nHao Ni (UCL): Presented on theoretical foundations of AI in finance\n\n<strong>Invited Talks:</strong>\n\nNicole Cho (J.P. Morgan AI Research): Industry applications of AI in finance\n\nSojung Kim (Bank of Korea): Central bank perspectives on Financial AI\n\nSeonkyu Lim (Korea Finance Telecommunications & Clearings Institute): Financial infrastructure and AI\n\nYeonhee Lee (Electronics and Telecommunications Research Institute): AI technology development for finance\n\nJongin Choi (Korea Credit Information Services): Credit information and AI applications\n\nEric Jiawei He (RBC Borealis): Banking sector AI innovations\n\nJoo Lee (Arrowpoint Investment Partners) & Jin (Yongjin) Kim (LinqAlpha): Investment management with AI\n\nWonbin Ahn (LG AI Research): Corporate AI research perspectives\n\n<strong>Accepted Papers:</strong>\n\nOral presentations were delivered by Juhyeong Kim (Mirae Asset Global Investments) and Hanwool Lee (Shinhan Securities Co.), presenting cutting-edge research in Financial AI.\n\n[figure4]\n\n<strong>Panel Discussion:</strong>\n\nModerated by Jin (Yongjin) Kim (LinqAlpha), with panelists Bhaskarjit Sarmah (Domyn), Hyeyoung Yoon (KFTC), Eric Jiawei He (RBC Borealis), Sojung Kim (Bank of Korea), and Joo Lee (Arrowpoint), discussing the future of responsible AI in finance.\n\n<strong>Workshop Organizers:</strong>\nYongjae Lee (UNIST), Dhagash Mehta (BlackRock), Stefan Zohren (University of Oxford), Jacob Chanyeol Choi (LinqAlpha), Yoon Kim (MIT), Nazanin Mehrasa (RBC Borealis), Chung-Chi Chen (AIST), Chulheum Lee (KCIS), Yeonhee Lee (ETRI), Eunsook Oh (KFTC)\n\n<strong>Workshop Assistants:</strong>\nHoyoung Lee (UNIST), Katie Duke (LinqAlpha)",
+      "figure1": "/public/news/251021_1.jpg",
+      "figure2": "/public/news/251021_2.jpg",
+      "figure3": "/public/news/251021_3.jpg",
+      "figure4": "/public/news/251021_4.jpg",
+      "figure5": "/public/news/251021_5.jpg",
+      "tags": ["workshop", "CIKM", "Financial AI", "Seoul", "LLM"],
+      "links": []
+    },
+    {
+      "id": "hong-kong-talks-2025",
+      "date": "2025-11-07",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Delivers Invited Talks in Hong Kong at UBS HOLT Conference and CUHK",
+      "title_kr": "이용재 교수, 홍콩 UBS HOLT 컨퍼런스 및 중문대 초청 발표",
+      "summary": "Professor Lee visited Hong Kong for the first time to deliver two invited talks on LLM applications in investment analysis at the UBS Quant, Evidence Lab and HOLT Conference 2025 and The Chinese University of Hong Kong.",
+      "content": "Professor Lee completed his first visit to Hong Kong, delivering two invited talks on the application of large language models in finance.\n\n<strong>November 6 (Thu): \"Hidden Bias and Hidden Alpha: Understanding LLM Behavior in Investment Analysis\"</strong>\n\nCo-presented with Jacob Chanyeol Choi (co-CEO of LinqAlpha) at the UBS Quant, Evidence Lab and HOLT Conference 2025. The presentation explored how LLMs exhibit implicit investment biases and how these can be understood and utilized in investment analysis.\n\n<strong>November 7 (Fri): \"LLMs in Portfolio Selection\"</strong>\n\nDelivered at the Department of Systems Engineering and Engineering Management at The Chinese University of Hong Kong. The talk covered recent research on applying large language models to portfolio construction and selection.\n\n[figure1]\n\nThe presentations were based on three key research papers:\n\n<strong>1. \"Your AI, Not Your View: The View of LLMs in Investment Analysis\"</strong>\n(with Hoyoung Lee, Junhyeok Seo, Suhwan Park, Junhyeong Lee, Wonbin Ahn, Jacob Chanyeol Choi, Alejandro Lopez-Lira)\nAccepted for oral presentation (top 15.5%) at ACM ICAIF 2025\n\n<strong>2. \"THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics\"</strong>\n(with Hoyoung Lee, Wonbin Ahn, Suhwan Park, Jaehoon Lee, Minjae Kim, Sungdong Yoo, Tae Yoon Lim, Woohyung Lim)\nAccepted for oral presentation at ACM CIKM 2025 Applied Research Track (acceptance rate: 30.1%)\n\n<strong>3. \"Integrating LLM-Generated Views into Mean-Variance Optimization using the Black-Litterman Model\"</strong>\n(with Youngbin Lee, Yejin Kim, Juhyeong Kim, Suin Kim, Yoontae Hwang)\n\nProfessor Lee expressed gratitude to Dr. Chang Hwan Sung and Will Stephens for connecting him to the UBS event, to Prof. Dohyun Ahn for arranging the CUHK seminar on their graduation day, to Dr. Taeho Kim for being an excellent guide, and to Yanwei Jia, Anita Mansbridge, and all others who made the visit memorable.\n\nThe visit highlighted the growing attention from both industry and academia to the applications and challenges of using large language models in investment analysis.",
+      "figure1": "/public/news/241107_1.jpg",
+      "tags": ["Hong Kong", "UBS", "CUHK", "LLM", "portfolio selection", "invited talk"],
+      "links": [
+        {
+          "text": "Paper 1: Your AI, Not Your View",
+          "url": "https://arxiv.org/abs/2507.20957",
+          "type": "paper"
+        },
+        {
+          "text": "Paper 2: THEME",
+          "url": "https://arxiv.org/abs/2508.16936",
+          "type": "paper"
+        },
+        {
+          "text": "Paper 3: Black-Litterman Model",
+          "url": "https://arxiv.org/abs/2504.14345",
+          "type": "paper"
+        }
+      ]
+    },
+    {
       "id": "national-ai-strategy-committee-2025",
       "date": "2025-10-01",
       "category": "achievement",
@@ -25,7 +156,7 @@
       "links": [
       {
       "text": "Paper Link",
-      "url": "https://lnkd.in/guUESHnS",
+      "url": "https://arxiv.org/abs/2502.00828",
       "type": "paper"
       }
       ]
@@ -43,12 +174,12 @@
       "links": [
         {
           "text": "Paper 1: Your AI, Not Your View",
-          "url": "https://lnkd.in/gZYWiC8p",
+          "url": "https://arxiv.org/abs/2507.20957",
           "type": "paper"
         },
         {
-          "text": "Paper 3: Black-Litterman Model",
-          "url": "https://lnkd.in/gzwjA5Ha",
+          "text": "Paper 2: Black-Litterman Model",
+          "url": "https://arxiv.org/abs/2504.14345",
           "type": "paper"
         }
       ]
@@ -57,7 +188,7 @@
       "id": "hwang-professor-appointment-2025",
       "date": "2025-07-20",
       "category": "achievement",
-      "featured": true,
+      "featured": false,
       "title": "Dr. Yoontae Hwang Appointed Assistant Professor at Pusan National University",
       "title_kr": "황윤태 박사, 부산대학교 데이터사이언스학과 조교수 임용",
       "summary": "Dr. Yoontae Hwang, the first Ph.D. student of UNIST FE Lab, has been appointed as Assistant Professor in the Department of Data Science at Pusan National University after completing his postdoctoral research at Oxford University.",
@@ -66,7 +197,7 @@
       "links": [
         {
           "text": "Yoontae's Website",
-          "url": "https://lnkd.in/gTUVAS-v",
+          "url": "https://tsi-yoontae.github.io/#members",
           "type": "website"
         }
       ]
@@ -87,12 +218,12 @@
       "links": [
         {
           "text": "Tutorial Website",
-          "url": "https://lnkd.in/grJnbdpF",
+          "url": "https://sites.google.com/view/irfin/home",
           "type": "website"
         },
         {
           "text": "Presentation Slides",
-          "url": "https://lnkd.in/gKbP2YPu",
+          "url": "https://www.dropbox.com/scl/fi/83aqlnpnfp7twcqg0yx8c/LLMs-for-Portfolio-Selection-Yongjae-Lee-UNIST.pdf?rlkey=wbujfpvw9ual3lw4kmhp00fli&st=85ngz8fh&dl=0",
           "type": "slides"
         }
       ]
