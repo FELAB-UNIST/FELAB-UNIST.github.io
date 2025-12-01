@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "id": "jeonse-fraud-2025",
+      "status": "ongoing",
+      "title_kr": "전세사기 사전탐지 모델 연구 용역",
+      "title_en": "Research on Pre-detection Model for Jeonse (Lease) Fraud",
+      "funding_agency": "정부출연기관용역사업 (용역)",
+      "duration": "2025.11 ~ 2025.12",
+      "project_number": "2.251210.01",
+      "notes": "",
+      "keywords": ["Fraud Detection", "Real Estate", "Jeonse", "Machine Learning"],
+      "participants": ["inwoo-tae"]
+    },
+    {
       "id": "seed-2025",
       "status": "ongoing",
       "title_kr": "개인투자자의 다양한 투자 선호를 고려한 개인 맞춤형 자산관리 모형 개발",
@@ -8,6 +20,7 @@
       "funding_agency": "한국연구재단 (NRF of Korea)",
       "duration": "2025.09 ~ 2026.08",
       "project_number": "2.251152.01",
+      "notes": "이공계열 우수신진 (씨앗)",
       "keywords": ["Behavioral Economics", "Individual Investors", "Big Data", "Trading Patterns"],
       "participants": []
     },
@@ -55,7 +68,7 @@
       "project_number": "2022R1I1A4069163",
       "notes": "학제간융합연구. UNIST 장현진 교수님, 서울대학교 이정혜 교수님과 공동",
       "keywords": ["Household Finance", "AI", "Life-cycle Planning", "Optimization"],
-      "participants": ["inwoo-tae", "hyungwoo-kong"]
+      "participants": ["yoontae-hwang","sohyeon-kwon","minjoo-choi","youngbin-lee","seonmi-kim","seyoung-kim","yejin-kim","junhyeong-lee","juchan-kim","inwoo-tae", "hyungwoo-kong","kangmin-kim","hoyoung-lee","suhwan-park","sangjin-jin"]
     },
     {
       "id": "kb-trading-classification-2024",
@@ -148,7 +161,7 @@
       "project_number": "2.210910.01",
       "notes": "Financial Intelligence Team, Knowledge AI Lab",
       "keywords": ["Generative Models", "Market Simulation", "Financial Modeling"],
-      "participants": ["yoontae-hwang"]
+      "participants": ["yoontae-hwang","sohyeon-kwon","minjoo-choi","youngbin-lee","seyoung-kim"]
     },
     {
       "id": "individual-investor-nrf-2021",

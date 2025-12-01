@@ -523,90 +523,155 @@
                 return;
             }
             
-            // Group publications by year
-            const pubsByYear = {};
+            // Group publications by category
+            const categories = {
+                'Journal & Conference Papers': [],
+                'Workshop & Bridge Papers': [],
+                'Non-Refereed Papers': [],
+                'Working Papers': []
+            };
+            
             memberPubs.forEach(pub => {
-                const year = pub.year === 'working_paper' ? 'Working Papers' : pub.year;
-                if (!pubsByYear[year]) {
-                    pubsByYear[year] = [];
+                if (pub.type === 'Journal' || pub.type === 'Conference') {
+                    categories['Journal & Conference Papers'].push({...pub, subtype: pub.type});
+                } else if (pub.type === 'Conference Workshop' || pub.type === 'Bridge Paper') {
+                    categories['Workshop & Bridge Papers'].push({...pub, subtype: pub.type === 'Conference Workshop' ? 'Workshop' : 'Bridge'});
+                } else if (pub.type === 'Non-Refereed Papers') {
+                    categories['Non-Refereed Papers'].push(pub);
+                } else if (pub.type === 'Working Papers' || pub.year === 'working_paper') {
+                    categories['Working Papers'].push(pub);
+                } else if (pub.type === 'Book in Progress') {
+                    // Book in Progress goes to Working Papers category
+                    categories['Working Papers'].push(pub);
+                } else {
+                    // Default to Journal & Conference
+                    categories['Journal & Conference Papers'].push(pub);
                 }
-                pubsByYear[year].push(pub);
             });
             
-            // Sort years (Working Papers at the end)
-            const years = Object.keys(pubsByYear).sort((a, b) => {
-                if (a === 'Working Papers') return 1;
-                if (b === 'Working Papers') return -1;
-                return b - a;
+            // Sort each category by year (most recent first)
+            Object.keys(categories).forEach(cat => {
+                categories[cat].sort((a, b) => {
+                    if (a.year === 'working_paper') return 1;
+                    if (b.year === 'working_paper') return -1;
+                    return b.year - a.year;
+                });
             });
             
-            // Render publications
+            // Render publications by category
             let html = '';
-            years.forEach(year => {
+            
+            Object.keys(categories).forEach(categoryName => {
+                const pubs = categories[categoryName];
+                if (pubs.length === 0) return;
+                
                 html += `
                     <div class="mb-8">
-                        <h3 class="text-lg font-bold text-brand-navy mb-4 pb-2 border-b">${year}</h3>
-                        <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-brand-navy mb-4 pb-2 border-b-2 border-brand-accent">
+                            ${categoryName} (${pubs.length})
+                        </h3>
                 `;
                 
-                pubsByYear[year].forEach(pub => {
-                    // Determine badge color based on type
-                    const typeBadge = this.getTypeBadge(pub.type);
-                    const oralBadge = this.getOralBadge(pub.notes);
-                    const awardBadge = this.getAwardBadge(pub.notes);
+                // Group by year within category
+                const pubsByYear = {};
+                pubs.forEach(pub => {
+                    const year = pub.year === 'working_paper' ? 'In Progress' : pub.year;
+                    if (!pubsByYear[year]) {
+                        pubsByYear[year] = [];
+                    }
+                    pubsByYear[year].push(pub);
+                });
+                
+                // Sort years
+                const years = Object.keys(pubsByYear).sort((a, b) => {
+                    if (a === 'In Progress') return 1;
+                    if (b === 'In Progress') return -1;
+                    return b - a;
+                });
+                
+                years.forEach(year => {
+                    html += `
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-3">${year}</h4>
+                            <div class="space-y-3">
+                    `;
+                    
+                    pubsByYear[year].forEach(pub => {
+                        html += this.createPublicationCard(pub, member.id);
+                    });
                     
                     html += `
-                        <div class="publication-item p-4 hover:bg-gray-50 rounded-lg transition-colors">
-                            <div class="flex items-start gap-4">
-                                <div class="flex-1">
-                                    <div class="text-sm">
-                                        <!-- Type badge -->
-                                        ${typeBadge}
-                                        <div class="mb-2 mt-2">
-                                            ${this.formatAuthors(pub.authors, member.id)}
-                                        </div>
-                                        <div class="font-semibold text-brand-navy mb-1">
-                                            ${pub.link ? 
-                                                `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors inline-flex items-center gap-1 group">
-                                                    <span class="underline decoration-gray-400 underline-offset-2 group-hover:decoration-gray-900">
-                                                        ${pub.title}
-                                                    </span>
-                                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                    </svg>
-                                                </a>` : 
-                                                pub.title
-                                            }
-                                        </div>
-                                        ${pub.venue ? `<div class="text-gray-600 italic">${pub.venue}</div>` : ''}
-                                        ${pub.notes ? `<div class="text-gray-500 text-xs mt-1">${pub.notes}</div>` : ''}
-                                        ${pub.keywords ? `
-                                            <div class="flex flex-wrap gap-2 mt-2">
-                                                ${pub.keywords.map(keyword => 
-                                                    `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${keyword}</span>`
-                                                ).join('')}
-                                            </div>
-                                        ` : ''}
-                                    </div>
-                                </div>
-                                ${awardBadge || oralBadge ? `
-                                    <div class="flex-shrink-0 flex flex-col gap-2">
-                                        ${awardBadge}
-                                        ${oralBadge}
-                                    </div>
-                                ` : ''}
                             </div>
                         </div>
                     `;
                 });
                 
-                html += `
-                        </div>
-                    </div>
-                `;
+                html += `</div>`;
             });
             
             container.innerHTML = html;
+        },
+        
+        createPublicationCard(pub, memberId) {
+            const typeBadge = pub.subtype ? this.getSubtypeBadge(pub.subtype) : this.getTypeBadge(pub.type);
+            const oralBadge = this.getOralBadge(pub.notes);
+            const awardBadge = this.getAwardBadge(pub.notes);
+            
+            return `
+                <div class="publication-item p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-1">
+                            <div class="text-sm">
+                                <!-- Type badge -->
+                                ${typeBadge}
+                                <div class="mb-2 mt-2">
+                                    ${this.formatAuthors(pub.authors, memberId)}
+                                </div>
+                                <div class="font-semibold text-brand-navy mb-1">
+                                    ${pub.link ? 
+                                        `<a href="${pub.link}" target="_blank" class="hover:text-brand-accent transition-colors inline-flex items-center gap-1 group">
+                                            <span class="underline decoration-gray-400 underline-offset-2 group-hover:decoration-gray-900">
+                                                ${pub.title}
+                                            </span>
+                                            <svg class="w-3 h-3 text-gray-400 group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </a>` : 
+                                        pub.title
+                                    }
+                                </div>
+                                ${pub.venue ? `<div class="text-gray-600 italic">${pub.venue}</div>` : ''}
+                                ${pub.notes ? `<div class="text-gray-500 text-xs mt-1">${pub.notes}</div>` : ''}
+                                ${pub.keywords ? `
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        ${pub.keywords.map(keyword => 
+                                            `<span class="text-xs px-2 py-1 bg-gray-100 rounded">${keyword}</span>`
+                                        ).join('')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        ${awardBadge || oralBadge ? `
+                            <div class="flex-shrink-0 flex flex-col gap-2">
+                                ${awardBadge}
+                                ${oralBadge}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        },
+        
+        getSubtypeBadge(subtype) {
+            const badgeColors = {
+                'Journal': 'bg-blue-100 text-blue-700',
+                'Conference': 'bg-green-100 text-green-700',
+                'Workshop': 'bg-purple-100 text-purple-700',
+                'Bridge': 'bg-orange-100 text-orange-700'
+            };
+            
+            const color = badgeColors[subtype] || 'bg-gray-100 text-gray-700';
+            return `<span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full ${color}">${subtype}</span>`;
         },
 
         getTypeBadge(type) {

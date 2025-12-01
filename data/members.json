@@ -242,12 +242,13 @@
         "start_date": "2024-02",
         
         "bio_short": "Working on portfolio theory, machine learning, and knowledge graphs",
-        "bio_full": "Currently pursuing M.S. in Industrial Engineering at UNIST, with a background in Computer Science. Interested in portfolio theory, machine learning, and knowledge graph applications in finance.",
+        "bio_full": "Currently pursuing Ph.D-M.S combined course in Industrial Engineering at UNIST, with a background in Computer Science. Interested in portfolio theory, machine learning, and knowledge graph applications in finance.",
         
         "research_interests": [
           "Portfolio Theory",
           "Machine Learning",
-          "Knowledge Graph"
+          "Knowledge Graph",
+          "Causal Graph"
         ],
         
         "education": [
@@ -292,7 +293,7 @@
         "start_date": "2024-02",
         
         "bio_short": "Working on portfolio optimization for retail investors and machine learning applications",
-        "bio_full": "M.S. student in Industrial Engineering at UNIST, working under Prof. Yongjae Lee. Research focuses on portfolio optimization, especially for retail investors, and machine learning applications in finance.",
+        "bio_full": "Ph.D-M.S combined course in Industrial Engineering at UNIST, working under Prof. Yongjae Lee. Research focuses on portfolio optimization, especially for retail investors, and machine learning applications in finance.",
         
         "research_interests": [
           "Portfolio Optimization (especially for retail investors)",
@@ -378,7 +379,7 @@
         "links": {
           "google_scholar": "https://scholar.google.com/citations?hl=ko&user=rxmr19sAAAAJ",
           "linkedin": "https://www.linkedin.com/in/juchan-kim-11a846249/",
-          "website" : "https://jkim621.github.io/"
+          "website" : "https://juchan-6021.github.io/"
         }
       },
       

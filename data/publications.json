@@ -1,16 +1,64 @@
 {
   "publications": [
     {
-      "id": "book_2025_advanced_portfolio",
+      "id": "pub_2025_cikm_workshop",
       "year": 2025,
-      "authors": "Yongjae Lee, Jang Ho Kim, Woo Chang Kim, Frank J. Fabozzi",
-      "author_ids": ["yongjae-lee"],
-      "venue": "",
-      "title": "Advanced Portfolio Optimization: Integrating Classical Models, Robust Approaches, and Machine Learning",
-      "keywords": ["Finance", "Portfolio Optimization", "Machine Learning"],
+      "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
+      "author_ids": ["youngbin-lee","yejin-kim","yongjae-lee"],
+      "venue": "CIKM'25 Workshop on Advances in Financial AI: Innovations, Risk, and Responsibility in the Era of LLMs",
+      "title": "GuruAgents: Emulating Wise Investors with Prompt-Guided LLM Agents",
+      "keywords": ["Finance","LLMs","Investment Analysis"],
+      "notes": "",
+      "link": "https://arxiv.org/abs/2510.01664",
+      "type": "Conference Workshop"
+    },
+    {
+      "id": "pub_2025_cikm_workshop",
+      "year": 2025,
+      "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
+      "author_ids": ["youngbin-lee","yejin-kim","yongjae-lee"],
+      "venue": "CIKM'25 Workshop on Advances in Financial AI: Innovations, Risk, and Responsibility in the Era of LLMs",
+      "title": "LLM-Enhanced Black-Litterman Portfolio Optimization",
+      "keywords": ["Finance", "Optimization"],
+      "notes": "",
+      "link": "https://arxiv.org/abs/2504.14345",
+      "type": "Conference Workshop"
+    },
+    {
+      "id": "pub_2025_icaif_workshop_timeseries",
+      "year": 2025,
+      "authors": "Sangjin Jin†, Suhwan Park†, Kangmin Kim, Inwoo Tae, Juchan Kim, Hoyoung Lee, Junhyeong Lee, Yongjae Lee*",
+      "author_ids": ["sangjin-jin", "suhwan-park", "kangmin-kim", "inwoo-tae", "juchan-kim", "hoyoung-lee", "junhyeong-lee", "yongjae-lee"],
+      "venue": "ICAIF'25 Workshop on Rethinking Financial Time-Series: Foundations, Frontiers, and Future Directions",
+      "title": "LLM-guided Factor Generation for Explainable Coal Price Forecasting",
+      "keywords": ["Finance", "LLMs"],
       "notes": "",
       "link": "",
-      "type": "Book in Progress"
+      "type": "Conference Workshop"
+    },
+    {
+      "id": "pub_2025_icaif_workshop_generative",
+      "year": 2025,
+      "authors": "Daeyoung Park†, Jongyeop Lee†, Yongjae Lee*, Inyoung Ko*",
+      "author_ids": ["daeyoung-park", "jongyeop-lee", "yongjae-lee", "inyoung-ko"],
+      "venue": "ICAIF'25 The 2nd Workshop on  LLMs and Generative AI for Finance",
+      "title": "Practical QA Benchmark of Financial Security Knowledge for Measuring Capabilities of LLMs",
+      "keywords": ["Finance", "LLMs", "Question Answering"],
+      "notes": "",
+      "link": "",
+      "type": "Conference Workshop"
+    },
+    {
+      "id": "pub_2025_cikm_workshop",
+      "year": 2025,
+      "authors": "Juhyeong Kim, Sungyoon Choi, Youngbin Lee, Yejin Kim, Yongmin Choi, Yongjae Lee**",
+      "author_ids": ["yongjae-lee"],
+      "venue": "CIKM'25 Workshop on Advances in Financial AI: Innovations, Risk, and Responsibility in the Era of LLMs",
+      "title": "Decision by Supervised Learning with Deep Ensembles: A Practical Framework for Robust Portfolio Optimization",
+      "keywords": ["Finance", "Optimization", "Machine Learning"],
+      "notes": "",
+      "link": "https://arxiv.org/abs/2503.13544",
+      "type": "Conference Workshop"
     },
     {
       "id": "pub_2025_jpm_clustering",
