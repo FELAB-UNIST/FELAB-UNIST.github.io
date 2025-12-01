@@ -267,8 +267,9 @@
           }
         ],
         
-        "ta_experience": [
+        "teaching_experience": [
           {
+            "role": "Teaching Assistant",
             "course": "IE412 AI for Finance",
             "semester": "Spring 2024",
             "institution": "UNIST"
@@ -332,23 +333,27 @@
           }
         ],
         
-        "ta_experience": [
+        "teaching_experience": [
           {
+            "role": "Teaching Assistant",
             "course": "IE313 Time Series Analysis",
-            "semester": "Fall 2024",
+            "semester": "Fall 2024, Fall 2025",
             "institution": "UNIST"
           },
           {
+            "role": "Teaching Assistant",
             "course": "IE412 AI for Finance",
             "semester": "Spring 2024",
             "institution": "UNIST"
           },
-          {
+          { 
+            "role": "Teaching Assistant",
             "course": "MTH111 Calculus I",
             "semester": "Spring 2019, Spring 2022",
             "institution": "UNIST"
           },
           {
+            "role": "Teaching Assistant",
             "course": "MTH112 Calculus II",
             "semester": "Fall 2019, Fall 2022",
             "institution": "UNIST"

@@ -425,18 +425,41 @@
             const section = document.getElementById('teaching-section');
             const content = document.getElementById('teaching-content');
             
-            if (member.ta_experience && member.ta_experience.length > 0) {
+            // Support both new teaching_experience and legacy ta_experience
+            const teachingData = member.teaching_experience || member.ta_experience;
+            
+            if (teachingData && teachingData.length > 0) {
                 section.classList.remove('hidden');
-                content.innerHTML = member.ta_experience.map(ta => `
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <h4 class="font-medium text-brand-navy">${ta.course}</h4>
-                        <p class="text-sm text-gray-600">${ta.semester}</p>
-                        <p class="text-sm text-gray-500">${ta.institution}</p>
-                    </div>
-                `).join('');
+                content.innerHTML = teachingData.map(teaching => {
+                    const role = teaching.role || 'Teaching Assistant';
+                    const roleBadgeColor = this.getRoleBadgeColor(role);
+                    
+                    return `
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <div class="flex items-start justify-between mb-2">
+                                <h4 class="font-medium text-brand-navy">${teaching.course}</h4>
+                                <span class="text-xs px-2 py-1 rounded-full ${roleBadgeColor}">${role}</span>
+                            </div>
+                            <p class="text-sm text-gray-600">${teaching.semester}</p>
+                            <p class="text-sm text-gray-500">${teaching.institution}</p>
+                        </div>
+                    `;
+                }).join('');
             } else {
                 section.classList.add('hidden');
             }
+        },
+        
+        getRoleBadgeColor(role) {
+            const roleColors = {
+                'Teaching Assistant': 'bg-blue-100 text-blue-700',
+                'Lecturer': 'bg-green-100 text-green-700',
+                'PhD Lecture': 'bg-purple-100 text-purple-700',
+                'Guest Lecturer': 'bg-orange-100 text-orange-700',
+                'Instructor': 'bg-indigo-100 text-indigo-700'
+            };
+            
+            return roleColors[role] || 'bg-gray-100 text-gray-700';
         },
         
         renderService(member) {
