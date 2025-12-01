@@ -17,7 +17,7 @@
     "date": "2025년 10월 29일",
     "title": "Learning to Learn in Interactive Constraint Acquisition",
     "presenter": "Junhyeong Lee",
-    "reason" : "제가 까먹고 있다가 늦게 올려드립니다...죄송합니다 ㅠ 이번 논문은 AAAI'24에 억셉된 논문입니다. 논문 내용 자체는 아주 특별하거나 그렇게까지 맜있는건 아니지만, 예전에 진행하고자 랩미팅때 소개하였던 '자연어만으로 최적화 모델링하기'에 관해서 여러 좋은 motivation이 될 수 있을 것 같습니다. 그래서 해당 논문과 다른 여러 논문들을 소개하는 시간을 가져 보려고 합니다. 우선 이 논문은 Constraint Acquisition (CA)이라는 분야를 다루는 연구입니다. CA에서는 user가 명시적으로 제약식을 모두 적어주지 않아도, 다양한 질문에 대해서 user가 대답을 하면 해당 대답을 기반으로 다양한 변수들 사이의 구체적인 제약 관계를 학습합니다. 이 과정을 반복하면서 드러나지 않은 다양한 제약들에 대해서 모델링이 가능하게 됩니다. 저는 이러한 연구의 움직임이 결국 LLM/Agent를 통해서 인간의 자연어만으로도 user가 원하는 목적, 만족하고자 하는 제약등을 context로 부터 파악하여 모델링 후 solution까지 도출하는 하나의 시스템으로 나아가는 과정이라는 생각이 들었습니다. 그래서 이번 논문 내용 설명과 함께 제가 생각하는 다음 연구 방향에 대한 내용도 간단하게 공유해보려고 합니다.",
+    "reason" : "이번 논문은 AAAI'24에 억셉된 논문입니다. 논문 내용 자체는 아주 특별하거나 그렇게까지 맜있는건 아니지만, 예전에 진행하고자 랩미팅때 소개하였던 '자연어만으로 최적화 모델링하기'에 관해서 여러 좋은 motivation이 될 수 있을 것 같습니다. 그래서 해당 논문과 다른 여러 논문들을 소개하는 시간을 가져 보려고 합니다. 우선 이 논문은 Constraint Acquisition (CA)이라는 분야를 다루는 연구입니다. CA에서는 user가 명시적으로 제약식을 모두 적어주지 않아도, 다양한 질문에 대해서 user가 대답을 하면 해당 대답을 기반으로 다양한 변수들 사이의 구체적인 제약 관계를 학습합니다. 이 과정을 반복하면서 드러나지 않은 다양한 제약들에 대해서 모델링이 가능하게 됩니다. 저는 이러한 연구의 움직임이 결국 LLM/Agent를 통해서 인간의 자연어만으로도 user가 원하는 목적, 만족하고자 하는 제약등을 context로 부터 파악하여 모델링 후 solution까지 도출하는 하나의 시스템으로 나아가는 과정이라는 생각이 들었습니다. 그래서 이번 논문 내용 설명과 함께 제가 생각하는 다음 연구 방향에 대한 내용도 간단하게 공유해보려고 합니다.",
     "url" : "https://arxiv.org/abs/2312.10795"
   },
   {
@@ -31,7 +31,7 @@
     "date": "2025년 09월 24일",
     "title": "Basis Assets",
     "presenter": "Yongjae Lee",
-    "reason" : "얼마 전 자본시장연구원 컨퍼런스에서 서울대학교 경제학과 안동현 교수님을 뵈었습니다. 제가 대학원생 때 처음으로 쓴 국제학술지 논문인 Journal of Portfolio Management에 실린 Cost of Asset Allocation을 쓸 때 철학적(?) 기반이 되었던 논문이 바로 안동현 교수님의 Basis Assets였습니다. 대략적인 내용은 아주 간단명료 합니다. asset pricing model은 자산 수익률을 여러 factor들로 설명하려 하는데, 사실 이 factor라는 것은 실제 거래 가능한 상품은 아닙니다. 안동현 교수님의 Basis Assets의 아이디어는 factor 대신에 실제 거래 가능한 portfolio들로 asset pricing model을 만들 수 있지 않겠느냐 하는 것입니다. 김우창 교수님과 제가 쓴 cost of asset allocation 논문은 비슷하지만 좀 다른 부분이 전체 주식 시장을 n개의 group으로 나누고 싶은데, 각 group을 equal-weight portfolio로 만들어 자산배분을 했을 때 가장 Sharpe ratio가 높은 그룹이 무엇이겠느냐 하는 것이었습니다. 여튼 이번에 안동현 교수님과 행사 후 오찬 자리에서 잠깐 말씀을 나누었는데 이 basis asset을 ML/AI를 활용해서 다시 쓰려고 하고 계시다고 합니다. 이걸 너무 asset pricing이 잘되는 방향으로만 최적화 해버리면 너무 corner solution 같이 실제로 쓰기 어려운게 나오고, 그렇다고 그렇게 하지 않으려고 하면 과연 어떻게 해야 좋은 basis asset을 얻었다고 할 수 있는건지 등등 애매한 포인트가 많다고 하셨습니다. 사실 이는 저도 cost of asset allocation 논문부터 이후에 여러 clustering 연구 또는 representation 연구를 해오면서 느낀바였습니다. 결국엔 어떤 clustering, 어떤 representation이 좋은걸까라는 질문으로 귀결됩니다. finance 논문 답게 꽤나 길기 때문에 journal club 때는 핵심 내용 위주로 소개를 하고, 제가 그동안 해왔던 고민을 같이 이야기 나눠보는 시간을 가지면 좋을 듯 합니다.",
+    "reason" : "서울대학교 경제학과 안동현 교수님의 Basis Assets 논문은 제가 대학원생 때 처음으로 쓴 국제학술지 논문인 Journal of Portfolio Management의 \"Cost of Asset Allocation\"을 쓸 때 철학적 기반이 되었던 논문입니다. 핵심 아이디어는 간단명료합니다. Asset pricing model은 자산 수익률을 여러 factor들로 설명하려 하는데, 이 factor라는 것은 실제 거래 가능한 상품이 아닙니다. Basis Assets의 아이디어는 factor 대신 실제 거래 가능한 portfolio들로 asset pricing model을 구성할 수 있지 않겠느냐 하는 것입니다. 김우창 교수님과 제가 쓴 \"Cost of Asset Allocation\" 논문은 비슷하지만 조금 다른 접근입니다. 전체 주식 시장을 n개의 group으로 나누고, 각 group을 equal-weight portfolio로 만들어 자산배분을 했을 때 가장 Sharpe ratio가 높은 grouping이 무엇인가를 탐구했습니다. 최근 이 Basis Assets를 ML/AI를 활용해서 재구성하려는 시도들이 있는데, 여기에는 까다로운 문제가 있습니다. Asset pricing이 잘 되는 방향으로만 최적화하면 실제로 쓰기 어려운 corner solution이 나오고, 그렇다고 이를 피하려고 하면 과연 어떻게 해야 좋은 basis asset을 얻었다고 할 수 있는지 모호해집니다. 이는 제가 \"Cost of Asset Allocation\" 이후 여러 clustering 및 representation 연구를 해오면서 느낀 바이기도 합니다. 결국 어떤 clustering, 어떤 representation이 좋은 것인가라는 근본적인 질문으로 귀결됩니다. Finance 논문답게 꽤 길기 때문에 journal club에서는 핵심 내용 위주로 소개하고, 이러한 고민들을 함께 나눠보는 시간을 가지면 좋겠습니다.",
     "url" : "https://academic.oup.com/rfs/article/22/12/5133/1577250"
   },
   {
@@ -66,7 +66,7 @@
     "date": "2025년 08월 12일",
     "title": "Unveiling Causal Reasoning in Large Language Models: Reality or Mirage?",
     "presenter": "Sangjin Jin",
-    "reason": "위 논문은 LLM의 인과추론(causal reasoning) 능력에 대한 근본적인 의문을 제기하는 연구로써, 현재 LLM의 인과추론 성능은 데이터로부터 학습한 내용에 대한 얕은 추론에 가까움을 실증적으로 입증하며, 이를 해결할 수 있는 접근법을 제시합니다.\n저자는 LLM의 autoregressive한 특성이 순차적인 예측을 제공할뿐 인과적인 추론에 기여하지 않는다는 점을 지적하며, 인과추론을 두 개의 레벨(Level-1, Level-2)로 구분하고, fresh 벤치마크 데이터로부터 LLM의 인과추론이 대부분 Level-1 (학습 내용)에 머물러 있음을 확인하였습니다. 이에, 인간의 추론 메커니즘에서 영감을 얻은 G2-Reasoner를 제안하며 RAG을 결합한 LLM에게 인과관계를 식별하도록 유도하여, LLM의 인과추론 능력이 Level-2 수준의 근접할 수 있음을 보여줍니다.\n\n최근 한화생명과의 산학과제에서도 거론되었듯이, LLM이 금융시장에서의 복잡한 상호작용을 진정 이해하고, 투자자에게 유용한 인사이트를 제공해줄 수 있는지에 대해서 고민해볼 수 있었습니다. 특히, 여러 거시변수들이 자산 가격에 미치는 복잡한 인과관계에 대해서는 LLM이 이를 정확히 파악하기란 어려움이 있을 것이라 생각했는데, 이런 분야에서 LLM의 capabilities와 나아가야할 방향에 대해 알아보기에 좋은 논문일 것 같습니다!",
+    "reason": "위 논문은 LLM의 인과추론(causal reasoning) 능력에 대한 근본적인 의문을 제기하는 연구로써, 현재 LLM의 인과추론 성능은 데이터로부터 학습한 내용에 대한 얕은 추론에 가까움을 실증적으로 입증하며, 이를 해결할 수 있는 접근법을 제시합니다.\n저자는 LLM의 autoregressive한 특성이 순차적인 예측을 제공할뿐 인과적인 추론에 기여하지 않는다는 점을 지적하며, 인과추론을 두 개의 레벨(Level-1, Level-2)로 구분하고, fresh 벤치마크 데이터로부터 LLM의 인과추론이 대부분 Level-1 (학습 내용)에 머물러 있음을 확인하였습니다. 이에, 인간의 추론 메커니즘에서 영감을 얻은 G2-Reasoner를 제안하며 RAG을 결합한 LLM에게 인과관계를 식별하도록 유도하여, LLM의 인과추론 능력이 Level-2 수준의 근접할 수 있음을 보여줍니다.\n\n LLM이 금융시장에서의 복잡한 상호작용을 진정 이해하고, 투자자에게 유용한 인사이트를 제공해줄 수 있는지에 대해서 고민해볼 수 있었습니다. 특히, 여러 거시변수들이 자산 가격에 미치는 복잡한 인과관계에 대해서는 LLM이 이를 정확히 파악하기란 어려움이 있을 것이라 생각했는데, 이런 분야에서 LLM의 capabilities와 나아가야할 방향에 대해 알아보기에 좋은 논문일 것 같습니다!",
     "url": "https://arxiv.org/abs/2506.21215"
   },
   {
@@ -91,10 +91,24 @@
     "url": "https://arxiv.org/pdf/2502.04395"
   },
   {
+    "date": "2025년 07월 22일",
+    "title": "Are Generative AI Agents Effective Personalized Financial Advisors?",
+    "presenter": "Yongjae Lee",
+    "reason": "실제 64명의 사람들을 대상으로 LLM이 개개인의 투자 preference를 알아낼 수 있는지, 그리고 사람들이 실제로 어떤 LLM의 조언을 좋게 평가했는지 등을 보여준 논문입니다. 특히 흥미로운 부분은 사람들이 조언의 quality에는 상당히 둔감하다는 것이며, 외향적이고 친절한 LLM의 조언을 더 좋게 평가했다는 것입니다. 연구와 실무가 얼마나 다를 수 있는지를 잘 보여주는 부분이라고도 생각합니다. 이 논문 외에도 우리 연구실에서 진행 중인 LLM 연구들도 간단히 엮어서 소개하도록 하겠습니다",
+    "url": "https://arxiv.org/abs/2504.05862"
+  },
+  {
     "date": "2025년 07월 08일",
     "title": "Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction",
     "presenter": "Inwoo Tae",
     "reason": "본 연구는 이번 ICML 2025에서 oral로 채택된 연구로써, 현재 언어 모델의 창의적 한계를 정량적으로 측정하고 이를 극복하기 위한 multi-token prediction 접근법을 제안하였습니다. 전통적인 next-token prediction의 한계는 한 토큰씩 순차적으로 예측하는 근시안적 접근으로 인해 창의적이고 다양한 출력 생성에 실패하며, 훈련 데이터의 과도한 memorization에 의존한다는 점이었습니다. 논문에서는 실제 창의적 과제를 추상화한 네 가지 알고리즘적 과제를 설계하고, 이를 통해 창의성을 문법적으로 올바르면서도 훈련 데이터에 없는 새로운 출력의 비율로 정의하여 정량화하는 과정을 보여줍니다.\n언어 모델의 창의성이라는 측정하기 어려운 개념을 최소한의 알고리즘적 과제로 추상화하여 체계적으로 분석한다는 접근이 흥미로웠고, 특히 입력 레이어에 노이즈를 주입하는 seed-conditioning이라는 새로운 방법론을 통해 출력의 다양성을 확보한다는 아이디어가 인상적이었습니다. 결과적으로, 논문에서는 teacherless training과 discrete diffusion이라는 multi-token prediction 방법들이 기존 next-token prediction 대비 창의성 점수에서 현저한 개선을 보였으며, seed-conditioning이 모델의 일관성을 해치지 않으면서도 다양성을 효과적으로 증진시킴을 실험 결과를 통해 보여줍니다.",
+    "url": "https://arxiv.org/abs/2504.15266"
+  },
+  {
+    "date": "2025년 07월 08일",
+    "title": "Conformal prediction for multi-dimensional time series by ellipsoidal sets",
+    "presenter": "Kangmin Kim",
+    "reason": "이 논문은 ICML 2024 Spotlight를 받은 논문입니다. ML을 사용해서 예측을 할 때 아무리 train이 잘 된 모델이라도 예측 오차가 존재합니다. 이런 오차, 즉 불확실성을 quantify하기 위해 여러 연구들이 많이 진행되어왔는데, BNN, Conformal Prediction 등의 방법론이 대표적입니다. conformal prediction은 예측 값이 1-α의 확률로 존재하는 interval을 output으로 내뱉어 uncertainty quantification을 수행하는 방식입니다. 기존의 conformal prediction은 각 변수를 독립적으로 본 연구들이었고, 따라서 각 변수에 대한 interval이 따로 도출되게 되어 다변량 시계열의 경우에는 box 형태의 uncertainty set이 나오게되어 변수간의 관계를 고려하지 못하고, 과도하게 보수적인 set을 구성하게 됩니다. 이 논문은 변수들 오차의 관계를 고려해 ellipsoidal 형태의 uncertainty set을 output으로 도출하도록하는 Conformal Prediction 방법론인 MultiDimSPCI라는 방법론을 제안합니다. 이론적으로도 coverage에 대한 보장을 보였으며, 실험적으로도 coverage가 보장됨을 보였으며, 해당 set이 다른 방법론에서 도출된 set의 size보다 작은 결과를 보여줘 더 효율적인 uncertainty set을 도출합니다.",
     "url": "https://arxiv.org/abs/2504.15266"
   },
   {
@@ -409,14 +423,14 @@
     "date": "2024년 02월 02일",
     "title": "Frequency-domain MLPs are More Effective Learners in Time Series Forecasting",
     "presenter": "Yoontae Hwang",
-    "reason": "제 차례인지 몰라서 좀 늦게 올렸습니다.. 그 시계열에 관련된 연구인데 DLinear가 왜잘되는지를 이 논문을 통해서 얼핏이나마 알 수 있을것 같아서 선정했습니다. 중간에 읽다가 좀 더 세부내용 추가하겠습니다!",
+    "reason": "시계열에 관련된 연구인데 DLinear가 왜잘되는지를 이 논문을 통해서 얼핏이나마 알 수 있을것 같아서 선정했습니다. 중간에 읽다가 좀 더 세부내용 추가하겠습니다!",
     "url": "https://openreview.net/forum?id=iif9mGCTfy"
   },
   {
     "date": "2024년 01월 25일",
     "title": "A Multimodal Embedding-Based Approach to Industry\nClassification in Financial Markets",
     "presenter": "Inwoo Tae",
-    "reason": "늦게 올려서 죄송합니다 ㅠㅠ. 앞으로 어떤 연구를 해야 할지 고민하던 중에, 윤태형의 SimStock처럼 주식 간의 representation을 추출하는 연구를 해보고 싶어서 관련 논문을 찾아보았는데, 주가 데이터와 관련 news 데이터를 엮어서 representation를 추출하길래 한 번 읽어보았습니다.작년에 세영님이 journal club에서 발표해주신 https://www.sciencedirect.com/science/article/pii/S003132032100399X 와 유사하게 주가 정보와 text 데이터들을 multimodal로 학습시킨 모델인데, 해당 논문의 목표는 stock의 industry classification을 목적으로 제작이 되었습니다.내용 자체가 어렵지 않아서 쉽게 읽으실 수 있습니다. 보통 기존의 knowledge graph는 텍스트 기반으로 제작이 되는데, historical return을 embedding해서 graph로 표현한 figure가 앞으로 제 연구를 어떻게 시작해 나갈지 고민하게 되는 계기를 만들어줘서 해당 논문으로 최종 결정하게 되었습니다. 읽으면서 혹시 비슷한 연구나 추천해주시고 싶은 paper있으시면 댓글로 알려주시면 감사하겠습니다!",
+    "reason": "앞으로 어떤 연구를 해야 할지 고민하던 중에, 윤태형의 SimStock처럼 주식 간의 representation을 추출하는 연구를 해보고 싶어서 관련 논문을 찾아보았는데, 주가 데이터와 관련 news 데이터를 엮어서 representation를 추출하길래 한 번 읽어보았습니다.작년에 세영님이 journal club에서 발표해주신 https://www.sciencedirect.com/science/article/pii/S003132032100399X 와 유사하게 주가 정보와 text 데이터들을 multimodal로 학습시킨 모델인데, 해당 논문의 목표는 stock의 industry classification을 목적으로 제작이 되었습니다.내용 자체가 어렵지 않아서 쉽게 읽으실 수 있습니다. 보통 기존의 knowledge graph는 텍스트 기반으로 제작이 되는데, historical return을 embedding해서 graph로 표현한 figure가 앞으로 제 연구를 어떻게 시작해 나갈지 고민하게 되는 계기를 만들어줘서 해당 논문으로 최종 결정하게 되었습니다. 읽으면서 혹시 비슷한 연구나 추천해주시고 싶은 paper있으시면 댓글로 알려주시면 감사하겠습니다!",
     "url": "https://arxiv.org/pdf/2211.06378.pdf"
   },
   {
@@ -437,7 +451,7 @@
     "date": "2024년 01월 18일",
     "title": "Differentiation of Blackbox Combinatorial Solvers",
     "presenter": "Junhyeong Lee",
-    "reason": "새해 첫 저널클럽이네요 ㅎㅎ 올해도 잘 부탁드립니다 여러분!이번 논문은 ICLR 2020에 publish된 논문입니다.보통 최적화의 경우 실행 시간과 성능에 대해서 이론적으로 보장된 방법론들이 존재합니다. 그러나 복잡성이 높은 데이터에서의 활용이나 practical한 접근을 위해 딥러닝과 이런 최적화 방법론을 같이 다룰 수 밖에 없는 경우들이 있습니다. 이렇게 섞게 될 경우에, 미분 가능성에 대한 내용이 아주 중요한 문제가 됩니다. 그렇기에 많은 연구들에서는 surrogate loss function을 제안하거나, 다양한 조건들을 완화하여 이런 문제를 다룹니다. 이 논문에서는 linearization을 통해 gradient를 대체해서 구하게 되고, 우리에게 나름 익숙한 piecewise한 접근을 통해 연속성에 대한 증명을 보입니다.이런류의 연구들을 Neural Combinatorial Optimization이라고 부르는 것 같더라구요. 검색해보면 자료가 많이 나오니 관심 있으신 분들은 찾아보셔도 좋을 것 같습니다.추가적으로, 발표 하고 싶었던 논문 중에 https://arxiv.org/pdf/2305.17570.pdf(NIPS 2023 Oral) 도 있었는데, 한 번 읽어보셔도 재밌을 거 같아서 남깁니다!",
+    "reason": "이번 논문은 ICLR 2020에 publish된 논문입니다.보통 최적화의 경우 실행 시간과 성능에 대해서 이론적으로 보장된 방법론들이 존재합니다. 그러나 복잡성이 높은 데이터에서의 활용이나 practical한 접근을 위해 딥러닝과 이런 최적화 방법론을 같이 다룰 수 밖에 없는 경우들이 있습니다. 이렇게 섞게 될 경우에, 미분 가능성에 대한 내용이 아주 중요한 문제가 됩니다. 그렇기에 많은 연구들에서는 surrogate loss function을 제안하거나, 다양한 조건들을 완화하여 이런 문제를 다룹니다. 이 논문에서는 linearization을 통해 gradient를 대체해서 구하게 되고, 우리에게 나름 익숙한 piecewise한 접근을 통해 연속성에 대한 증명을 보입니다.이런류의 연구들을 Neural Combinatorial Optimization이라고 부르는 것 같더라구요. 검색해보면 자료가 많이 나오니 관심 있으신 분들은 찾아보셔도 좋을 것 같습니다.추가적으로, 발표 하고 싶었던 논문 중에 https://arxiv.org/pdf/2305.17570.pdf(NIPS 2023 Oral) 도 있었는데, 한 번 읽어보셔도 재밌을 거 같아서 남깁니다!",
     "url": "https://arxiv.org/pdf/1912.02175.pdf"
   },
   {
@@ -486,7 +500,7 @@
     "date": "2023년 09월 14일",
     "title": "Explainable Recommendation with Personalized Review Retrieval and Aspect Learning",
     "presenter": "Yejin Kim",
-    "reason": "안녕하세요. 미국 3주차 김예진입니다🇺🇸. 저번 Summary journal club에서 ACL’23 Best Papers을 소개해드렸는데요. 그 연장선으로 ACL accepted paper들을 살펴보다가 text generation을 추천에 적용한 논문을 발견해 이번 저널클럽 논문으로 선정해 보았습니다.\nExplainable recommendation은 prediction과 generation tasks를 통합한 테크닉입니다. 그 중 textual generation은 많은 양의 데이터가 있어야 만족스러운 accuracy를 얻을 수 있는데, 추천 데이터의 경우 유저의 history reviews의 양이 충분하지 않은 경우가 있습니다. 이를 해결하기 위해 이 논문에서는 ERRA(Explainable Recommendation by personalized Review retrieval and Aspect learning)라는 새로운 모델을 제안합니다.\nERRA는 크게 두가지 메인 components가 있는데, 첫번째로는 data scarcity를 해결하기 위한 Retrieval enhancement이고 두번째는 관련성 있는 설명을 생성하기 위한 aspect enhancement 입니다. 모델 마지막에는 joint enhancement transformer을 통해 추천점수 예측과 explaination tasks를 수행하였는데, 이를 모두 학습시키기 위해 loss 4개(!!!!)를 합친 multi-task를 수행합니다. Explainable recommendation에 대해 들어보기만 했었는데, 정확히 어떤식으로 모델이 구성 되고 학습되는지에 대해 궁금해서 이 논문을 선택해보았습니다.",
+    "reason": "안녕하세요.  저번 Summary journal club에서 ACL’23 Best Papers을 소개해드렸는데요. 그 연장선으로 ACL accepted paper들을 살펴보다가 text generation을 추천에 적용한 논문을 발견해 이번 저널클럽 논문으로 선정해 보았습니다.\nExplainable recommendation은 prediction과 generation tasks를 통합한 테크닉입니다. 그 중 textual generation은 많은 양의 데이터가 있어야 만족스러운 accuracy를 얻을 수 있는데, 추천 데이터의 경우 유저의 history reviews의 양이 충분하지 않은 경우가 있습니다. 이를 해결하기 위해 이 논문에서는 ERRA(Explainable Recommendation by personalized Review retrieval and Aspect learning)라는 새로운 모델을 제안합니다.\nERRA는 크게 두가지 메인 components가 있는데, 첫번째로는 data scarcity를 해결하기 위한 Retrieval enhancement이고 두번째는 관련성 있는 설명을 생성하기 위한 aspect enhancement 입니다. 모델 마지막에는 joint enhancement transformer을 통해 추천점수 예측과 explaination tasks를 수행하였는데, 이를 모두 학습시키기 위해 loss 4개(!!!!)를 합친 multi-task를 수행합니다. Explainable recommendation에 대해 들어보기만 했었는데, 정확히 어떤식으로 모델이 구성 되고 학습되는지에 대해 궁금해서 이 논문을 선택해보았습니다.",
     "url": "https://aclanthology.org/2023.acl-long.4/"
   },
   {
