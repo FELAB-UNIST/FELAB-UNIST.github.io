@@ -1,17 +1,17 @@
 [
   {
-    "date": "2025년 11월 25일",
-    "title": "TimeSeriesScientist: A General-Purpose AI Agent for Time Series Analysis",
-    "presenter": "Suhwan Park",
-    "reason": "최근 시계열 agent 관련 paper도 간간이 나오고 있는 것 같아 시계열 예측을 멀티 에이전트 프레임워크로 구축한 간단한 연구를 소개해드리고자 합니다. 시계열 예측의 전체 파이프라인 (데이터 전처리, 모델 선택, 앙상블, 리포팅)을 자동화하는 LLM 기반 멀티 에이전트 프레임워크를 제안하며, 4개의 전문화된 에이전트가 협업하여 해석 가능한 예측 결과를 생성합니다. 말 그대로 Agent 시스템이 시계열 예측에도 아직 부족하지만 활용될 수 있다라는 메시지를 전달하는 논문이어서 가볍게 읽어보시면 될 것 같습니다. 발표에서는 이 논문 외에도 time series + agent 관련된 다른 최근 연구들도 함께 간단히 소개드릴 예정입니다. 특히 우리 연구실에서 다루는 금융 시계열 데이터의 특성을 고려했을 때, 이런 에이전트 기반 접근법을 금융시장에서 어떻게 적용해볼 수 있을지 아이디어를 나눠보면 좋을 것 같습니다.",
-    "url": "https://arxiv.org/pdf/2503.14411"
-  },
-  {
     "date": "2025년 12월 3일",
     "title": "Unifying Text Semantics and Graph Structures for Temporal Text-attributed Graphs with Large Language Models",
     "presenter": "Sangjin Jin",
     "reason": "위 논문은 올해 뉴립스에 억셉된 논문으로써, 시간에 따라 변화하는 텍스트의 의미와 그래프의 구조에 대해 동시에 다루는 TTAG (Temporal Text-Attributed Graph)에 대해 다룹니다. 기존 그래프 모델 (e.g. Temporal GNN)들은 텍스트 임베딩을 고정 한 후, 그래프 구조가 어떻게 evolve하는지에만 신경썻기 때문에, 텍스트의 semantic dynamics는 capture하기가 어렵다는 한계가 존재했습니다. 본 논문에서 제안하는 CROSS라는 프레임워크는 'Temporal Semantics Extractor'와 'Semantic-Structural Co-encoder' 라는 두 단계 과정을 통해 시간에 따라 달라지는 동적인 텍스트의 의미를 파악하고, 동적 텍스트와 그래프 구조를 섞어서 모달리티간 상호보완적인 fusion 과정을 동적으로 수행할 수 있게합니다. 저자들은 여기서 얻은 임베딩을 그래프 안에서의 temporal link prediction 과 같은 태스크에 접목하여 학습하는 방법을 제시하며, downstream task에서도 월등한 퍼포먼스 향상을 보입니다. 최근, 자산에 대한 적절한 representation을 어떻게 만들 수 있을지 고민해보며, semantic embedding을 얻는 과정에서 각 시점 별로 달라지는 의미까지도 정확하게 align하여 반영할 수 있는지에 대해 관심이 생겼습니다. 같은 뉴스라도 배경으로하는 context가 다른 경우에는 그 의미가 다르게 해석될 수 있기 때문에, 이러한 관점에서 text semantics와 graph를 묶어서 접근하면 좋은 representation을 얻는 방법으로 활용할 수 있을 것이라고 느꼈습니다. 뉴스나 공시정보들이 비정기적으로 발생하는 경우, entity에 대한 지속적인 업데이트가 어려운데, 그래프로부터 노드간 여러 상호작용이 발생할 수 있고, semantic dynamics 함께 반영함으로써 시점에 따라 적절히 변하는 임베딩을 얻는데 활용할 수 있을 것이라고 기대합니다!",
     "url": "https://arxiv.org/abs/2510.01538"
+  },
+  {
+    "date": "2025년 11월 25일",
+    "title": "TimeSeriesScientist: A General-Purpose AI Agent for Time Series Analysis",
+    "presenter": "Suhwan Park",
+    "reason": "최근 시계열 agent 관련 paper도 간간이 나오고 있는 것 같아 시계열 예측을 멀티 에이전트 프레임워크로 구축한 간단한 연구를 소개해드리고자 합니다. 시계열 예측의 전체 파이프라인 (데이터 전처리, 모델 선택, 앙상블, 리포팅)을 자동화하는 LLM 기반 멀티 에이전트 프레임워크를 제안하며, 4개의 전문화된 에이전트가 협업하여 해석 가능한 예측 결과를 생성합니다. 말 그대로 Agent 시스템이 시계열 예측에도 아직 부족하지만 활용될 수 있다라는 메시지를 전달하는 논문이어서 가볍게 읽어보시면 될 것 같습니다. 발표에서는 이 논문 외에도 time series + agent 관련된 다른 최근 연구들도 함께 간단히 소개드릴 예정입니다. 특히 우리 연구실에서 다루는 금융 시계열 데이터의 특성을 고려했을 때, 이런 에이전트 기반 접근법을 금융시장에서 어떻게 적용해볼 수 있을지 아이디어를 나눠보면 좋을 것 같습니다.",
+    "url": "https://arxiv.org/pdf/2503.14411"
   },
   {
     "date": "2025년 10월 29일",
