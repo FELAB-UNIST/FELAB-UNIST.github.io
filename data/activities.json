@@ -422,7 +422,7 @@
         "location": "UNIST, Ulsan, South Korea",
         "type": "celebration",
         "featured": false,
-        "thumbnail": "./public/images/activities/teachers-day-2025-1.png",
+        "thumbnail": "./public/images/activities/teachers-day-2025-1.jpg",
         "summary": "2025년 5월 15일 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
         
         "content": {
@@ -434,7 +434,7 @@
                     "title": "",
                     "images": [
                         {
-                            "url": "./public/images/activities/teachers-day-2025-1.png",
+                            "url": "./public/images/activities/teachers-day-2025-1.jpg",
                             "caption": "칙칙하지만 꽃을 들고 저희의 마음을 표현해보았습니다."
                         }
                     ]
