@@ -1189,7 +1189,7 @@
       "github": null,
       "citation": {
         "apa": "Lee, Y., Kim, M. J., Kim, J. H., Jang, J. R., & Chang Kim, W. (2020). Sparse and robust portfolio selection via semi-definite relaxation. Journal of the Operational Research Society, 71(5), 687-699.",
-        "bibtex": null,
+        "bibtex": "@article{lee2020sparse,\n  title={Sparse and robust portfolio selection via semi-definite relaxation},\n  author={Kim, Min Jeong and Lee, Yongjae and Kim, Jang Ho and Kim, Woo Chang},\n  journal={Journal of the Operational Research Society},\n  volume={71},\n  number={5},\n  pages={687--699},\n  year={2020}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=603488008790575379&hl=ko&as_sdt=0,5"
       }
     },
@@ -1213,8 +1213,8 @@
       "github": null,
       "citation": {
         "apa": "유제용, 홍주환, 이용재, & 김장호. (2019). 국내 인적자본을 고려한 생애주기별 자산관리. 대한산업공학회지, 45(5), 376-386.",
-        "bibtex": null,
-        "scholar_url": null
+        "bibtex": "@article{yoo2019lifecycle,\n  title={국내 인적자본을 고려한 생애주기별 자산관리},\n  author={유제용 and 홍주환 and 이용재 and 김장호},\n  journal={대한산업공학회지},\n  volume={45},\n  number={5},\n  pages={376--386},\n  year={2019}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=13347399911034565723&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1234,9 +1234,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., & Kim, W. C. (2018). Why your smart beta portfolio might not work. International Journal of Financial Engineering and Risk Management, 2(4), 351-362.",
+        "bibtex": "@article{lee2018smart,\n  title={Why your smart beta portfolio might not work},\n  author={Lee, Yongjae and Kim, Woo Chang},\n  journal={International Journal of Financial Engineering and Risk Management},\n  volume={2},\n  number={4},\n  pages={351--362},\n  year={2018}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=16087188728971277305&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1256,9 +1256,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., Kwon, D. G., Kim, W. C., & Fabozzi, F. J. (2018). An alternative approach for portfolio performance evaluation: enabling fund evaluation relative to peer group via Malkiel’s monkey. Applied Economics, 50(40), 4318-4327.",
+        "bibtex": "@article{lee2018monkey,\n  title={An alternative approach for portfolio performance evaluation: enabling fund evaluation relative to peer group via Malkiel's monkey},\n  author={Lee, Yongjae and Kwon, Do-Gyun and Kim, Woo Chang and Fabozzi, Frank J.},\n  journal={Applied Economics},\n  volume={50},\n  number={40},\n  pages={4318--4327},\n  year={2018}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=16632103498890810398&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1279,8 +1279,8 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "Kim, B., Lee, Y., Kwon, D. G., & Kim, W. C. (2017). A Study on the Korean ETF Market: Systemic Risk and the Optimal ETF Introduction Sequence.",
+        "bibtex": "@article{kim2017etf,\n  title={A Study on the Korean ETF Market: Systemic Risk and the Optimal ETF Introduction Sequence},\n  author={Kim, Beomhyeon and Lee, Yongjae and Kwon, Do-Gyun and Kim, Woo Chang},\n  year={2017}\n}",
         "scholar_url": null
       }
     },
@@ -1301,9 +1301,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kwon, D. G., Kim, J. H., Lee, Y., & Kim, W. C. (2017). Modeling the dynamics of institutional, foreign, and individual investors through price consensus. International Review of Financial Analysis, 49, 166-175.",
+        "bibtex": "@article{kwon2017dynamics,\n  title={Modeling the dynamics of institutional, foreign, and individual investors through price consensus},\n  author={Kwon, Do-Gyun and Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang},\n  journal={International Review of Financial Analysis},\n  volume={49},\n  pages={166--175},\n  year={2017}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=15224704318630047068&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1324,9 +1324,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, M. J., Lee, Y., Kim, J. H., & Kim, W. C. (2016). Sparse tangent portfolio selection via semi-definite relaxation. Operations Research Letters, 44(4), 540-543.",
+        "bibtex": "@article{kim2016sparse,\n  title={Sparse tangent portfolio selection via semi-definite relaxation},\n  author={Kim, Min Jeong and Lee, Yongjae and Kim, Jang Ho and Kim, Woo Chang},\n  journal={Operations Research Letters},\n  volume={44},\n  number={4},\n  pages={540--543},\n  year={2016}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=16663416516226440490&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1346,9 +1346,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, W. C., & Lee, Y. (2016). A uniformly distributed random portfolio. Quantitative Finance, 16(2), 297-307.",
+        "bibtex": "@article{kim2016uniformly,\n  title={A uniformly distributed random portfolio},\n  author={Kim, Woo Chang and Lee, Yongjae},\n  journal={Quantitative Finance},\n  volume={16},\n  number={2},\n  pages={297--307},\n  year={2016}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=8256529775554713185&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1368,9 +1368,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, W. C., Lee, Y., & Lee, Y. H. (2014). Cost of Asset Allocation in Equity Market: How Much Do Investors Lose Due to Bad Asset Class Design?. The Journal of Portfolio Management, 41(1), 34-44.",
+        "bibtex": "@article{kim2014cost,\n  title={Cost of Asset Allocation in Equity Market: How Much Do Investors Lose Due to Bad Asset Class Design?},\n  author={Kim, Woo Chang and Lee, Yongjae and Lee, Yoon Hak},\n  journal={The Journal of Portfolio Management},\n  volume={41},\n  number={1},\n  pages={34--44},\n  year={2014}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=7917182358226719372&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1390,9 +1390,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., & Kim, W. C. (2013). A stochastic model for order book dynamics: An application to Korean stock index futures. Management Science and Financial Engineering, 19(1), 37.",
+        "bibtex": "@article{lee2013stochastic,\n  title={A stochastic model for order book dynamics: An application to Korean stock index futures},\n  author={Lee, Yongjae and Kim, Woo Chang},\n  journal={Management Science and Financial Engineering},\n  volume={19},\n  number={1},\n  pages={37},\n  year={2013}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=10778952247465863041&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1415,32 +1415,9 @@
       "type": "Conference Workshop",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
-    {
-      "id": "pub_2025_iclr_finder",
-      "year": 2025,
-      "authors": "Chanyeol Choi*, Jihoon Kwon, Jaeseon Ha, Hojun Choi, Chaewoon Kim, Yongjae Lee, Jy-yong Sohn, Alejandro Lopez-Lira",
-      "author_ids": [
-        "yongjae-lee"
-      ],
-      "venue": "ICLR 2025 Workshop on Advances in Financial AI: Opportunities, Innovations and Responsible AI",
-      "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
-      "keywords": [
-        "Finance",
-        "Machine Learning"
-      ],
-      "notes": "",
-      "link": "https://arxiv.org/abs/2504.15800",
-      "type": "Conference Workshop",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Choi, C., Lopez-Lira, A., Lee, Y., Kwon, J., Kim, M., Hwang, J., ... & Kim, J. (2025). Structuring the unstructured: a multi-agent system for extracting and querying financial kpis and guidance. arXiv preprint arXiv:2505.19197.",
+        "bibtex": "@article{choi2025structuring,\n  title={Structuring the unstructured: a multi-agent system for extracting and querying financial KPIs and guidance},\n  author={Choi, Chanyeol and Lopez-Lira, Alejandro and Lee, Yongjae and Kwon, Jihoon and Kim, Minjae and Hwang, Juneha and Ha, Minsoo and Kim, Chaewoon and Ha, Jaeseon and Yun, Suyeol and Kim, Jin},\n  journal={arXiv preprint arXiv:2505.19197},\n  year={2025}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=705747978540625423&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1461,11 +1438,11 @@
       "notes": "",
       "link": "https://arxiv.org/abs/2504.14345",
       "type": "Conference Workshop",
-      "github": null,
+      "github": "https://github.com/youngandbin/LLM-BLM",
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., Kim, Y., Kim, S., & Lee, Y. (2025). Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model. arXiv preprint arXiv:2504.14345.",
+        "bibtex": "@article{lee2025integrating,\n  title={Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model},\n  author={Lee, Youngbin and Kim, Yejin and Kim, Juhyeong and Kim, Suin and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2504.14345},\n  year={2025}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=17874729528871335136&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1483,31 +1460,6 @@
       ],
       "notes": "",
       "link": "https://sites.google.com/view/ml-for-financial-wellness/home?authuser=0",
-      "type": "Conference Workshop",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
-    {
-      "id": "pub_2024_ijcai_workshop",
-      "year": 2024,
-      "authors": "Youngbin Lee†, Yejin Kim†, Javier Sanz-Cruzado Puig, Richard Mccreadie, Yongjae Lee*",
-      "author_ids": [
-        "youngbin-lee",
-        "yejin-kim",
-        "yongjae-lee"
-      ],
-      "venue": "IJCAI-24 Workshop on Recommeder Systems in Finance (Fin-RecSys)",
-      "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling",
-      "keywords": [
-        "Finance",
-        "Machine Learning"
-      ],
-      "notes": "",
-      "link": "http://arxiv.org/abs/2404.07223",
       "type": "Conference Workshop",
       "github": null,
       "citation": {
@@ -1535,9 +1487,9 @@
       "type": "Conference Workshop",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, Y., Lee, Y., Yuan, V., Lee, A., & Lee, Y. (2024). A temporal graph network framework for dynamic recommendation. arXiv preprint arXiv:2403.16066.",
+        "bibtex": "@article{kim2024temporal,\n  title={A temporal graph network framework for dynamic recommendation},\n  author={Kim, Yejin and Lee, Youngbin and Yuan, Vincent and Lee, Annika and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2403.16066},\n  year={2024}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=10257143427692918770&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1560,9 +1512,9 @@
       "type": "Conference Workshop",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, Y., Lee, Y., Choe, M., Oh, S., & Lee, Y. (2024). Temporal graph networks for graph anomaly detection in financial networks. arXiv preprint arXiv:2404.00060.",
+        "bibtex": "@article{kim2024temporalgraph,\n  title={Temporal graph networks for graph anomaly detection in financial networks},\n  author={Kim, Yejin and Lee, Youngbin and Choe, Minyoung and Oh, Sungju and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2404.00060},\n  year={2024}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=494192232315573610&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1582,13 +1534,13 @@
         "Machine Learning"
       ],
       "notes": "",
-      "link": "https://sites.google.com/view/ml-for-investor-recsys",
+      "link": "https://openreview.net/forum?id=8rVCMfLCy9",
       "type": "Conference Workshop",
-      "github": null,
+      "github": "https://anonymous.4open.science/r/ICAIF2024-E23E",
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., Kim, Y., Sanz-Cruzado, J., Mccreadie, R., & Lee, Y. (2024). Stock recommendations for individual investors: A temporal graph network approach with diversification-enhancing contrastive learning.",
+        "bibtex": "@article{lee2024stock,\n  title={Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Diversification-Enhancing Contrastive Learning},\n  author={Lee, Youngbin and Kim, Yejin and Lee, Yongjae},\n  journal={CoRR},\n  year={2024}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=15227574939170492847&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1641,9 +1593,9 @@
       "type": "Bridge Paper",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "An NFT Collectibles Recommender System with Content Features",
+        "bibtex": "@article{choi2024recommender,\n  title={A recommender system for NFT collectibles with item feature},\n  author={Choi, Minjoo and Kim, Seonmi and Kim, Yejin and Lee, Youngbin and Hong, Joohwan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2403.18305},\n  year={2024}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=5912283758455860381&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1688,8 +1640,8 @@
       "type": "Non-Refereed Papers",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "배금일, 이용재, 김지은, 김우창, 김민정, & 김장호. (2015). Anatomy of Robo-Advisor: 적용기술의 타당성을 중심으로: 적용기술의 타당성을 중심으로. 대한산업공학회 추계학술대회 논문집, 1580-1605.",
+        "bibtex": "@inproceedings{bae2015anatomy,\n  title={Anatomy of Robo-Advisor: 적용기술의 타당성을 중심으로},\n  author={배금일 and 이용재 and 김지은 and 김우창 and 김민정 and 김장호},\n  booktitle={대한산업공학회 추계학술대회 논문집},\n  pages={1580--1605},\n  year={2015}\n}",
         "scholar_url": null
       }
     },
@@ -1710,8 +1662,8 @@
       "type": "Non-Refereed Papers",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "Lee, Y., & Kim, W. C. (2014). Concise formulas for the surface area of the intersection of two hyperspherical caps. KAIST Technical Report.",
+        "bibtex": "@techreport{lee2014concise,\n  title={Concise formulas for the surface area of the intersection of two hyperspherical caps},\n  author={Lee, Yongjae and Kim, Woo Chang},\n  institution={KAIST},\n  type={Technical Report},\n  year={2014}\n}",
         "scholar_url": null
       }
     },
@@ -1756,9 +1708,9 @@
       "type": "Working Papers",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Hwang, Y., Zohren, S., & Lee, Y. (2024). Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management. arXiv preprint arXiv:2407.13751.",
+        "bibtex":"@article{hwang2024temporal,\n  title={Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management},\n  author={Hwang, Yoontae and Zohren, Stefan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2407.13751},\n  year={2024}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=4915051564620530005&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1852,9 +1804,9 @@
       "type": "Working Papers",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Bae, H., Jeon, H., Park, M., Lee, Y., & Kim, W. C. (2025). A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization. arXiv preprint arXiv:2502.11701.",
+        "bibtex": "@article{bae2025cholesky,\n  title={A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization},\n  author={Bae, Hyunglip and Jeon, Haeun and Park, Minsu and Lee, Yongjae and Kim, Woo Chang},\n  journal={arXiv preprint arXiv:2502.11701},\n  year={2025}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=7154912267934233800&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1875,11 +1827,11 @@
       "notes": "submitted",
       "link": "https://arxiv.org/abs/2502.00828",
       "type": "Working Papers",
-      "github": null,
+      "github": "https://anonymous.4open.science/r/Decision-informed-Neural-Networks-with-Large-Language-Model-Integration-for-Portfolio-Optimization-A441/README.md",
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Hwang, Y., Kong, Y., Zohren, S., & Lee, Y. (2025). Decision-informed neural networks with large language model integration for portfolio optimization. arXiv preprint arXiv:2502.00828.",
+        "bibtex": "@article{hwang2025decision,\n  title={Decision-informed neural networks with large language model integration for portfolio optimization},\n  author={Hwang, Yoontae and Kong, Yaxuan and Zohren, Stefan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2502.00828},\n  year={2025}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=10666944650353888385&hl=ko&as_sdt=0,5"
       }
     },
     {
