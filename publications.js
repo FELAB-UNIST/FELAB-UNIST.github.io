@@ -58,7 +58,6 @@ const PublicationsManager = {
         }
         
         if (journalAndConf.length > 0) {
-            // 연도별로 정렬
             journalAndConf.sort((a, b) => {
                 if (a.year === 'working_paper') return 1;
                 if (b.year === 'working_paper') return -1;
@@ -89,7 +88,7 @@ const PublicationsManager = {
             html += `</div>`;
         }
         
-        // Workshop과 Bridge Papers 섞어서 표시
+        // Workshop과 Bridge Papers
         const workshopAndBridge = [];
         if (groupedByType['Conference Workshop']) {
             workshopAndBridge.push(...groupedByType['Conference Workshop'].map(p => ({...p, subtype: 'Workshop'})));
@@ -143,7 +142,6 @@ const PublicationsManager = {
     },
     
     renderTypeSection(type, publications) {
-        // ID용 slug 생성
         const sectionId = type === 'Non-Refereed Papers' ? 'section-non-refereed' : 
                           type === 'Working Papers' ? 'section-working' : 
                           type === 'Book in Progress' ? 'section-book' : '';
@@ -212,25 +210,41 @@ const PublicationsManager = {
         // Links
         const linkHtml = pub.link ? 
             `<a href="${pub.link}" target="_blank" rel="noopener noreferrer" 
-                class="text-brand-teal hover:underline">[Paper]</a>` : '';
+                class="inline-flex items-center gap-1 text-brand-teal hover:underline">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Paper</a>` : '';
         
         const githubHtml = pub.github ? 
             `<a href="${pub.github}" target="_blank" rel="noopener noreferrer" 
-                class="text-gray-700 hover:text-gray-900 hover:underline">[GitHub]</a>` : '';
+                class="inline-flex items-center gap-1 text-gray-700 hover:text-gray-900 hover:underline">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub</a>` : '';
         
         // Cite button (only if citation data exists)
         const citation = pub.citation || {};
         const hasCitation = citation.apa || citation.bibtex;
         const citeHtml = hasCitation ? 
             `<button onclick="PublicationsManager.openCiteModal('${pub.id}')" 
-                class="text-purple-600 hover:text-purple-800 hover:underline cursor-pointer">[Cite]</button>` : '';
+                class="inline-flex items-center gap-1 text-purple-600 hover:text-purple-800 hover:underline">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+                Cite</button>` : '';
         
-        // Version link (Google Scholar)
-        const versionHtml = citation.scholar_url ? 
+        // Google Scholar link
+        const scholarHtml = citation.scholar_url ? 
             `<a href="${citation.scholar_url}" target="_blank" rel="noopener noreferrer" 
-                class="text-blue-600 hover:text-blue-800 hover:underline">[Versions]</a>` : '';
+                class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                </svg>
+                Scholar</a>` : '';
         
-        // subtype 표시 (Journal/Conference/Workshop/Bridge)
+        // subtype 표시
         const subtypeHtml = pub.subtype ? 
             `<span class="text-xs font-medium px-2 py-0.5 rounded-full ${
                 pub.subtype === 'Journal' ? 'bg-blue-100 text-blue-700' :
@@ -239,7 +253,7 @@ const PublicationsManager = {
                 'bg-orange-100 text-orange-700'
             }">${pub.subtype}</span>` : '';
         
-        // Right side badges (award and oral)
+        // Right side badges
         const rightBadgesHtml = (awardHtml || oralHtml) ? `
             <div class="flex-shrink-0 flex flex-col gap-2">
                 ${awardHtml}
@@ -263,11 +277,11 @@ const PublicationsManager = {
                             `<div class="mt-3 flex flex-wrap gap-2">${keywordsHtml}</div>` : ''}
                         ${pub.notes ? 
                             `<p class="text-sm text-gray-600 mt-2">${pub.notes}</p>` : ''}
-                        <div class="mt-3 flex items-center space-x-3 text-sm">
+                        <div class="mt-3 flex items-center flex-wrap gap-4 text-sm">
                             ${linkHtml}
                             ${githubHtml}
                             ${citeHtml}
-                            ${versionHtml}
+                            ${scholarHtml}
                         </div>
                     </div>
                     ${rightBadgesHtml}
@@ -280,7 +294,6 @@ const PublicationsManager = {
         return authorsString.split(',').map(author => {
             const trimmedAuthor = author.trim();
             
-            // Extract symbols (*, **, †)
             const symbols = [];
             if (trimmedAuthor.includes('**')) {
                 symbols.push('**');
@@ -291,17 +304,14 @@ const PublicationsManager = {
                 symbols.push('†');
             }
             
-            // Clean name for checking membership
             const cleanName = trimmedAuthor.replace(/[*†]/g, '').trim();
             
-            // Check if lab member
             const isLabMember = this.labMembers.some(member => 
                 cleanName.toLowerCase().includes(member.toLowerCase())
             );
             
             const authorClass = isLabMember ? 'text-author-pi' : 'text-author-external';
             
-            // Reconstruct with symbols
             const symbolsHtml = symbols.length > 0 ? 
                 `<sup class="text-xs">${symbols.join('')}</sup>` : '';
             
@@ -351,7 +361,6 @@ const PublicationsManager = {
     updateDetailedStats() {
         const groupedByType = this.groupByType(this.data);
         
-        // Count by category
         const journalConfCount = (groupedByType['Journal']?.length || 0) + 
                                  (groupedByType['Conference']?.length || 0);
         const workshopCount = (groupedByType['Conference Workshop']?.length || 0) + 
@@ -359,7 +368,6 @@ const PublicationsManager = {
         const nonRefereedCount = groupedByType['Non-Refereed Papers']?.length || 0;
         const workingCount = groupedByType['Working Papers']?.length || 0;
         
-        // Update HTML elements
         const totalEl = document.getElementById('total-pubs');
         if (totalEl) totalEl.textContent = this.data.length;
         
@@ -380,7 +388,7 @@ const PublicationsManager = {
         const sectionId = `section-${sectionName}`;
         const section = document.getElementById(sectionId);
         if (section) {
-            const headerOffset = 100; // sticky header 높이 고려
+            const headerOffset = 100;
             const elementPosition = section.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
             
@@ -402,42 +410,51 @@ const PublicationsManager = {
                     <div class="fixed inset-0 flex items-center justify-center p-4 pointer-events-none">
                         <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden pointer-events-auto">
                             <div class="flex items-center justify-between px-6 py-4 border-b">
-                                <h3 class="text-lg font-semibold text-gray-900">Cite</h3>
+                                <h3 class="text-lg font-semibold text-gray-900">Cite this paper</h3>
                                 <button onclick="PublicationsManager.closeCiteModal()" class="text-gray-400 hover:text-gray-600">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                     </svg>
                                 </button>
                             </div>
-                            <div class="px-6 py-4 max-h-[60vh] overflow-y-auto">
-                                <!-- APA Section -->
-                                <div class="mb-4">
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="text-sm font-medium text-gray-700">APA</span>
-                                        <button onclick="PublicationsManager.copyAPA()" 
-                                            class="text-xs text-brand-teal hover:underline" id="copy-apa-btn">
-                                            Copy
-                                        </button>
-                                    </div>
-                                    <div id="cite-apa-text" 
-                                        class="bg-gray-50 rounded-lg p-4 text-sm text-gray-800 cursor-pointer hover:bg-gray-100 transition-colors"
-                                        onclick="PublicationsManager.copyAPA()">
-                                    </div>
+                            <div class="px-6 py-4">
+                                <!-- Tabs -->
+                                <div class="flex gap-2 mb-4">
+                                    <button id="cite-tab-apa" onclick="PublicationsManager.switchCiteTab('apa')" 
+                                        class="px-4 py-2 text-sm font-medium rounded-lg bg-brand-navy text-white">
+                                        APA
+                                    </button>
+                                    <button id="cite-tab-bibtex" onclick="PublicationsManager.switchCiteTab('bibtex')" 
+                                        class="px-4 py-2 text-sm font-medium rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300">
+                                        BibTeX
+                                    </button>
                                 </div>
-                                
-                                <!-- BibTeX Section -->
-                                <div>
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="text-sm font-medium text-gray-700">BibTeX</span>
-                                        <button onclick="PublicationsManager.copyBibTeX()" 
-                                            class="text-xs text-brand-teal hover:underline" id="copy-bibtex-btn">
-                                            Copy
-                                        </button>
-                                    </div>
-                                    <pre id="cite-bibtex-text" 
-                                        class="bg-gray-50 rounded-lg p-4 text-sm text-gray-800 cursor-pointer hover:bg-gray-100 transition-colors font-mono whitespace-pre-wrap overflow-x-auto"
-                                        onclick="PublicationsManager.copyBibTeX()"></pre>
+                                <!-- Content -->
+                                <div id="cite-content-apa" class="cite-content">
+                                    <div class="bg-gray-50 rounded-lg p-4 text-sm text-gray-800 font-mono whitespace-pre-wrap break-words max-h-60 overflow-y-auto" id="cite-apa-text"></div>
                                 </div>
+                                <div id="cite-content-bibtex" class="cite-content hidden">
+                                    <div class="bg-gray-50 rounded-lg p-4 text-sm text-gray-800 font-mono whitespace-pre-wrap break-words max-h-60 overflow-y-auto" id="cite-bibtex-text"></div>
+                                </div>
+                                <!-- Copy Button -->
+                                <button onclick="PublicationsManager.copyCitation()" 
+                                    class="mt-4 w-full py-2 px-4 bg-brand-teal text-white rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span id="copy-btn-text">Copy to Clipboard</span>
+                                </button>
+                            </div>
+                            <!-- Footer with Scholar link -->
+                            <div id="cite-modal-footer" class="px-6 py-3 bg-gray-50 border-t text-center hidden">
+                                <a id="cite-scholar-link" href="#" target="_blank" rel="noopener noreferrer" 
+                                    class="text-sm text-gray-600 hover:text-blue-600 inline-flex items-center gap-1">
+                                    Looking for other versions?
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                                    </svg>
+                                    Google Scholar
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -447,6 +464,7 @@ const PublicationsManager = {
         }
     },
     
+    currentCiteTab: 'apa',
     currentPubId: null,
     
     openCiteModal(pubId) {
@@ -454,17 +472,27 @@ const PublicationsManager = {
         if (!pub || !pub.citation) return;
         
         this.currentPubId = pubId;
+        this.currentCiteTab = 'apa';
         
         const modal = document.getElementById('cite-modal');
         const apaText = document.getElementById('cite-apa-text');
         const bibtexText = document.getElementById('cite-bibtex-text');
+        const footer = document.getElementById('cite-modal-footer');
+        const scholarLink = document.getElementById('cite-scholar-link');
         
         apaText.textContent = pub.citation.apa || 'APA citation not available';
         bibtexText.textContent = pub.citation.bibtex || 'BibTeX citation not available';
         
-        // Reset copy buttons
-        document.getElementById('copy-apa-btn').textContent = 'Copy';
-        document.getElementById('copy-bibtex-btn').textContent = 'Copy';
+        // Scholar link
+        if (pub.citation.scholar_url) {
+            scholarLink.href = pub.citation.scholar_url;
+            footer.classList.remove('hidden');
+        } else {
+            footer.classList.add('hidden');
+        }
+        
+        // Reset tabs
+        this.switchCiteTab('apa');
         
         // Show modal
         modal.classList.remove('hidden');
@@ -475,30 +503,46 @@ const PublicationsManager = {
         const modal = document.getElementById('cite-modal');
         modal.classList.add('hidden');
         document.body.style.overflow = '';
+        document.getElementById('copy-btn-text').textContent = 'Copy to Clipboard';
     },
     
-    async copyAPA() {
-        const pub = this.data.find(p => p.id === this.currentPubId);
-        if (!pub || !pub.citation || !pub.citation.apa) return;
+    switchCiteTab(tab) {
+        this.currentCiteTab = tab;
         
-        await this.copyToClipboard(pub.citation.apa, 'copy-apa-btn');
-    },
-    
-    async copyBibTeX() {
-        const pub = this.data.find(p => p.id === this.currentPubId);
-        if (!pub || !pub.citation || !pub.citation.bibtex) return;
+        const apaTab = document.getElementById('cite-tab-apa');
+        const bibtexTab = document.getElementById('cite-tab-bibtex');
+        const apaContent = document.getElementById('cite-content-apa');
+        const bibtexContent = document.getElementById('cite-content-bibtex');
         
-        await this.copyToClipboard(pub.citation.bibtex, 'copy-bibtex-btn');
+        if (tab === 'apa') {
+            apaTab.className = 'px-4 py-2 text-sm font-medium rounded-lg bg-brand-navy text-white';
+            bibtexTab.className = 'px-4 py-2 text-sm font-medium rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300';
+            apaContent.classList.remove('hidden');
+            bibtexContent.classList.add('hidden');
+        } else {
+            bibtexTab.className = 'px-4 py-2 text-sm font-medium rounded-lg bg-brand-navy text-white';
+            apaTab.className = 'px-4 py-2 text-sm font-medium rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300';
+            bibtexContent.classList.remove('hidden');
+            apaContent.classList.add('hidden');
+        }
+        
+        document.getElementById('copy-btn-text').textContent = 'Copy to Clipboard';
     },
     
-    async copyToClipboard(text, buttonId) {
+    async copyCitation() {
+        const pub = this.data.find(p => p.id === this.currentPubId);
+        if (!pub || !pub.citation) return;
+        
+        const text = this.currentCiteTab === 'apa' ? pub.citation.apa : pub.citation.bibtex;
+        
+        if (!text) return;
+        
         try {
             await navigator.clipboard.writeText(text);
-            const btn = document.getElementById(buttonId);
-            btn.textContent = 'Copied!';
+            document.getElementById('copy-btn-text').textContent = 'Copied!';
             setTimeout(() => {
-                btn.textContent = 'Copy';
-            }, 1000);
+                document.getElementById('copy-btn-text').textContent = 'Copy to Clipboard';
+            }, 2000);
         } catch (err) {
             console.error('Failed to copy:', err);
             // Fallback
@@ -508,11 +552,7 @@ const PublicationsManager = {
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            const btn = document.getElementById(buttonId);
-            btn.textContent = 'Copied!';
-            setTimeout(() => {
-                btn.textContent = 'Copy';
-            }, 1000);
+            document.getElementById('copy-btn-text').textContent = 'Copied!';
         }
     },
     
