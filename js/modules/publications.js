@@ -65,7 +65,7 @@ const PublicationsManager = {
                 return 0;
             });
             
-            html += `<div class="publication-type-section mb-12">
+            html += `<div id="section-journal-conference" class="publication-type-section mb-12">
                 <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
                     Journal & Conference Papers (${journalAndConf.length})
                 </h2>`;
@@ -105,7 +105,7 @@ const PublicationsManager = {
                 return 0;
             });
             
-            html += `<div class="publication-type-section mb-12">
+            html += `<div id="section-workshop" class="publication-type-section mb-12">
                 <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
                     Conference Workshop & Bridge Papers (${workshopAndBridge.length})
                 </h2>`;
@@ -142,7 +142,12 @@ const PublicationsManager = {
     },
     
     renderTypeSection(type, publications) {
-        let html = `<div class="publication-type-section mb-12">
+        // ID용 slug 생성
+        const sectionId = type === 'Non-Refereed Papers' ? 'section-non-refereed' : 
+                          type === 'Working Papers' ? 'section-working' : 
+                          type === 'Book in Progress' ? 'section-book' : '';
+        
+        let html = `<div id="${sectionId}" class="publication-type-section mb-12">
             <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
                 ${type} (${publications.length})
             </h2>`;
@@ -322,47 +327,45 @@ const PublicationsManager = {
     },
     
     updateDetailedStats() {
-        // Calculate statistics
-        const stats = {
-            total: this.data.length,
-            byKeyword: {
-                finance: 0,
-                ml: 0,
-                optimization: 0
-            }
-        };
+        const groupedByType = this.groupByType(this.data);
         
-        // Count by keywords
-        this.data.forEach(pub => {
-            if (pub.keywords && Array.isArray(pub.keywords)) {
-                pub.keywords.forEach(keyword => {
-                    const kw = keyword.toLowerCase();
-                    if (kw.includes('finance')) stats.byKeyword.finance++;
-                    if (kw.includes('machine learning') || kw.includes('deep learning')) stats.byKeyword.ml++;
-                    if (kw.includes('optimization')) stats.byKeyword.optimization++;
-                });
-            }
-        });
+        // Count by category
+        const journalConfCount = (groupedByType['Journal']?.length || 0) + 
+                                 (groupedByType['Conference']?.length || 0);
+        const workshopCount = (groupedByType['Conference Workshop']?.length || 0) + 
+                              (groupedByType['Bridge Paper']?.length || 0);
+        const nonRefereedCount = groupedByType['Non-Refereed Papers']?.length || 0;
+        const workingCount = groupedByType['Working Papers']?.length || 0;
         
         // Update HTML elements
         const totalEl = document.getElementById('total-pubs');
-        if (totalEl) {
-            totalEl.textContent = stats.total;
-        }
+        if (totalEl) totalEl.textContent = this.data.length;
         
-        const financeEl = document.getElementById('finance-pubs');
-        if (financeEl) {
-            financeEl.textContent = stats.byKeyword.finance;
-        }
+        const journalConfEl = document.getElementById('journal-conf-pubs');
+        if (journalConfEl) journalConfEl.textContent = journalConfCount;
         
-        const mlEl = document.getElementById('ml-pubs');
-        if (mlEl) {
-            mlEl.textContent = stats.byKeyword.ml;
-        }
+        const workshopEl = document.getElementById('workshop-pubs');
+        if (workshopEl) workshopEl.textContent = workshopCount;
         
-        const optimizationEl = document.getElementById('optimization-pubs');
-        if (optimizationEl) {
-            optimizationEl.textContent = stats.byKeyword.optimization;
+        const nonRefereedEl = document.getElementById('non-refereed-pubs');
+        if (nonRefereedEl) nonRefereedEl.textContent = nonRefereedCount;
+        
+        const workingEl = document.getElementById('working-pubs');
+        if (workingEl) workingEl.textContent = workingCount;
+    },
+    
+    scrollToSection(sectionName) {
+        const sectionId = `section-${sectionName}`;
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerOffset = 100; // sticky header 높이 고려
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     },
     
@@ -476,4 +479,4 @@ const PublicationsManager = {
             noResultsEl.style.display = 'none';
         }
     }
-};
+};  
