@@ -1075,9 +1075,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, J. H., Lee, Y., Bae, J., & Kim, W. C. (2021). Recent trends and perspectives on the Korean asset management industry. Journal of Portfolio Management, 47(7), 248.",
+        "bibtex": "@article{kim2021recent,\n  title={Recent trends and perspectives on the Korean asset management industry},\n  author={Kim, Jang Ho and Lee, Yongjae and Bae, Jaekyu and Kim, Woo Chang},\n  journal={Journal of Portfolio Management},\n  volume={47},\n  number={7},\n  pages={248},\n  year={2021},\n  publisher={Portfolio Management Research}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=10136626328257125532&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1098,9 +1098,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, J. H., Lee, Y., Kim, W. C., & Fabozzi, F. J. (2021). Mean-variance optimization for asset allocation. Journal of Portfolio Management, 47(5), 24-40.",
+        "bibtex": "@article{kim2021mean,\n  title={Mean-variance optimization for asset allocation},\n  author={Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={47},\n  number={5},\n  pages={24--40},\n  year={2021},\n  publisher={Portfolio Management Research}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=289816218100026901&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1120,9 +1120,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Lee, Y., Kim, W. C., & Kim, J. H. (2020). Achieving portfolio diversification for individuals with low financial sustainability. Sustainability, 12(17), 7073.",
+        "bibtex": "@article{lee2020achieving,\n  title={Achieving portfolio diversification for individuals with low financial sustainability},\n  author={Lee, Yongjae and Kim, Woo Chang and Kim, Jang Ho},\n  journal={Sustainability},\n  volume={12},\n  number={17},\n  pages={7073},\n  year={2020},\n  publisher={MDPI}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=4980502958732408314&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1142,9 +1142,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Cho, H., Kim, Y., Lee, E., Choi, D., Lee, Y., & Rhee, W. (2020). Basic enhancement strategies when using Bayesian optimization for hyperparameter tuning of deep neural networks. IEEE access, 8, 52588-52608.",
+        "bibtex": "@article{cho2020basic,\n  title={Basic enhancement strategies when using Bayesian optimization for hyperparameter tuning of deep neural networks},\n  author={Cho, Hyunghun and Kim, Yongjin and Lee, Eunjung and Choi, Daeyoung and Lee, Yongjae and Rhee, Wonjong},\n  journal={IEEE access},\n  volume={8},\n  pages={52588--52608},\n  year={2020},\n  publisher={IEEE}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=17884534573838788765&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1165,9 +1165,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
+        "apa": "Kim, W. C., Kwon, D. G., Lee, Y., Kim, J. H., & Lin, C. (2020). Personalized goal-based investing via multi-stage stochastic goal programming. Quantitative Finance, 20(3), 515-526.",
+        "bibtex": "@article{kim2020personalized,\n  title={Personalized goal-based investing via multi-stage stochastic goal programming},\n  author={Kim, Woo Chang and Kwon, Do-Gyun and Lee, Yongjae and Kim, Jang Ho and Lin, Changle},\n  journal={Quantitative Finance},\n  volume={20},\n  number={3},\n  pages={515--526},\n  year={2020},\n  publisher={Taylor & Francis}\n}",
+        "scholar_url": "https://scholar.google.com/scholar?cluster=2390854560402654216&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1188,9 +1188,9 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": null,
+        "apa": "Lee, Y., Kim, M. J., Kim, J. H., Jang, J. R., & Chang Kim, W. (2020). Sparse and robust portfolio selection via semi-definite relaxation. Journal of the Operational Research Society, 71(5), 687-699.",
         "bibtex": null,
-        "scholar_url": null
+        "scholar_url": "https://scholar.google.com/scholar?cluster=603488008790575379&hl=ko&as_sdt=0,5"
       }
     },
     {
@@ -1212,7 +1212,7 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": null,
+        "apa": "유제용, 홍주환, 이용재, & 김장호. (2019). 국내 인적자본을 고려한 생애주기별 자산관리. 대한산업공학회지, 45(5), 376-386.",
         "bibtex": null,
         "scholar_url": null
       }
