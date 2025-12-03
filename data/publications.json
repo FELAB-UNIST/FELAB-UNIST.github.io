@@ -146,12 +146,12 @@
         "Clustering"
       ],
       "notes": "",
-      "link": "https://www.pm-research.com/content/iijpormgmt/early/2025/11/17/jpm20251787",
+      "link": "https://www.pm-research.com/content/iijpormgmt/52/2/150",
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Mehta, D., Thompson, J. R., Lee, H., & Lee, Y. (2025). Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners. The Journal of Portfolio Management.",
-        "bibtex": "@article{mehta2025clustering,\n  title={Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners},\n  author={Mehta, Dhagash and Thompson, John RJ and Lee, Hoyoung and Lee, Yongjae},\n  journal={The Journal of Portfolio Management},\n  year={2025},\n  publisher={Portfolio Management Research}\n}",
+        "apa": "Mehta, D., Thompson, J. R., Lee, H., & Lee, Y. (2025). Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners. The Journal of Portfolio Management, 52(2), 150-183",
+        "bibtex": "@article{mehta2025clustering,\n  title={Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners},\n  author={Mehta, Dhagash and Thompson, John RJ and Lee, Hoyoung and Lee, Yongjae},\n  journal={The Journal of Portfolio Management},\n  volume={52},\n number={2},\n pages={150--183},\n year={2025},\n  publisher={Portfolio Management Research}\n, }",
         "scholar_url": "https://scholar.google.com/scholar?cluster=17188592592933967106&hl=ko&as_sdt=0,5"
       }
     },
@@ -177,8 +177,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Hwang, Y., Lee, Y., Lee, J., Zohren, S., Kim, J. H., Kim, W. C., ... & Fabozzi, F. J. (2025). Deep Learning in Asset Management: Architectures, Applications, and Challenges. The Journal of Portfolio Management.",
-        "bibtex": "@article{hwang2025deep,\n  title={Deep Learning in Asset Management: Architectures, Applications, and Challenges},\n  author={Hwang, Yoontae and Lee, Youngbin and Lee, Junhyeong and Zohren, Stefan and Kim, Jang Ho and Kim, Woo Chang and Lee, Yongjae and Fabozzi, Frank J},\n  journal={The Journal of Portfolio Management},\n  year={2025},\n  publisher={Portfolio Management Research}\n}",
+        "apa": "Hwang, Y., Lee, Y., Lee, J., Zohren, S., Kim, J. H., Kim, W. C., ... & Fabozzi, F. J. (2025). Deep Learning in Asset Management: Architectures, Applications, and Challenges. The Journal of Portfolio Management, 52(2), 233-271",
+        "bibtex": "@article{hwang2025deep,\n  title={Deep Learning in Asset Management: Architectures, Applications, and Challenges},\n  author={Hwang, Yoontae and Lee, Youngbin and Lee, Junhyeong and Zohren, Stefan and Kim, Jang Ho and Kim, Woo Chang and Lee, Yongjae and Fabozzi, Frank J},\n  journal={The Journal of Portfolio Management},\n  volume={52},\n number={2},\n pages={233--271},\n year={2025},\n  publisher={Portfolio Management Research}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=2894018914588294980&hl=ko&as_sdt=0,5"
       }
     },
@@ -201,8 +201,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Kim, J. H., Lee, Y., Kim, W. C., Song, J. W., & Fabozzi, F. J. (2025). Random Forests for Feature Selection: Concepts and Applications in Asset Management. The Journal of Portfolio Management.",
-        "bibtex": "@article{kim2025random,\n  title={Random Forests for Feature Selection: Concepts and Applications in Asset Management},\n  author={Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang and Song, Jae Wook and Fabozzi, Frank J},\n  journal={The Journal of Portfolio Management},\n  year={2025},\n  publisher={Portfolio Management Research}\n}",
+        "apa": "Kim, J. H., Lee, Y., Kim, W. C., Song, J. W., & Fabozzi, F. J. (2025). Random Forests for Feature Selection: Concepts and Applications in Asset Management. The Journal of Portfolio Management, 52(2), 24-43",
+        "bibtex": "@article{kim2025random,\n  title={Random Forests for Feature Selection: Concepts and Applications in Asset Management},\n  author={Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang and Song, Jae Wook and Fabozzi, Frank J},\n  journal={The Journal of Portfolio Management},\n  volume={52},\n number={2},\n pages={24--43},\n year={2025},\n  publisher={Portfolio Management Research}\n}",
         "scholar_url": null
       }
     },
@@ -503,8 +503,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Lee, Y., Kim, J. H., Kim, W. C., & Fabozzi, F. J. (2024). An Overview of Machine Learning for Portfolio Optimization. Journal of Portfolio Management, 51(2).",
-        "bibtex": "@article{lee2024overview,\n  title={An Overview of Machine Learning for Portfolio Optimization.},\n  author={Lee, Yongjae and Kim, Jang Ho and Kim, Woo Chang and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={51},\n  number={2},\n  year={2024}\n}",
+        "apa": "Kim, J. H., Kim, S., Lee, Y., Kim, W. C., & Fabozzi, F. J. (2025). Enhancing mean–variance portfolio optimization through GANs-based anomaly detection. Annals of Operations Research, 346(1), 217-244.",
+        "bibtex": "@article{kim2025enhancing,title={Enhancing mean--variance portfolio optimization through GANs-based anomaly detection},author={Kim, Jang Ho and Kim, Seyoung and Lee, Yongjae and Kim, Woo Chang and Fabozzi, Frank J}, journal={Annals of Operations Research}, volume={346}, number={1}, pages={217--244}, year={2025}, publisher={Springer}}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=9469667595959276483&hl=ko&as_sdt=0,5"
       }
     },
@@ -576,8 +576,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Lee, Y., Kim, J. H., Kim, W. C., & Fabozzi, F. J. (2024). An Overview of Machine Learning for Portfolio Optimization. Journal of Portfolio Management, 51(2).",
-        "bibtex": "@article{lee2024overview,\n  title={An Overview of Machine Learning for Portfolio Optimization.},\n  author={Lee, Yongjae and Kim, Jang Ho and Kim, Woo Chang and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={51},\n  number={2},\n  year={2024}\n}",
+        "apa": "Lee, Y., Kim, J. H., Kim, W. C., & Fabozzi, F. J. (2024). An Overview of Machine Learning for Portfolio Optimization. Journal of Portfolio Management, 51(2), 131-148.",
+        "bibtex": "@article{lee2024overview,\n  title={An Overview of Machine Learning for Portfolio Optimization.},\n  author={Lee, Yongjae and Kim, Jang Ho and Kim, Woo Chang and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={51},\n  number={2},\n pages={131--148},\n year={2024}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=9469667595959276483&hl=ko&as_sdt=0,5"
       }
     },
@@ -599,8 +599,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Kim, J. H., Lee, Y., Kim, W. C., Kang, T., & Fabozzi, F. J. (2024). An Overview of Optimization Models for Portfolio Management. Journal of Portfolio Management, 51(2).",
-        "bibtex": "@article{kim2024overview,\n  title={An Overview of Optimization Models for Portfolio Management.},\n  author={Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang and Kang, Taehyeon and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={51},\n  number={2},\n  year={2024}\n}",
+        "apa": "Kim, J. H., Lee, Y., Kim, W. C., Kang, T., & Fabozzi, F. J. (2024). An Overview of Optimization Models for Portfolio Management. Journal of Portfolio Management, 51(2), 101-117.",
+        "bibtex": "@article{kim2024overview,\n  title={An Overview of Optimization Models for Portfolio Management.},\n  author={Kim, Jang Ho and Lee, Yongjae and Kim, Woo Chang and Kang, Taehyeon and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={51},\n  number={2},\n pages={101--117},\n year={2024}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=16442077849470978650&hl=ko&as_sdt=0,5"
       }
     },
@@ -868,8 +868,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Lee, Y., Thompson, J. R., Kim, J. H., Kim, W. C., & Fabozzi, F. A. (2023). An Overview of Machine Learning for Asset Management. Journal of Portfolio Management, 49(9).",
-        "bibtex": "@article{lee2023overview,\n  title={An Overview of Machine Learning for Asset Management.},\n  author={Lee, Yongjae and Thompson, John RJ and Kim, Jang Ho and Kim, Woo Chang and Fabozzi, Francesco A},\n  journal={Journal of Portfolio Management},\n  volume={49},\n  number={9},\n  year={2023}\n}",
+        "apa": "Lee, Y., Thompson, J. R., Kim, J. H., Kim, W. C., & Fabozzi, F. A. (2023). An Overview of Machine Learning for Asset Management. Journal of Portfolio Management, 49(9), 31-63.",
+        "bibtex": "@article{lee2023overview,\n  title={An Overview of Machine Learning for Asset Management.},\n  author={Lee, Yongjae and Thompson, John RJ and Kim, Jang Ho and Kim, Woo Chang and Fabozzi, Francesco A},\n  journal={Journal of Portfolio Management},\n  volume={49},\n  number={9},\n pages={31--63},\n year={2023}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=8766981889757022398&hl=ko&as_sdt=0,5"
       }
     },
@@ -891,8 +891,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Kim, J. H., Kim, W. C., Lee, Y., Choi, B. G., & Fabozzi, F. J. (2023). Robustness in Portfolio Optimization. Journal of Portfolio Management, 49(9).",
-        "bibtex": "@article{kim2023robustness,\n  title={Robustness in Portfolio Optimization.},\n  author={Kim, Jang Ho and Kim, Woo Chang and Lee, Yongjae and Choi, Bong-Geun and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={49},\n  number={9},\n  year={2023}\n}",
+        "apa": "Kim, J. H., Kim, W. C., Lee, Y., Choi, B. G., & Fabozzi, F. J. (2023). Robustness in Portfolio Optimization. Journal of Portfolio Management, 49(9), 140-159.",
+        "bibtex": "@article{kim2023robustness,\n  title={Robustness in Portfolio Optimization.},\n  author={Kim, Jang Ho and Kim, Woo Chang and Lee, Yongjae and Choi, Bong-Geun and Fabozzi, Frank J},\n  journal={Journal of Portfolio Management},\n  volume={49},\n  number={9},\n pages={140--159},\n year={2023}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=18345320814130297896&hl=ko&as_sdt=0,5"
       }
     },
@@ -1075,8 +1075,8 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Kim, J. H., Lee, Y., Bae, J., & Kim, W. C. (2021). Recent trends and perspectives on the Korean asset management industry. Journal of Portfolio Management, 47(7), 248.",
-        "bibtex": "@article{kim2021recent,\n  title={Recent trends and perspectives on the Korean asset management industry},\n  author={Kim, Jang Ho and Lee, Yongjae and Bae, Jaekyu and Kim, Woo Chang},\n  journal={Journal of Portfolio Management},\n  volume={47},\n  number={7},\n  pages={248},\n  year={2021},\n  publisher={Portfolio Management Research}\n}",
+        "apa": "Kim, J. H., Lee, Y., Bae, J., & Kim, W. C. (2021). Recent trends and perspectives on the Korean asset management industry. Journal of Portfolio Management, 47(7), 172-183.",
+        "bibtex": "@article{kim2021recent,\n  title={Recent trends and perspectives on the Korean asset management industry},\n  author={Kim, Jang Ho and Lee, Yongjae and Bae, Jaekyu and Kim, Woo Chang},\n  journal={Journal of Portfolio Management},\n  volume={47},\n  number={7},\n  pages={172--183},\n  year={2021},\n  publisher={Portfolio Management Research}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=10136626328257125532&hl=ko&as_sdt=0,5"
       }
     },
