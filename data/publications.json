@@ -89,7 +89,7 @@
         "jongyeop-lee",
         "yongjae-lee"
       ],
-      "venue": "ICAIF'25 The 2nd Workshop on  LLMs and Generative AI for Finance",
+      "venue": "ICAIF'25 The 2nd Workshop on LLMs and Generative AI for Finance",
       "title": "Practical QA Benchmark of Financial Security Knowledge for Measuring Capabilities of LLMs",
       "keywords": [
         "Finance",
@@ -177,7 +177,7 @@
       "type": "Journal",
       "github": null,
       "citation": {
-        "apa": "Hwang, Y., Lee, Y., Lee, J., Zohren, S., Kim, J. H., Kim, W. C., ... & Fabozzi, F. J. (2025). Deep Learning in Asset Management: Architectures, Applications, and Challenges. The Journal of Portfolio Management, 52(2), 233-271",
+        "apa": "Hwang, Y., Lee, Y., Lee, J., Zohren, S., Kim, J. H., Kim, W. C., Lee, Y. & Fabozzi, F. J. (2025). Deep Learning in Asset Management: Architectures, Applications, and Challenges. The Journal of Portfolio Management, 52(2), 233-271",
         "bibtex": "@article{hwang2025deep,\n  title={Deep Learning in Asset Management: Architectures, Applications, and Challenges},\n  author={Hwang, Yoontae and Lee, Youngbin and Lee, Junhyeong and Zohren, Stefan and Kim, Jang Ho and Kim, Woo Chang and Lee, Yongjae and Fabozzi, Frank J},\n  journal={The Journal of Portfolio Management},\n  volume={52},\n number={2},\n pages={233--271},\n year={2025},\n  publisher={Portfolio Management Research}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=2894018914588294980&hl=ko&as_sdt=0,5"
       }
@@ -229,7 +229,7 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Lee, H., Seo, J., Park, S., Lee, J., Ahn, W., Choi, C., ... & Lee, Y. (2025, November). Your ai, not your view: The bias of llms in investment analysis. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 150-158).",
+        "apa": "Lee, H., Seo, J., Park, S., Lee, J., Ahn, W., Choi, C., Lopez-Lira, A., & Lee, Y. (2025, November). Your ai, not your view: The bias of llms in investment analysis. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 150-158).",
         "bibtex": "@inproceedings{lee2025your,\n  title={Your ai, not your view: The bias of llms in investment analysis},\n  author={Lee, Hoyoung and Seo, Junhyuk and Park, Suhwan and Lee, Junhyeong and Ahn, Wonbin and Choi, Chanyeol and Lopez-Lira, Alejandro and Lee, Yongjae},\n  booktitle={Proceedings of the 6th ACM International Conference on AI in Finance},\n  pages={150--158},\n  year={2025}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=2853902662308951896&hl=ko&as_sdt=0,5"
       }
@@ -330,7 +330,7 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Choi, C., Kwon, J., Ha, J., Choi, H., Kim, C., Lee, Y., ... & Lopez-Lira, A. (2025, November). Finder: Financial dataset for question answering and evaluating retrieval-augmented generation. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 638-646).",
+        "apa": "Choi, C., Kwon, J., Ha, J., Choi, H., Kim, C., Lee, Y., Sohn, J. Y., & Lopez-Lira, A. (2025, November). Finder: Financial dataset for question answering and evaluating retrieval-augmented generation. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 638-646).",
         "bibtex": "@inproceedings{choi2025finder,\n  title={Finder: Financial dataset for question answering and evaluating retrieval-augmented generation},\n  author={Choi, Chanyeol and Kwon, Jihoon and Ha, Jaeseon and Choi, Hojun and Kim, Chaewoon and Lee, Yongjae and Sohn, Jy-yong and Lopez-Lira, Alejandro},\n  booktitle={Proceedings of the 6th ACM International Conference on AI in Finance},\n  pages={638--646},\n  year={2025}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=962331492716411443&hl=ko&as_sdt=0,5"
       }
@@ -355,7 +355,7 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Choi, C., Kwon, J., Lopez-Lira, A., Kim, C., Kim, M., Hwang, J., ... & Lee, Y. (2025, November). FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 632-637).",
+        "apa": "Choi, C., Kwon, J., Lopez-Lira, A., Kim, C., Kim, M., Hwang, J., Ha, J., Choi, H., Yun, S., Kim, Y., & Lee, Y. (2025, November). FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 632-637).",
         "bibtex": "@inproceedings{choi2025finagentbench,\n  title={FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering},\n  author={Choi, Chanyeol and Kwon, Jihoon and Lopez-Lira, Alejandro and Kim, Chaewoon and Kim, Minjae and Hwang, Juneha and Ha, Jaeseon and Choi, Hojun and Yun, Suyeol and Kim, Yongjin and others},\n  booktitle={Proceedings of the 6th ACM International Conference on AI in Finance},\n  pages={632--637},\n  year={2025}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=2100095006864533591&hl=ko&as_sdt=0,5"
       }
@@ -451,11 +451,11 @@
         "Machine Learning"
       ],
       "notes": "Applied Research Track, acceptance rate: 30.1%",
-      "link": "https://arxiv.org/abs/2508.16936",
+      "link": "https://dl.acm.org/doi/10.1145/3746252.3761517",
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Lee, H., Ahn, W., Park, S., Lee, J., Kim, M., Yoo, S., ... & Lee, Y. (2025, November). THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics. In Proceedings of the 34th ACM International Conference on Information and Knowledge Management (pp. 5797-5804).",
+        "apa": "Lee, H., Ahn, W., Park, S., Lee, J., Kim, M., Yoo, S., Lim, T., Lim, W., & Lee, Y. (2025, November). THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics. In Proceedings of the 34th ACM International Conference on Information and Knowledge Management (pp. 5797-5804).",
         "bibtex": "@inproceedings{lee2025theme,\n  title={THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics},\n  author={Lee, Hoyoung and Ahn, Wonbin and Park, Suhwan and Lee, Jaehoon and Kim, Minjae and Yoo, Sungdong and Lim, Taeyoon and Lim, Woohyung and Lee, Yongjae},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  pages={5797--5804},\n  year={2025}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=2955594442304047449&hl=ko&as_sdt=0,5"
       }
