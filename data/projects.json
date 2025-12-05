@@ -3,10 +3,10 @@
     {
       "id": "jeonse-fraud-2025",
       "status": "ongoing",
-      "title_kr": "전세사기 사전탐지 모델 연구 용역",
+      "title_kr": "전세사기 사전탐지 모델 연구",
       "title_en": "Research on Pre-detection Model for Jeonse (Lease) Fraud",
-      "funding_agency": "정부출연기관용역사업 (용역)",
-      "duration": "2025.11 ~ 2025.12",
+      "funding_agency": "국가인공지능전략위원회",
+      "duration": "2025.10 ~ 2025.12",
       "project_number": "2.251210.01",
       "notes": "",
       "keywords": ["Fraud Detection", "Real Estate", "Jeonse", "Machine Learning"],
