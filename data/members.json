@@ -505,46 +505,147 @@
           "linkedin": "https://www.linkedin.com/in/like-zero",
           "google_scholar": "https://scholar.google.com/citations?user=12kx1B4AAAAJ&hl=ko&oi=sra"
         }
-      }
-    ],
-    
-    "interns": [
-      {
-        "id": "sangjin-jin",
-        "name": "Sangjin Jin",
-        "name_kr": "진상진",
-        "position": "Undergraduate Intern",
-        "image": "./public/images/members/sangjin.jpg",
-        "bio": "Undergraduate Research Intern",
-        "bio_short": "Undergraduate Research Intern",
-        "email": "jsj9185@unist.ac.kr",
-        "research_interests": [],
-        "links": {}
       },
+      
+       {
+          "id": "sangjin-jin",
+          "name": "Sangjin Jin",
+          "name_kr": "진상진",
+          "position": "M.S. Student",
+          "program": "M.S. Student in Industrial Engineering",
+          "image": "./public/images/members/sangjin.jpg",
+          "email": "jsj9185@unist.ac.kr",
+          "advisor": "Yongjae Lee",
+          "start_date": "2025-03",
+  
+          "bio_short": "Working on machine learning and robust optimization for financial decision-making",
+          "bio_full": "M.S. Student in Industrial Engineering at UNIST. Research forcuses on robust optimization and machine learning applications for financial decision-making.",
+
+          "research_interests": [
+            "Machine Learning",
+            "Portfolio Optimization",
+            "Robust Optimization"
+          ],
+         
+          "education": [
+            {
+              "degree": "M.S.",
+              "field": "Industrial Engineering",
+              "institution": "UNIST",
+              "period": "2026.02 - Present",
+              "advisor": "Yongjae Lee"
+            },
+            {
+              "degree": "B.S.",
+              "field": "Industrial Engineering",
+              "institution": "UNIST",
+              "period": "2020.03 - 2026.02",
+            }
+          ],
+
+          "awards": [
+            {
+              "title": "National Industry-Academia Convergence Project Lab Contest(Silver Prize)",
+              "organization": "KIAT",
+              "year": "2025.11"
+            },
+            {
+              "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition(Silver Prize)",
+              "organization": "UNIST",
+              "year": "2025.01"
+            }
+          ],
+          
+          "experience": [
+            {
+              "position": "Undergraduate Intern",
+              "organization": "Financial Engineering Lab, UNIST",
+              "period": "2022.06 - 2024.02"
+            }
+          ],
+         
+          "links": {
+            "linkedin":"https://www.linkedin.com/in/sangjin-jin-84615a273/"
+          }
+      },
+
       {
-        "id": "suhwan-park",
+         "id": "suhwan-park",
         "name": "Suhwan Park",
         "name_kr": "박수환",
         "position": "Undergraduate Intern",
-        "image": "public/images/members/shpark.jpeg",
+          "program": "M.S. Student in Industrial Engineering",
+          "image": "public/images/members/shpark.jpeg",
+          "email": "suhwan@unist.ac.kr",
+          "advisor": "Yongjae Lee",
+          "start_date": "2025-03",
+  
+          "bio": "Working on Large Language Models and AI applications in finance",
+          "bio_short": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
+
+           "research_interests": [
+            "Large Language Models",
+            "Machine Learning",
+          ],
+        
+          "education": [
+            {
+              "degree": "M.S.",
+              "field": "Industrial Engineering",
+              "institution": "UNIST",
+              "period": "2026.02 - Present",
+              "advisor": "Yongjae Lee"
+            },
+            {
+              "degree": "B.S.",
+              "field": "Industrial Engineering",
+              "institution": "UNIST",
+              "period": "2021.03 - 2026.02",
+            }
+          ],
+
+          "awards": [
+            {
+              "title": "National Industry-Academia Convergence Project Lab Contest(Silver Prize)",
+              "organization": "KIAT",
+              "year": "2025.11"
+            },
+            {
+              "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition(Silver Prize)",
+              "organization": "UNIST",
+              "year": "2025.01"
+            }
+          ],
+          
+          "experience": [
+            {
+              "position": "Undergraduate Intern",
+              "organization": "Financial Engineering Lab, UNIST",
+              "period": "2022.06 - 2024.02"
+            }
+          ],
+         
+          "links": {
+            "google_scholar": "https://scholar.google.com/citations?user=TTCt3J4AAAAJ&hl=ko",
+            "linkedin": "https://www.linkedin.com/in/suhwan-park-5a9529299/"
+          }
+      },
+      
+    ],
+    
+    "interns": [
+       {
+        "id": "heebeom-park",
+        "name": "Heebeom Park",
+        "name_kr": "박희범",
+        "position": "Undergraduate Intern",
+        "image": "public/images/members/hbpark.jpg",
         "bio": "Undergraduate Research Intern",
         "bio_short": "Undergraduate Research Intern",
-        "email": "suhwan@unist.ac.kr",
+        "email": "smile@unist.ac.kr",
         "research_interests": [],
         "links": {}
-      },
-     {
-      "id": "suhwan-park",
-      "name": "Suhwan Park",
-      "name_kr": "박희범",
-      "position": "Undergraduate Intern",
-      "image": "public/images/members/shpark.jpeg",
-      "bio": "Undergraduate Research Intern",
-      "bio_short": "Undergraduate Research Intern",
-      "email": "smile@unist.ac.kr",
-      "research_interests": [],
-      "links": {}
-    }
+      }
     ]
   },
   "alumni": {
