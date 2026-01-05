@@ -275,6 +275,14 @@
             "institution": "UNIST"
           }
         ],
+
+        "experience": [
+          {
+            "position": "Undergraduate Intern",
+            "organization": "Financial Engineering Lab, UNIST",
+            "period": "2023.01 - 2024.02"
+          }
+        ],
         
         "links": {
           "google_scholar": "https://scholar.google.com/citations?hl=ko&user=QcLeQXQAAAAJ",
@@ -422,6 +430,14 @@
             "period": "2020.03 - 2024.08"
           }
         ],
+
+        "experience": [
+          {
+            "position": "Undergraduate Intern",
+            "organization": "Financial Engineering Lab, UNIST",
+            "period": "2024.03 - 2024.08"
+          }
+        ],
         
         "links": {
           "linkedin": "https://www.linkedin.com/in/kangmin-kim-40410a279/"
@@ -555,12 +571,12 @@
             "year": "2025.01"
           }
         ],
-        
+
         "experience": [
           {
             "position": "Undergraduate Intern",
             "organization": "Financial Engineering Lab, UNIST",
-            "period": "2022.06 - 2024.02"
+            "period": "2024.04 - 2026.02"
           }
         ],
         
@@ -580,7 +596,7 @@
         "advisor": "Yongjae Lee",
         "start_date": "2025-03",
 
-        "bio_short": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
+        "bio_short": "Working on machine learning and large language models in finance.",
         "bio_full": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
 
         "research_interests": [
@@ -616,15 +632,15 @@
             "year": "2025.01"
           }
         ],
-        
+
         "experience": [
           {
             "position": "Undergraduate Intern",
             "organization": "Financial Engineering Lab, UNIST",
-            "period": "2022.06 - 2024.02"
+            "period": "2024.04 - 2026.02"
           }
         ],
-        
+              
         "links": {
           "google_scholar": "https://scholar.google.com/citations?user=TTCt3J4AAAAJ&hl=ko",
           "linkedin": "https://www.linkedin.com/in/suhwan-park-5a9529299/"
