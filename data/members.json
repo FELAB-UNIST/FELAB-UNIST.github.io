@@ -189,7 +189,7 @@
         "id": "junhyeong-lee",
         "name": "Junhyeong Lee",
         "name_kr": "이준형",
-        "position": "Ph.D-M.S Combined",
+        "position": "Ph.D.-M.S. Combined",
         "program": "Ph.D.-M.S. Combined program in Industrial Engineering",
         "image": "./public/images/members/jhlee.png",
         "email": "jun.lee@unist.ac.kr",
@@ -234,15 +234,15 @@
         "id": "inwoo-tae",
         "name": "Inwoo Tae",
         "name_kr": "태인우",
-        "position": "Ph.D-M.S Combined",
-        "program": "M.S. student in Industrial Engineering",
+        "position": "Ph.D.-M.S. Combined",
+        "program": "Ph.D.-M.S. Combined program in Industrial Engineering",
         "image": "./public/images/members/iwtae.jpg",
         "email": "vitainu0104@unist.ac.kr",
         "advisor": "Yongjae Lee",
         "start_date": "2024-02",
         
         "bio_short": "Working on portfolio theory, machine learning, and knowledge graphs",
-        "bio_full": "Currently pursuing Ph.D-M.S combined course in Industrial Engineering at UNIST, with a background in Computer Science. Interested in portfolio theory, machine learning, and knowledge graph applications in finance.",
+        "bio_full": "Currently pursuing Ph.D.-M.S. combined course in Industrial Engineering at UNIST, with a background in Computer Science. Interested in portfolio theory, machine learning, and knowledge graph applications in finance.",
         
         "research_interests": [
           "Portfolio Theory",
@@ -253,7 +253,7 @@
         
         "education": [
           {
-            "degree": "M.S.",
+            "degree": "Ph.D.-M.S. Combined",
             "field": "Industrial Engineering",
             "institution": "UNIST",
             "period": "2024.02 - Present",
@@ -286,15 +286,15 @@
         "id": "juchan-kim",
         "name": "Juchan Kim",
         "name_kr": "김주찬",
-        "position": "Ph.D-M.S Combined",
-        "program": "M.S. Student in Dept. of Industrial Engineering",
+        "position": "Ph.D.-M.S. Combined",
+        "program": "Ph.D.-M.S. Combined program in Industrial Engineering",
         "image": "./public/images/members/jckim.jpg",
         "email": "joc6021@unist.ac.kr",
         "advisor": "Yongjae Lee",
         "start_date": "2024-02",
         
         "bio_short": "Working on portfolio optimization for retail investors and machine learning applications",
-        "bio_full": "Ph.D-M.S combined course in Industrial Engineering at UNIST, working under Prof. Yongjae Lee. Research focuses on portfolio optimization, especially for retail investors, and machine learning applications in finance.",
+        "bio_full": "Ph.D.-M.S. combined course in Industrial Engineering at UNIST, working under Prof. Yongjae Lee. Research focuses on portfolio optimization, especially for retail investors, and machine learning applications in finance.",
         
         "research_interests": [
           "Portfolio Optimization (especially for retail investors)",
@@ -303,7 +303,7 @@
         
         "education": [
           {
-            "degree": "M.S.",
+            "degree": "Ph.D.-M.S. Combined",
             "field": "Industrial Engineering",
             "institution": "UNIST",
             "period": "2024.02 - Present",
@@ -392,15 +392,15 @@
         "id": "kangmin-kim",
         "name": "Kangmin Kim",
         "name_kr": "김강민",
-        "position": "Ph.D-M.S Combined",
-        "program": "Ph.D-M.S combined Program in Industrial Engineering",
+        "position": "Ph.D.-M.S. Combined",
+        "program": "Ph.D.-M.S. Combined program in Industrial Engineering",
         "image": "./public/images/members/kmkim.jpg",
         "email": "kmin1015@unist.ac.kr",
         "advisor": "Yongjae Lee",
         "start_date": "2024-09",
         
         "bio_short": "Working on portfolio theory and machine learning applications in finance",
-        "bio_full": "Ph.D-M.S combined student in Industrial Engineering at UNIST. Research interests include portfolio theory and machine learning applications.",
+        "bio_full": "Ph.D.-M.S. combined student in Industrial Engineering at UNIST. Research interests include portfolio theory and machine learning applications.",
         
         "research_interests": [
           "Portfolio Theory",
@@ -409,7 +409,7 @@
         
         "education": [
           {
-            "degree": "Ph.D-M.S Combined",
+            "degree": "Ph.D.-M.S. Combined",
             "field": "Industrial Engineering",
             "institution": "UNIST",
             "period": "2024.09 - Present",
@@ -424,7 +424,7 @@
         ],
         
         "links": {
-          "linkedin":"https://www.linkedin.com/in/kangmin-kim-40410a279/  "
+          "linkedin": "https://www.linkedin.com/in/kangmin-kim-40410a279/"
         }
       }
     ],
@@ -507,141 +507,140 @@
         }
       },
       
-       {
-          "id": "sangjin-jin",
-          "name": "Sangjin Jin",
-          "name_kr": "진상진",
-          "position": "M.S. Student",
-          "program": "M.S. Student in Industrial Engineering",
-          "image": "./public/images/members/sangjin.jpg",
-          "email": "jsj9185@unist.ac.kr",
-          "advisor": "Yongjae Lee",
-          "start_date": "2025-03",
-  
-          "bio_short": "Working on machine learning and robust optimization for financial decision-making",
-          "bio_full": "M.S. Student in Industrial Engineering at UNIST. Research forcuses on robust optimization and machine learning applications for financial decision-making.",
+      {
+        "id": "sangjin-jin",
+        "name": "Sangjin Jin",
+        "name_kr": "진상진",
+        "position": "M.S. Student",
+        "program": "M.S. Student in Industrial Engineering",
+        "image": "./public/images/members/sangjin.jpg",
+        "email": "jsj9185@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2025-03",
 
-          "research_interests": [
-            "Machine Learning",
-            "Portfolio Optimization",
-            "Robust Optimization"
-          ],
-         
-          "education": [
-            {
-              "degree": "M.S.",
-              "field": "Industrial Engineering",
-              "institution": "UNIST",
-              "period": "2026.02 - Present",
-              "advisor": "Yongjae Lee"
-            },
-            {
-              "degree": "B.S.",
-              "field": "Industrial Engineering",
-              "institution": "UNIST",
-              "period": "2020.03 - 2026.02",
-            }
-          ],
+        "bio_short": "Working on machine learning and robust optimization for financial decision-making",
+        "bio_full": "M.S. Student in Industrial Engineering at UNIST. Research focuses on robust optimization and machine learning applications for financial decision-making.",
 
-          "awards": [
-            {
-              "title": "National Industry-Academia Convergence Project Lab Contest(Silver Prize)",
-              "organization": "KIAT",
-              "year": "2025.11"
-            },
-            {
-              "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition(Silver Prize)",
-              "organization": "UNIST",
-              "year": "2025.01"
-            }
-          ],
-          
-          "experience": [
-            {
-              "position": "Undergraduate Intern",
-              "organization": "Financial Engineering Lab, UNIST",
-              "period": "2022.06 - 2024.02"
-            }
-          ],
-         
-          "links": {
-            "linkedin":"https://www.linkedin.com/in/sangjin-jin-84615a273/"
+        "research_interests": [
+          "Machine Learning",
+          "Portfolio Optimization",
+          "Robust Optimization"
+        ],
+        
+        "education": [
+          {
+            "degree": "M.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2026.02 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2020.03 - 2026.02"
           }
+        ],
+
+        "awards": [
+          {
+            "title": "National Industry-Academia Convergence Project Lab Contest (Silver Prize)",
+            "organization": "KIAT",
+            "year": "2025.11"
+          },
+          {
+            "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition (Silver Prize)",
+            "organization": "UNIST",
+            "year": "2025.01"
+          }
+        ],
+        
+        "experience": [
+          {
+            "position": "Undergraduate Intern",
+            "organization": "Financial Engineering Lab, UNIST",
+            "period": "2022.06 - 2024.02"
+          }
+        ],
+        
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sangjin-jin-84615a273/"
+        }
       },
 
       {
-         "id": "suhwan-park",
+        "id": "suhwan-park",
         "name": "Suhwan Park",
         "name_kr": "박수환",
-        "position": "Undergraduate Intern",
-          "program": "M.S. Student in Industrial Engineering",
-          "image": "public/images/members/shpark.jpeg",
-          "email": "suhwan@unist.ac.kr",
-          "advisor": "Yongjae Lee",
-          "start_date": "2025-03",
-  
-          "bio": "Working on Large Language Models and AI applications in finance",
-          "bio_short": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
+        "position": "M.S. Student",
+        "program": "M.S. Student in Industrial Engineering",
+        "image": "public/images/members/shpark.jpeg",
+        "email": "suhwan@unist.ac.kr",
+        "advisor": "Yongjae Lee",
+        "start_date": "2025-03",
 
-           "research_interests": [
-            "Large Language Models",
-            "Machine Learning",
-          ],
-        
-          "education": [
-            {
-              "degree": "M.S.",
-              "field": "Industrial Engineering",
-              "institution": "UNIST",
-              "period": "2026.02 - Present",
-              "advisor": "Yongjae Lee"
-            },
-            {
-              "degree": "B.S.",
-              "field": "Industrial Engineering",
-              "institution": "UNIST",
-              "period": "2021.03 - 2026.02",
-            }
-          ],
+        "bio_short": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
+        "bio_full": "M.S. student in Industrial Engineering at UNIST, advised by Prof. Yongjae Lee. Research interests include LLM applications in finance, particularly investment decision-making.",
 
-          "awards": [
-            {
-              "title": "National Industry-Academia Convergence Project Lab Contest(Silver Prize)",
-              "organization": "KIAT",
-              "year": "2025.11"
-            },
-            {
-              "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition(Silver Prize)",
-              "organization": "UNIST",
-              "year": "2025.01"
-            }
-          ],
-          
-          "experience": [
-            {
-              "position": "Undergraduate Intern",
-              "organization": "Financial Engineering Lab, UNIST",
-              "period": "2022.06 - 2024.02"
-            }
-          ],
-         
-          "links": {
-            "google_scholar": "https://scholar.google.com/citations?user=TTCt3J4AAAAJ&hl=ko",
-            "linkedin": "https://www.linkedin.com/in/suhwan-park-5a9529299/"
-          }
-      },
+        "research_interests": [
+          "Large Language Models",
+          "Machine Learning"
+        ],
       
+        "education": [
+          {
+            "degree": "M.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2026.02 - Present",
+            "advisor": "Yongjae Lee"
+          },
+          {
+            "degree": "B.S.",
+            "field": "Industrial Engineering",
+            "institution": "UNIST",
+            "period": "2021.03 - 2026.02"
+          }
+        ],
+
+        "awards": [
+          {
+            "title": "National Industry-Academia Convergence Project Lab Contest (Silver Prize)",
+            "organization": "KIAT",
+            "year": "2025.11"
+          },
+          {
+            "title": "The 4th UNIST-KAIST-POSTECH Data Science Competition (Silver Prize)",
+            "organization": "UNIST",
+            "year": "2025.01"
+          }
+        ],
+        
+        "experience": [
+          {
+            "position": "Undergraduate Intern",
+            "organization": "Financial Engineering Lab, UNIST",
+            "period": "2022.06 - 2024.02"
+          }
+        ],
+        
+        "links": {
+          "google_scholar": "https://scholar.google.com/citations?user=TTCt3J4AAAAJ&hl=ko",
+          "linkedin": "https://www.linkedin.com/in/suhwan-park-5a9529299/"
+        }
+      }
     ],
     
     "interns": [
-       {
+      {
         "id": "heebeom-park",
         "name": "Heebeom Park",
         "name_kr": "박희범",
         "position": "Undergraduate Intern",
         "image": "public/images/members/hbpark.jpg",
-        "bio": "Undergraduate Research Intern",
         "bio_short": "Undergraduate Research Intern",
+        "bio_full": "Undergraduate Research Intern",
         "email": "smile@unist.ac.kr",
         "research_interests": [],
         "links": {}
