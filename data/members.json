@@ -532,7 +532,19 @@
         "email": "suhwan@unist.ac.kr",
         "research_interests": [],
         "links": {}
-      }
+      },
+     {
+      "id": "suhwan-park",
+      "name": "Suhwan Park",
+      "name_kr": "박희범",
+      "position": "Undergraduate Intern",
+      "image": "public/images/members/shpark.jpeg",
+      "bio": "Undergraduate Research Intern",
+      "bio_short": "Undergraduate Research Intern",
+      "email": "smile@unist.ac.kr",
+      "research_interests": [],
+      "links": {}
+    }
     ]
   },
   "alumni": {
