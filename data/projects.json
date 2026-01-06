@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "jeonse-fraud-2025",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "전세사기 사전탐지 모델 연구",
       "title_en": "Research on Pre-detection Model for Jeonse (Lease) Fraud",
       "funding_agency": "국가인공지능전략위원회",
@@ -10,7 +10,7 @@
       "project_number": "2.251210.01",
       "notes": "",
       "keywords": ["Fraud Detection", "Real Estate", "Jeonse", "Machine Learning"],
-      "participants": ["inwoo-tae"]
+      "participants": ["inwoo-tae", "kangmin-kim"]
     },
     {
       "id": "seed-2025",
@@ -22,7 +22,7 @@
       "project_number": "2.251152.01",
       "notes": "이공계열 우수신진 (씨앗)",
       "keywords": ["Behavioral Economics", "Individual Investors", "Big Data", "Trading Patterns"],
-      "participants": []
+      "participants": ["junhyeong-lee","juchan-kim","inwoo-tae", "kangmin-kim", "hoyoung-lee","suhwan-park","sangjin-jin"]
     },
     {
       "id": "credit-synthetic-data-2024",
