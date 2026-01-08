@@ -1,6 +1,46 @@
 {
   "news": [
     {
+      "id": "neurips-genai-finance-workshop-2025",
+      "date": "2025-12-06",
+      "category": "event",
+      "featured": false,
+      "title": "NeurIPS 2025 Workshop on Generative AI in Finance Draws Standing-Room-Only Crowd",
+      "title_kr": "NeurIPS 2025 Workshop on Generative AI in Finance, 샌디에이고에서 성황리 개최",
+      "summary": "Professor Lee co-organized the NeurIPS 2025 Workshop on Generative AI in Finance in San Diego, which drew a standing-room-only crowd of over 200 attendees. The workshop featured leading industry and academic experts discussing the transformative potential and critical challenges of Generative AI in finance.",
+      "content": "The NeurIPS 2025 Workshop on Generative AI in Finance was successfully held in San Diego on December 6, 2025, with overwhelming interest from the AI and finance communities.\n\n<strong>Full House and Standing Ovation</strong>\n\nThe workshop exceeded all expectations, with the 200-capacity room completely packed. Attendees stood along the walls and at the back to catch every session, demonstrating the tremendous enthusiasm for Generative AI applications in finance.\n\nThe event brought together top industry and academic experts to discuss both the transformative potential of Generative AI in finance and the critical challenges that remain to be addressed.\n\n<strong>Distinguished Speakers:</strong>\n\n[figure1]\n\n<strong>Rama Cont</strong> (University of Oxford): Presented on theoretical foundations of AI in finance\n\n[figure2]\n\n<strong>Ioana Boier</strong> (NVIDIA): Discussed GPU-accelerated financial AI applications\n\n[figure3]\n\n<strong>Bayan Bruss</strong> (Capital One): Shared industry perspectives on implementing Generative AI in banking\n\n<strong>Alejandro Lopez-Lira</strong> (University of Florida): Explored LLM applications in investment analysis\n\n[figure4]\n\n<strong>Jacob Chanyeol Choi</strong> (LinqAlpha): Demonstrated practical implementations of LLM agents in finance\n\n<strong>Furong Huang</strong> (University of Maryland): Presented on machine learning advances for financial applications\n\n<strong>Stefano Pasquali</strong> (Domyn): Discussed deployment challenges in production financial systems\n\n<strong>Tal Kachman</strong> (Radboud University): Explored theoretical aspects of Generative AI\n\n<strong>Hao Ni</strong> (UCL): Presented on mathematical foundations of AI in finance\n\n<strong>Panel Discussion:</strong>\n\nThe panel featured industry leaders including <strong>Prakash Arunachalam</strong> (BNY Mellon), <strong>Benika Hall</strong> (NVIDIA), <strong>Dianqi Li</strong> (Citadel Securities), and <strong>Pusheng Zhang</strong> (Cubist), discussing the future of Generative AI in financial services.\n\n<strong>Generous Sponsorship:</strong>\n\nThe workshop was made possible through generous support from:\n- Cubist Systematic Strategies\n- Susquehanna International Group\n- Domyn\n- RBC Borealis\n\n<strong>Organizing Committee:</strong>\n\nYongjae Lee (UNIST), Randall Balestriero (Brown University), Yinbin Han (Stanford University), Eric Jiawei He (RBC Borealis), Atlas Wang (XTX Markets, The University of Texas at Austin), Renyuan Xu (Stanford University), Yu Yu (BlackRock)\n\n<strong>Looking Ahead: ICLR 2026 in Rio</strong>\n\nBuilding on this momentum, the next \"Advances in Financial AI\" workshop is already being planned for ICLR 2026 in Rio de Janeiro, Brazil in April 2026.\n\nThe success of this workshop demonstrates the growing importance of Generative AI in finance and the strong collaboration between academia and industry in advancing this field.",
+      "figure1": "/public/news/251206_1.jpg",
+      "figure2": "/public/news/251206_2.jpg",
+      "figure3": "/public/news/251206_3.jpg",
+      "figure4": "/public/news/251206_4.jpg",
+      "tags": ["NeurIPS", "workshop", "Generative AI", "San Diego", "Financial AI"],
+      "links": []
+    },
+    {
+      "id": "bloomberg-cto-speaker-series-2025",
+      "date": "2025-12-09",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Invited Speaker at Bloomberg CTO Data Science Speaker Series",
+      "title_kr": "이용재 교수, Bloomberg CTO Data Science Speaker Series 초청 발표",
+      "summary": "Professor Lee was invited to present at the Bloomberg CTO Data Science Speaker Series at their New York office, discussing recent research on utilizing LLMs for investment analysis and engaging in discussions about Financial AI with Bloomberg researchers.",
+      "content": "Professor Yongjae Lee was invited to present at the <strong>Bloomberg CTO Data Science Speaker Series</strong> at Bloomberg's New York office on December 9, 2025.\n\n[figure1]\n\nThe presentation focused on recent research on utilizing Large Language Models (LLMs) for investment analysis, followed by stimulating discussions about Financial AI and LLMs with many excellent researchers at Bloomberg LP.\n\n<strong>Presentation Topics:</strong>\n\nThe talk was based on two recent research papers:\n\n<strong>1. \"Your AI, Not Your View: The View of LLMs in Investment Analysis\"</strong>\n(with Hoyoung Lee, Junhyeok Seo, Suhwan Park, Junhyeong Lee, Wonbin Ahn, Jacob Chanyeol Choi, Alejandro Lopez-Lira)\n\nThis study examines how different LLMs exhibit distinct investment biases and preferences shaped by their training data, and how these can be understood and utilized in investment analysis.\n\n<strong>2. \"THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics\"</strong>\n(with Hoyoung Lee, Wonbin Ahn, Suhwan Park, Jaehoon Lee, Minjae Kim, Sungdong Yoo, Tae Yoon Lim, Woohyung Lim)\n\nThis research introduces a novel approach to thematic investing using semantic stock representations and temporal dynamics.\n\nProfessor Lee expressed special gratitude to <strong>Daniel Preotiuc-Pietro</strong>, <strong>Anant Gupta</strong>, <strong>Enrico Santus</strong>, and <strong>Babak Saleh</strong> for their warm welcome and for graciously hosting him throughout the day. The visit provided valuable opportunities for insightful conversations and discussions about future collaborations with Bloomberg.",
+      "figure1": "/public/news/251209_1.jpg",
+      "tags": ["Bloomberg", "invited talk", "LLM", "investment analysis", "New York"],
+      "links": [
+        {
+          "text": "Paper 1: Your AI, Not Your View",
+          "url": "https://arxiv.org/abs/2507.20957",
+          "type": "paper"
+        },
+        {
+          "text": "Paper 2: THEME",
+          "url": "https://arxiv.org/abs/2508.16936",
+          "type": "paper"
+        }
+      ]
+    },
+    {
       "id": "ytn-ai-investment-research-2025",
       "date": "2025-11-22",
       "category": "achievement",

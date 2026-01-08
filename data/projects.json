@@ -1,6 +1,39 @@
 {
   "projects": [
     {
+      "id": "lg-ai-llm-market-2025",
+      "status": "ongoing",
+      "title_kr": "EXAONE-BI 고도화를 위한 투자 성향 맞춤형 LLM 및 Market Representation 공동연구",
+      "title_en": "Joint Research on Investment-Style-Tailored LLM and Market Representation for EXAONE-BI Enhancement",
+      "funding_agency": "엘지경영개발원 AI연구원",
+      "duration": "2026.01 ~ 2026.12",
+      "project_number": "2.251271.01",
+      "keywords": ["LLM", "Investment Analysis", "Market Representation", "EXAONE"],
+      "participants": ["inwoo-tae", "juchan-kim", "hoyoung-lee", "suhwan-park", "junhyeong-lee", "sangjin-jin"]
+    },
+    {
+      "id": "hanwha-life-portfolio-2026",
+      "status": "ongoing",
+      "title_kr": "AI 기반 퇴직연금 포트폴리오 산학협력연구",
+      "title_en": "AI-based Retirement Pension Portfolio Research",
+      "funding_agency": "한화생명보험(주)",
+      "duration": "2026.01 ~ 2026.06",
+      "project_number": "2.260051.01",
+      "keywords": ["Retirement Pension", "Portfolio Optimization", "AI"],
+      "participants": ["hoyoung-lee", "suhwan-park"]
+    },
+    {
+      "id": "kcis-synthetic-data-automation-2026",
+      "status": "ongoing",
+      "title_kr": "합성데이터 생성 자동화 모델 고도화 연구용역 계약서",
+      "title_en": "Advanced Automation Model for Synthetic Data Generation",
+      "funding_agency": "한국신용정보원",
+      "duration": "2026.01 ~ 2026.09",
+      "project_number": "",
+      "keywords": ["Synthetic Data", "Data Automation", "Credit Information"],
+      "participants": ["kangmin-kim"]
+    },
+    {
       "id": "jeonse-fraud-2025",
       "status": "completed",
       "title_kr": "전세사기 사전탐지 모델 연구",
