@@ -48,37 +48,39 @@ const App = {
     
     handleInitialRoute() {
         const hash = window.location.hash.slice(1); // Remove #
-        
+
         // Clean up hash - remove trailing slashes and handle members/xxx format
         const cleanHash = hash.replace(/\/$/, ''); // Remove trailing slash
-        
+
         if (cleanHash.startsWith('members/')) {
             const parts = cleanHash.split('/');
             const memberId = parts[1];
             if (memberId) {
                 // Load members page first, then navigate to profile
-                this.loadPage('members').then(() => {
+                // Use updateHistory: false to avoid duplicate history entries
+                this.loadPage('members', false).then(() => {
                     setTimeout(() => {
                         this.loadProfile(memberId);
                     }, 100);
                 });
             } else {
                 // Just members/ without ID - load members page
-                this.loadPage('members');
+                this.loadPage('members', false);
             }
         } else if (cleanHash.startsWith('profile/')) {
             const parts = cleanHash.split('/');
             const memberId = parts[1];
             // Load members page first, then navigate to profile
-            this.loadPage('members').then(() => {
+            this.loadPage('members', false).then(() => {
                 setTimeout(() => {
                     this.loadProfile(memberId);
                 }, 100);
             });
         } else if (cleanHash) {
-            this.loadPage(cleanHash);
+            // Don't create duplicate history entry for initial page load
+            this.loadPage(cleanHash, false);
         } else {
-            this.loadPage('home');
+            this.loadPage('home', false);
         }
     },
 
@@ -203,23 +205,29 @@ const App = {
     
     async loadProfile(memberId) {
         console.log(`Loading profile: ${memberId}`);
-        
+
         try {
             // Load the profile template
             const response = await fetch('./pages/profile.html');
             if (!response.ok) {
                 throw new Error('Failed to load profile template');
             }
-            
+
             const html = await response.text();
             const mainContent = document.getElementById('main-content');
             if (mainContent) {
                 mainContent.innerHTML = html;
                 window.scrollTo(0, 0);
-                
-                // Update URL
-                history.pushState({ profile: memberId }, '', `#members/${memberId}`);
-                
+
+                // Update URL with proper history management
+                // Only push state if we're not already at this URL
+                const currentHash = window.location.hash.slice(1);
+                const targetHash = `members/${memberId}`;
+
+                if (currentHash !== targetHash) {
+                    history.pushState({ profile: memberId }, '', `#${targetHash}`);
+                }
+
                 // Initialize profile with member data
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
