@@ -168,10 +168,14 @@ const MembersManager = {
                 data-member-id="${member.id}"
                 data-category="${category}">
                 <div class="text-center">
-                        <div class="mb-4">
-                            <img src="${member.image}" 
-                                 alt="${member.name}" 
-                                 class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-gray-100"
+                        <div class="mb-4 relative w-32 h-32 mx-auto">
+                            <div class="absolute inset-0 rounded-full bg-gray-200 animate-pulse"></div>
+                            <img src="${member.image}"
+                                 alt="${member.name}"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="absolute inset-0 w-full h-full rounded-full object-cover border-4 border-gray-100 opacity-0 transition-opacity duration-300"
+                                 onload="this.style.opacity='1'; this.previousElementSibling.remove();"
                                  onerror="this.onerror=null; this.src='https://placehold.co/200x200/0B1220/F7F9FC?text=${this.getInitials(member.name)}'">
                         </div>
                         <h5 class="font-semibold text-brand-navy text-lg">${member.name}</h5>

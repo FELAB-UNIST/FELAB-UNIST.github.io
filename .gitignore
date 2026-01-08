@@ -1,0 +1,21 @@
+# Python files
+*.py
+*.pyc
+*.pyo
+__pycache__/
+*.ipynb
+
+# Claude folders
+.claude/
+claude/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

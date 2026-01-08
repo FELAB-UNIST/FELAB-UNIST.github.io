@@ -143,10 +143,14 @@ const ActivitiesManager = {
         return `
             <article class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer overflow-hidden group"
                      onclick="event.stopPropagation(); ActivitiesManager.openActivityDetail('${activity.id}'); return false;">
-                <div class="h-48 overflow-hidden bg-gray-100">
-                    <img src="${activity.thumbnail}" 
+                <div class="h-48 overflow-hidden bg-gray-100 relative">
+                    <div class="absolute inset-0 bg-gray-200 animate-pulse"></div>
+                    <img src="${activity.thumbnail}"
                          alt="${activity.title}"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                         loading="lazy"
+                         decoding="async"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300 opacity-0 relative z-10"
+                         onload="this.style.opacity='1'; this.previousElementSibling?.remove();"
                          onerror="this.src='https://placehold.co/400x300/2563EB/FFFFFF?text=${activity.type}'">
                 </div>
                 <div class="p-6">
