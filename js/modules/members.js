@@ -2,10 +2,11 @@
 const MembersManager = {
     data: null,
     initialized: false,
-    
+    clickHandler: null,
+
     async init() {
         this.initialized = false;
-        
+
         await this.loadData();
         this.render();
         this.setupMemberClicks();
@@ -196,18 +197,26 @@ const MembersManager = {
     },
     
     setupMemberClicks() {
-        // Handle member card clicks for navigation
-        document.addEventListener('click', (e) => {
+        // Remove existing click handler if present to prevent duplicates
+        if (this.clickHandler) {
+            document.removeEventListener('click', this.clickHandler);
+        }
+
+        // Create and store the click handler
+        this.clickHandler = (e) => {
             const memberCard = e.target.closest('.member-card');
             if (memberCard && memberCard.dataset.memberId) {
                 e.preventDefault();
                 const memberId = memberCard.dataset.memberId;
                 const category = memberCard.dataset.category;
-                
+
                 // Navigate to profile page
                 window.App.loadProfile(memberId, category);
             }
-        });
+        };
+
+        // Handle member card clicks for navigation
+        document.addEventListener('click', this.clickHandler);
     },
     
     renderAlumni() {
