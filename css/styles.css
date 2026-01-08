@@ -337,3 +337,23 @@ article img[loading="lazy"] {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
+
+/* Project agency logos */
+.agency-logo img {
+    max-height: 64px;
+    max-width: 120px;
+    filter: grayscale(0%);
+    transition: all 0.3s ease;
+}
+
+.agency-logo img:hover {
+    filter: grayscale(0%);
+    opacity: 1 !important;
+}
+
+/* Ensure logos look good on different backgrounds */
+.project-item .agency-logo {
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}

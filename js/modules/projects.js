@@ -1,13 +1,14 @@
 // Projects Manager Module
 const ProjectsManager = {
     data: [],
+    agencyLogos: {},
     membersData: null,
     initialized: false,
     currentFilter: 'all',
-    
+
     async init() {
         this.initialized = false;
-        
+
         await this.loadData();
         await this.loadMembersData();
         this.render();
@@ -16,15 +17,17 @@ const ProjectsManager = {
         this.updateStatistics();
         this.initialized = true;
     },
-    
+
     async loadData() {
         try {
             const response = await fetch('./data/projects.json');
             const jsonData = await response.json();
             this.data = jsonData.projects;
+            this.agencyLogos = jsonData.agencyLogos || {};
         } catch (error) {
             console.error('Failed to load projects data:', error);
             this.data = [];
+            this.agencyLogos = {};
         }
     },
     
@@ -120,16 +123,17 @@ const ProjectsManager = {
     
     createProjectHTML(project) {
         const statusClass = project.status === 'ongoing' ? 'border-brand-teal' : 'border-gray-300';
-        const statusBadge = project.status === 'ongoing' 
+        const statusBadge = project.status === 'ongoing'
             ? '<span class="inline-flex items-center gap-1.5 bg-brand-teal text-white text-xs font-medium px-2.5 py-1 rounded-full">진행중</span>'
             : '<span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">✓ 완료</span>';
-            
+
         const keywordsHtml = this.formatKeywords(project.keywords);
         const participantsHtml = this.formatParticipants(project.participants);
-        
+        const logoHtml = this.getAgencyLogo(project.funding_agency);
+
         return `
             <div class="project-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-6 border-l-4 ${statusClass}">
-                <div class="flex justify-between items-start mb-4">
+                <div class="flex justify-between items-start gap-4 mb-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-3 mb-2">
                             ${statusBadge}
@@ -142,6 +146,7 @@ const ProjectsManager = {
                             <p class="text-sm text-gray-600 italic project-title-en">${project.title_en}</p>
                         ` : ''}
                     </div>
+                    ${logoHtml}
                 </div>
                 
                 <div class="space-y-2 mb-4">
@@ -194,13 +199,28 @@ const ProjectsManager = {
     
     formatKeywords(keywords) {
         if (!keywords) return '';
-        return keywords.map(kw => 
+        return keywords.map(kw =>
             `<span class="keyword text-xs font-medium bg-slate-100 text-slate-800 px-2 py-1 rounded-full">
                 ${kw}
             </span>`
         ).join(' ');
     },
-    
+
+    getAgencyLogo(agencyName) {
+        const logoFileName = this.agencyLogos[agencyName];
+        if (!logoFileName) return '';
+
+        return `
+            <div class="agency-logo flex-shrink-0">
+                <img src="/public/images/logos/${logoFileName}"
+                     alt="${agencyName}"
+                     class="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                     onerror="this.style.display='none'"
+                     loading="lazy">
+            </div>
+        `;
+    },
+
     extractYear(duration) {
         const match = duration.match(/(\d{4})/);
         return match ? parseInt(match[1]) : 0;
