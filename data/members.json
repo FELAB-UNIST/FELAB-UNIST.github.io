@@ -407,12 +407,13 @@
         "advisor": "Yongjae Lee",
         "start_date": "2024-09",
         
-        "bio_short": "Working on portfolio theory and machine learning applications in finance",
-        "bio_full": "Ph.D.-M.S. combined student in Industrial Engineering at UNIST. Research interests include portfolio theory and machine learning applications.",
+        "bio_short": "Working on portfolio theory and robust machine learning application in finance.",
+        "bio_full": "Ph.D.-M.S. combined student in Industrial Engineering at UNIST. Research interests include portfolio theory, robust and trustworthy AI in Finance.",
         
         "research_interests": [
           "Portfolio Theory",
-          "Machine Learning"
+          "Robust AI", 
+          "Calibration"
         ],
         
         "education": [
