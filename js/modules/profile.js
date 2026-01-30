@@ -478,7 +478,17 @@
                 document.getElementById('journals-content').innerHTML = member.service.journals.map(item => `
                     <div class="bg-gray-50 rounded-lg p-3">
                         <p class="font-medium text-brand-navy">${item.role}</p>
-                        <p class="text-sm text-gray-600">${item.journal}</p>
+                        <p class="text-sm text-gray-600">
+                            ${item.url ?
+                                `<a href="${item.url}" target="_blank" class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors group">
+                                    <span>${item.journal}</span>
+                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>` :
+                                item.journal
+                            }
+                        </p>
                         ${item.special_issue ? `<p class="text-xs text-gray-500">Special Issue: ${item.special_issue}</p>` : ''}
                         <p class="text-xs text-gray-500">${item.period}</p>
                     </div>
@@ -490,7 +500,17 @@
                 document.getElementById('conferences-content').innerHTML = member.service.conferences.map(item => `
                     <div class="bg-gray-50 rounded-lg p-3">
                         <p class="font-medium text-brand-navy">${item.role}</p>
-                        <p class="text-sm text-gray-600">${item.conference}</p>
+                        <p class="text-sm text-gray-600">
+                            ${item.url ?
+                                `<a href="${item.url}" target="_blank" class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors group">
+                                    <span>${item.conference}</span>
+                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>` :
+                                item.conference
+                            }
+                        </p>
                         <p class="text-xs text-gray-500">${item.location}, ${item.date}</p>
                     </div>
                 `).join('');
@@ -498,9 +518,23 @@
             
             if (member.service.workshops && member.service.workshops.length > 0) {
                 document.getElementById('service-workshops').classList.remove('hidden');
-                document.getElementById('workshops-content').innerHTML = member.service.workshops.map(workshop => 
-                    `<div class="bg-gray-50 rounded-lg p-2 text-sm">${workshop}</div>`
-                ).join('');
+                document.getElementById('workshops-content').innerHTML = member.service.workshops.map(workshop => {
+                    // Support both old string format and new object format for backward compatibility
+                    const workshopName = typeof workshop === 'string' ? workshop : workshop.name;
+                    const workshopUrl = typeof workshop === 'object' ? workshop.url : '';
+
+                    return `<div class="bg-gray-50 rounded-lg p-2 text-sm">
+                        ${workshopUrl ?
+                            `<a href="${workshopUrl}" target="_blank" class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors group">
+                                <span>${workshopName}</span>
+                                <svg class="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>` :
+                            workshopName
+                        }
+                    </div>`;
+                }).join('');
             }
             
             if (member.service.society && member.service.society.length > 0) {
@@ -508,7 +542,17 @@
                 document.getElementById('society-content').innerHTML = member.service.society.map(item => `
                     <div class="bg-gray-50 rounded-lg p-3">
                         <p class="font-medium text-brand-navy">${item.role}</p>
-                        <p class="text-sm text-gray-600">${item.organization}</p>
+                        <p class="text-sm text-gray-600">
+                            ${item.url ?
+                                `<a href="${item.url}" target="_blank" class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors group">
+                                    <span>${item.organization}</span>
+                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>` :
+                                item.organization
+                            }
+                        </p>
                         <p class="text-xs text-gray-500">${item.period}</p>
                     </div>
                 `).join('');
@@ -519,7 +563,17 @@
                 document.getElementById('advisory-content').innerHTML = member.service.advisory.map(item => `
                     <div class="bg-gray-50 rounded-lg p-3">
                         <p class="font-medium text-brand-navy">${item.role}</p>
-                        <p class="text-sm text-gray-600">${item.organization}</p>
+                        <p class="text-sm text-gray-600">
+                            ${item.url ?
+                                `<a href="${item.url}" target="_blank" class="inline-flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors group">
+                                    <span>${item.organization}</span>
+                                    <svg class="w-3 h-3 text-gray-400 group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>` :
+                                item.organization
+                            }
+                        </p>
                         <p class="text-xs text-gray-500">${item.period}</p>
                     </div>
                 `).join('');

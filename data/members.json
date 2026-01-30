@@ -75,13 +75,15 @@
             {
               "role": "Editorial Advisory Board Member",
               "journal": "The Journal of Financial Data Science",
-              "period": "2020 - Present"
+              "period": "2020 - Present",
+              "url": "https://www.pm-research.com/content/iijjfds"
             },
             {
               "role": "Guest Editor",
               "journal": "The Journal of Behavioral Finance",
               "special_issue": "Statistical and Machine Learning for Investor Modelling",
-              "period": "2023 - 2024"
+              "period": "2023 - 2024",
+              "url": "https://www.tandfonline.com/journals/hbhf20"
             }
           ],
           "conferences": [
@@ -89,39 +91,73 @@
               "role": "Senior Program Committee",
               "conference": "The 6th International Conference on AI in Finance (ICAIF'25)",
               "location": "Singapore",
-              "date": "November 2025"
+              "date": "November 2025",
+              "url": "https://icaif25.org/"
             },
             {
               "role": "Workshop Chair",
               "conference": "The 5th International Conference on AI in Finance (ICAIF'24)",
               "location": "New York, US",
-              "date": "November 2024"
+              "date": "November 2024",
+              "url": "https://ai-finance.org/"
             }
           ],
           "workshops": [
-            "Gen AI in Finance @ NeurIPS 2025",
-            "Financial Time-Series @ ICAIF'25",
-            "LLM and Gen AI for Finance @ ICAIF'25",
-            "Emerging Markets @ ICAIF'25",
-            "Financial AI @ CIKM 2025",
-            "IR in Finance Tutorial @ SIGIR 2025",
-            "Financial AI @ ICLR 2025",
-            "AI for Social Impact @ AAAI-25",
-            "RecSys in Finance @ IJCAI-24",
-            "ML for Investor Modelling @ ICAIF'23"
+            {
+              "name": "Gen AI in Finance @ NeurIPS 2025",
+              "url": "https://sites.google.com/view/neurips-25-gen-ai-in-finance/"
+            },
+            {
+              "name": "Financial Time-Series @ ICAIF'25",
+              "url": "https://icaif-25-rtfs.github.io/"
+            },
+            {
+              "name": "LLM and Gen AI for Finance @ ICAIF'25",
+              "url": "https://ai4f.org/"
+            },
+            {
+              "name": "Emerging Markets @ ICAIF'25",
+              "url": "https://icaif25-finrem.framer.website/"
+            },
+            {
+              "name": "Financial AI @ CIKM 2025",
+              "url": "https://advancesinfinancialai.com/"
+            },
+            {
+              "name": "IR in Finance Tutorial @ SIGIR 2025",
+              "url": "https://sites.google.com/view/irfin/home"
+            },
+            {
+              "name": "Financial AI @ ICLR 2025",
+              "url": ""
+            },
+            {
+              "name": "AI for Social Impact @ AAAI-25",
+              "url": "https://sites.google.com/view/aaai-2025-ai-si/home"
+            },
+            {
+              "name": "RecSys in Finance @ IJCAI-24",
+              "url": "https://sites.google.com/view/fin-recsys2024/"
+            },
+            {
+              "name": "ML for Investor Modelling @ ICAIF'23",
+              "url": "https://sites.google.com/view/ml-for-investor-recsys"
+            }
           ],
           "society": [
             {
               "role": "Executive Director and Chair of Financial AI Committee",
               "organization": "The Korean Association of Financial Engineering (한국금융공학회)",
-              "period": "2023 - Present"
+              "period": "2023 - Present",
+              "url": ""
             }
           ],
           "advisory": [
             {
               "role": "분과위원",
               "organization": "국가인공지능전략위원회",
-              "period": "2025 - Present"
+              "period": "2025 - Present",
+              "url": ""
             },
             {
               "role": "위원",
@@ -131,22 +167,26 @@
             {
               "role": "Advisor (자문교수)",
               "organization": "LinqAlpha",
-              "period": "2024 - Present"
+              "period": "2024 - Present",
+              "url": ""
             },
             {
               "role": "위원",
               "organization": "금융위원회 금융권 AI 협의회",
-              "period": "2024 - Present"
+              "period": "2024 - Present",
+              "url": ""
             },
             {
               "role": "위원",
               "organization": "한국주택금융공사 와이즈맨 클럽",
-              "period": "2024 - Present"
+              "period": "2024 - Present",
+              "url": ""
             },
             {
               "role": "Co-founder and Advisor",
               "organization": "Veranos Technologies",
-              "period": "2017 - 2023"
+              "period": "2017 - 2023",
+              "url": ""
             }
           ]
         },
