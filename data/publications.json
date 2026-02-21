@@ -1690,6 +1690,207 @@
       }
     },
     {
+      "id": "pub_wp_dfl_tangent",
+      "year": "working_paper",
+      "authors": "Junhyeong Lee, Sangjin Jin, Yongjae Lee**",
+      "author_ids": [
+        "junhyeong-lee",
+        "sangjin-jin",
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "Decision-Focused Learning via Tangent-Space Projection of Prediction Error",
+      "keywords": [
+        "Decision-Focused Learning",
+        "Optimization",
+        "Machine Learning"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_homophily_gnn",
+      "year": "working_paper",
+      "authors": "Inwoo Tae, Yoontae Hwang*, Yongjae Lee**",
+      "author_ids": [
+        "inwoo-tae",
+        "yoontae-hwang",
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "Homophily and Entropy Temperature Scaling for Graph Neural Network",
+      "keywords": [
+        "Graph Neural Networks",
+        "Machine Learning"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_mm_compliance",
+      "year": "working_paper",
+      "authors": "Rui He, Jianhua Yang, Tomoki Kera, Atsushi Keyaki, Anaïs Lhuissier, Juyeon Kang, Min-Yuh Day, Guan-Bo Yang, Hsin-Hsi Chen, Dittaya Wanvarie, Yongjae Lee, Suhwan Park, Yuriko Nakao, Chung-Chi Chen, Yohei Seki",
+      "author_ids": [
+        "yongjae-lee",
+        "suhwan-park"
+      ],
+      "venue": "",
+      "title": "MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing",
+      "keywords": [
+        "Finance",
+        "Compliance",
+        "Multimodal",
+        "NLP"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_cross_sectional_retrieval",
+      "year": "working_paper",
+      "authors": "Hyeongmin Lee, Chanyeol Choi, Jihoon Kwon, Yoon Kim, Alejandro Lopez-Lira, Wonbin Ahn, Yongjae Lee**",
+      "author_ids": [
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning",
+      "keywords": [
+        "Finance",
+        "Retrieval",
+        "Asset Pricing"
+      ],
+      "notes": "submitted",
+      "link": "https://arxiv.org/abs/2602.10711",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": "Lee, H., Choi, C., Kwon, J., Kim, Y., Lopez-Lira, A., Ahn, W., & Lee, Y. (2026). Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning. arXiv preprint arXiv:2602.10711.",
+        "bibtex": "@article{lee2026crosssectional,\n  title={Cross-Sectional Asset Retrieval via Future-Aligned Soft Contrastive Learning},\n  author={Lee, Hyeongmin and Choi, Chanyeol and Kwon, Jihoon and Kim, Yoon and Lopez-Lira, Alejandro and Ahn, Wonbin and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2602.10711},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_llm_risk_manager",
+      "year": "working_paper",
+      "authors": "Sumin Kim, Minjae Kim, Jihoon Kwon, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee**, Chanyeol Choi",
+      "author_ids": [
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets",
+      "keywords": [
+        "Finance",
+        "LLMs",
+        "Prediction Markets"
+      ],
+      "notes": "submitted",
+      "link": "https://arxiv.org/abs/2602.07048",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": "Kim, S., Kim, M., Kwon, J., Kim, Y., Kagan, N., Lee, J. W., Levy, O., Lopez-Lira, A., Lee, Y., & Choi, C. (2026). LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets. arXiv preprint arXiv:2602.07048.",
+        "bibtex": "@article{kim2026llm,\n  title={LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets},\n  author={Kim, Sumin and Kim, Minjae and Kwon, Jihoon and Kim, Yoon and Kagan, Nicole and Lee, Joo Won and Levy, Oscar and Lopez-Lira, Alejandro and Lee, Yongjae and Choi, Chanyeol},\n  journal={arXiv preprint arXiv:2602.07048},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_fintexts",
+      "year": "working_paper",
+      "authors": "Jaehoon Lee, Suhwan Park, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn",
+      "author_ids": [
+        "suhwan-park",
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing",
+      "keywords": [
+        "Finance",
+        "Time Series",
+        "NLP",
+        "Dataset"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_mention_markets",
+      "year": "working_paper",
+      "authors": "Sumin Kim, Jihoon Kwon, Yoon Kim, Raffi Khatchadourian, Wonbin Ahn, Alejandro Lopez-Lira, Jaewon Lee, Yoontae Hwang, Oscar Levy, Yongjae Lee, Chanyeol Choi",
+      "author_ids": [
+        "yoontae-hwang",
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "Forecasting Future Language: Context Design for Mention Markets",
+      "keywords": [
+        "Finance",
+        "Prediction Markets",
+        "LLMs",
+        "NLP"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_wp_text_to_alpha",
+      "year": "working_paper",
+      "authors": "Chanyeol Choi, Yoon Kim, Yu Yu, Young Cha, Zach Golkhou, Igor Halperin, Georgios Papaioannou, Minkyu Kim, Zhangyang Wang, Jihoon Kwon, Minjae Kim, Alejandro Lopez-Lira, Yongjae Lee",
+      "author_ids": [
+        "yongjae-lee"
+      ],
+      "venue": "",
+      "title": "From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures?",
+      "keywords": [
+        "Finance",
+        "LLMs",
+        "Corporate Disclosures"
+      ],
+      "notes": "submitted",
+      "link": "",
+      "type": "Working Papers",
+      "github": null,
+      "citation": {
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
+      }
+    },
+    {
       "id": "pub_wp_temporal",
       "year": "working_paper",
       "authors": "Yoontae Hwang, Stefan Zohren, Yongjae Lee**",
@@ -1709,81 +1910,8 @@
       "github": null,
       "citation": {
         "apa": "Hwang, Y., Zohren, S., & Lee, Y. (2024). Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management. arXiv preprint arXiv:2407.13751.",
-        "bibtex":"@article{hwang2024temporal,\n  title={Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management},\n  author={Hwang, Yoontae and Zohren, Stefan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2407.13751},\n  year={2024}\n}",
+        "bibtex": "@article{hwang2024temporal,\n  title={Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management},\n  author={Hwang, Yoontae and Zohren, Stefan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2407.13751},\n  year={2024}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=4915051564620530005&hl=ko&as_sdt=0,5"
-      }
-    },
-    {
-      "id": "pub_wp_taxonomy",
-      "year": "working_paper",
-      "authors": "Juchan Kim, Yongjae Lee**",
-      "author_ids": [
-        "juchan-kim",
-        "yongjae-lee"
-      ],
-      "venue": "",
-      "title": "Taxonomy of Individual Investors",
-      "keywords": [
-        "Finance",
-        "Investor Behavior"
-      ],
-      "notes": "",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
-    {
-      "id": "pub_wp_preference_po",
-      "year": "working_paper",
-      "authors": "Juchan Kim, Yoontae Hwang, Yongjae Lee**",
-      "author_ids": [
-        "juchan-kim",
-        "yoontae-hwang",
-        "yongjae-lee"
-      ],
-      "venue": "",
-      "title": "Preference-Informed Portfolio Optimization",
-      "keywords": [
-        "Finance",
-        "Portfolio Optimization"
-      ],
-      "notes": "",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
-    {
-      "id": "pub_wp_end2end_mm",
-      "year": "working_paper",
-      "authors": "Guhyuk Chung, Yongjae Lee*, Woo Chang Kim*",
-      "author_ids": [
-        "yongjae-lee"
-      ],
-      "venue": "",
-      "title": "End-to-End Market Making via Non-skipping Recurrent Proximal Policy Optimization",
-      "keywords": [
-        "Finance",
-        "Reinforcement Learning",
-        "Market Making"
-      ],
-      "notes": "",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
       }
     },
     {

@@ -1,6 +1,47 @@
 {
   "activities": [
     {
+        "id": "kaist-joint-seminar-2026",
+        "date": "2026-02-12",
+        "title": "UNIST×KAIST FELAB Joint Seminar",
+        "title_kr": "UNIST×KAIST 금융공학연구실 합동 세미나",
+        "location": "UNIST",
+        "type": "seminar",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kaist-seminar-2026-2.jpg",
+        "summary": "UNIST 금융공학연구실과 KAIST 금융공학연구실 학생들이 모여 합동 세미나를 진행하였습니다.",
+        "content": {
+            "overview": "UNIST 금융공학연구실과 Woo Chang Kim 교수님께서 이끄시는 KAIST 금융공학연구실 학생들이 모여 공동으로 세미나를 진행하였습니다. 박사과정 학생들 중심으로 30분 정도씩 각자의 연구분야를 발표하고 서로 토의도 하는 시간을 가졌는데요, 학생들 숫자가 적지 않다보니 오후 내내 빡빡하게 진행했는데 겨우 저녁시간 맞춰서 마칠 수 있었습니다.",
+            "sections": [
+                {
+                    "type": "gallery",
+                    "title": "세미나 프로그램",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kaist-seminar-2026-1.jpg",
+                            "caption": "세미나 프로그램 - 2026년 2월 12일 (목), 13:00-18:00, UNIST 110 N101"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "합동 세미나",
+                    "content": "UNIST 금융공학연구실과 Woo Chang Kim 교수님께서 이끄시는 KAIST 금융공학연구실 학생들이 모여 공동으로 세미나를 진행하였습니다. 박사과정 학생들 중심으로 30분 정도씩 각자의 연구분야를 발표하고 서로 토의도 하는 시간을 가졌는데요, 학생들 숫자가 적지 않다보니 오후 내내 빡빡하게 진행했는데 겨우 저녁시간 맞춰서 마칠 수 있었습니다.\n\n김우창 교수님께서 작년 여름부터 청와대에 들어가시면서 KAIST 학생들 연구 지도를 제가 도와주고 있는데요, 두 금융공학연구실은 모두 금융분야의 다양한 문제 해결을 위한 기술 연구를 목표로 하고 있다보니 학생들의 관심사도 상당히 다양한 것을 볼 수가 있었습니다. 수리적 최적화, 시계열, 그래프, LLM 까지 다양한 영역을 커버하고 있는 두 연구실의 학생들을 보니 참 뿌듯하고 좋았습니다.\n\n두 연구실에 훌륭한 학생들이 정말 많으니 금융권에서는 많은 관심 부탁드리겠습니다 ㅎㅎ"
+                },
+                {
+                    "type": "gallery",
+                    "title": "참가자 단체 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kaist-seminar-2026-2.jpg",
+                            "caption": "UNIST × KAIST 금융공학연구실 합동 세미나 참가자들"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
         "id": "icaif-2025-singapore",
         "date": "2025-11-18",
         "title": "2025 ICAIF (Singapore)",
@@ -2249,6 +2290,11 @@
         "name": "Celebrations",
         "icon": "🎊",
         "color": "yellow"
+    },
+    "seminar": {
+        "name": "Seminars",
+        "icon": "📚",
+        "color": "orange"
     }
     }
 }
