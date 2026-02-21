@@ -1,6 +1,37 @@
 {
   "news": [
     {
+      "id": "fsc-innovative-finance-committee-2026",
+      "date": "2026-01-06",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee Appointed to FSC Innovative Financial Services Review Committee",
+      "title_kr": "이용재 교수, 금융위원회 혁신금융심사위원회 위원 위촉",
+      "summary": "Professor Lee has been appointed as a member of the Financial Services Commission's Innovative Financial Services Review Committee and attended the first meeting.",
+      "content": "Professor Lee has been appointed as a member of the Financial Services Commission's (금융위원회) Innovative Financial Services Review Committee (혁신금융심사위원회) and attended its first meeting.\n\n[figure1]\n\nHaving focused primarily on research as a technologist, this appointment offered a reminder of how much there is still to learn about the regulatory side of financial services. Professor Lee looks forward to the next two years as an opportunity to bridge that gap—and to contribute, even in a small way, to enabling innovative financial services to take root.",
+      "figure1": "/public/news/260106_1.jpg",
+      "tags": ["FSC", "appointment", "policy", "financial regulation"],
+      "links": []
+    },
+    {
+      "id": "sampro-understanding-2026",
+      "date": "2026-01-16",
+      "category": "event",
+      "featured": false,
+      "title": "Prof. Lee Appears on Sampro Understanding: Jeonse Fraud Detection & LLM Investment Bias",
+      "title_kr": "이용재 교수, 삼프로 언더스탠딩 출연: 전세사기 사전탐지 & LLM 투자편향 연구 소개",
+      "summary": "Professor Lee appeared on Sampro Understanding (삼프로 언더스탠딩) in two parts: discussing AI-powered jeonse fraud early detection (Part 1) and LLM investment bias research (Part 2).",
+      "content": "<strong>Part 1: AI-Powered Jeonse Fraud Early Detection</strong>\n\n[youtube:Ta4iNHffKOk]\n\nProfessor Lee appeared on Sampro Understanding to introduce research on AI-powered early detection of jeonse (전세) fraud, developed as part of a National AI Strategy Committee project. The research is not about creating entirely new technology—rather, it focuses on connecting and integrating government-held data to reduce information asymmetries, helping people make better-informed decisions through clearer and more accessible analysis.\n\n<strong>Part 2: LLM Investment Bias</strong>\n\n[youtube:BMAZc9lddhE]\n\nIn Part 2, Professor Lee introduced his research paper \"Your AI, Not Your View: The Bias of LLMs in Investment Analysis,\" presented at ICAIF in Singapore (November 2024).\n\nThe study shows that different AI models carry distinct investment biases from their training data, and that they vary considerably in how stubbornly they hold their positions when challenged. These tendencies are worth understanding for anyone relying on AI in investment decisions.\n\nSince its debut as a keynote at the SIGIR Financial AI Workshop in Padova, Italy (July 2025), the paper has made its rounds—UCL in London (August), the Bank of Korea (September), UBS and CUHK in Hong Kong (November), ICAIF in Singapore (November), Bloomberg in New York (December), and SBS News—before landing on Sampro Understanding. Extended follow-up research is currently in progress.",
+      "tags": ["Sampro", "media", "jeonse fraud", "LLM", "investment bias", "National AI Strategy Committee"],
+      "links": [
+        {
+          "text": "Paper: Your AI, Not Your View",
+          "url": "https://dl.acm.org/doi/10.1145/3768292.3770375",
+          "type": "paper"
+        }
+      ]
+    },
+    {
       "id": "neurips-genai-finance-workshop-2025",
       "date": "2025-12-06",
       "category": "event",
