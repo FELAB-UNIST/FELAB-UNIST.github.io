@@ -1743,7 +1743,7 @@
     {
       "id": "pub_wp_mm_compliance",
       "year": "working_paper",
-      "authors": "Rui He, Jianhua Yang, Tomoki Kera, Atsushi Keyaki, Anaïs Lhuissier, Juyeon Kang, Min-Yuh Day, Guan-Bo Yang, Hsin-Hsi Chen, Dittaya Wanvarie, Yongjae Lee, Suhwan Park, Yuriko Nakao, Chung-Chi Chen, Yohei Seki",
+      "authors": "Rui He, Jianhua Yang, Tomoki Kera, Atsushi Keyaki, Anaïs Lhuissier, Juyeon Kang, Min-Yuh Day, Guan-Bo Yang, Hsin-Hsi Chen, Dittaya Wanvarie, Yongjae Lee, Suhwan Park, Yuriko Nakao, Chung-Chi Chen, Yohei Seki*",
       "author_ids": [
         "yongjae-lee",
         "suhwan-park"
@@ -1769,7 +1769,7 @@
     {
       "id": "pub_wp_cross_sectional_retrieval",
       "year": "working_paper",
-      "authors": "Hyeongmin Lee, Chanyeol Choi, Jihoon Kwon, Yoon Kim, Alejandro Lopez-Lira, Wonbin Ahn, Yongjae Lee**",
+      "authors": "Hyeongmin Lee, Chanyeol Choi, Jihoon Kwon, Yoon Kim, Alejandro Lopez-Lira, Wonbin Ahn, Yongjae Lee",
       "author_ids": [
         "yongjae-lee"
       ],
@@ -1793,7 +1793,7 @@
     {
       "id": "pub_wp_llm_risk_manager",
       "year": "working_paper",
-      "authors": "Sumin Kim, Minjae Kim, Jihoon Kwon, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee**, Chanyeol Choi",
+      "authors": "Sumin Kim†, Minjae Kim†, Jihoon Kwon†, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee*, Chanyeol Choi*",
       "author_ids": [
         "yongjae-lee"
       ],
@@ -1817,7 +1817,7 @@
     {
       "id": "pub_wp_fintexts",
       "year": "working_paper",
-      "authors": "Jaehoon Lee, Suhwan Park, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn",
+      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn*",
       "author_ids": [
         "suhwan-park",
         "yongjae-lee"
@@ -1843,7 +1843,7 @@
     {
       "id": "pub_wp_mention_markets",
       "year": "working_paper",
-      "authors": "Sumin Kim, Jihoon Kwon, Yoon Kim, Raffi Khatchadourian, Wonbin Ahn, Alejandro Lopez-Lira, Jaewon Lee, Yoontae Hwang, Oscar Levy, Yongjae Lee, Chanyeol Choi",
+      "authors": "Sumin Kim†, Jihoon Kwon†, Yoon Kim, Raffi Khatchadourian, Wonbin Ahn, Alejandro Lopez-Lira, Jaewon Lee, Yoontae Hwang, Oscar Levy, Yongjae Lee*, Chanyeol Choi*",
       "author_ids": [
         "yoontae-hwang",
         "yongjae-lee"
@@ -1893,7 +1893,7 @@
     {
       "id": "pub_wp_temporal",
       "year": "working_paper",
-      "authors": "Yoontae Hwang, Stefan Zohren, Yongjae Lee**",
+      "authors": "Yoontae Hwang, Stefan Zohren*, Yongjae Lee**",
       "author_ids": [
         "yoontae-hwang",
         "yongjae-lee"
