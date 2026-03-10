@@ -45,22 +45,22 @@
           {
             "position": "Associate Professor",
             "institution": "Department of Industrial Engineering and Artificial Intelligence Graduate School, UNIST",
-            "period": "2024 - Present"
+            "period": "Mar 2024 - Present"
           },
           {
             "position": "Assistant Professor",
             "institution": "Department of Industrial Engineering, UNIST",
-            "period": "2018 - 2024"
+            "period": "Aug 2018 - Feb 2024"
           },
           {
             "position": "BK Assistant Professor",
             "institution": "Department of Transdisciplinary Studies, Seoul National University",
-            "period": "2017 - 2018"
+            "period": "Nov 2017 - Oct 2018"
           },
           {
             "position": "Post-doctoral Researcher",
             "institution": "KAIST Center for Wealth Management Technologies",
-            "period": "2016 - 2017"
+            "period": "Mar 2016 - Oct 2017"
           },
           {
             "position": "Visiting Researcher",
@@ -75,7 +75,7 @@
             {
               "role": "Editorial Advisory Board Member",
               "journal": "The Journal of Financial Data Science",
-              "period": "2020 - Present",
+              "period": "Feb 2020 - Present",
               "url": "https://www.pm-research.com/content/iijjfds"
             },
             {
@@ -105,38 +105,47 @@
           "workshops": [
             {
               "name": "Gen AI in Finance @ NeurIPS 2025",
+              "date": "December 2025",
               "url": "https://sites.google.com/view/neurips-25-gen-ai-in-finance/"
             },
             {
               "name": "Financial Time-Series @ ICAIF'25",
+              "date": "November 2025",
               "url": "https://icaif-25-rtfs.github.io/"
             },
             {
               "name": "LLM and Gen AI for Finance @ ICAIF'25",
+              "date": "November 2025",
               "url": "https://ai4f.org/"
             },
             {
               "name": "Emerging Markets @ ICAIF'25",
+              "date": "November 2025",
               "url": "https://icaif25-finrem.framer.website/"
             },
             {
               "name": "Financial AI @ CIKM 2025",
+              "date": "November 2025",
               "url": "https://advancesinfinancialai.com/"
             },
             {
               "name": "IR in Finance Tutorial @ SIGIR 2025",
+              "date": "July 2025",
               "url": "https://sites.google.com/view/irfin/home"
             },
             {
               "name": "Financial AI @ ICLR 2025",
+              "date": "April 2025",
               "url": ""
             },
             {
               "name": "AI for Social Impact @ AAAI-25",
+              "date": "March 2025",
               "url": "https://sites.google.com/view/aaai-2025-ai-si/home"
             },
             {
               "name": "RecSys in Finance @ IJCAI-24",
+              "date": "August 2024",
               "url": "https://sites.google.com/view/fin-recsys2024/"
             },
             {
@@ -148,13 +157,13 @@
             {
               "role": "Executive Director (상임이사)",
               "organization": "The Korean Association of Financial Engineering (한국금융공학회)",
-              "period": "2023 - Present",
+              "period": "Jan 2023 - Present",
               "url": "https://www.kafe2023.org/about/executives"
             },
             {
               "role": "Executive Director (상임이사)",
               "organization": "Korean Financial Management Association (한국재무관리학회)",
-              "period": "2026 - Present",
+              "period": "Jan 2026 - Present",
               "url": "https://kfma.org/homepage/custom/names"
             }
           ],
@@ -162,36 +171,36 @@
             {
               "role": "분과위원",
               "organization": "국가인공지능전략위원회",
-              "period": "2025 - Present",
+              "period": "Oct 2025 - Present",
               "url": ""
             },
             {
               "role": "위원",
               "organization": "금융위원회 혁신금융심사위원회",
-              "period": "2026 - Present"
+              "period": "Jan 2026 - Present"
             },
             {
               "role": "Advisor (자문교수)",
               "organization": "LinqAlpha",
-              "period": "2024 - Present",
+              "period": "April 2025 - Present",
               "url": ""
             },
             {
               "role": "위원",
               "organization": "금융위원회 금융권 AI 협의회",
-              "period": "2024 - Present",
+              "period": "Mar 2024 - Present",
               "url": ""
             },
             {
               "role": "위원",
               "organization": "한국주택금융공사 와이즈맨 클럽",
-              "period": "2024 - Present",
+              "period": "Dec 2024 - Present",
               "url": ""
             },
             {
               "role": "Co-founder and Advisor",
               "organization": "Veranos Technologies",
-              "period": "2017 - 2023",
+              "period": "Nov 2017 - May 2023",
               "url": ""
             }
           ]
@@ -201,29 +210,29 @@
           {
             "title": "Maeil Business Young Scholar Best Paper Award (매경신진학자논문상)",
             "organization": "Korean Academic Society of Business Administration",
-            "year": "2025",
+            "year": "August 2025",
             "paper": "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization"
           },
           {
             "title": "Best Paper Award",
             "organization": "Korean Academic Society of Business Administration",
-            "year": "2024",
+            "year": "August 2024",
             "paper": "Temporal Representation Learning for Stock Similarities and Its Applications in Investment Management"
           },
           {
             "title": "Best Poster Award",
             "organization": "4th ACM International Conference on AI in Finance (ICAIF'23)",
-            "year": "2023"
+            "year": "November 2023"
           },
           {
             "title": "Outstanding Faculty Award (in Education)",
             "organization": "UNIST",
-            "year": "2022"
+            "year": "April 2023"
           },
           {
             "title": "KT Best Management Science Ph.D. Thesis Award",
             "organization": "The Korean Operations Research and Management Science Society (KORMS)",
-            "year": "2016"
+            "year": "October 2016"
           }
         ],
         
