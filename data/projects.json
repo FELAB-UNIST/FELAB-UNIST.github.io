@@ -1,6 +1,28 @@
 {
   "projects": [
     {
+      "id": "kftc-aml-network-2026",
+      "status": "ongoing",
+      "title_kr": "AI 기반 지급결제 네트워크 분석을 활용한 자금세탁 의심거래 탐지고도화 연구",
+      "title_en": "Enhancing Suspicious Money Laundering Transaction Detection Using AI-based Payment Network Analysis",
+      "funding_agency": "금융결제원",
+      "duration": "2026.03.09 ~ 2026.07.16",
+      "project_number": "",
+      "keywords": ["AML", "Payment Network", "Graph Analysis", "AI"],
+      "participants": ["inwoo-tae"]
+    },
+    {
+      "id": "kakaobank-multi-agent-debate-2026",
+      "status": "ongoing",
+      "title_kr": "Multi-Agent Debate 기반 금융 의사결정 예측 및 신뢰도 개선 연구",
+      "title_en": "Multi-Agent Debate-based Financial Decision Prediction and Reliability Improvement",
+      "funding_agency": "카카오뱅크",
+      "duration": "2026.04.13 ~ 2026.12.12",
+      "project_number": "",
+      "keywords": ["Multi-Agent", "LLM", "Financial Decision", "Reliability"],
+      "participants": ["junhyeong-lee", "suhwan-park", "kangmin-kim", "hoyoung-lee", "sangjin-jin"]
+    },
+    {
       "id": "lg-ai-llm-market-2025",
       "status": "ongoing",
       "title_kr": "EXAONE-BI 고도화를 위한 투자 성향 맞춤형 LLM 및 Market Representation 공동연구",
@@ -294,6 +316,8 @@
     }
   ],
   "agencyLogos": {
+    "금융결제원": "ktfc.png",
+    "카카오뱅크": "kakaobank.jpg",
     "LG AI Research": "lg-ai-research.png",
     "한화생명보험(주)": "hanwha-life.png",
     "한국신용정보원": "kcis.jpg",

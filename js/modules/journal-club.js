@@ -156,7 +156,8 @@ const JournalClubManager = {
         const topics = {
             'Time Series': ['time series', 'forecasting', '시계열', '예측', 'temporal', 'TRACE'],
             'Deep Learning': ['deep learning', 'neural', 'diffusion', '딥러닝', '신경망', 'transformer'],
-            'NLP & AI': ['RAG', 'retrieval', 'LLM', 'language model', 'question answering', 'multimodal', 'LLMs'],
+            'LLM': ['LLM', 'LLMs', 'language model', 'RAG', 'retrieval', 'agent', 'multi-agent', 'prompt', 'in-context', 'persona', 'multimodal', 'reasoning', 'instruction'],
+            'NLP': ['text', 'embedding', 'BERT', 'word2vec', 'sentiment', 'tokenization', '텍스트', '자연어', 'dynamic embedding'],
             'Knowledge Graph': ['knowledge graph', 'KG', '지식 그래프', 'mKG-RAG'],
             'Machine Learning': ['machine learning', 'ML', '머신러닝', 'embedding'],
             'Computer Vision': ['visual', 'image', '이미지', '시각'],
@@ -751,7 +752,8 @@ const JournalClubManager = {
         const colors = {
             'Time Series': 'bg-blue-100 text-blue-800',
             'Deep Learning': 'bg-purple-100 text-purple-800',
-            'NLP & AI': 'bg-green-100 text-green-800',
+            'LLM': 'bg-emerald-100 text-emerald-800',
+            'NLP': 'bg-green-100 text-green-800',
             'Knowledge Graph': 'bg-indigo-100 text-indigo-800',
             'Machine Learning': 'bg-orange-100 text-orange-800',
             'Computer Vision': 'bg-pink-100 text-pink-800',

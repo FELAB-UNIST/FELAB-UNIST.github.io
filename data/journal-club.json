@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026년 4월 14일",
+    "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
+    "presenter": "Sangjin Jin",
+    "reason": "제가 이번에 준비한 논문는 MemRL이라는 논문으로, LLM agent의 episodic memory(개인적 경험)을 강화학습을 통해 진화시켜, 어떤 경험을 다시 써야 더 좋은 추론을 할 수 있을지에 대해 연속적으로 학습하는 방법론을 제시합니다. LLM agent는 특정 task를 더 잘해내기 위해 계속해서 skillset들을 진화시켜야 하는 필요성이 존재합니다. 이를 위해 과거 경험으로부터 LLM을 스스로 진화시키는 self-evolution에 대한 연구들이 여럿 진행되었습니다. 이는 fine-tuning-based 방법과 memory-based 방법으로 나뉘는데, 전자는 큰 계산비용과 catastrophic forgetting에 대한 문제가 존재하고, 후자는 semantic similarity만으로 retrieve해오기 때문에 performance 향상에 도움이 크지 않을 수 있다 이야기합니다. 따라서, MemRL은 retrieval의 기준을 similarity에서 utility로 변경하고자 하였고, 과거 경험으로부터 높은 reward를 보였던 memory를 골라낼 수 있는 비모수적 강화학습을 제시합니다. 이를 통해 frozen된 LLM 위에서도 memory내에서의 utility 기반 평가만을 기반으로 self-evolution이 가능함을 입증하였습니다. 이와같은 연구방향은 현재 진행하고있는 카카오뱅크나 retrieval 관련 연구들에서 유용한 관점인 것 같아 함께 디스커션 해보고자 합니다!",
+    "url": "https://arxiv.org/pdf/2601.03192"
+  },
+  {
+    "date": "2026년 4월 7일",
+    "title": "Differentiable Distributionally Robust Optimization Layers",
+    "presenter": "Junhyeong Lee",
+    "reason": "이 논문은 ICML'24에 억셉된 논문입니다. 오늘 랩미팅 때 말씀 드린 것 처럼, 기존 PEAR 연구를 distributionally 확장하는 과정에서 베이스라인으로 삼을 만한 연구들을 찾다가 알게된 논문입니다. DRO를 layer로 학습하게끔 하려면 ambiguity set에 대해 미분을 해야하는데, 이것이 tricky하기 때문에 해당 연구에서는 이를 해결하는 방법론을 제안합니다. 기존 DFL 연구들과는 살짝 다른 관점의 이야기를 하는 것 같아서 이들의 접근법을 같이 살펴보고 개선 가능한 부분들에 대해서 아이디어를 얻어 가고 싶어서 선정해보았습니다.",
+    "url": "https://arxiv.org/abs/2406.16571"
+  },
+  {
+    "date": "2026년 3월 31일",
+    "title": "Linear Representations of Political Perspective Emerge in Large Language Models",
+    "presenter": "Suhwan Park",
+    "reason": "소개드릴 논문은 ICLR'25 논문으로 저번 Assistant Axis 논문과 비슷하게 LLM의 representation level에서의 현상을 분석한 논문입니다. 내용은 LLM의 activation space에 political ideology의 linear representation이 존재함을 보이고, 이를 활용해 모델 출력의 이념적 성향을 monitoring하고 steering할 수 있음을 보인 논문입니다. 구체적으론, 미국 의원 500여명의 이념점수(DW-NOMINATE score)를 attention head의 activation으로 예측하는 linear probe를 학습한 뒤, 이 probe가 뉴스 매체의 편향성까지 재학습 없이 예측할 수 있음을 보여, LLM 내부에 liberal-conservative axis가 일반적인 형태로 encoding되어 있음을 입증합니다. linear representation과 steering이라는 framework가 정치 도메인 뿐만 아니라 다양한 도메인에 응용할 수 있을 것 같은데, 특히 금융 도메인에서도 이러한 접근으로, LLM 내부의 다양한 현상을 이해하는 데 도움이 될 수 있지 않을까 싶어 선정하였습니다. 추가로, 이러한 representation-level에서 llm을 건드리는 방법론이 다른 도메인에서도 어떻게 적용되고 있는지 관련 논문들을 함께 소개하려합니다.",
+    "url": "https://openreview.net/forum?id=rwqShzb9li"
+  },
+  {
+    "date": "2026년 3월 25일",
+    "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
+    "presenter": "Hoyoung Lee",
+    "reason": "이 논문은 Anthropic의 research paper로 LLM 기본 persona가 activation space 상의 assistant axis로 나타나며, 모델이 이 축에서 멀어질수록 다른 인격을 더 쉽게 취하거나 harmful한 응답을 보이는 persona drift가 발생하고, 이를 activation으로 완화할 수 있음을 보입니다. 이 논문이 페르소나를 단순한 말투나 캐릭터 설정이 아니라 모델의 안정성과 의사결정 방식에 연결된 구조적 문제로 다룬다는 점에서 흥미로웠고, 한화생명 과제에서도 관련 고민이 있어 persona를 딥다이브 해보고 싶어 선정했습니다. 특히 이 주제는 behavioral finance와도 연결될 수 있는데 향후 개인투자자 대상에서는 persona가 단순한 UX 요소를 넘어 사용자의 신뢰 형성, 위험선호, 과잉확신, 손실회피 같은 판단과 행동에 영향을 줄 수 있는 변수이기 때문입니다. 나아가 assistant axis뿐 아니라 risk 같은 특정 axis를 추가로 찾아 조정해 다양한 투자 성향의 AI persona를 시뮬레이션하고, 이를 실제 투자자 행동이나 behavioral finance의 대표적 편향과 비교해보는 연구로도 확장할 수 있다고 생각합니다. 발표에서는 여기에 더해 persona selection model도 함께 소개하려고 합니다.",
+    "url": "https://arxiv.org/abs/2601.10387"
+  },
+  {
+    "date": "2026년 3월 17일",
+    "title": "Bank Run, Interrupted: Modeling Deposit Withdrawals with Generative AI",
+    "presenter": "Yongjae Lee",
+    "reason": "FOMC 의사결정을 LLM agents로 모델링하는 등 LLM agent를 활용한 economic simulation 연구를 활발하게 하고 있는 Stanford HAI의 연구원인 Sophia Kazinnik의 논문입니다. LLM으로 약 200 여개의 persona를 생성하고 이를 실제 소수의 실제 사람 응답 데이터로 편향을 보정하여 공포로 유발된 bank run 상황에서의 시뮬레이션을 보다 정밀하게 하는 방법을 제시합니다. 분석 결과로 어떠한 메시지를 주는 것이 bank run을 진정시키는데 도움이 되는지도 살펴보고, 네트워크 모델을 바탕으로 한 확산 양상에 대해 분석하기도 했습니다.",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4656722"
+  },
+  {
+    "date": "2026년 3월 10일",
+    "title": "Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative",
+    "presenter": "Juchan Kim",
+    "reason": "이번 ICLR 2026에 억셉된 Multimodal time-series forecasting 연구입니다. 일반적으로 시계열 예측에 사용하는 단일 시계열 이외에 text 데이터를 혼합해 예측하는 모델들에 대해서 생각해볼 수 있는 논문이라 채택하게 되었습니다. 이 논문에서 주장하고자 하는 내용은 간단합니다. numerical sequence 외에도 이 시계열을 설명하는 text data를 auxiliary variable로서 input에 사용한다면 성능이 더 향상될 수 있다는 내용입니다. 이에 따라 모델 아키텍쳐도 굉장히 간단한 형태로 이루어져 있습니다. 하지만, 이러한 아키텍쳐 설계 이전에 \"왜 text를 추가적으로 활용해야 이점이 있는지\" 에 대한 내용을 시계열 / text embedding space 에서 비교하는 실험을 통해 우선적으로 보이고 나서 이러한 구조를 설계하게 됩니다. 전반적으로 논문의 내용은 간단해서 이러한 실험적 디테일과 빌드업하는 과정에 초점을 맞춰서 보시면 좋을 것 같습니다. 발표때는 최근에 공개된 아래 논문들[1,2](이들 역시 multimodal time-series forecasting을 다룹니다) 또한 함께 엮어서 발표하겠습니다. [1] Unlocking the Value of Text: Event-Driven Reasoning and Multi-Level Alignment for Time Series Forecasting (ICLR 2026) [2] Spectral Text Fusion: A Frequency-Aware Approach to Multimodal Time-Series Forecasting (AISTATS 2026)",
+    "url": "https://openreview.net/forum?id=a1zBg9cBvt"
+  },
+  {
     "date": "2026년 2월 12일",
     "title": "NodePFN: Learning Posterior Predictive Distributions for Node Classification from Synthetic Graph Priors",
     "presenter": "Inwoo Tae",
