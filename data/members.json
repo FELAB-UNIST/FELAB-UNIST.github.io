@@ -727,6 +727,30 @@
         "email": "smile@unist.ac.kr",
         "research_interests": [],
         "links": {}
+      },
+      {
+        "id": "jaeho-jo",
+        "name": "Jaeho Jo",
+        "name_kr": "조재호",
+        "position": "Undergraduate Intern",
+        "image": "public/images/members/jhjo.jpg",
+        "bio_short": "Undergraduate Research Intern",
+        "bio_full": "Undergraduate Research Intern",
+        "email": "jojaeho@unist.ac.kr",
+        "research_interests": [],
+        "links": {}
+      },
+      {
+        "id": "yujeong-lee",
+        "name": "Yujeong Lee",
+        "name_kr": "이유정",
+        "position": "Undergraduate Intern",
+        "image": "public/images/members/ujlee.jpg",
+        "bio_short": "Undergraduate Research Intern",
+        "bio_full": "Undergraduate Research Intern",
+        "email": "ujlee1661@unist.ac.kr",
+        "research_interests": [],
+        "links": {}
       }
     ]
   },
