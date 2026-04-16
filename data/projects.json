@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "id": "kftc-aml-network-2026",
-      "status": "ongoing",
-      "title_kr": "AI 기반 지급결제 네트워크 분석을 활용한 자금세탁 의심거래 탐지고도화 연구",
-      "title_en": "Enhancing Suspicious Money Laundering Transaction Detection Using AI-based Payment Network Analysis",
-      "funding_agency": "금융결제원",
-      "duration": "2026.03 ~ 2026.07",
-      "project_number": "",
-      "keywords": ["AML", "Payment Network", "Graph Analysis", "AI"],
-      "participants": ["inwoo-tae"]
-    },
-    {
       "id": "kakaobank-multi-agent-debate-2026",
       "status": "ongoing",
       "title_kr": "Multi-Agent Debate 기반 금융 의사결정 예측 및 신뢰도 개선 연구",
@@ -34,17 +23,6 @@
       "participants": ["hoyoung-lee", "suhwan-park", "juchan-kim", "junhyeong-lee", "sangjin-jin", "inwoo-tae"]
     },
     {
-      "id": "hanwha-life-portfolio-2026",
-      "status": "ongoing",
-      "title_kr": "AI 기반 퇴직연금 포트폴리오 산학협력연구",
-      "title_en": "AI-based Retirement Pension Portfolio Research",
-      "funding_agency": "한화생명보험(주)",
-      "duration": "2026.01 ~ 2026.06",
-      "project_number": "2.260051.01",
-      "keywords": ["Retirement Pension", "Portfolio Optimization", "AI"],
-      "participants": ["hoyoung-lee", "suhwan-park"]
-    },
-    {
       "id": "kcis-synthetic-data-automation-2026",
       "status": "ongoing",
       "title_kr": "합성데이터 생성 자동화 모델 고도화",
@@ -54,6 +32,28 @@
       "project_number": "",
       "keywords": ["Synthetic Data", "Data Automation", "Credit Information"],
       "participants": ["kangmin-kim"]
+    },
+    {
+      "id": "kftc-aml-network-2026",
+      "status": "ongoing",
+      "title_kr": "AI 기반 지급결제 네트워크 분석을 활용한 자금세탁 의심거래 탐지고도화 연구",
+      "title_en": "Enhancing Suspicious Money Laundering Transaction Detection Using AI-based Payment Network Analysis",
+      "funding_agency": "금융결제원",
+      "duration": "2026.03 ~ 2026.07",
+      "project_number": "",
+      "keywords": ["AML", "Payment Network", "Graph Analysis", "AI"],
+      "participants": ["inwoo-tae"]
+    },
+    {
+      "id": "hanwha-life-portfolio-2026",
+      "status": "ongoing",
+      "title_kr": "AI 기반 퇴직연금 포트폴리오 산학협력연구",
+      "title_en": "AI-based Retirement Pension Portfolio Research",
+      "funding_agency": "한화생명보험(주)",
+      "duration": "2026.01 ~ 2026.06",
+      "project_number": "2.260051.01",
+      "keywords": ["Retirement Pension", "Portfolio Optimization", "AI"],
+      "participants": ["hoyoung-lee", "suhwan-park"]
     },
     {
       "id": "jeonse-fraud-2025",
