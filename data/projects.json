@@ -6,7 +6,7 @@
       "title_kr": "AI 기반 지급결제 네트워크 분석을 활용한 자금세탁 의심거래 탐지고도화 연구",
       "title_en": "Enhancing Suspicious Money Laundering Transaction Detection Using AI-based Payment Network Analysis",
       "funding_agency": "금융결제원",
-      "duration": "2026.03.09 ~ 2026.07.16",
+      "duration": "2026.03 ~ 2026.07",
       "project_number": "",
       "keywords": ["AML", "Payment Network", "Graph Analysis", "AI"],
       "participants": ["inwoo-tae"]
@@ -17,7 +17,7 @@
       "title_kr": "Multi-Agent Debate 기반 금융 의사결정 예측 및 신뢰도 개선 연구",
       "title_en": "Multi-Agent Debate-based Financial Decision Prediction and Reliability Improvement",
       "funding_agency": "카카오뱅크",
-      "duration": "2026.04.13 ~ 2026.12.12",
+      "duration": "2026.04 ~ 2026.12",
       "project_number": "",
       "keywords": ["Multi-Agent", "LLM", "Financial Decision", "Reliability"],
       "participants": ["junhyeong-lee", "suhwan-park", "kangmin-kim", "hoyoung-lee", "sangjin-jin"]
@@ -31,7 +31,7 @@
       "duration": "2026.01 ~ 2026.12",
       "project_number": "2.251271.01",
       "keywords": ["LLM", "Investment Analysis", "Market Representation", "EXAONE"],
-      "participants": ["inwoo-tae", "juchan-kim", "hoyoung-lee", "suhwan-park", "junhyeong-lee", "sangjin-jin"]
+      "participants": ["hoyoung-lee", "suhwan-park", "juchan-kim", "junhyeong-lee", "sangjin-jin", "inwoo-tae"]
     },
     {
       "id": "hanwha-life-portfolio-2026",
