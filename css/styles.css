@@ -245,6 +245,35 @@ body {
 
 /* Additional styles for improved publications page */
 
+.publication-stat-card {
+    min-height: 7.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.publication-stat-value {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.publication-stat-label {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
 /* Search highlight styles */
 .search-highlight {
     background-color: #fef08a;

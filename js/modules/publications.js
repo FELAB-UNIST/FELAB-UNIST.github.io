@@ -48,45 +48,20 @@ const PublicationsManager = {
             html += this.renderTypeSection('Book in Progress', groupedByType['Book in Progress']);
         }
         
-        // Journal과 Conference를 섞어서 표시
-        const journalAndConf = [];
-        if (groupedByType['Journal']) {
-            journalAndConf.push(...groupedByType['Journal'].map(p => ({...p, subtype: 'Journal'})));
-        }
+        const conferenceAndJournal = [];
         if (groupedByType['Conference']) {
-            journalAndConf.push(...groupedByType['Conference'].map(p => ({...p, subtype: 'Conference'})));
+            conferenceAndJournal.push(...groupedByType['Conference'].map(p => ({...p, subtype: 'Conference'})));
         }
-        
-        if (journalAndConf.length > 0) {
-            // 연도별로 정렬
-            journalAndConf.sort((a, b) => {
-                if (a.year === 'working_paper') return 1;
-                if (b.year === 'working_paper') return -1;
-                if (a.year !== b.year) return b.year - a.year;
-                return 0;
-            });
-            
-            html += `<div id="section-journal-conference" class="publication-type-section mb-12">
-                <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
-                    Journal & Conference Papers (${journalAndConf.length})
-                </h2>`;
-            
-            const groupedByYear = this.groupByYear(journalAndConf);
-            const sortedYears = this.getSortedYears(groupedByYear);
-            
-            sortedYears.forEach(year => {
-                html += `<div class="publication-year-section mb-8">
-                    <h3 class="font-semibold text-lg text-gray-700 mb-4">${year}</h3>
-                    <div class="space-y-4">`;
-                
-                groupedByYear[year].forEach(pub => {
-                    html += this.createPublicationHTML(pub);
-                });
-                
-                html += `</div></div>`;
-            });
-            
-            html += `</div>`;
+        if (groupedByType['Journal']) {
+            conferenceAndJournal.push(...groupedByType['Journal'].map(p => ({...p, subtype: 'Journal'})));
+        }
+
+        if (conferenceAndJournal.length > 0) {
+            html += this.renderCombinedTypeSection(
+                'conference-journal',
+                'Conference & Journal Papers',
+                conferenceAndJournal
+            );
         }
         
         // Workshop과 Bridge Papers 섞어서 표시
@@ -146,11 +121,16 @@ const PublicationsManager = {
         // ID용 slug 생성
         const sectionId = type === 'Non-Refereed Papers' ? 'section-non-refereed' : 
                           type === 'Working Papers' ? 'section-working' : 
-                          type === 'Book in Progress' ? 'section-book' : '';
+                          type === 'Book in Progress' ? 'section-book' :
+                          type === 'Journal' ? 'section-journal' :
+                          type === 'Conference' ? 'section-conference' : '';
+        const sectionTitle = type === 'Journal' ? 'Journal Papers' :
+                             type === 'Conference' ? 'Conference Papers' :
+                             type;
         
         let html = `<div id="${sectionId}" class="publication-type-section mb-12">
             <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
-                ${type} (${publications.length})
+                ${sectionTitle} (${publications.length})
             </h2>`;
         
         const groupedByYear = this.groupByYear(publications);
@@ -169,6 +149,39 @@ const PublicationsManager = {
             html += `</div></div>`;
         });
         
+        html += `</div>`;
+        return html;
+    },
+
+    renderCombinedTypeSection(sectionName, sectionTitle, publications) {
+        const sectionId = `section-${sectionName}`;
+        let html = `<div id="${sectionId}" class="publication-type-section mb-12">
+            <h2 class="text-2xl font-bold text-brand-navy mb-6 pb-2 border-b-2 border-brand-accent">
+                ${sectionTitle} (${publications.length})
+            </h2>`;
+
+        const groupedByYear = this.groupByYear(publications);
+        const sortedYears = this.getSortedYears(groupedByYear);
+
+        sortedYears.forEach(year => {
+            const sortedPublications = groupedByYear[year].slice().sort((a, b) => {
+                const priority = { Conference: 0, Journal: 1 };
+                const aPriority = Object.prototype.hasOwnProperty.call(priority, a.subtype) ? priority[a.subtype] : 2;
+                const bPriority = Object.prototype.hasOwnProperty.call(priority, b.subtype) ? priority[b.subtype] : 2;
+                return aPriority - bPriority;
+            });
+
+            html += `<div class="publication-year-section mb-8">
+                <h3 class="font-semibold text-lg text-gray-700 mb-4">${year}</h3>
+                <div class="space-y-4">`;
+
+            sortedPublications.forEach(pub => {
+                html += this.createPublicationHTML(pub);
+            });
+
+            html += `</div></div>`;
+        });
+
         html += `</div>`;
         return html;
     },
@@ -352,19 +365,22 @@ const PublicationsManager = {
         const groupedByType = this.groupByType(this.data);
         
         // Count by category
-        const journalConfCount = (groupedByType['Journal']?.length || 0) + 
-                                 (groupedByType['Conference']?.length || 0);
-        const workshopCount = (groupedByType['Conference Workshop']?.length || 0) + 
-                              (groupedByType['Bridge Paper']?.length || 0);
-        const nonRefereedCount = groupedByType['Non-Refereed Papers']?.length || 0;
-        const workingCount = groupedByType['Working Papers']?.length || 0;
+        const journalCount = (groupedByType['Journal'] && groupedByType['Journal'].length) || 0;
+        const conferenceCount = (groupedByType['Conference'] && groupedByType['Conference'].length) || 0;
+        const workshopCount = ((groupedByType['Conference Workshop'] && groupedByType['Conference Workshop'].length) || 0) +
+                              ((groupedByType['Bridge Paper'] && groupedByType['Bridge Paper'].length) || 0);
+        const nonRefereedCount = (groupedByType['Non-Refereed Papers'] && groupedByType['Non-Refereed Papers'].length) || 0;
+        const workingCount = (groupedByType['Working Papers'] && groupedByType['Working Papers'].length) || 0;
         
         // Update HTML elements
         const totalEl = document.getElementById('total-pubs');
         if (totalEl) totalEl.textContent = this.data.length;
         
-        const journalConfEl = document.getElementById('journal-conf-pubs');
-        if (journalConfEl) journalConfEl.textContent = journalConfCount;
+        const journalEl = document.getElementById('journal-pubs');
+        if (journalEl) journalEl.textContent = journalCount;
+        
+        const conferenceEl = document.getElementById('conference-pubs');
+        if (conferenceEl) conferenceEl.textContent = conferenceCount;
         
         const workshopEl = document.getElementById('workshop-pubs');
         if (workshopEl) workshopEl.textContent = workshopCount;
@@ -554,9 +570,12 @@ const PublicationsManager = {
         let hasVisibleItems = false;
         
         publicationItems.forEach(item => {
-            const title = item.querySelector('.pub-title')?.textContent?.toLowerCase() || '';
-            const authors = item.querySelector('.pub-authors')?.textContent?.toLowerCase() || '';
-            const venue = item.querySelector('.pub-venue')?.textContent?.toLowerCase() || '';
+            const titleElement = item.querySelector('.pub-title');
+            const authorsElement = item.querySelector('.pub-authors');
+            const venueElement = item.querySelector('.pub-venue');
+            const title = titleElement && titleElement.textContent ? titleElement.textContent.toLowerCase() : '';
+            const authors = authorsElement && authorsElement.textContent ? authorsElement.textContent.toLowerCase() : '';
+            const venue = venueElement && venueElement.textContent ? venueElement.textContent.toLowerCase() : '';
             const keywords = Array.from(item.querySelectorAll('.keyword')).map(k => k.textContent.toLowerCase()).join(' ');
             
             const searchableText = `${title} ${authors} ${venue} ${keywords}`;

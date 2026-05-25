@@ -1690,28 +1690,28 @@
       }
     },
     {
-      "id": "pub_wp_dfl_tangent",
-      "year": "working_paper",
-      "authors": "Junhyeong Lee, Sangjin Jin, Yongjae Lee**",
+      "id": "pub_2026_icml_dfl_tangent",
+      "year": 2026,
+      "authors": "Junhyeong Lee, Sangjin Jin, Yongjae Lee*",
       "author_ids": [
         "junhyeong-lee",
         "sangjin-jin",
         "yongjae-lee"
       ],
-      "venue": "",
+      "venue": "International Conference on Machine Learning (ICML 2026)",
       "title": "Decision-Focused Learning via Tangent-Space Projection of Prediction Error",
       "keywords": [
         "Decision-Focused Learning",
         "Optimization",
         "Machine Learning"
       ],
-      "notes": "submitted",
-      "link": "",
-      "type": "Working Papers",
+      "notes": "Poster",
+      "link": "https://arxiv.org/abs/2605.01361",
+      "type": "Conference",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "Lee, J., Jin, S., & Lee, Y. (2026). Decision-Focused Learning via Tangent-Space Projection of Prediction Error. arXiv preprint arXiv:2605.01361.",
+        "bibtex": "@article{lee2026decision,\n  title={Decision-Focused Learning via Tangent-Space Projection of Prediction Error},\n  author={Lee, Junhyeong and Jin, Sangjin and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2605.01361},\n  year={2026}\n}",
         "scholar_url": null
       }
     },
@@ -1791,22 +1791,22 @@
       }
     },
     {
-      "id": "pub_wp_llm_risk_manager",
-      "year": "working_paper",
-      "authors": "Sumin Kim†, Minjae Kim†, Jihoon Kwon†, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee*, Chanyeol Choi*",
+      "id": "pub_2026_acl_industry_llm_risk_manager",
+      "year": 2026,
+      "authors": "Sumin Kim, Minjae Kim, Jihoon Kwon, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee**, Chanyeol Choi*",
       "author_ids": [
         "yongjae-lee"
       ],
-      "venue": "",
+      "venue": "ACL 2026 Industry Track",
       "title": "LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets",
       "keywords": [
         "Finance",
         "LLMs",
         "Prediction Markets"
       ],
-      "notes": "submitted",
+      "notes": "Oral",
       "link": "https://arxiv.org/abs/2602.07048",
-      "type": "Working Papers",
+      "type": "Conference",
       "github": null,
       "citation": {
         "apa": "Kim, S., Kim, M., Kwon, J., Kim, Y., Kagan, N., Lee, J. W., Levy, O., Lopez-Lira, A., Lee, Y., & Choi, C. (2026). LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets. arXiv preprint arXiv:2602.07048.",
@@ -1815,14 +1815,41 @@
       }
     },
     {
-      "id": "pub_wp_fintexts",
-      "year": "working_paper",
-      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn*",
+      "id": "pub_2026_icml_bias_consideration",
+      "year": 2026,
+      "authors": "Yaxuan Kong†, Hoyoung Lee†, Yoontae Hwang†, Alejandro Lopez-Lira, Bradford Levy, Dhagash Mehta, Qingsong Wen, Chanyeol Choi, Yongjae Lee**, Stefan Zohren*",
+      "author_ids": [
+        "hoyoung-lee",
+        "yoontae-hwang",
+        "yongjae-lee"
+      ],
+      "venue": "International Conference on Machine Learning (ICML 2026), Position Paper Track",
+      "title": "Evaluating LLMs in Finance Requires Explicit Bias Consideration",
+      "keywords": [
+        "Finance",
+        "LLMs",
+        "Evaluation",
+        "Bias"
+      ],
+      "notes": "",
+      "link": "https://arxiv.org/abs/2602.14233",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Kong, Y., Lee, H., Hwang, Y., Lopez-Lira, A., Levy, B., Mehta, D., Wen, Q., Choi, C., Lee, Y., & Zohren, S. (2026). Evaluating LLMs in Finance Requires Explicit Bias Consideration. arXiv preprint arXiv:2602.14233.",
+        "bibtex": "@article{kong2026evaluating,\n  title={Evaluating LLMs in Finance Requires Explicit Bias Consideration},\n  author={Kong, Yaxuan and Lee, Hoyoung and Hwang, Yoontae and Lopez-Lira, Alejandro and Levy, Bradford and Mehta, Dhagash and Wen, Qingsong and Choi, Chanyeol and Lee, Yongjae and Zohren, Stefan},\n  journal={arXiv preprint arXiv:2602.14233},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_kdd_datasets_fintexts",
+      "year": 2026,
+      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, SoonYoung Lee, Yongjae Lee, Wonbin Ahn",
       "author_ids": [
         "suhwan-park",
         "yongjae-lee"
       ],
-      "venue": "",
+      "venue": "KDD 2026 Datasets and Benchmarks Track",
       "title": "FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing",
       "keywords": [
         "Finance",
@@ -1830,13 +1857,13 @@
         "NLP",
         "Dataset"
       ],
-      "notes": "submitted",
-      "link": "",
-      "type": "Working Papers",
+      "notes": "Poster",
+      "link": "https://arxiv.org/abs/2603.02702",
+      "type": "Conference",
       "github": null,
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "Lee, J., Park, S., Lim, T. Y., Lee, S., Seo, J., Kang, D., Choi, H., Kim, M., Yoo, S., Lee, S., Lee, Y., & Ahn, W. (2026). FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing. arXiv preprint arXiv:2603.02702.",
+        "bibtex": "@article{lee2026fintexts,\n  title={FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing},\n  author={Lee, Jaehoon and Park, Suhwan and Lim, Tae Yoon and Lee, Seunghan and Seo, Jun and Kang, Dongwan and Choi, Hwanil and Kim, Minjae and Yoo, Sungdong and Lee, SoonYoung and Lee, Yongjae and Ahn, Wonbin},\n  journal={arXiv preprint arXiv:2603.02702},\n  year={2026}\n}",
         "scholar_url": null
       }
     },
@@ -1915,26 +1942,28 @@
       }
     },
     {
-      "id": "pub_wp_cholesky",
-      "year": "working_paper",
-      "authors": "Hyunglip Bae†, Haeun Jeon†, Minsu Park, Yongjae Lee*, Woo Chang Kim*",
+      "id": "pub_2026_icml_sparse_tangent_portfolio",
+      "year": 2026,
+      "authors": "Haeun Jeon†, Seunghoon Choi†, Hyunglip Bae, Yongjae Lee**, Woo Chang Kim*",
       "author_ids": [
         "yongjae-lee"
       ],
-      "venue": "",
-      "title": "A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization",
+      "venue": "International Conference on Machine Learning (ICML 2026)",
+      "title": "Decision-focused Sparse Tangent Portfolio Optimization",
       "keywords": [
         "Finance",
-        "Optimization"
+        "Optimization",
+        "Portfolio Optimization",
+        "Decision-Focused Learning"
       ],
-      "notes": "submitted",
-      "link": "https://arxiv.org/abs/2502.11701",
-      "type": "Working Papers",
+      "notes": "Poster",
+      "link": "https://icml.cc/virtual/2026/poster/64722",
+      "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Bae, H., Jeon, H., Park, M., Lee, Y., & Kim, W. C. (2025). A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization. arXiv preprint arXiv:2502.11701.",
-        "bibtex": "@article{bae2025cholesky,\n  title={A Cholesky decomposition-based asset selection heuristic for sparse tangent portfolio optimization},\n  author={Bae, Hyunglip and Jeon, Haeun and Park, Minsu and Lee, Yongjae and Kim, Woo Chang},\n  journal={arXiv preprint arXiv:2502.11701},\n  year={2025}\n}",
-        "scholar_url": "https://scholar.google.com/scholar?cluster=7154912267934233800&hl=ko&as_sdt=0,5"
+        "apa": null,
+        "bibtex": null,
+        "scholar_url": null
       }
     },
     {

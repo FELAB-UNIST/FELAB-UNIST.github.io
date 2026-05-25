@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026년 5월 26일",
+    "title": "ReTabSyn: Realistic Tabular Data Synthesis via Reinforcement Learning",
+    "presenter": "Kangmin Kim",
+    "reason": "ICML'26에 억셉된 논문입니다. 합성 데이터를 생성하는 주된 목적은 데이터 부족 문제를 완화하고, 실제 downstream task에서 모델이 더 잘 일반화할 수 있도록 학습 데이터를 보강하는 데 있습니다. 하지만 데이터가 부족하고, imbalance한 환경에서는 generative model이 데이터 전체 분포를 학습하는데 문제가 있기 때문에, utility 측면에서 좋지 않은 데이터가 생성될 확률이 높습니다.\n\n이 논문은 Utility Decomposition 이론에 기반하여, downstream prediction에서 중요한 것은 feature distribution을 완벽하게 복원하는 것보다 target과 관련된 decision-relevant signal을 보존하는 것이라고 주장합니다. 이를 위해 ReTabSyn은 language model-based tabular synthesizer를 먼저 학습한 뒤, target 또는 feature를 perturb하여 preference pair를 구성합니다. 이후 일관된 row가 perturb된 row보다 더 높은 likelihood를 갖도록 preference optimization을 수행합니다. 완전하게 feature를 잘 맞추는 것보다는, feature 분포가 조금 틀어지더라도, utiltiy 측면에서 signal만 유지하도록 하는 일종의 decision focused한 방법론이라는 것이 재밌어보여 선정해보았습니다.",
+    "url": "https://arxiv.org/pdf/2603.10823"
+  },
+  {
+    "date": "2026년 5월 19일",
+    "title": "AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay",
+    "presenter": "Jaeho Jo",
+    "reason": "제가 이번에 준비한 논문은 KDD 2025에 accept된 AlphaAgent라는 논문으로, 기존 alpha mining의 핵심 문제인 alpha decay를 직접적으로 다루며 LLM agent를 활용해 주식시장에서 지속적으로 유효한 alpha factor를 발굴하는 방법론을 제시합니다.\n\nAlphaAgent의 아이디어는 Alpha Decay를 해결하기 위해서 LLM이 단순히 성과가 좋아 보이는 수식을 생성하는 것이 아니라, 기존 전략과 orthogonal하고, 투자 가설과 alpha expression이 잘 aligned 되어있으며, 지나치게 복잡하지 않은 alpha를 만들도록 탐색 과정을 정규화하는 것입니다. 이를 위해 Idea Agent가 시장 가설을 만들고, Factor Agent가 이를 alpha expression으로 변환하며, Eval Agent가 백테스트 결과를 평가해 다음 라운드에 피드백하는 closed-loop 구조를 만들고 각 단계별로 ‘AST 구조 파싱 후 simmilarity 계산’, ‘expression complexity 제한’ 등의 장치를 두는 구조를 제시합니다.\n\n현재 제가 참여하고 있는 WorldQuant IQC 대회를 위한 알파 마이닝 시스템 관련해서 insight를 얻고 함께 discussion 해보면 좋을 것 같아 이 논문을 선정했습니다!",
+    "url": "https://dl.acm.org/doi/10.1145/3711896.3736838"
+  },
+  {
+    "date": "2026년 5월 12일",
+    "title": "TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets",
+    "presenter": "Yujeong Lee",
+    "reason": "제가 이번에 준비한 논문은 LLM 기반 멀티에이전트 프레임워크를 활용해 주식 시장에서의 집단적 사회 현상을 시뮬레이션하는 연구입니다. ICLR 2025 Workshop Best Paper Award를 수상하고 NeurIPS 2025에 Accept된 논문으로, 현재 AICP에서 참고하고 있는 논문이기도 합니다.\n\nTwinMarket의 핵심 아이디어는 Belief-Desire-Intention(BDI) 프레임워크로 각 에이전트의 인지 과정을 모델링하고, 이를 소셜 네트워크와 연결해 micro-level의 개별 행동이 어떻게 macro-level의 시장 현상(버블, 폭락, 군집행동 등)으로 이어지는지를 재현합니다. 에이전트들은 실제 중국 A주 투자자 639명의 거래 데이터를 기반으로 설계되었으며 뉴스를 읽고, 소셜 미디어에서 상호작용하고, 매일 매매 의사결정을 내립니다. 검증 측면에서는 4가지 stylized facts를 기존 ABM 베이스라인 대비 가장 근접하게 재현했음을 보였고 루머 주입 실험을 통해 잘못된 정보가 에코 챔버와 패닉 셀링으로 이어지는 메커니즘도 분석합니다.\n\n에이전트 페르소나 설계 방식, 소셜 네트워크를 통한 정보 전파 모델링 등 여러 구체적인 설계 선택에서 다양한 의견을 공유받고자 해당 논문을 소개드립니다!",
+    "url": "https://arxiv.org/pdf/2502.01506"
+  },
+  {
+    "date": "2026년 5월 1일",
+    "title": "Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies",
+    "presenter": "Heebeom Park",
+    "reason": "제가 준비한 논문은 ICLR '26에 Accept된 논문으로, 새로운 도메인에 대해 효과적인 MAS를 설계하는 최적화 방법론을 제시합니다.\n\n이 논문은 MAS의 구성요소를 크게 Prompt와 Topology로 분리해 규정합니다. 새로운 도메인에 대한 효과적인 MAS를 설계하는 것은 Prompt Design이라는 무한한 공간과, Topology에 어떤 Agent를 통합할지에 대한 구조적 결정이 합쳐진 방대한 Combinatorial Search Space를 탐색해야 하는 문제라고 설정했습니다. 이를 해결하기 위해 전체 Search Space에서 실질적으로 성능에 영향을 미치는 요소만을 추려낸 Pruned Search Space를 구성하여 탐색 복잡성을 낮추고, Local Level에서의 Prompt 최적화를 시작으로 Topology 최적화, 이후 Global Level에서의 Prompt 최적화로 이어지는 다단계 Framework를 제안합니다.\n\n이 논문을 선택한 이유는 \"어떤 구조로 Multi-Agent System을 설계하는 것이 가장 효과적일까\"에 대한 Insight를 얻을 수 있을 것 같았기 때문입니다. 금융 도메인에서도 Multi-Agent Trading System을 설계할 때 명확한 기준 없이 관념적으로 접근하는 경우가 많은데, 문제를 잘 규정하면 비슷한 설계 가이드라인을 만들어낼 수 있지 않을까 싶어 생각해보면 좋을 것 같습니다.",
+    "url": "https://openreview.net/forum?id=I05H9RUzHB"
+  },
+  {
     "date": "2026년 4월 14일",
     "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
     "presenter": "Sangjin Jin",
