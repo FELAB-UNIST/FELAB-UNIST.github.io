@@ -1708,7 +1708,7 @@
       "notes": "Poster (acceptance rate: 26.6%)",
       "link": "https://arxiv.org/abs/2605.01361",
       "type": "Conference",
-      "github": null,
+      "github": "https://github.com/FinJun/PEAR",
       "citation": {
         "apa": "Lee, J., Jin, S., & Lee, Y. (2026). Decision-Focused Learning via Tangent-Space Projection of Prediction Error. arXiv preprint arXiv:2605.01361.",
         "bibtex": "@article{lee2026decision,\n  title={Decision-Focused Learning via Tangent-Space Projection of Prediction Error},\n  author={Lee, Junhyeong and Jin, Sangjin and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2605.01361},\n  year={2026}\n}",
@@ -1834,7 +1834,7 @@
       "notes": "(acceptance rate: 29%)",
       "link": "https://arxiv.org/abs/2602.14233",
       "type": "Conference",
-      "github": null,
+      "github": "https://github.com/Eleanorkong/Awesome-Financial-LLM-Bias-Mitigation",
       "citation": {
         "apa": "Kong, Y., Lee, H., Hwang, Y., Lopez-Lira, A., Levy, B., Mehta, D., Wen, Q., Choi, C., Lee, Y., & Zohren, S. (2026). Evaluating LLMs in Finance Requires Explicit Bias Consideration. arXiv preprint arXiv:2602.14233.",
         "bibtex": "@article{kong2026evaluating,\n  title={Evaluating LLMs in Finance Requires Explicit Bias Consideration},\n  author={Kong, Yaxuan and Lee, Hoyoung and Hwang, Yoontae and Lopez-Lira, Alejandro and Levy, Bradford and Mehta, Dhagash and Wen, Qingsong and Choi, Chanyeol and Lee, Yongjae and Zohren, Stefan},\n  journal={arXiv preprint arXiv:2602.14233},\n  year={2026}\n}",
@@ -1860,7 +1860,7 @@
       "notes": "Poster",
       "link": "https://arxiv.org/abs/2603.02702",
       "type": "Conference",
-      "github": null,
+      "github": "https://github.com/leejaehoon2016/FinTexTS",
       "citation": {
         "apa": "Lee, J., Park, S., Lim, T. Y., Lee, S., Seo, J., Kang, D., Choi, H., Kim, M., Yoo, S., Lee, S., Lee, Y., & Ahn, W. (2026). FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing. arXiv preprint arXiv:2603.02702.",
         "bibtex": "@article{lee2026fintexts,\n  title={FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing},\n  author={Lee, Jaehoon and Park, Suhwan and Lim, Tae Yoon and Lee, Seunghan and Seo, Jun and Kang, Dongwan and Choi, Hwanil and Kim, Minjae and Yoo, Sungdong and Lee, SoonYoung and Lee, Yongjae and Ahn, Wonbin},\n  journal={arXiv preprint arXiv:2603.02702},\n  year={2026}\n}",
