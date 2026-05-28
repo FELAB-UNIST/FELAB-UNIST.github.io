@@ -233,9 +233,15 @@ const PublicationsManager = {
     comparePublicationsWithinYear(a, b) {
         const aDate = this.getEventDateValue(a);
         const bDate = this.getEventDateValue(b);
+        const aHasDate = Number.isFinite(aDate);
+        const bHasDate = Number.isFinite(bDate);
         
-        if (aDate !== bDate) {
-            return aDate - bDate;
+        if (aHasDate && bHasDate && aDate !== bDate) {
+            return bDate - aDate;
+        }
+
+        if (aHasDate !== bHasDate) {
+            return aHasDate ? -1 : 1;
         }
         
         return (a._originalIndex || 0) - (b._originalIndex || 0);

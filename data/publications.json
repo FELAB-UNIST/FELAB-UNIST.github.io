@@ -777,7 +777,7 @@
       ],
       "notes": "",
       "link": "https://doi.org/10.1016/j.engappai.2024.109179",
-      "type": "Conference",
+      "type": "Journal",
       "github": null,
       "citation": {
         "apa": "Kim, Y., Kim, S., Lee, Y., Hong, J., & Lee, Y. (2024). Multi-attention recommender system for non-fungible tokens. Engineering Applications of Artificial Intelligence, 137, 109179.",
