@@ -88,6 +88,18 @@ const MembersManager = {
             
             // Process links if they exist
             if (member.links) {
+                // Google Scholar
+                if (member.links.google_scholar) {
+                    linkButtons += `
+                        <div class="text-gray-400 hover:text-brand-accent transition-colors"
+                             onclick="event.preventDefault(); event.stopPropagation(); window.open('${member.links.google_scholar}', '_blank')">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/>
+                            </svg>
+                        </div>
+                    `;
+                }
+
                 // LinkedIn
                 if (member.links.linkedin) {
                     linkButtons += `
@@ -137,7 +149,7 @@ const MembersManager = {
                         </div>
                     `;
                 }
-                
+
                 // Website
                 if (member.links.website) {
                     linkButtons += `
@@ -149,15 +161,16 @@ const MembersManager = {
                         </div>
                     `;
                 }
-                
-                // Google Scholar
-                if (member.links.google_scholar) {
+
+                // CV
+                if (member.links.cv) {
                     linkButtons += `
-                        <div class="text-gray-400 hover:text-brand-accent transition-colors"
-                             onclick="event.preventDefault(); event.stopPropagation(); window.open('${member.links.google_scholar}', '_blank')">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/>
+                        <div class="inline-flex items-center gap-1 text-gray-400 hover:text-brand-accent transition-colors text-xs font-medium"
+                             onclick="event.preventDefault(); event.stopPropagation(); window.open('${member.links.cv}', '_blank')">
+                            <svg class="w-4 h-4" style="transform: scale(1.14); transform-origin: center;" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16z"/>
                             </svg>
+                            <span>(CV)</span>
                         </div>
                     `;
                 }
@@ -329,19 +342,6 @@ const MembersManager = {
     createAlumniLinks(links) {
         let html = '';
         
-        if (links.website) {
-            html += `
-                <a href="${links.website}" 
-                   target="_blank" 
-                   class="text-gray-400 hover:text-brand-accent transition-colors"
-                   title="Website">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                </a>
-            `;
-        }
-        
         if (links.linkedin) {
             html += `
                 <a href="${links.linkedin}" 
@@ -364,6 +364,33 @@ const MembersManager = {
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
+                </a>
+            `;
+        }
+
+        if (links.website) {
+            html += `
+                <a href="${links.website}" 
+                   target="_blank" 
+                   class="text-gray-400 hover:text-brand-accent transition-colors"
+                   title="Website">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                </a>
+            `;
+        }
+
+        if (links.cv) {
+            html += `
+                <a href="${links.cv}" 
+                   target="_blank" 
+                   class="inline-flex items-center gap-1 text-gray-400 hover:text-brand-accent transition-colors text-sm font-medium"
+                   title="CV">
+                    <svg class="w-5 h-5" style="transform: scale(1.14); transform-origin: center;" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16z"/>
+                    </svg>
+                    <span>(CV)</span>
                 </a>
             `;
         }

@@ -4,6 +4,7 @@
     {
       "id": "pub_2026_kdd_datasets_fintexts",
       "year": 2026,
+      "event_date": "2026-08-09",
       "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, SoonYoung Lee, Yongjae Lee, Wonbin Ahn",
       "author_ids": [
         "suhwan-park",
@@ -31,6 +32,7 @@
     {
       "id": "pub_2026_icml_dfl_tangent",
       "year": 2026,
+      "event_date": "2026-07-06",
       "authors": "Junhyeong Lee, Sangjin Jin, Yongjae Lee*",
       "author_ids": [
         "junhyeong-lee",
@@ -58,6 +60,7 @@
     {
       "id": "pub_2026_icml_sparse_tangent_portfolio",
       "year": 2026,
+      "event_date": "2026-07-06",
       "authors": "Haeun Jeon†, Seunghoon Choi†, Hyunglip Bae, Yongjae Lee**, Woo Chang Kim*",
       "author_ids": [
         "yongjae-lee"
@@ -84,6 +87,7 @@
     {
       "id": "pub_2026_icml_bias_consideration",
       "year": 2026,
+      "event_date": "2026-07-06",
       "authors": "Yaxuan Kong†, Hoyoung Lee†, Yoontae Hwang†, Alejandro Lopez-Lira, Bradford Levy, Dhagash Mehta, Qingsong Wen, Chanyeol Choi, Yongjae Lee**, Stefan Zohren*",
       "author_ids": [
         "hoyoung-lee",
@@ -112,6 +116,7 @@
     {
       "id": "pub_2026_acl_industry_llm_risk_manager",
       "year": 2026,
+      "event_date": "2026-07-02",
       "authors": "Sumin Kim, Minjae Kim, Jihoon Kwon, Yoon Kim, Nicole Kagan, Joo Won Lee, Oscar Levy, Alejandro Lopez-Lira, Yongjae Lee**, Chanyeol Choi*",
       "author_ids": [
         "yongjae-lee"
@@ -137,6 +142,7 @@
     {
       "id": "pub_2025_cikm_workshop",
       "year": 2025,
+      "event_date": "2025-11-14",
       "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
       "author_ids": [
         "youngbin-lee",
@@ -163,6 +169,7 @@
     {
       "id": "pub_2025_cikm_workshop",
       "year": 2025,
+      "event_date": "2025-11-14",
       "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
       "author_ids": [
         "youngbin-lee",
@@ -188,6 +195,7 @@
     {
       "id": "pub_2025_icaif_workshop_timeseries",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Sangjin Jin†, Suhwan Park†, Kangmin Kim, Inwoo Tae, Juchan Kim, Hoyoung Lee, Junhyeong Lee, Yongjae Lee*",
       "author_ids": [
         "sangjin-jin",
@@ -218,6 +226,7 @@
     {
       "id": "pub_2025_icaif_workshop_generative",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Daeyoung Park†, Jongyeop Lee†, Yongjae Lee*, Inyoung Ko*",
       "author_ids": [
         "jongyeop-lee",
@@ -243,6 +252,7 @@
     {
       "id": "pub_2025_cikm_workshop",
       "year": 2025,
+      "event_date": "2025-11-14",
       "authors": "Juhyeong Kim, Sungyoon Choi, Youngbin Lee, Yejin Kim, Yongmin Choi, Yongjae Lee**",
       "author_ids": [
         "yongjae-lee"
@@ -343,6 +353,7 @@
     {
       "id": "pub_2025_icaif_bias_llm",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Hoyoung Lee, Junhyuk Seo, Suhwan Park, Junhyeong Lee, Wonbin Ahn, Chanyeol Choi, Alejandro Lopez-Lira, Yongjae Lee**",
       "author_ids": [
         "hoyoung-lee",
@@ -371,6 +382,7 @@
     {
       "id": "pub_2025_icaif_return_prediction",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Junhyeong Lee†, Haeun Jeon†, Hyunglip Bae*, Yongjae Lee**",
       "author_ids": [
         "junhyeong-lee",
@@ -397,6 +409,7 @@
     {
       "id": "pub_2025_icaif_covariance",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Juchan Kim†, Inwoo Tae†, Yongjae Lee**",
       "author_ids": [
         "juchan-kim",
@@ -423,6 +436,7 @@
     {
       "id": "pub_2025_icaif_collaborative_filtering",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Munki Chung†, Junhyeong Lee†, Yongjae Lee**, Woo Chang Kim*",
       "author_ids": [
         "junhyeong-lee",
@@ -448,6 +462,7 @@
     {
       "id": "pub_2025_icaif_finder",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Chanyeol Choi*, Jihoon Kwon*, Jaeseon Ha, Hojun Choi, Chaewoon Kim, Yongjae Lee, Jy-yong Sohn, Alejandro Lopez-Lira",
       "author_ids": [
         "yongjae-lee"
@@ -472,6 +487,7 @@
     {
       "id": "pub_2025_icaif_finagentbench",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Chanyeol Choi*, Jihoon Kwon, Alejandro Lopez-Lira, Chaewoon Kim, Minjae Kim, Juneha Hwang, Jaeseon Ha, Hojun Choi, Suyeol Yun, Yongjin Kim, Yongjae Lee",
       "author_ids": [
         "yongjae-lee"
@@ -497,6 +513,7 @@
     {
       "id": "pub_2025_icaif_shock_biased",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Sukmin Hwang, Sungho Lee, Chanyeong Kim, Yongjae Lee*, Woo Chang Kim*",
       "author_ids": [
         "yongjae-lee"
@@ -521,6 +538,7 @@
     {
       "id": "pub_2025_icaif_order_flow",
       "year": 2025,
+      "event_date": "2025-11-15",
       "authors": "Sungho Lee, Sukmin Hwang, Chanyeong Kim, Mingyu Yang, Yongjae Lee*, Woo Chang Kim*",
       "author_ids": [
         "yongjae-lee"
@@ -572,6 +590,7 @@
     {
       "id": "pub_2025_cikm_theme",
       "year": 2025,
+      "event_date": "2025-11-10",
       "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim, Sundong You, Taeyoon Lim, Woohyung Lim*, Yongjae Lee**",
       "author_ids": [
         "hoyoung-lee",
@@ -597,6 +616,7 @@
     {
       "id": "pub_2025_aaai_geodesic",
       "year": 2025,
+      "event_date": "2025-02-25",
       "authors": "Yoontae Hwang, Yongjae Lee**",
       "author_ids": [
         "yoontae-hwang",
@@ -1532,6 +1552,7 @@
     {
       "id": "pub_2025_sigir_kpi",
       "year": 2025,
+      "event_date": "2025-07-13",
       "authors": "Chanyeol Choi*, Alejandro Lopez-Lira, Yongjae Lee, Jihoon Kwon, Minjae Kim, Juneha Hwang, Minsoo Ha, Chaewoon Kim, Jaeseon Ha, Suyeol Yun, Jin Kim",
       "author_ids": [
         "yongjae-lee"
@@ -1557,6 +1578,7 @@
     {
       "id": "pub_2025_iclr_llm_blacklitterman",
       "year": 2025,
+      "event_date": "2025-04-28",
       "authors": "Youngbin Lee†, Yejin Kim†, Suin Kim, Yongjae Lee**",
       "author_ids": [
         "yejin-kim",

@@ -7,7 +7,7 @@ const PublicationsManager = {
     labMembers: [
         'Yongjae Lee', 'Hoyoung Lee', 'Junhyeong Lee', 'Inwoo Tae', 'Juchan Kim', 'Kangmin Kim',
         'Yejin Kim', 'Seonmi Kim', 'Seyoung Kim', 'Youngbin Lee', 'Sohyeon Kwon', 'Minjoo Choi',
-        'Yoontae Hwang', 'Joohwan Hong', 'Hyungwoo Kong', 'Suhwan Park'
+        'Yoontae Hwang', 'Joohwan Hong', 'Hyungwoo Kong', 'Suhwan Park', 'Sangjin Jin'
     ],
     
     async init() {
@@ -25,7 +25,10 @@ const PublicationsManager = {
         try {
             const response = await fetch('./data/publications.json');
             const jsonData = await response.json();
-            this.data = jsonData.publications;
+            this.data = jsonData.publications.map((pub, index) => ({
+                ...pub,
+                _originalIndex: index
+            }));
             console.log('Publications loaded:', this.data.length);
         } catch (error) {
             console.error('Failed to load publications data:', error);
@@ -94,7 +97,11 @@ const PublicationsManager = {
                     <h3 class="font-semibold text-lg text-gray-700 mb-4">${year}</h3>
                     <div class="space-y-4">`;
                 
-                groupedByYear[year].forEach(pub => {
+                const sortedPublications = groupedByYear[year]
+                    .slice()
+                    .sort((a, b) => this.comparePublicationsWithinYear(a, b));
+                
+                sortedPublications.forEach(pub => {
                     html += this.createPublicationHTML(pub);
                 });
                 
@@ -142,7 +149,11 @@ const PublicationsManager = {
                 <h3 class="font-semibold text-lg text-gray-700 mb-4">${yearTitle}</h3>
                 <div class="space-y-4">`;
             
-            groupedByYear[year].forEach(pub => {
+            const sortedPublications = groupedByYear[year]
+                .slice()
+                .sort((a, b) => this.comparePublicationsWithinYear(a, b));
+            
+            sortedPublications.forEach(pub => {
                 html += this.createPublicationHTML(pub);
             });
             
@@ -168,7 +179,10 @@ const PublicationsManager = {
                 const priority = { Conference: 0, Journal: 1 };
                 const aPriority = Object.prototype.hasOwnProperty.call(priority, a.subtype) ? priority[a.subtype] : 2;
                 const bPriority = Object.prototype.hasOwnProperty.call(priority, b.subtype) ? priority[b.subtype] : 2;
-                return aPriority - bPriority;
+                if (aPriority !== bPriority) {
+                    return aPriority - bPriority;
+                }
+                return this.comparePublicationsWithinYear(a, b);
             });
 
             html += `<div class="publication-year-section mb-8">
@@ -214,6 +228,26 @@ const PublicationsManager = {
             if (b === 'working_paper') return -1;
             return b - a;
         });
+    },
+
+    comparePublicationsWithinYear(a, b) {
+        const aDate = this.getEventDateValue(a);
+        const bDate = this.getEventDateValue(b);
+        
+        if (aDate !== bDate) {
+            return aDate - bDate;
+        }
+        
+        return (a._originalIndex || 0) - (b._originalIndex || 0);
+    },
+
+    getEventDateValue(pub) {
+        if (!pub.event_date) {
+            return Number.POSITIVE_INFINITY;
+        }
+        
+        const timestamp = Date.parse(`${pub.event_date}T00:00:00Z`);
+        return Number.isNaN(timestamp) ? Number.POSITIVE_INFINITY : timestamp;
     },
     
     createPublicationHTML(pub) {

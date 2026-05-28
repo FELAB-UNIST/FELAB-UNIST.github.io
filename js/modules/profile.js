@@ -216,7 +216,7 @@
                     </a>
                 `;
             }
-            
+
             if (member.links.website) {
                 html += `
                     <a href="${member.links.website}" 
@@ -226,6 +226,20 @@
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                         </svg>
+                    </a>
+                `;
+            }
+
+            if (member.links.cv) {
+                html += `
+                    <a href="${member.links.cv}" 
+                    target="_blank"
+                    class="inline-flex items-center gap-1 text-gray-400 hover:text-brand-accent transition-colors text-sm font-medium"
+                    title="CV">
+                        <svg class="w-5 h-5" style="transform: scale(1.14); transform-origin: center;" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16z"/>
+                        </svg>
+                        <span>(CV)</span>
                     </a>
                 `;
             }
