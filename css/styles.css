@@ -350,17 +350,14 @@ body {
 img {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
+    image-rendering: auto;
 }
 
 /* Smooth image scaling for thumbnails and avatars */
 .member-card img,
+#profile-image,
 article img[loading="lazy"] {
     image-rendering: auto;
-    image-rendering: -webkit-optimize-contrast;
     -ms-interpolation-mode: bicubic;
     transform: translateZ(0);
     backface-visibility: hidden;
