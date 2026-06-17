@@ -104,6 +104,26 @@
           ],
           "workshops": [
             {
+              "name": "FinNLP @ EMNLP 2026",
+              "date": "October 2026",
+              "url": "https://sigfintech.github.io/finnlp2026/"
+            },
+            {
+              "name": "KDD Finance Day 2026",
+              "date": "August 2026",
+              "url": ""
+            },
+            {
+              "name": "AI for Finance Summit Asia 2026",
+              "date": "July 2026",
+              "url": ""
+            },
+             {
+              "name": "Financial AI @ ICLR 2026",
+              "date": "April 2026",
+              "url": "https://sites.google.com/view/iclr2026finai/home"
+            },
+            {
               "name": "Gen AI in Finance @ NeurIPS 2025",
               "date": "December 2025",
               "url": "https://sites.google.com/view/neurips-25-gen-ai-in-finance/"
@@ -213,6 +233,11 @@
         },
         
         "awards": [
+          {
+            "title": "Outstanding Faculty Award for International Visibility (UNITE Award)",
+            "organization": "College of Information and Biotechnology, UNIST",
+            "year": "June 2026"
+          },
           {
             "title": "Maeil Business Young Scholar Best Paper Award (매경신진학자논문상)",
             "organization": "Korean Academic Society of Business Administration",
