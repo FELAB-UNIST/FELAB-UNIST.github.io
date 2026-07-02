@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026년 7월 3일",
+    "title": "TimeMRA: LLM-Empowered Time Series Forecasting via Multi-Scale Retrieval-Augmented Representations",
+    "presenter": "Juchan Kim",
+    "reason": "제가 이번에 준비한 논문은 ICML 2026에 accept된 TimeMRA라는 논문으로, LLM을 활용한 시계열 예측에서 여러 주기와 scale의 패턴을 어떻게 효과적으로 사용할 수 있을지를 다룹니다. 기존 LLM-based time series forecasting 방법들은 시계열을 prompt나 embedding 형태로 바꿔 LLM의 semantic representation을 활용했지만, 실제 시계열에는 단기 변동, 계절성, 장기 trend처럼 다양한 scale의 패턴이 섞여 있기 때문에 단일 scale만 보는 것은 한계가 있습니다. TimeMRA는 전체 training data에 FFT를 적용해 중요한 주기 성분을 찾고, 이를 바탕으로 scale별 prompt를 만든 뒤 frozen LLM으로 semantic representation을 추출합니다. 이후 contrastive learning으로 scale별 표현이 서로 섞이지 않도록 정렬하고, router network를 통해 예측에 필요한 scale만 선택적으로 retrieval하여 forecasting에 활용합니다. 단순히 LLM을 예측기로 쓰는 것이 아니라, 시계열의 multi-scale 구조를 LLM representation으로 확장하고 필요한 정보만 가져온다는 점이 흥미로웠고, 현재 진행 중인 multimodal time-series forecasting이나 retrieval 기반 연구와도 연결될 수 있을 것 같아 선정했습니다.",
+    "url": "https://openreview.net/forum?id=h3HLLGCfVy"
+  },
+  {
+    "date": "2026년 7월 3일",
+    "title": "Do Hedge Funds Strategically Misreport Their Holdings? Evidence from 13F Restatements",
+    "presenter": "Yongjae Lee",
+    "reason": "MS에 최근 나온 논문으로 헤지펀드들이 일부러 자신들의 전략을 숨기기 위해 13F 공시에 잘못 공시를 하고 추후에 수정을 하는 것 같다는 내용입니다. 공시가 수정된 내역들을 분석해보니 그렇지 않은 종목들에 비해 추가 수익률이 있었다고 합니다. 이러한 내용을 잘 활용하면 추가 알파를 만들 수도 있지 않을까 싶어서 한번 선정 해봤습니다.",
+    "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2024.08833"
+  },
+  {
+    "date": "2026년 6월 2일",
+    "title": "JUCAL: Jointly Calibrating Aleatoric and Epistemic Uncertainty in Classification Tasks",
+    "presenter": "Inwoo Tae",
+    "reason": "이 논문은 앙상블 모델을 통해 데이터 자체가 애매해서 생기는 불확실성과 모델들이 서로 다르게 예측해서 생기는 불확실성을 확인하고, 기존 calibration 방법인 temperature scaling이 이 둘을 한꺼번에 조정하는 한계를 개선하려는 논문입니다. Simplex 위에서 calibration이 어떻게 작동하는지 보여주는 설명이 제가 하려고 생각중이었고, 저자들이 calibration을 바라보는 관점이 제가 생각하던 방향과 비슷해서 같이 이야기해보면 좋을 것 같아 선정했습니다. 다른 calibration baseline들과의 비교가 충분하지 않은 점은 조금 아쉽지만, 그래도 앞으로 calibration을 실제로 써야 하는 상황에서 참고할 만한 아이디어가 있을 것 같아 재밌게 읽어보면 좋겠습니다.",
+    "url": "https://arxiv.org/pdf/2602.20153v1"
+  },
+  {
     "date": "2026년 5월 26일",
     "title": "ReTabSyn: Realistic Tabular Data Synthesis via Reinforcement Learning",
     "presenter": "Kangmin Kim",

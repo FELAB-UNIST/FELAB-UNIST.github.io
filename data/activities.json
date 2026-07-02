@@ -1,6 +1,133 @@
 {
   "activities": [
     {
+        "id": "kiie-2026-gyeongju",
+        "date": "2026-06-04",
+        "title": "2026 KIIE/KORMS Spring Conference (Gyeongju)",
+        "title_kr": "2026 춘계공동학술대회 (경주)",
+        "location": "HICO, Gyeongju, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/kiie-2026-1.jpg",
+        "summary": "2026년 6월 4일부터 5일까지 경주 화백컨벤션센터(HICO)에서 개최된 2026 춘계공동학술대회에 참여하였습니다. 국내 금융공학 연구실들과의 교류 및 AI in Finance 세션 발표를 진행하였습니다.",
+        "content": {
+            "overview": "2026년 6월 4일(목)부터 5일(금)까지 경주 화백컨벤션센터(HICO)에서 2026 춘계공동학술대회가 개최되었습니다. 저희 연구실에서도 학술대회에 참여하여, 세미나 참석과 국내 금융공학 연구실들과의 교류, 그리고 AI in Finance 세션 발표까지 알찬 이틀을 보냈습니다.",
+            "sections": [
+                {
+                    "type": "text",
+                    "title": "6월 4일 - 세미나 & 금융공학 연구실 바베큐 파티",
+                    "content": "첫째 날에는 다양한 세미나를 들은 뒤, 국내 금융공학 연구실들이 한자리에 모여 바베큐 파티를 진행했습니다. 고려대학교 김장호 교수님, 성균관대학교 허정규 교수님, 한국외국어대학교 공형우 교수님, 전남대학교 배형립 교수님을 비롯한 여러 연구실이 함께 자리했습니다. KAIST 김우창 교수님께서는 함께하지 못하셨지만, KAIST 금융공학연구실 학생들이 참석해 자리를 빛내주었습니다. 고기를 구우며 금융공학과 각자의 다양한 연구 주제에 대해 이야기를 나누는 즐거운 시간이었습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "바베큐 파티",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kiie-2026-1.jpg",
+                            "caption": "국내 금융공학 연구실들이 한자리에 모여 바베큐 파티를 즐겼습니다."
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "6월 5일 - AI in Finance 세션 (1부)",
+                    "content": "둘째 날에는 AI in Finance 세션을 마련했습니다. 첫 번째 세션은 성균관대학교 송재욱 교수님께서 좌장을 맡아 진행해 주셨습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "세션 1 프로그램",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kiie-2026-2.png",
+                            "caption": "AI in Finance 세션 1 프로그램 (좌장: 성균관대 송재욱 교수님)"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "AI in Finance 세션 (2부)",
+                    "content": "두 번째 세션은 이용재 교수님께서 좌장을 맡아 진행되었습니다. 박수환 학생이 \"Validating Behavioral Personas for Financial LLM Agents\"를 주제로 발표하였고, 이용재 교수님께서는 다양한 국제 학회에 accept된 최신 논문들을 소개해 주셨습니다. 이어서 진상진 학생이 \"Understanding the Structure of Decision-Focused Learning: Applications to Portfolio Optimization\"를 주제로 발표하였습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "세션 2 프로그램",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kiie-2026-3.png",
+                            "caption": "AI in Finance 세션 2 프로그램 (좌장: 이용재 교수님)"
+                        }
+                    ]
+                },
+                {
+                    "type": "gallery",
+                    "title": "세션 2 발표",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kiie-2026-4.png",
+                            "caption": "\"Validating Behavioral Personas for Financial LLM Agents\"를 발표하는 박수환 학생"
+                        },
+                        {
+                            "url": "./public/images/activities/kiie-2026-5.png",
+                            "caption": "다양한 국제 학회에 accept된 논문들을 소개하시는 이용재 교수님"
+                        },
+                        {
+                            "url": "./public/images/activities/kiie-2026-6.jpg",
+                            "caption": "\"Understanding the Structure of Decision-Focused Learning: Applications to Portfolio Optimization\"를 발표하는 진상진 학생"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "세션 마무리",
+                    "content": "많은 분들이 세션을 찾아주셔서, 넓은 공간임에도 뒤에서 서서 발표를 경청하시는 분들이 계실 정도로 성황리에 마무리되었습니다. 세션이 끝난 뒤에는 발표해 주신 분들과 FE LAB 구성원들이 다 함께 모여 단체 사진을 남겼습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "단체 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/kiie-2026-7.jpg",
+                            "caption": "AI in Finance 세션 발표자들과 FE LAB 구성원들이 함께한 단체 사진"
+                        }
+                    ]
+                }
+            ]
+        },
+        "links": []
+    },
+    {
+        "id": "teachers-day-2026",
+        "date": "2026-05-15",
+        "title": "2026 Teacher's Day",
+        "title_kr": "2026 스승의 날",
+        "location": "UNIST, Ulsan, South Korea",
+        "type": "celebration",
+        "featured": false,
+        "thumbnail": "./public/images/activities/teachers-day-2026-1.jpg",
+        "summary": "2026년 5월 15일 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+        "content": {
+            "overview": "2026년 5월 15일 스승의 날을 맞아 FE Lab 학생들이 이용재 교수님께 감사의 마음을 전했습니다.",
+            "sections": [
+                {
+                    "type": "gallery",
+                    "title": "",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/teachers-day-2026-1.jpg",
+                            "caption": "저희가 직접 만든 케이크로 교수님께 감사의 마음을 전했습니다."
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "",
+                    "content": "언제나 아낌없는 가르침과 지도를 주시는 교수님께 깊이 감사드립니다.\n앞으로도 좋은 연구로 보답하겠습니다!\n-FE Lab 일동-"
+                }
+            ]
+        },
+        "links": []
+    },
+    {
         "id": "kaist-joint-seminar-2026",
         "date": "2026-02-12",
         "title": "UNIST×KAIST FELAB Joint Seminar",
