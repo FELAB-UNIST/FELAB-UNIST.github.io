@@ -1,6 +1,21 @@
 {
   "news": [
     {
+      "id": "unist-college-teaching-award-2026",
+      "date": "2026-07-27",
+      "category": "award",
+      "featured": false,
+      "title": "Prof. Lee Receives Outstanding Faculty Award from UNIST College of Information and Biotechnology",
+      "title_kr": "이용재 교수, UNIST 정보바이오융합대학 우수교원상 수상",
+      "summary": "Professor Yongjae Lee received the Outstanding Faculty Award from the UNIST College of Information and Biotechnology, recognized for his contribution to raising the university's international visibility.",
+      "content": "Professor Yongjae Lee received the Outstanding Faculty Award (우수교원상) from the UNIST College of Information and Biotechnology (정보바이오융합대학).\n\n[figure1]\n\nThe award is given across several categories, including convergence research, pioneering research, unsung contribution, and student mentoring. Professor Lee was selected for his contribution to raising UNIST's international visibility.\n\n[figure2]\n\n[figure3]\n\nThe award follows a period of sustained international activity by the lab. Together with its students and collaborators, the lab has presented its research at conferences and institutions across Asia, Europe, and North America over the past year, and has organized workshops on financial AI at ACM CIKM 2025 in Seoul and NeurIPS 2025 in San Diego.\n\nProfessor Lee credited the recognition to the lab's students and collaborators, as well as to the continued support of the department, and said the lab will continue to expand its presence in the global research community.",
+      "figure1": "./public/news/260727_1.jpg",
+      "figure2": "./public/news/260727_2.jpg",
+      "figure3": "./public/news/260727_3.jpg",
+      "tags": ["award", "UNIST", "faculty award", "international visibility"],
+      "links": []
+    },
+    {
       "id": "fsc-innovative-finance-committee-2026",
       "date": "2026-01-06",
       "category": "achievement",
