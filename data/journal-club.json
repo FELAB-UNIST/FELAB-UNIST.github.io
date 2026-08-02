@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026년 8월 4일",
+    "title": "Which Algorithms Can Graph Neural Networks Learn?",
+    "presenter": "Inwoo Tae",
+    "reason": "이 논문은 이번 ICML에서 Oral을 받은 페이퍼입니다. Message Passing NN이 shortest path나 dynamic programming 같은 고전 알고리즘을, 작은 그래프 몇 개만으로 학습하고도 훨씬 큰 그래프에서 잘 동작할 수 있는지를 이론적으로 분석한 연구입니다. 저자들은 입력이 일정한 조건(유한 립시츠 클래스)을 만족하면, 적은 학습 데이터로 정규화된 손실을 줄이는 것만으로 그래프 크기와 상관없이 알고리즘을 근사할 수 있음을 보입니다. 반대로 표준 MPNN은 표현력의 한계 때문에 minimum spanning tree나 shortest path 비용은 아예 학습하지 못한다는 점도 함께 보여줍니다. 특히 Bellman–Ford 알고리즘에서는 미분 가능한 정규화 항을 새로 도입해, 큰 그래프로 일반화하는 데 필요한 학습 데이터를 크게 줄였습니다. 기존 연구가 경험적으로 잘 된다거나 원리적으로 표현이 가능하다는 정도에 머물렀다면, 이 논문은 적은 데이터로 실제 학습해 더 큰 입력에서도 일반화됨을 증명으로 보여준다는 점에서 한 걸음 더 나아갑니다. GNN의 표현력만이 아니라 학습 가능성과 크기 일반화까지 다루고, 무엇을 배울 수 있고 무엇을 배울 수 없는지 명확히 나눈 관점이 흥미로워 함께 살펴보면 좋을 것 같아 선정했습니다.",
+    "url": "https://arxiv.org/abs/2602.13106"
+  },
+  {
+    "date": "2026년 8월 4일",
+    "title": "Calibrating Decision Robustness via Inverse Conformal Risk Control",
+    "presenter": "Kangmin Kim",
+    "reason": "ICML 2026에 나온 논문입니다. Robust optimization에서 uncertainty set의 크기를 관습적인 coverage나 경험적 튜닝으로 정해 온 문제를 다룹니다. 저자들은 여러 robustness level이 유발하는 miscoverage와 regret를 유한 표본에서 보수적으로 추정하고, 두 기준의 trade-off를 certified Pareto frontier로 제시하는 inverse conformal risk control 방법을 제안합니다. 또한 frontier를 본 뒤 robustness level을 사후적으로 선택하면 통계적 보장이 깨질 수 있음을 지적하고, 데이터 분할과 재보정을 통해 선택 이후에도 validity를 유지합니다. 기존 연구가 주로 정해진 coverage를 만족하는 uncertainty set을 구성하는 데 집중했다면, 이 논문은 robustness를 높일 때 발생하는 decision quality의 손실까지 함께 인증하며 적절한 수준의 선택을 지원한다는 점이 흥미로워 선정해 보았습니다.",
+    "url": "https://openreview.net/pdf?id=lV4tqcVIyx"
+  },
+  {
+    "date": "2026년 7월 28일",
+    "title": "The Stepwise Deception: Simulating the Evolution from True News to Fake News with LLM Agents",
+    "presenter": "Junyoung Kwon",
+    "reason": "이번에 선정한 논문은 EMNLP 2025 논문으로, LLM agent 기반 시뮬레이션 환경에서 진짜 뉴스가 상호작용을 거치며 가짜 뉴스로 점진적으로 변형되는 과정과, 이를 완화하기 위한 개입 시점을 분석한 논문입니다. 기존 연구들이 가짜 뉴스가 이미 존재한다는 전제하에 확산 양상이나 영향력을 분석했다면, 이 논문은 진짜 뉴스가 agent들의 재해석과 반복적인 전파를 통해 어떻게 왜곡되는지에 초점을 둡니다. 이를 위해 네 가지 역할의 agent(spreader, commentator, verifier, bystander)를 구성하고, 뉴스의 감정·새로운 정보·확실성·문체·시간 정보·관점 변화를 측정하는 FUSE-EVAL metric을 제안합니다. 또한 네트워크 구조, agent의 성향, memory 구조, 공식 개입 여부에 따른 뉴스 진화 양상을 비교합니다. 현재 진행 중인 AICP 연구에서 적절한 agent simulation 실험과 정량적·정성적 분석 방법을 고민하던 중, 이 논문이 참고할 수 있는 실험 설계와 분석 관점을 제공한다고 판단해 선정했습니다. 이러한 관점에서 insight를 얻고 함께 이야기해볼 수 있으면 좋을 것 같습니다.",
+    "url": "https://aclanthology.org/2025.emnlp-main.1330.pdf"
+  },
+  {
+    "date": "2026년 7월 28일",
+    "title": "Chronos-2: From Univariate to Universal Forecasting",
+    "presenter": "Jaeho Jo",
+    "reason": "본 논문은 accept이 되지는 않았지만 단일 time-series foundation model 기준 1년 가까이 SOTA를 유지하고 있는 논문으로, 기존 모델이 주로 univariate forecasting에 한정된다는 문제를 다루며, univariate·multivariate·covariate-informed forecasting을 하나의 모델로 수행하는 Chronos-2를 제안합니다. 핵심은 각 시계열의 시간적 패턴을 처리하는 time attention과 관련된 target 및 covariate 사이의 정보를 공유하는 group attention을 결합한 구조로, 다양한 형태의 변수와 예측 문제를 별도의 fine-tuning 없이 zero-shot으로 다룰 수 있습니다. 또한 부족한 multivariate 학습 데이터를 보완하기 위해 univariate 시계열에 상관관계와 lead–lag 등의 의존성을 부여한 합성 데이터를 활용합니다. 단변량 예측을 넘어 다양한 형태의 시계열 데이터를 하나의 구조로 학습한다는 점이 흥미로웠고 이러한 구조를 함께 살펴보면 좋을 것 같습니다.\n\n한편 최근 단일 모델로 한정하지 않았을 경우의 벤치마크 SOTA는 하나의 모델에 의존하기보다 입력에 따라 여러 모델을 routing하거나 ensemble하는 방향으로 발전하고 있어, 마지막에는 이번 ICML 2026 workshop에 억셉된 TimeRouter도 간단히 소개하고자 합니다. 해당 논문에서는 Chronos-2를 포함한 모델 풀에서 적절한 expert를 선택하고 불확실할 때 ensemble을 사용하는 lightweight routing을 제시합니다.",
+    "url": "https://arxiv.org/abs/2510.15821"
+  },
+  {
+    "date": "2026년 7월 21일",
+    "title": "Time-Causal VAE: Robust Financial Time Series Generator",
+    "presenter": "Sangjin Jin",
+    "reason": "본 논문은 올해 SIAM Journal on Financial Mathematics에 억셉된 논문으로, 여러 task에 활용할 수 있는 금융 시계열 생성 방법론에 대하여 제시합니다. 금융 시계열을 비롯한 시계열 합성데이터들은 단순히 실제 데이터와 통계적으로 비슷한가를 통해 평가되곤 합니다. 본 논문에서는 단순히 합성 데이터의 품질을 실제 데이터와의 분포적·통계적 유사성을 기준으로 평가하는 기존의 방식과 달리, 생성된 시계열을 portfolio optimization이나 option pricing과 같은 downstream task에 적용했을 때에도 실제 데이터와 유사한 결과를 얻을 수 있도록 하는 Time-Causal VAE를 제안합니다. 구체적으로는 encoder와 decoder가 미래 정보를 참조하지 않도록 causal structure를 부여하고, 모델의 학습 objective를 causal Wasserstein distance와 연결함으로써 금융 의사결정에 중요한 temporal dependency와 information structure를 보존하고자 합니다. 금융 분야에서는 학습에 활용할 수 있는 데이터가 제한적이라는 점이 모델 학습 및 검증의 주요한 제약으로 작용하는 만큼, 이번 발표에서는 금융 합성 데이터가 갖추어야 할 특성과 어떤 생성 및 평가 방식이 유효할지를 함께 살펴보고자 합니다. 나아가 이러한 접근이 시계열 데이터 기반의 의사결정 문제에 어떻게 활용될 수 있을지도 논의해본다면 좋을 것 같습니다.",
+    "url": "https://arxiv.org/pdf/2411.02947"
+  },
+  {
+    "date": "2026년 7월 21일",
+    "title": "Do LLMs Signal When They're Right? Evidence from Neuron Agreement",
+    "presenter": "Suhwan Park",
+    "reason": "ICML 2026 논문으로, LLM이 정답을 생성하고 있을 때 모델의 내부 뉴런 활성에서도 이를 구분할 수 있는 신호가 나타나는지를 분석한 연구입니다. 동일한 문제에 대해 여러 추론을 생성했을 때, 정답 응답들이 서로 더 유사한 뉴런 활성 패턴을 보인다는 점을 발견하고, 이러한 내부 신호를 활용해 여러 후보 중 더 유망한 답변을 선택하는 방법을 제안합니다. 이를 통해 모델의 내부 activation이 단순한 해석의 대상에 그치지 않고, 실제 추론 성능과 계산 효율을 개선하는 데 활용될 수 있음을 보여줍니다. 여러 추론 결과 사이의 내부적인 공통 패턴이 실제 정답 여부와 연결될 수 있다는 관점이 흥미로웠고, activation을 활용한 새로운 application 사례로 함께 살펴보면 좋을 것 같아 선정했습니다.",
+    "url": "https://openreview.net/forum?id=ZVRgcQq4D2"
+  },
+  {
+    "date": "2026년 7월 14일",
+    "title": "A Fully First-Order Layer for Differentiable Optimization",
+    "presenter": "Junhyeong Lee",
+    "reason": "이번 ICML 2026에서 spotlight를 받은 논문입니다. 이 논문의 주된 내용은 differentiable optimization layer의 backward를 Hessian 없이 first-order를 활용하여 gradient를 계산하는 방법을 다루고 있습니다. 기존 널리 활용되어 오던 OptNet이나 cvxpylayers는 full KKT system을 통해서 gradient를 얻는데, 매 backward마다 Hessian이 포함된 연산을 진행해야 해서 시간/메모리에 병목이 발생합니다. 이 논문은 저희 PEAR 연구에서 다뤘던 active set 기반 KKT system reduction 아이디어를 비슷하게 활용하니 이런 점도 같이 봐보면 재밌을 것 같습니다. 기존 cvxpylayers 라이브러리에서 바로 활용할 수 있도록 들어가 있다고 하니 사용해보고 싶으신 분들은 쉽게 사용해볼 수 있을 것 같습니다.",
+    "url": "https://arxiv.org/abs/2512.02494"
+  },
+  {
+    "date": "2026년 7월 14일",
+    "title": "Autodata: An Agentic Data Scientist to Create High Quality Synthetic Data",
+    "presenter": "Hoyoung Lee",
+    "reason": "Autodata는 Meta가 최근 공개한 연구로, LLM 에이전트가 학습 데이터를 직접 생성하고 평가한 뒤 실패 원인을 분석해 데이터 생성 전략까지 스스로 개선하는 방법을 제안합니다. 단순히 많은 합성 데이터를 만드는 것이 아니라 현재 모델이 어려워하는 지점을 파악하고 학습에 효과적인 데이터를 자동으로 설계한다는 점이 핵심입니다. 최근 에이전트 평가와 평가 데이터 생성에 관해 연구하던 중 발견한 논문으로, 평가 데이터 구축뿐만 아니라 고품질 데이터가 부족한 금융 도메인에 다양하게 확장해볼 수 있는 아이디어가 있을까 해서 선정했습니다.",
+    "url": "https://arxiv.org/pdf/2606.25996"
+  },
+  {
     "date": "2026년 7월 3일",
     "title": "TimeMRA: LLM-Empowered Time Series Forecasting via Multi-Scale Retrieval-Augmented Representations",
     "presenter": "Juchan Kim",

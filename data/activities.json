@@ -1,6 +1,141 @@
 {
   "activities": [
     {
+        "id": "icml-2026-seoul",
+        "date": "2026-07-11",
+        "title": "2026 ICML (Seoul)",
+        "title_kr": "2026 ICML (서울)",
+        "location": "COEX, Seoul, South Korea",
+        "type": "conference",
+        "featured": false,
+        "thumbnail": "./public/images/activities/icml-2026-1.jpg",
+        "summary": "2026년 7월 7일부터 7월 11일까지 서울 COEX에서 열린 43rd International Conference on Machine Learning (ICML'26)에 참여하였습니다.",
+        "content": {
+            "overview": "2026년 7월 7일부터 7월 11일까지 서울 COEX에서 열린 43rd International Conference on Machine Learning (ICML'26)에 참여하였습니다.",
+            "sections": [
+                {
+                    "type": "gallery",
+                    "title": "학회 참가자",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-1.jpg",
+                            "caption": "학회장 로비 앞에서 찍은 FE Lab 단체 사진. 왼쪽부터 이호영(박사), 태인우(박사), 이준형(박사), 이용재(교수님), 김주찬(박사), 김강민(박사), 진상진(석사), 박수환(석사)"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "7/7 - 학회 1일차",
+                    "content": "7월 7일 오전부터 본격적인 학회 1일차 일정이 시작되었습니다.\n\n첫날 오전부터 FE Lab의 이름을 알린 이준형 학생과 진상진 학생의 \"Decision-Focused Learning via Tangent-Space Projection of Prediction Error\" 포스터 발표가 있었습니다.\n\n점심에는 이용재 교수님, KAIST 학생들과 함께 점심 식사를 한 뒤, RBC Borealis의 박사님을 만나 커피챗을 나눴습니다.\n\n이후 각자 관심 분야에 맞는 포스터 세션을 돌면서 많은 연구자분들과 교류할 수 있었습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "7/7 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-2.jpg",
+                            "caption": "포스터 앞에서 멋진 포즈를 취하고 있는 상진, 준형"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-3.jpg",
+                            "caption": "많은 사람들 앞에서 논문을 소개하고 있는 모습"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-4.jpeg",
+                            "caption": "오전에 발표된 포스터"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-5.jpg",
+                            "caption": "저녁 식사 전 기분이 좋아 보이는 주찬"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "7/8 - 학회 2일차",
+                    "content": "7월 8일에도 마찬가지로 포스터 세션과 구두 발표 세션이 있었습니다. FE Lab 일원 모두 열심히 학회 일정을 소화하면서 여러 연구를 볼 수 있었습니다.\n\n저녁에는 이준형 학생과 진상진 학생이 WorldQuant에서 주최하는 칵테일 파티에 참석해 인사이트를 교류하고 오는 자리를 가졌습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "7/8 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-6.jpg",
+                            "caption": "COEX 전광판에 걸린 학회 슬로건"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-7.jpg",
+                            "caption": "WorldQuant에서 주최하는 칵테일 파티에 참여한 준형"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "7/9 - 학회 3일차",
+                    "content": "학회 3일차에는 Yaxuan Kong(University of Oxford)과 이호영 학생의 Position Paper \"Evaluating LLMs in Finance Requires Explicit Bias Consideration\" 포스터 발표가 있었습니다.\n\n그리고 김주찬 학생이 Time-LLM 저자인 Ming Jin 교수님과 Yaxuan Kong을 만나 연구 교류를 하면서 많은 인사이트를 얻을 수 있었습니다.\n\n저녁에는 연구실 1호 박사이신 부산대학교 황윤태 교수님과 함께 FE Lab의 화합을 도모하는 회식 자리를 가졌습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "7/9 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-8.jpg",
+                            "caption": "Ming Jin(Griffith University), Yaxuan Kong(University of Oxford)과 함께 대화를 나누는 모습"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-9.jpeg",
+                            "caption": "치킨을 아주 맛있게 먹고 있는 준형"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "7/10 - 학회 4일차",
+                    "content": "오전에는 LinqAlpha에서 주최하는 AI for Finance Summit 행사에 참여해 XTX Markets의 Atlas Wang, Squirrel AI의 Qingsong Wen 등 유명하신 분들의 talk을 들으면서 금융에서의 AI 적용에 대한 실무진들의 인사이트를 얻을 수 있었습니다.\n\n오후에는 워크샵 발표를 들으면서 학회 일정을 소화하였고, 저녁에는 FE Lab 일원들의 화합을 도모하는 자리를 가졌습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "7/10 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-10.jpg",
+                            "caption": "AI for Finance Summit 행사의 패널 토론 장면"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-11.jpg",
+                            "caption": "저녁 식사를 마치고 이동하고 있는 FE Lab 학생들"
+                        },
+                        {
+                            "url": "./public/images/activities/icml-2026-12.jpg",
+                            "caption": "카페에서 휴식을 취하고 있는 수환, 주찬, 준형, 강민"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "7/11 - 학회 5일차",
+                    "content": "학회 마지막 날에도 FE Lab 일원들 모두 워크샵에 참석해 세계적으로 유명한 연구자분들의 Keynote와 발표를 들으면서 많은 인사이트를 얻어갈 수 있었습니다.\n\n특히 Hypothesis Test 워크샵에서 Georgia Tech의 Yao Xie 교수님께서 소개하신, 시계열 change point detection을 검증하는 알고리즘 중 하나인 CUSUM에 대한 내용을 인상 깊게 들었습니다. 이외에도 Apodex의 Agent를 활용한 Event Forecasting 발표도 인상 깊었습니다.\n\n오후에는 NeuroFusion의 모상우 박사님을 만나 커피챗을 하면서 연구 교류를 하고 좋은 인사이트를 얻어갈 수 있었습니다."
+                },
+                {
+                    "type": "gallery",
+                    "title": "7/11 사진",
+                    "images": [
+                        {
+                            "url": "./public/images/activities/icml-2026-13.jpg",
+                            "caption": "카페에서 커피챗을 하는 모습. 왼쪽부터 박수환(석사), 모상우 박사님, 이용재(교수님), 진상진(석사), 김강민(박사), 이준형(박사)"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "학회 후기",
+                    "content": "이번 학회의 경험을 통해 현재 어떤 문제를 트렌드로 다루고 있는지, 다른 연구자들은 어떤 인사이트를 갖고 있는지 공유할 수 있었던 유익한 시간이었습니다.\n\n연구실 일원 전체가 참석할 수 있는 좋은 기회를 마련해주신 이용재 교수님께 너무 감사드립니다 🙇‍♂️"
+                }
+            ]
+        },
+        "links": []
+    },
+    {
         "id": "kiie-2026-gyeongju",
         "date": "2026-06-04",
         "title": "2026 KIIE/KORMS Spring Conference (Gyeongju)",
