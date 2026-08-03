@@ -26,7 +26,7 @@
                 {
                     "type": "text",
                     "title": "7/7 - 학회 1일차",
-                    "content": "7월 7일 오전부터 본격적인 학회 1일차 일정이 시작되었습니다.\n\n첫날 오전부터 FE Lab의 이름을 알린 이준형 학생과 진상진 학생의 \"Decision-Focused Learning via Tangent-Space Projection of Prediction Error\" 포스터 발표가 있었습니다.\n\n점심에는 이용재 교수님, KAIST 학생들과 함께 점심 식사를 한 뒤, RBC Borealis의 박사님을 만나 커피챗을 나눴습니다.\n\n이후 각자 관심 분야에 맞는 포스터 세션을 돌면서 많은 연구자분들과 교류할 수 있었습니다."
+                    "content": "7월 7일 오전부터 본격적인 학회 1일차 일정이 시작되었습니다.\n\n첫날 오전부터 FE Lab의 이름을 알린 이준형 학생과 진상진 학생의 \"Decision-Focused Learning via Tangent-Space Projection of Prediction Error\" 포스터 발표가 있었습니다.\n\n점심에는 이용재 교수님, KAIST 학생들과 함께 점심 식사를 한 뒤, RBC Borealis의 이한빛 박사님을 만나 커피챗을 나눴습니다.\n\n이후 각자 관심 분야에 맞는 포스터 세션을 돌면서 많은 연구자분들과 교류할 수 있었습니다."
                 },
                 {
                     "type": "gallery",
@@ -114,7 +114,7 @@
                 {
                     "type": "text",
                     "title": "7/11 - 학회 5일차",
-                    "content": "학회 마지막 날에도 FE Lab 일원들 모두 워크샵에 참석해 세계적으로 유명한 연구자분들의 Keynote와 발표를 들으면서 많은 인사이트를 얻어갈 수 있었습니다.\n\n특히 Hypothesis Test 워크샵에서 Georgia Tech의 Yao Xie 교수님께서 소개하신, 시계열 change point detection을 검증하는 알고리즘 중 하나인 CUSUM에 대한 내용을 인상 깊게 들었습니다. 이외에도 Apodex의 Agent를 활용한 Event Forecasting 발표도 인상 깊었습니다.\n\n오후에는 NeuroFusion의 모상우 박사님을 만나 커피챗을 하면서 연구 교류를 하고 좋은 인사이트를 얻어갈 수 있었습니다."
+                    "content": "학회 마지막 날에도 FE Lab 일원들 모두 워크샵에 참석해 세계적으로 유명한 연구자분들의 Keynote와 발표를 들으면서 많은 인사이트를 얻어갈 수 있었습니다.\n\n특히 Hypothesis Test 워크샵에서 Georgia Tech의 Yao Xie 교수님께서 소개하신, 시계열 change point detection을 검증하는 알고리즘 중 하나인 CUSUM에 대한 내용을 인상 깊게 들었습니다. 이외에도 Apodex의 Agent를 활용한 Event Forecasting 발표도 인상 깊었습니다.\n\n오후에는 NeuroFusion의 이상우 박사님을 만나 커피챗을 하면서 연구 교류를 하고 좋은 인사이트를 얻어갈 수 있었습니다."
                 },
                 {
                     "type": "gallery",
@@ -122,7 +122,7 @@
                     "images": [
                         {
                             "url": "./public/images/activities/icml-2026-13.jpg",
-                            "caption": "카페에서 커피챗을 하는 모습. 왼쪽부터 박수환(석사), 모상우 박사님, 이용재(교수님), 진상진(석사), 김강민(박사), 이준형(박사)"
+                            "caption": "카페에서 커피챗을 하는 모습. 왼쪽부터 박수환(석사), 이상우 박사님, 이용재(교수님), 진상진(석사), 김강민(박사), 이준형(박사)"
                         }
                     ]
                 },
