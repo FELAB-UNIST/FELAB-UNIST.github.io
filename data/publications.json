@@ -2,6 +2,90 @@
   "publications": [
 
     {
+      "id": "pub_2026_cikm_seq2synth",
+      "year": 2026,
+      "event_date": "2026-11-07",
+      "authors": "Kiwan Kwon†, Kangmin Kim†, Hojin Lee, Yeseong Jung, Hyeongwoo Kong, Vamsi Krishna Potluru, Saerom Park*, Yongjae Lee*",
+      "author_ids": [
+        "kangmin-kim",
+        "hyungwoo-kong",
+        "yongjae-lee"
+      ],
+      "venue": "The 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
+      "title": "Seq2Synth: Benchmarking Temporal Fidelity in Synthetic Sequential Tabular Data",
+      "keywords": [
+        "Synthetic Data",
+        "Tabular Data",
+        "Time Series",
+        "Benchmark"
+      ],
+      "notes": "acceptance rate: 26.9%",
+      "link": "https://arxiv.org/abs/2607.15606",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Kwon, K., Kim, K., Lee, H., Jung, Y., Kong, H., Potluru, V. K., Park, S., & Lee, Y. (2026). Seq2Synth: Benchmarking Temporal Fidelity in Synthetic Sequential Tabular Data. arXiv preprint arXiv:2607.15606.",
+        "bibtex": "@article{kwon2026seq2synth,\n  title={Seq2Synth: Benchmarking Temporal Fidelity in Synthetic Sequential Tabular Data},\n  author={Kwon, Kiwan and Kim, Kangmin and Lee, Hojin and Jung, Yeseong and Kong, Hyeongwoo and Potluru, Vamsi Krishna and Park, Saerom and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2607.15606},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_cikm_retrieval_conformal",
+      "year": 2026,
+      "event_date": "2026-11-07",
+      "authors": "Sangjin Jin, Kangmin Kim, Junhyeong Lee, Yongjae Lee*",
+      "author_ids": [
+        "sangjin-jin",
+        "kangmin-kim",
+        "junhyeong-lee",
+        "yongjae-lee"
+      ],
+      "venue": "The 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
+      "title": "Retrieval-Corrected Conformal Prediction for Time Series",
+      "keywords": [
+        "Conformal Prediction",
+        "Time Series",
+        "Uncertainty Quantification",
+        "Retrieval"
+      ],
+      "notes": "acceptance rate: 26.9%",
+      "link": "https://arxiv.org/abs/2608.10553",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Jin, S., Kim, K., Lee, J., & Lee, Y. (2026). Retrieval-Corrected Conformal Prediction for Time Series. arXiv preprint arXiv:2608.10553.",
+        "bibtex": "@article{jin2026retrieval,\n  title={Retrieval-Corrected Conformal Prediction for Time Series},\n  author={Jin, Sangjin and Kim, Kangmin and Lee, Junhyeong and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2608.10553},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_cikm_reliability_reranking",
+      "year": 2026,
+      "event_date": "2026-11-07",
+      "authors": "Inwoo Tae, Yongjae Lee*",
+      "author_ids": [
+        "inwoo-tae",
+        "yongjae-lee"
+      ],
+      "venue": "The 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
+      "title": "Post-Calibration Reliability Reranking of Relevance Decisions via Label-wise Monotone Projection",
+      "keywords": [
+        "Information Retrieval",
+        "Ranking",
+        "Calibration",
+        "Reliability"
+      ],
+      "notes": "acceptance rate: 26.9%",
+      "link": "https://arxiv.org/abs/2608.10406",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Tae, I., & Lee, Y. (2026). Post-Calibration Reliability Reranking of Relevance Decisions via Label-wise Monotone Projection. arXiv preprint arXiv:2608.10406.",
+        "bibtex": "@article{tae2026post,\n  title={Post-Calibration Reliability Reranking of Relevance Decisions via Label-wise Monotone Projection},\n  author={Tae, Inwoo and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2608.10406},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
       "id": "pub_2026_kdd_datasets_fintexts",
       "year": 2026,
       "event_date": "2026-08-09",
