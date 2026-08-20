@@ -525,7 +525,10 @@
                                 item.conference
                             }
                         </p>
-                        <p class="text-xs text-gray-500">${item.location}, ${item.date}</p>
+                        ${[item.location, item.date].filter(Boolean).length > 0 ?
+                            `<p class="text-xs text-gray-500">${[item.location, item.date].filter(Boolean).join(', ')}</p>` :
+                            ''
+                        }
                     </div>
                 `).join('');
             }

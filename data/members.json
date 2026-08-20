@@ -13,9 +13,7 @@
         "office": "Building 112, Room 301-7",
         
         "bio_short": "Associate Professor at UNIST IE & AIGS",
-        "bio_full": "Yongjae Lee is an Associate Professor in the Department of Industrial Engineering and Artificial Intelligence Graduate School at Ulsan National Institute of Science and Technology (UNIST). He also serves as Chief Scientist of LinqAlpha AI Lab, where he leads research on how AI systems understand financial information, reason about markets, and make reliable investment decisions. He serves on the advisory editorial board for the Journal of Financial Data Science and was a Workshop Co-Chair for ICAIF '24. Dr. Lee has been playing a leading role in organizing numerous workshops on financial AI at premier ML/AI conferences, including NeurIPS, ICLR, AAAI, CIKM, IJCAI, KDD, and ICAIF. Dr. Lee actively bridges academia and policy, serving on Korea's Presidential Committee of National AI Strategy (대통령직속 국가인공지능전략위원회) and the Financial Services Commission (금융위원회)’s AI in Finance Committee (금융권 AI 협의회) and Innovation Financial Services Review Committee (혁신금융서비스심사위원회). He received his B.S. in Computer Science and Mathematical Sciences and his Ph.D. in Industrial and Systems Engineering from KAIST."
-
-",
+        "bio_full": "Yongjae Lee is an Associate Professor in the Department of Industrial Engineering and Artificial Intelligence Graduate School at Ulsan National Institute of Science and Technology (UNIST). He also serves as Chief Scientist of LinqAlpha AI Lab, where he leads research on how AI systems understand financial information, reason about markets, and make reliable investment decisions. He serves on the advisory editorial board for the Journal of Financial Data Science and was a Workshop Co-Chair for ICAIF '24. Dr. Lee has been playing a leading role in organizing numerous workshops on financial AI at premier ML/AI conferences, including NeurIPS, ICLR, AAAI, CIKM, IJCAI, KDD, and ICAIF. Dr. Lee actively bridges academia and policy, serving on Korea's Presidential Committee of National AI Strategy (대통령직속 국가인공지능전략위원회) and the Financial Services Commission (금융위원회)’s AI in Finance Committee (금융권 AI 협의회) and Innovation Financial Services Review Committee (혁신금융서비스심사위원회). He received his B.S. in Computer Science and Mathematical Sciences and his Ph.D. in Industrial and Systems Engineering from KAIST.",
         
         "research_interests": [
           "Financial Engineering",
@@ -90,7 +88,7 @@
           "conferences": [
             {
               "role": "Senior Program Committee",
-              "conference": "ICAIF'25, ICAIF'26",
+              "conference": "ICAIF'25, ICAIF'26"
             },
             {
               "role": "Workshop Chair",
