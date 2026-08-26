@@ -2,6 +2,116 @@
   "publications": [
 
     {
+      "id": "pub_2026_emnlp_summary_fidelity",
+      "year": 2026,
+      "event_date": "2026-10-24",
+      "authors": "Hoyoung Lee, Suhwan Park, Seunghan Lee, Jun Seo, Jaehoon Lee, Sungdong Yoo, Minjae Kim, Cheolwon Na, Atlas Wang, V. Zach Golkhou, Minkyu Kim, Sotirios Sabanis, Alejandro Lopez-Lira, Dhagash Mehta, Soonyoung Lee, Chanyeol Choi, Wonbin Ahn*, Yongjae Lee*",
+      "author_ids": [
+        "hoyoung-lee",
+        "suhwan-park",
+        "yongjae-lee"
+      ],
+      "venue": "EMNLP 2026 Industry Track",
+      "title": "When Summaries Distort Decisions: Information Fidelity in LLM-Compressed Financial Analysis",
+      "keywords": [
+        "LLMs",
+        "Summarization",
+        "Financial Analysis",
+        "Information Fidelity"
+      ],
+      "notes": "acceptance rate: 28.25%",
+      "link": "https://arxiv.org/abs/2606.29251",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Lee, H., Park, S., Lee, S., Seo, J., Lee, J., Yoo, S., Kim, M., Na, C., Wang, A., Golkhou, V. Z., Kim, M., Sabanis, S., Lopez-Lira, A., Mehta, D., Lee, S., Choi, C., Ahn, W., & Lee, Y. (2026). When Summaries Distort Decisions: Information Fidelity in LLM-Compressed Financial Analysis. arXiv preprint arXiv:2606.29251.",
+        "bibtex": "@article{lee2026summaries,\n  title={When Summaries Distort Decisions: Information Fidelity in LLM-Compressed Financial Analysis},\n  author={Lee, Hoyoung and Park, Suhwan and Lee, Seunghan and Seo, Jun and Lee, Jaehoon and Yoo, Sungdong and Kim, Minjae and Na, Cheolwon and Wang, Atlas and Golkhou, V. Zach and Kim, Minkyu and Sabanis, Sotirios and Lopez-Lira, Alejandro and Mehta, Dhagash and Lee, Soonyoung and Choi, Chanyeol and Ahn, Wonbin and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2606.29251},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_emnlp_fund2persona",
+      "year": 2026,
+      "event_date": "2026-10-24",
+      "authors": "Suhwan Park†, Hoyoung Lee†, Atlas Wang, Alejandro Lopez-Lira, Young Cha, Chanyeol Choi, Jaewon Choi*, Yongjae Lee*",
+      "author_ids": [
+        "suhwan-park",
+        "hoyoung-lee",
+        "yongjae-lee"
+      ],
+      "venue": "EMNLP 2026 Industry Track",
+      "title": "Fund2Persona: A Framework for Building and Refining Financial Advisor Personas from Fund Disclosure Data",
+      "keywords": [
+        "LLMs",
+        "Persona",
+        "Fund Disclosure",
+        "Financial Advisory"
+      ],
+      "notes": "acceptance rate: 28.25%",
+      "link": "https://arxiv.org/abs/2606.29793",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Park, S., Lee, H., Wang, A., Lopez-Lira, A., Cha, Y., Choi, C., Choi, J., & Lee, Y. (2026). Fund2Persona: A Framework for Building and Refining Financial Advisor Personas from Fund Disclosure Data. arXiv preprint arXiv:2606.29793.",
+        "bibtex": "@article{park2026fund2persona,\n  title={Fund2Persona: A Framework for Building and Refining Financial Advisor Personas from Fund Disclosure Data},\n  author={Park, Suhwan and Lee, Hoyoung and Wang, Atlas and Lopez-Lira, Alejandro and Cha, Young and Choi, Chanyeol and Choi, Jaewon and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2606.29793},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_emnlp_text_to_alpha",
+      "year": 2026,
+      "event_date": "2026-10-24",
+      "authors": "Chanyeol Choi, Yoon Kim, Yu Yu, Young Cha, V. Zach Golkhou, Igor Halperin, Georgios Papaioannou, Minkyu Kim, Atlas Wang, Jihoon Kwon, Minjae Kim, Alejandro Lopez-Lira, Yongjae Lee",
+      "author_ids": [
+        "yongjae-lee"
+      ],
+      "venue": "EMNLP 2026 Industry Track",
+      "title": "From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures?",
+      "keywords": [
+        "LLMs",
+        "Corporate Disclosures",
+        "Alpha Generation",
+        "Textual Analysis"
+      ],
+      "notes": "acceptance rate: 28.25%",
+      "link": "https://arxiv.org/abs/2510.03195",
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "Choi, C., Kim, Y., Yu, Y., Cha, Y., Golkhou, V. Z., Halperin, I., Papaioannou, G., Kim, M., Wang, A., Kwon, J., Kim, M., Lopez-Lira, A., & Lee, Y. (2026). From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures? arXiv preprint arXiv:2510.03195.",
+        "bibtex": "@article{choi2026text,\n  title={From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures?},\n  author={Choi, Chanyeol and Kim, Yoon and Yu, Yu and Cha, Young and Golkhou, V. Zach and Halperin, Igor and Papaioannou, Georgios and Kim, Minkyu and Wang, Atlas and Kwon, Jihoon and Kim, Minjae and Lopez-Lira, Alejandro and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2510.03195},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
+      "id": "pub_2026_emnlp_mm_compliance",
+      "year": 2026,
+      "event_date": "2026-10-24",
+      "authors": "Rui He†, Jianhua Yang†, Tomoki Kera, Atsushi Keyaki, Anaïs Lhuissier, Juyeon Kang, Min-Yuh Day, Guan-Bo Yang, Hsin-Hsi Chen, Dittaya Wanvarie, Yongjae Lee, Suhwan Park, Yuriko Nakao, Chung-Chi Chen*, Yohei Seki*",
+      "author_ids": [
+        "yongjae-lee",
+        "suhwan-park"
+      ],
+      "venue": "EMNLP 2026 Main Conference",
+      "title": "MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing",
+      "keywords": [
+        "Multimodal",
+        "Multilingual",
+        "Dataset",
+        "Sustainability",
+        "Compliance"
+      ],
+      "notes": "acceptance rate: 15.4%",
+      "link": null,
+      "type": "Conference",
+      "github": null,
+      "citation": {
+        "apa": "He, R., Yang, J., Kera, T., Keyaki, A., Lhuissier, A., Kang, J., Day, M.-Y., Yang, G.-B., Chen, H.-H., Wanvarie, D., Lee, Y., Park, S., Nakao, Y., Chen, C.-C., & Seki, Y. (2026). MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026).",
+        "bibtex": "@inproceedings{he2026mmcompliance,\n  title={MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing},\n  author={He, Rui and Yang, Jianhua and Kera, Tomoki and Keyaki, Atsushi and Lhuissier, Ana{\\\"i}s and Kang, Juyeon and Day, Min-Yuh and Yang, Guan-Bo and Chen, Hsin-Hsi and Wanvarie, Dittaya and Lee, Yongjae and Park, Suhwan and Nakao, Yuriko and Chen, Chung-Chi and Seki, Yohei},\n  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)},\n  year={2026}\n}",
+        "scholar_url": null
+      }
+    },
+    {
       "id": "pub_2026_cikm_seq2synth",
       "year": 2026,
       "event_date": "2026-11-07",
@@ -75,7 +185,7 @@
         "Calibration",
         "Reliability"
       ],
-      "notes": "Full Research Track, acceptance rate: 26.9%",
+      "notes": "Full Research Track, Oral, acceptance rate: 26.9%, oral presentation: 15.2%",
       "link": "https://arxiv.org/abs/2608.10406",
       "type": "Conference",
       "github": null,
@@ -224,7 +334,7 @@
     },
     
     {
-      "id": "pub_2025_cikm_workshop",
+      "id": "pub_2025_cikm_workshop_guruagents",
       "year": 2025,
       "event_date": "2025-11-14",
       "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
@@ -251,7 +361,7 @@
       }
     },
     {
-      "id": "pub_2025_cikm_workshop",
+      "id": "pub_2025_cikm_workshop_black_litterman",
       "year": 2025,
       "event_date": "2025-11-14",
       "authors": "Youngbin Lee†, Yejin Kim†, Juhyeong Kim, Suin Kim, Yongjae Lee**",
@@ -313,7 +423,6 @@
       "event_date": "2025-11-15",
       "authors": "Daeyoung Park†, Jongyeop Lee†, Yongjae Lee*, Inyoung Ko*",
       "author_ids": [
-        "jongyeop-lee",
         "yongjae-lee"
       ],
       "venue": "ICAIF'25 The 2nd Workshop on LLMs and Generative AI for Finance",
@@ -334,7 +443,7 @@
       }
     },
     {
-      "id": "pub_2025_cikm_workshop",
+      "id": "pub_2025_cikm_workshop_dsl_ensembles",
       "year": 2025,
       "event_date": "2025-11-14",
       "authors": "Juhyeong Kim, Sungyoon Choi, Youngbin Lee, Yejin Kim, Yongmin Choi, Yongjae Lee**",
