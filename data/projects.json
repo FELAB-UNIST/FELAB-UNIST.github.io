@@ -88,7 +88,7 @@
       "duration": "2024.10 ~ 2025.04",
       "project_number": "2.241136.01",
       "keywords": ["Synthetic Data", "Credit Information", "Machine Learning"],
-      "participants": ["hyungwoo-kong", "kangmin-kim"]
+      "participants": ["hyeongwoo-kong", "kangmin-kim"]
     },
     {
       "id": "dynamic-embedding-tae-2024",
@@ -111,7 +111,7 @@
       "duration": "2024.08 ~ 2024.12",
       "project_number": "2.240899.01",
       "keywords": ["AML", "AI", "Financial Crime", "Transaction Monitoring"],
-      "participants": ["inwoo-tae", "kangmin-kim", "hyungwoo-kong"]
+      "participants": ["inwoo-tae", "kangmin-kim", "hyeongwoo-kong"]
     },
     {
       "id": "household-finance-ai-2022",
@@ -123,7 +123,7 @@
       "project_number": "2022R1I1A4069163",
       "notes": "학제간융합연구. UNIST 장현진 교수님, 서울대학교 이정혜 교수님과 공동",
       "keywords": ["Household Finance", "AI", "Life-cycle Planning", "Optimization"],
-      "participants": ["yoontae-hwang","sohyeon-kwon","minjoo-choi","youngbin-lee","seonmi-kim","seyoung-kim","yejin-kim","junhyeong-lee","juchan-kim","inwoo-tae", "hyungwoo-kong","kangmin-kim","hoyoung-lee","suhwan-park","sangjin-jin"]
+      "participants": ["yoontae-hwang","sohyeon-kwon","minjoo-choi","youngbin-lee","seonmi-kim","seyoung-kim","yejin-kim","junhyeong-lee","juchan-kim","inwoo-tae", "hyeongwoo-kong","kangmin-kim","hoyoung-lee","suhwan-park","sangjin-jin"]
     },
     {
       "id": "kb-trading-classification-2024",
@@ -134,7 +134,7 @@
       "duration": "2024.09 ~ 2024.11",
       "project_number": "2.241015.01",
       "keywords": ["Investment Behavior", "Classification", "Individual Investors"],
-      "participants": ["juchan-kim", "junhyeong-lee", "hyungwoo-kong"]
+      "participants": ["juchan-kim", "junhyeong-lee", "hyeongwoo-kong"]
     },
     {
       "id": "policy-mortgage-xai-2023",
@@ -145,7 +145,7 @@
       "duration": "2023.04 ~ 2023.08",
       "project_number": "2.230685.01",
       "keywords": ["XAI", "Policy Mortgage", "Financial Services"],
-      "participants": ["juchan-kim", "junhyeong-lee", "hyungwoo-kong"]
+      "participants": ["juchan-kim", "junhyeong-lee", "hyeongwoo-kong"]
     },
     {
       "id": "news-keyword-extraction-2023",

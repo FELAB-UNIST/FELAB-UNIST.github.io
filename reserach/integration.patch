@@ -1,0 +1,62 @@
+diff --git a/components/header.html b/components/header.html
+--- a/components/header.html
++++ b/components/header.html
+@@ -17,6 +17,7 @@
+                 <a href="#" data-tab="home" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Home</a>
+                 <a href="#" data-tab="members" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Members</a>
+                 <a href="#" data-tab="publications" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Publications</a>
++                <a href="#" data-tab="research" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Research</a>
+                 <a href="#" data-tab="projects" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Projects</a>
+                 <a href="#" data-tab="activities" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Activities</a>
+                 <a href="#" data-tab="journal-club" class="nav-link text-sm font-medium text-gray-600 hover:text-brand-navy transition-colors">Journal Club</a>
+@@ -39,6 +40,7 @@
+             <a href="#" data-tab="home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Home</a>
+             <a href="#" data-tab="members" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Members</a>
+             <a href="#" data-tab="publications" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Publications</a>
++            <a href="#" data-tab="research" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Research</a>
+             <a href="#" data-tab="projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Projects</a>
+             <a href="#" data-tab="activities" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Activities</a>
+             <a href="#" data-tab="journal-club" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brand-navy hover:bg-gray-50">Journal Club</a>
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -27,6 +27,7 @@
+     
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="./css/styles.css">
++    <link rel="stylesheet" href="./css/research.css">
+ </head>
+ <body class="bg-brand-off-white">
+     <h1 class="sr-only">UNIST Financial Engineering Lab (FELAB) – Yongjae Lee (이용재 교수)</h1>
+@@ -55,6 +56,7 @@
+     <script src="./js/modules/news.js"></script>
+     <script src="./js/modules/carousel.js"></script>
+     <script src="./js/modules/activities.js"></script>
++    <script src="./js/modules/research.js"></script>
+     <script src="./js/app.js"></script>
+ </body>
+ </html>
+diff --git a/js/app.js b/js/app.js
+--- a/js/app.js
++++ b/js/app.js
+@@ -187,6 +187,7 @@ const App = {
+                     'members': 'Members',
+                     'activities': 'Activities',
+                     'publications': 'Publications', 
++                    'research': 'Research',
+                     'projects': 'Research Projects',
+                     'journal-club': 'Journal Club',
+                     'news': 'News & Announcements',
+@@ -297,6 +298,12 @@ const App = {
+                     PublicationsManager.init();
+                 }
+                 break;
++
++            case 'research':
++                if (typeof ResearchManager !== 'undefined') {
++                    ResearchManager.init();
++                }
++                break;
+                 
+             case 'members':
+                 if (typeof MembersManager !== 'undefined') {

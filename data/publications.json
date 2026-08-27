@@ -118,7 +118,7 @@
       "authors": "Kiwan Kwon†, Kangmin Kim†, Hojin Lee, Yeseong Jung, Hyeongwoo Kong, Vamsi Krishna Potluru, Saerom Park*, Yongjae Lee*",
       "author_ids": [
         "kangmin-kim",
-        "hyungwoo-kong",
+        "hyeongwoo-kong",
         "yongjae-lee"
       ],
       "venue": "The 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
@@ -756,7 +756,7 @@
     {
       "id": "pub_2025_eaai_disease_cost",
       "year": 2025,
-      "authors": "Inwoo Tae, Hyungwoo Kong*, Junghye Lee, Yongjae Lee**",
+      "authors": "Inwoo Tae, Hyeongwoo Kong*, Junghye Lee, Yongjae Lee**",
       "author_ids": [
         "inwoo-tae",
         "yongjae-lee"
@@ -2218,7 +2218,7 @@
     {
       "id": "pub_wp_gr_fraud",
       "year": "working_paper",
-      "authors": "Inwoo Tae, Kangmin Kim, Hyungwoo Kong*, Yongjae Lee**",
+      "authors": "Inwoo Tae, Kangmin Kim, Hyeongwoo Kong*, Yongjae Lee**",
       "author_ids": [
         "inwoo-tae",
         "kangmin-kim",

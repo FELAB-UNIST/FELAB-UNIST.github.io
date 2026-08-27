@@ -7,7 +7,7 @@ const PublicationsManager = {
     labMembers: [
         'Yongjae Lee', 'Hoyoung Lee', 'Junhyeong Lee', 'Inwoo Tae', 'Juchan Kim', 'Kangmin Kim',
         'Yejin Kim', 'Seonmi Kim', 'Seyoung Kim', 'Youngbin Lee', 'Sohyeon Kwon', 'Minjoo Choi',
-        'Yoontae Hwang', 'Joohwan Hong', 'Hyungwoo Kong', 'Suhwan Park', 'Sangjin Jin'
+        'Yoontae Hwang', 'Joohwan Hong', 'Hyeongwoo Kong', 'Suhwan Park', 'Sangjin Jin'
     ],
     
     async init() {
