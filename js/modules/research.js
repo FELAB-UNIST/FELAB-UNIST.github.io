@@ -6,6 +6,7 @@ const ResearchManager = {
     area: 'all',
     scrollFrame: null,
     selectedAuthor: 'yongjae-lee',
+    showAllPapers: false,
 
     // Short forms for the filter row, which has to fit on one line beside the
     // legend; the full names above are still used in the detail panel.
@@ -550,6 +551,7 @@ const ResearchManager = {
             const button = event.target.closest('button[data-area]');
             if (!button) return;
             this.area = button.dataset.area;
+            this.showAllPapers = false;
             this.updateNetwork();
         });
 
@@ -557,6 +559,7 @@ const ResearchManager = {
             const node = event.target.closest('[data-author-id]');
             if (!node || node.classList.contains('muted')) return;
             this.selectedAuthor = node.dataset.authorId;
+            this.showAllPapers = false;
             this.updateNetwork();
         });
 
@@ -566,6 +569,7 @@ const ResearchManager = {
             if (!node || node.classList.contains('muted')) return;
             event.preventDefault();
             this.selectedAuthor = node.dataset.authorId;
+            this.showAllPapers = false;
             this.updateNetwork();
         });
 
@@ -581,9 +585,16 @@ const ResearchManager = {
         root.querySelector('svg').addEventListener('focusin', raise);
 
         root.querySelector('.research-network-detail').addEventListener('click', (event) => {
+            const toggle = event.target.closest('button[data-show-all-papers]');
+            if (toggle) {
+                this.showAllPapers = !this.showAllPapers;
+                this.updateNetwork();
+                return;
+            }
             const button = event.target.closest('button[data-area]');
             if (!button) return;
             this.area = button.dataset.area;
+            this.showAllPapers = false;
             this.updateNetwork();
         });
 
@@ -658,6 +669,7 @@ const ResearchManager = {
         const selectedPapers = node.papers
             .filter((paper) => this.area === 'all' || paper.category === this.area)
             .sort((a, b) => String(b.year).localeCompare(String(a.year)));
+        const displayedPapers = this.showAllPapers ? selectedPapers : selectedPapers.slice(0, 5);
         const collaborators = new Set(this.graph.links
             .filter((link) => link.from === node.id || link.to === node.id)
             .flatMap((link) => [link.from, link.to])
@@ -677,7 +689,7 @@ const ResearchManager = {
             </div>
             <div class="research-detail-papers">
                 <span>${this.escape(this.area === 'all' ? 'Publications' : this.categoryLabels[this.area])}</span>
-                <ul>${selectedPapers.slice(0, 5).map((paper) => `
+                <ul>${displayedPapers.map((paper) => `
                     <li>
                         <small>${this.escape(paper.year)} · ${this.escape(this.categoryLabels[paper.category])}</small>
                         ${paper.link
@@ -685,7 +697,11 @@ const ResearchManager = {
                             : this.escape(paper.title)}
                     </li>
                 `).join('')}</ul>
-                ${selectedPapers.length > 5 ? `<p class="research-detail-more">+ ${selectedPapers.length - 5} more publications</p>` : ''}
+                ${selectedPapers.length > 5 ? `
+                    <button type="button" class="research-detail-toggle" data-show-all-papers aria-expanded="${this.showAllPapers}">
+                        ${this.showAllPapers ? 'Show fewer publications' : `Show all ${selectedPapers.length} publications`}
+                    </button>
+                ` : ''}
             </div>
         `;
     },
