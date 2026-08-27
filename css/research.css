@@ -252,6 +252,7 @@
     .research-subtheme-card { grid-template-columns: 44px minmax(210px,.8fr) minmax(0,1.2fr); gap: .75rem 1.5rem; }
     .research-review-columns > article { grid-template-columns: 200px 1fr; }
     .research-network-toolbar { align-items: flex-start; flex-direction: column; }
+    .research-network-filters, .research-network-legend { flex-wrap: wrap; }
     .research-network-grid { grid-template-columns: 1fr; }
     .research-network-canvas { border-right: 0; border-bottom: 1px solid #D8E0EB; }
     .research-network-detail { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: 1.5rem; }
@@ -284,8 +285,13 @@
     .research-reviews-heading { grid-template-columns: 1fr; gap: 1.5rem; }
     .research-review-columns > article { grid-template-columns: 1fr; gap: .8rem; }
     .research-review-columns > article > h3 { margin: 0; }
-    .research-network-canvas { overflow-x: auto; }
-    .research-network-canvas svg { width: 760px; max-width: none; min-height: 360px; }
-    .research-network-detail { display: block; }
-    .research-detail-stats { margin: 1.5rem 0; }
+    .research-network-canvas { overflow-x: visible; }
+    .research-network-canvas svg { width: 100%; max-width: 100%; min-height: 300px; }
+    /* Floating over a 300px canvas the note covers the graph; let it sit below. */
+    .research-network-note { position: static; max-width: none; margin: 0 1rem 1rem; }
+    /* Let the panel grow with the page rather than scrolling inside itself. */
+    .research-network-detail { display: block; max-height: none; padding: 1.5rem 1.25rem; }
+    /* The tablet rule above zeroes these; the stacked phone layout needs them. */
+    .research-detail-stats { margin: 1.25rem 0; }
+    .research-detail-papers { margin-top: 1.5rem; }
 }
