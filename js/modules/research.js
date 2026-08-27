@@ -7,11 +7,13 @@ const ResearchManager = {
     scrollFrame: null,
     selectedAuthor: 'yongjae-lee',
     showAllPapers: false,
+    reviewTitles: new Set(),
 
     // Short forms for the filter row, which has to fit on one line beside the
     // legend; the full names above are still used in the detail panel.
     filterLabels: {
         all: 'All',
+        reviews: 'Reviews',
         llms: 'LLMs',
         decisions: 'Decisions',
         assets: 'Asset Modeling',
@@ -21,6 +23,7 @@ const ResearchManager = {
 
     categoryLabels: {
         all: 'All publications',
+        reviews: 'Review Papers',
         llms: 'LLMs in Finance',
         decisions: 'Investment Decision Making',
         assets: 'Financial Asset Modeling',
@@ -45,6 +48,9 @@ const ResearchManager = {
             }
 
             this.config = await configResponse.json();
+            this.reviewTitles = new Set((this.config.reviews || [])
+                .flatMap((group) => group.papers || [])
+                .map((paper) => this.normalizeTitle(paper.title)));
             const publicationData = await publicationResponse.json();
             this.publications = (publicationData.publications || [])
                 .filter((publication) => this.isPublishedJournalOrConference(publication))
@@ -149,8 +155,17 @@ const ResearchManager = {
         return type === 'journal' || type === 'conference';
     },
 
+    normalizeTitle(title) {
+        return String(title || '').trim().toLowerCase().replace(/\s+/g, ' ');
+    },
+
     classifyPublication(publication) {
         const title = String(publication.title || '').trim();
+        // The curated review list on the Research page is authoritative. Match
+        // case-insensitively because publication records are not consistently
+        // capitalized, and keep reviews exclusive from the topical categories.
+        if (this.reviewTitles.has(this.normalizeTitle(title))) return 'reviews';
+
         const overrides = this.config.classificationOverrides || {};
         for (const category of ['other', 'decisions', 'assets', 'llms', 'investors']) {
             if ((overrides[category] || []).includes(title)) return category;
