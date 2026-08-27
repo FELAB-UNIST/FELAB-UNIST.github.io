@@ -285,49 +285,232 @@ const ResearchManager = {
             };
         }).filter((node) => node.papers.length >= 2);
 
-        const nodes = this.positionNodes(nodeInput);
-        const included = new Set(nodes.map((node) => node.id));
+        const included = new Set(nodeInput.map((node) => node.id));
         const links = [...linkMap.values()]
             .filter((link) => included.has(link.from) && included.has(link.to))
             .map((link) => ({ ...link, areas: [...link.areas] }));
+        const nodes = this.positionNodes(nodeInput, links);
 
         return { nodes, links };
     },
 
-    positionNodes(nodes) {
+    positionNodes(nodes, links) {
         const centerX = 500;
         const centerY = 410;
-        const pi = nodes.find((node) => node.name === 'Yongjae Lee');
-        const rest = nodes
-            .filter((node) => node.name !== 'Yongjae Lee')
-            .sort((a, b) => b.papers.length - a.papers.length || a.name.localeCompare(b.name));
-        const positioned = pi ? [{ ...pi, x: centerX, y: centerY }] : [];
-        const rings = [
-            { capacity: 14, radiusX: 136, radiusY: 84 },
-            { capacity: 22, radiusX: 236, radiusY: 146 },
-            { capacity: 32, radiusX: 338, radiusY: 206 },
-            { capacity: 40, radiusX: 430, radiusY: 262 },
-            { capacity: 50, radiusX: 500, radiusY: 304 }
-        ];
-        let cursor = 0;
-        rings.forEach((ring, ringIndex) => {
-            const count = Math.min(ring.capacity, rest.length - cursor);
-            for (let index = 0; index < count; index += 1) {
-                const node = rest[cursor + index];
-                const angle = -Math.PI / 2 + (Math.PI * 2 * index) / count + ringIndex * 0.17;
-                positioned.push({
-                    ...node,
-                    x: centerX + Math.cos(angle) * ring.radiusX,
-                    y: centerY + Math.sin(angle) * ring.radiusY
-                });
-            }
-            cursor += count;
+        const piId = this.authorId('Yongjae Lee');
+        const nodeById = new Map(nodes.map((node) => [node.id, node]));
+        const rest = nodes.filter((node) => node.id !== piId);
+
+        // Single-paper links are common in large author lists and should exert a
+        // light pull. Repeated collaboration grows much faster, so the detected
+        // communities reflect sustained coauthorship rather than one big paper.
+        const effectiveWeight = (link) => 0.3 + Math.pow(Math.max(0, link.papers.length - 1), 1.25);
+        const adjacency = new Map(rest.map((node) => [node.id, []]));
+        links.forEach((link) => {
+            if (link.from === piId || link.to === piId) return;
+            const weight = effectiveWeight(link);
+            if (adjacency.has(link.from)) adjacency.get(link.from).push({ id: link.to, weight });
+            if (adjacency.has(link.to)) adjacency.get(link.to).push({ id: link.from, weight });
         });
-        return positioned;
+
+        // A compact deterministic Louvain-style pass finds the initial clusters.
+        // It deliberately ignores the PI hub, otherwise nearly every author would
+        // be pulled into one community before the force layout even begins.
+        const degree = new Map(rest.map((node) => [
+            node.id,
+            (adjacency.get(node.id) || []).reduce((sum, edge) => sum + edge.weight, 0)
+        ]));
+        const totalDegree = [...degree.values()].reduce((sum, value) => sum + value, 0) || 1;
+        const community = new Map(rest.map((node) => [node.id, node.id]));
+        const communityDegree = new Map(degree);
+        const order = [...rest].sort((a, b) =>
+            (degree.get(b.id) - degree.get(a.id)) || a.name.localeCompare(b.name)
+        );
+
+        for (let pass = 0; pass < 28; pass += 1) {
+            let moved = false;
+            const offset = pass % Math.max(1, order.length);
+            for (let step = 0; step < order.length; step += 1) {
+                const node = order[(step + offset) % order.length];
+                const nodeDegree = degree.get(node.id) || 0;
+                const current = community.get(node.id);
+                communityDegree.set(current, (communityDegree.get(current) || 0) - nodeDegree);
+
+                const weightsByCommunity = new Map();
+                (adjacency.get(node.id) || []).forEach((edge) => {
+                    const label = community.get(edge.id);
+                    weightsByCommunity.set(label, (weightsByCommunity.get(label) || 0) + edge.weight);
+                });
+
+                let best = current;
+                let bestGain = 0;
+                [...weightsByCommunity.entries()]
+                    .sort(([a], [b]) => a.localeCompare(b))
+                    .forEach(([label, inWeight]) => {
+                        const expected = 1.08 * nodeDegree * (communityDegree.get(label) || 0) / totalDegree;
+                        const gain = inWeight - expected;
+                        if (gain > bestGain + 1e-8) {
+                            best = label;
+                            bestGain = gain;
+                        }
+                    });
+
+                community.set(node.id, best);
+                communityDegree.set(best, (communityDegree.get(best) || 0) + nodeDegree);
+                if (best !== current) moved = true;
+            }
+            if (!moved) break;
+        }
+
+        // Fold isolated/singleton results into their strongest neighboring group
+        // where possible, avoiding lone nodes floating far from collaborators.
+        const membersByCommunity = () => {
+            const groups = new Map();
+            rest.forEach((node) => {
+                const label = community.get(node.id);
+                groups.set(label, [...(groups.get(label) || []), node.id]);
+            });
+            return groups;
+        };
+        membersByCommunity().forEach((members) => {
+            if (members.length !== 1) return;
+            const id = members[0];
+            const candidates = new Map();
+            (adjacency.get(id) || []).forEach((edge) => {
+                const label = community.get(edge.id);
+                if (label !== community.get(id)) {
+                    candidates.set(label, (candidates.get(label) || 0) + edge.weight);
+                }
+            });
+            const target = [...candidates.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0];
+            if (target) community.set(id, target[0]);
+        });
+
+        const groups = [...membersByCommunity().values()]
+            .map((ids) => ids.map((id) => nodeById.get(id)))
+            .sort((a, b) => {
+                const aScore = a.reduce((sum, node) => sum + node.papers.length, 0);
+                const bScore = b.reduce((sum, node) => sum + node.papers.length, 0);
+                return bScore - aScore || a[0].name.localeCompare(b[0].name);
+            });
+        const clusterCenter = new Map();
+        groups.forEach((group, index) => {
+            const angle = -Math.PI / 2 + (Math.PI * 2 * index) / Math.max(1, groups.length);
+            const radiusX = groups.length <= 2 ? 180 : 250;
+            const radiusY = groups.length <= 2 ? 125 : 175;
+            group.forEach((node) => clusterCenter.set(node.id, {
+                x: centerX + Math.cos(angle) * radiusX,
+                y: centerY + Math.sin(angle) * radiusY
+            }));
+        });
+
+        const positioned = [];
+        const positionById = new Map();
+        const pi = nodeById.get(piId);
+        if (pi) {
+            const position = { ...pi, x: centerX, y: centerY, vx: 0, vy: 0 };
+            positioned.push(position);
+            positionById.set(pi.id, position);
+        }
+        groups.forEach((group) => {
+            const ordered = [...group].sort((a, b) => b.papers.length - a.papers.length || a.name.localeCompare(b.name));
+            const localRadius = 28 + Math.sqrt(group.length) * 12;
+            ordered.forEach((node, index) => {
+                const anchor = clusterCenter.get(node.id);
+                const angle = (Math.PI * 2 * index) / Math.max(1, ordered.length) + group.length * 0.31;
+                const ring = ordered.length === 1 ? 0 : localRadius * (0.6 + 0.4 * ((index % 3) / 2));
+                const position = {
+                    ...node,
+                    x: anchor.x + Math.cos(angle) * ring,
+                    y: anchor.y + Math.sin(angle) * ring * 0.72,
+                    vx: 0,
+                    vy: 0
+                };
+                positioned.push(position);
+                positionById.set(node.id, position);
+            });
+        });
+
+        // Settle the seeded communities with weighted springs. Stronger repeated
+        // coauthorship means a shorter spring and more attraction; repulsion and
+        // collision forces keep nodes readable instead of stacking them.
+        for (let tick = 0; tick < 360; tick += 1) {
+            const force = new Map(positioned.map((node) => [node.id, { x: 0, y: 0 }]));
+            for (let i = 0; i < positioned.length; i += 1) {
+                for (let j = i + 1; j < positioned.length; j += 1) {
+                    const a = positioned[i];
+                    const b = positioned[j];
+                    let dx = a.x - b.x;
+                    let dy = a.y - b.y;
+                    if (Math.abs(dx) + Math.abs(dy) < 0.001) {
+                        dx = ((i * 37 + j * 17) % 11 - 5) * 0.02;
+                        dy = ((i * 19 + j * 31) % 13 - 6) * 0.02;
+                    }
+                    const distanceSquared = Math.max(64, dx * dx + dy * dy);
+                    const distance = Math.sqrt(distanceSquared);
+                    let push = 2200 / distanceSquared;
+                    if (distance < 34) push += (34 - distance) * 0.12;
+                    const fx = dx / distance * push;
+                    const fy = dy / distance * push;
+                    force.get(a.id).x += fx;
+                    force.get(a.id).y += fy;
+                    force.get(b.id).x -= fx;
+                    force.get(b.id).y -= fy;
+                }
+            }
+
+            links.forEach((link) => {
+                const a = positionById.get(link.from);
+                const b = positionById.get(link.to);
+                if (!a || !b) return;
+                const dx = b.x - a.x;
+                const dy = b.y - a.y;
+                const distance = Math.max(1, Math.sqrt(dx * dx + dy * dy));
+                const repeated = Math.max(0, link.papers.length - 1);
+                const piLink = link.from === piId || link.to === piId;
+                const desired = piLink
+                    ? Math.max(90, 172 - Math.log2(1 + link.papers.length) * 17)
+                    : Math.max(48, 116 - Math.log2(1 + link.papers.length) * 20);
+                const strength = (piLink ? 0.006 : 0.012) * (0.8 + Math.log2(1 + repeated));
+                const pull = (distance - desired) * strength;
+                const fx = dx / distance * pull;
+                const fy = dy / distance * pull;
+                force.get(a.id).x += fx;
+                force.get(a.id).y += fy;
+                force.get(b.id).x -= fx;
+                force.get(b.id).y -= fy;
+            });
+
+            positioned.forEach((node) => {
+                if (node.id === piId) {
+                    node.x = centerX;
+                    node.y = centerY;
+                    node.vx = 0;
+                    node.vy = 0;
+                    return;
+                }
+                const anchor = clusterCenter.get(node.id) || { x: centerX, y: centerY };
+                const f = force.get(node.id);
+                f.x += (anchor.x - node.x) * 0.004 + (centerX - node.x) * 0.0007;
+                f.y += (anchor.y - node.y) * 0.004 + (centerY - node.y) * 0.0007;
+                const temperature = Math.max(0.7, 6 * (1 - tick / 360));
+                node.vx = (node.vx + f.x) * 0.76;
+                node.vy = (node.vy + f.y) * 0.76;
+                const speed = Math.max(1, Math.sqrt(node.vx * node.vx + node.vy * node.vy));
+                node.x += node.vx / speed * Math.min(speed, temperature);
+                node.y += node.vy / speed * Math.min(speed, temperature);
+            });
+        }
+
+        return positioned.map(({ vx, vy, ...node }) => ({
+            ...node,
+            x: Math.round(node.x * 10) / 10,
+            y: Math.round(node.y * 10) / 10
+        }));
     },
 
-    // Outer rings stay empty until the lab has enough coauthors to fill them, so a
-    // fixed viewBox leaves a tall band of blank canvas. Fit it to what is drawn.
+    // The weighted layout grows and contracts with its detected communities, so
+    // fit the viewBox to what the simulation actually drew.
     networkViewBox() {
         const nodes = this.graph.nodes;
         if (!nodes.length) return '0 0 1000 820';
@@ -360,7 +543,7 @@ const ResearchManager = {
             <div class="research-network-grid">
                 <div class="research-network-canvas">
                     <svg viewBox="${this.networkViewBox()}" role="img" aria-label="Interactive coauthor network"></svg>
-                    <div class="research-network-note">The network includes coauthors with two or more publications in the lab's complete publication data. Select any node for details.</div>
+                    <div class="research-network-note">Frequent coauthors are placed closer together. The network includes collaborators with two or more publications; select any node for details.</div>
                 </div>
                 <aside class="research-network-detail" aria-live="polite"></aside>
             </div>
