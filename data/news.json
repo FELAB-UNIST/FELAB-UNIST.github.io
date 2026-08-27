@@ -1,6 +1,31 @@
 {
   "news": [
     {
+      "id": "linqalpha-ai-lab-chief-scientist-2026",
+      "date": "2026-08-18",
+      "category": "achievement",
+      "featured": false,
+      "title": "Prof. Lee Appointed Chief Scientist of the Newly Launched LinqAlpha AI Lab",
+      "title_kr": "이용재 교수, LinqAlpha AI Lab 출범과 함께 Chief Scientist로 선임",
+      "summary": "With the launch of LinqAlpha AI Lab, Professor Yongjae Lee has been appointed its Chief Scientist, leading research on Alpha Intelligence — the ability of AI systems to understand financial information, identify meaningful market signals, and translate them into reliable investment insights and decisions.",
+      "content": "LinqAlpha AI Lab has been launched as a research initiative dedicated to advancing <strong>Alpha Intelligence</strong> — the ability of AI systems to understand financial information, identify meaningful market signals, and translate them into reliable investment insights and decisions. Professor Yongjae Lee has been appointed as its <strong>Chief Scientist</strong>.\n\nOver the past two years or so, Professor Lee and LinqAlpha have carried out joint research with leading institutions including J.P. Morgan, BlackRock, Blackstone, State Street, Kalshi, and MIT, publishing more than ten papers at venues such as ICML, ACL, EMNLP, and ACM ICAIF.\n\nAlongside this research, they have co-organized a series of academic events — the ACM ICAIF AI for Finance Symposium (2024–2026), the ICLR Workshop on Advances in Financial AI (2025–2026), the NeurIPS Workshop on Generative AI in Finance (2025), the EMNLP Workshop on Financial Technology and Natural Language Processing (FinNLP, 2026), and KDD Finance Day (2026) — contributing substantially to building and expanding the academic community around financial AI.",
+      "tags": [
+        "LinqAlpha",
+        "appointment",
+        "Chief Scientist",
+        "Alpha Intelligence",
+        "financial AI",
+        "industry collaboration"
+      ],
+      "links": [
+        {
+          "text": "Introducing LinqAlpha AI Lab",
+          "url": "https://linqalpha.com/research/introducing-linqalpha-ai-lab",
+          "type": "website"
+        }
+      ]
+    },
+    {
       "id": "unist-college-teaching-award-2026",
       "date": "2026-07-27",
       "category": "award",
