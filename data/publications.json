@@ -199,7 +199,7 @@
       "id": "pub_2026_kdd_datasets_fintexts",
       "year": 2026,
       "event_date": "2026-08-09",
-      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, SoonYoung Lee, Yongjae Lee, Wonbin Ahn",
+      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn",
       "author_ids": [
         "suhwan-park",
         "yongjae-lee"
@@ -218,7 +218,7 @@
       "github": "https://github.com/leejaehoon2016/FinTexTS",
       "citation": {
         "apa": "Lee, J., Park, S., Lim, T. Y., Lee, S., Seo, J., Kang, D., Choi, H., Kim, M., Yoo, S., Lee, S., Lee, Y., & Ahn, W. (2026). FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing. arXiv preprint arXiv:2603.02702.",
-        "bibtex": "@article{lee2026fintexts,\n  title={FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing},\n  author={Lee, Jaehoon and Park, Suhwan and Lim, Tae Yoon and Lee, Seunghan and Seo, Jun and Kang, Dongwan and Choi, Hwanil and Kim, Minjae and Yoo, Sungdong and Lee, SoonYoung and Lee, Yongjae and Ahn, Wonbin},\n  journal={arXiv preprint arXiv:2603.02702},\n  year={2026}\n}",
+        "bibtex": "@article{lee2026fintexts,\n  title={FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing},\n  author={Lee, Jaehoon and Park, Suhwan and Lim, Tae Yoon and Lee, Seunghan and Seo, Jun and Kang, Dongwan and Choi, Hwanil and Kim, Minjae and Yoo, Sungdong and Lee, Soonyoung and Lee, Yongjae and Ahn, Wonbin},\n  journal={arXiv preprint arXiv:2603.02702},\n  year={2026}\n}",
         "scholar_url": null
       }
     },
