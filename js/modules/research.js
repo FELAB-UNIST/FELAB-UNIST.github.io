@@ -46,7 +46,7 @@ const ResearchManager = {
             this.config = await configResponse.json();
             const publicationData = await publicationResponse.json();
             this.publications = (publicationData.publications || [])
-                .filter((publication) => !this.isWorkingPaper(publication))
+                .filter((publication) => this.isPublishedJournalOrConference(publication))
                 .map((publication) => ({
                     ...publication,
                     category: this.classifyPublication(publication)
@@ -143,12 +143,9 @@ const ResearchManager = {
         this.scrollFrame = requestAnimationFrame(step);
     },
 
-    isWorkingPaper(publication) {
-        const fields = [publication.year, publication.type, publication.venue, publication.notes]
-            .filter(Boolean)
-            .join(' ')
-            .toLowerCase();
-        return /working\s*paper/.test(fields) || String(publication.year).toLowerCase() === 'working';
+    isPublishedJournalOrConference(publication) {
+        const type = String(publication.type || '').trim().toLowerCase();
+        return type === 'journal' || type === 'conference';
     },
 
     classifyPublication(publication) {
@@ -543,7 +540,7 @@ const ResearchManager = {
             <div class="research-network-grid">
                 <div class="research-network-canvas">
                     <svg viewBox="${this.networkViewBox()}" role="img" aria-label="Interactive coauthor network"></svg>
-                    <div class="research-network-note">Frequent coauthors are placed closer together. The network includes collaborators with two or more publications; select any node for details.</div>
+                    <div class="research-network-note">This network counts journal and conference publications only; workshop, working, bridge, and non-refereed papers are excluded. Frequent coauthors are placed closer together; select any node for details.</div>
                 </div>
                 <aside class="research-network-detail" aria-live="polite"></aside>
             </div>
