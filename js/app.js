@@ -46,6 +46,16 @@ const App = {
         }
     },
     
+    // Hashes the router owns. Anything else (e.g. "#research-areas") is an
+    // in-page anchor and must be left alone: routing it would 404 and fall back
+    // to home, which resets the scroll position.
+    pages: ['home', 'members', 'publications', 'research', 'projects',
+            'activities', 'journal-club', 'news', 'join-us'],
+
+    isPageHash(hash) {
+        return this.pages.includes(hash);
+    },
+
     handleInitialRoute() {
         const hash = window.location.hash.slice(1); // Remove #
 
@@ -76,9 +86,12 @@ const App = {
                     this.loadProfile(memberId);
                 }, 100);
             });
-        } else if (cleanHash) {
+        } else if (this.isPageHash(cleanHash)) {
             // Don't create duplicate history entry for initial page load
             this.loadPage(cleanHash, false);
+        } else if (cleanHash) {
+            // Unknown hash: treat it as an in-page anchor on the home page.
+            this.loadPage('home', false);
         } else {
             this.loadPage('home', false);
         }
@@ -103,8 +116,11 @@ const App = {
             const parts = cleanHash.split('/');
             const memberId = parts[1];
             this.loadProfile(memberId);
-        } else if (cleanHash) {
+        } else if (this.isPageHash(cleanHash)) {
             this.loadPage(cleanHash, false);
+        } else if (cleanHash) {
+            // In-page anchor, not a route. Leave the current page and scroll alone.
+            return;
         } else {
             this.loadPage('home', false);
         }
@@ -187,6 +203,7 @@ const App = {
                     'members': 'Members',
                     'activities': 'Activities',
                     'publications': 'Publications', 
+                    'research': 'Research',
                     'projects': 'Research Projects',
                     'journal-club': 'Journal Club',
                     'news': 'News & Announcements',
@@ -295,6 +312,12 @@ const App = {
             case 'publications':
                 if (typeof PublicationsManager !== 'undefined') {
                     PublicationsManager.init();
+                }
+                break;
+
+            case 'research':
+                if (typeof ResearchManager !== 'undefined') {
+                    ResearchManager.init();
                 }
                 break;
                 

@@ -8,6 +8,61 @@
     --author-external: #0B1220;
 }
 
+/* The header markup carries `sticky top-0`, but its wrapper is exactly as tall
+   as the header, leaving a sticky element no room to travel. Sticking the
+   wrapper instead pins the menu bar to the top of every page. */
+#header-container {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+/* The header markup asks for `bg-brand-off-white/80`, but brand-off-white is a
+   hand-written class rather than a Tailwind theme color, so the /80 variant
+   matches nothing and the bar renders fully transparent. Set it explicitly, and
+   opaque enough that photos scrolling underneath do not read through. */
+#main-header {
+    background-color: rgba(247, 249, 252, 0.4);
+}
+
+/* Header navigation. The markup's `hover:text-brand-navy` never applies, for the
+   same reason: brand-navy is a hand-written class, not a Tailwind theme color,
+   so no hover variant is generated. Blue on hover, navy for the current page. */
+#main-header nav .nav-link:hover,
+#mobile-menu .nav-link:hover {
+    color: var(--brand-accent);
+}
+
+#main-header nav .nav-link.active,
+#main-header nav .nav-link.active:hover,
+#mobile-menu .nav-link.active,
+#mobile-menu .nav-link.active:hover {
+    color: var(--brand-navy);
+}
+
+/* Contact Us button: navy at rest, brand blue on hover. */
+#main-header > div > div > div > .nav-link[data-tab="join-us"] {
+    background-color: var(--brand-navy);
+    color: #fff;
+    transition: background-color .2s;
+}
+#main-header > div > div > div > .nav-link[data-tab="join-us"]:hover {
+    background-color: var(--brand-accent);
+    opacity: 1;
+}
+
+/* Footer Quick Links sit on the navy panel, where updateActiveNav()'s
+   text-brand-navy makes the current page's link disappear. Amber reads clearly
+   against the navy and stays clear of the blue/teal used elsewhere. */
+footer .nav-link:hover {
+    color: var(--brand-off-white);
+}
+
+footer .nav-link.active,
+footer .nav-link.active:hover {
+    color: #FBBF24;
+}
+
 /* Base Styles */
 body {
     font-family: 'Inter', 'Noto Sans KR', sans-serif;

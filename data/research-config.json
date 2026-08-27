@@ -1,0 +1,248 @@
+{
+  "themes": [
+    {
+      "id": "llms",
+      "index": "01",
+      "title": "LLMs in Finance",
+      "statement": "Understanding, evaluating, and using language models as financial decision systems.",
+      "description": "We study LLMs not simply as text processors, but as systems that interpret evidence, form investment judgments, retrieve financial knowledge, and support decisions. Our work connects model behavior and evaluation directly to practical financial use.",
+      "subthemes": [
+        {
+          "title": "Understanding LLM behavior in investment analysis",
+          "description": "We examine the judgments LLMs produce, the investment biases they carry, and the ways apparently fluent transformations such as summarization can change the decision supported by the original evidence.",
+          "papers": [
+            { "title": "Your AI, Not Your View: The Bias of LLMs in Investment Analysis", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770375" },
+            { "title": "When Summaries Distort Decisions: Information Fidelity in LLM-Compressed Financial Analysis", "venue": "EMNLP Industry Track", "year": 2026, "link": "https://arxiv.org/abs/2606.29251" }
+          ]
+        },
+        {
+          "title": "Evaluating LLMs for investment analysis",
+          "description": "Financial evaluation must measure more than answer accuracy. We build datasets and benchmarks for bias, retrieval, agentic research, factual grounding, and multilingual multimodal compliance.",
+          "papers": [
+            { "title": "Evaluating LLMs in Finance Requires Explicit Bias Consideration", "venue": "ICML Position Paper Track", "year": 2026, "link": "https://arxiv.org/abs/2602.14233" },
+            { "title": "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770361" },
+            { "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770362" },
+            { "title": "MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing", "venue": "EMNLP Main Conference", "year": 2026 }
+          ]
+        },
+        {
+          "title": "LLM-based investment strategies and financial advisors",
+          "description": "We translate language understanding into investment signals, risk controls, and personalized expertise, from analyst reports and corporate disclosures to prediction markets and fund-manager personas.",
+          "papers": [
+            { "title": "LLMs Analyzing Analysts: Do BERT and GPT Extract More Value from Financial Analyst Reports?", "venue": "ICAIF", "year": 2023, "link": "https://dl.acm.org/doi/10.1145/3604237.3627721" },
+            { "title": "LLM as a Risk Manager: LLM Semantic Filtering for Lead-Lag Trading in Prediction Markets", "venue": "ACL Industry Track", "year": 2026, "link": "https://arxiv.org/abs/2602.07048" },
+            { "title": "From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures?", "venue": "EMNLP Industry Track", "year": 2026, "link": "https://arxiv.org/abs/2510.03195" },
+            { "title": "Fund2Persona: A Framework for Building and Refining Financial Advisor Personas from Fund Disclosure Data", "venue": "EMNLP Industry Track", "year": 2026, "link": "https://arxiv.org/abs/2606.29793" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "index": "02",
+      "title": "Investment Decision Making",
+      "statement": "Learning and optimization methods built around the quality of the final investment decision.",
+      "description": "Prediction is only an intermediate step in finance. We develop learning and optimization methods that account for portfolio objectives, uncertainty, constraints, transaction structure, and long planning horizons.",
+      "subthemes": [
+        {
+          "title": "Decision-focused learning",
+          "description": "Rather than treating every prediction error equally, decision-focused learning identifies which errors alter the optimal portfolio and trains models around their downstream consequences.",
+          "papers": [
+            { "title": "Decision-Focused Learning via Tangent-Space Projection of Prediction Error", "venue": "ICML", "year": 2026, "link": "https://arxiv.org/abs/2605.01361" },
+            { "title": "Return Prediction for Mean-Variance Portfolio Selection: How Decision-Focused Learning Shapes Forecasting Models", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770423" },
+            { "title": "Estimating Covariance for Global Minimum Variance Portfolio: A Decision-Focused Learning Approach", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770378" },
+            { "title": "Decision-focused Sparse Tangent Portfolio Optimization", "venue": "ICML", "year": 2026, "link": "https://icml.cc/virtual/2026/poster/64722" }
+          ]
+        },
+        {
+          "title": "Portfolio optimization",
+          "description": "We study scalable portfolio and financial-planning problems under multiple stages, uncertain future states, sparse decisions, and distributional shifts.",
+          "papers": [
+            { "title": "Personalized Goal-Based Investing via Multi-Stage Stochastic Goal Programming", "venue": "Quantitative Finance", "year": 2020, "link": "https://www.tandfonline.com/doi/full/10.1080/14697688.2019.1662079" },
+            { "title": "Value Function Gradient Learning for Large-Scale Multistage Stochastic Programming Problems", "venue": "European Journal of Operational Research", "year": 2023, "link": "https://doi.org/10.1016/j.ejor.2022.10.011" },
+            { "title": "Large-scale Financial Planning via a Partially Observable Stochastic Dual Dynamic Programming Framework", "venue": "Quantitative Finance", "year": 2023, "link": "https://doi.org/10.1080/14697688.2023.2221296" },
+            { "title": "Deep Value Function Networks for Large-scale Multistage Stochastic Programs", "venue": "AISTATS", "year": 2023, "link": "https://proceedings.mlr.press/v206/bae23a.html" },
+            { "title": "Enhancing Mean-Variance Portfolio Optimization through GANs-Based Anomaly Detection", "venue": "Annals of Operations Research", "year": 2025, "link": "https://link.springer.com/article/10.1007/s10479-024-06293-x" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "index": "03",
+      "title": "Financial Asset Modeling",
+      "statement": "Representing assets and market dynamics across prices, text, order flow, and synthetic data.",
+      "description": "Financial assets are observed through heterogeneous and evolving signals. We build representations and predictive methods that combine temporal structure, semantic information, cross-asset relations, uncertainty, and tabular features.",
+      "subthemes": [
+        {
+          "title": "Stock modeling with time series and text",
+          "description": "We represent stocks through price dynamics, textual context, semantic similarity, and synthetic market behavior, with emphasis on the information preserved for downstream investment tasks.",
+          "papers": [
+            { "title": "FinTexTS: Financial Text-Paired Time-Series Dataset via Semantic-Based and Multi-Level Pairing", "venue": "KDD Datasets & Benchmarks", "year": 2026, "link": "https://arxiv.org/abs/2603.02702" },
+            { "title": "THEME: Enhancing Thematic Investing with Semantic Stock Representations and Temporal Dynamics", "venue": "CIKM", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3746252.3761517" },
+            { "title": "SimStock: Representation Model for Stock Similarities", "venue": "ICAIF", "year": 2023, "link": "https://dl.acm.org/doi/10.1145/3604237.3626888" },
+            { "title": "A GANs-Based Approach for Stock Price Anomaly Detection and Investment Risk Management", "venue": "ICAIF", "year": 2023, "link": "https://dl.acm.org/doi/10.1145/3604237.3626892" },
+            { "title": "Can GANs Learn the Stylized Facts of Financial Time Series?", "venue": "ICAIF", "year": 2024, "link": "https://doi.org/10.1145/3677052.3698661" },
+            { "title": "A Uniformly Distributed Random Portfolio", "venue": "Quantitative Finance", "year": 2016, "link": "https://doi.org/10.1080/14697688.2015.1114360" }
+          ]
+        },
+        {
+          "title": "Time-series forecasting",
+          "description": "We design targets, uncertainty estimates, and cross-asset representations that better reflect the asymmetric risks and changing regimes of financial forecasting.",
+          "papers": [
+            { "title": "Retrieval-Corrected Conformal Prediction for Time Series", "venue": "CIKM", "year": 2026, "link": "https://arxiv.org/abs/2608.10553" },
+            { "title": "Stop-Loss Adjusted Labels for Machine Learning-Based Trading of Risky Assets", "venue": "Finance Research Letters", "year": 2023, "link": "https://doi.org/10.1016/j.frl.2023.104285" },
+            { "title": "From Constituents to Index: Interpretable Price Movement Prediction via Cross-Asset Order Flow", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770432" }
+          ]
+        },
+        {
+          "title": "Tabular data modeling",
+          "description": "We study synthetic sequential tables and mixed-variable learning, where temporal fidelity, heterogeneous feature geometry, and limited labels are central challenges.",
+          "papers": [
+            { "title": "Seq2Synth: Benchmarking Temporal Fidelity in Synthetic Sequential Tabular Data", "venue": "CIKM", "year": 2026, "link": "https://arxiv.org/abs/2607.15606" },
+            { "title": "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset", "venue": "AAAI", "year": 2025, "link": "https://ojs.aaai.org/index.php/AAAI/article/view/33928" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investors",
+      "index": "04",
+      "title": "Investor Modeling & Personalization",
+      "statement": "Understanding heterogeneous investors and adapting decisions to their goals, behavior, and circumstances.",
+      "description": "There is no representative investor. We model heterogeneity in household finances and trading behavior, then translate it into personalized portfolios, recommendations, and other high-stakes decisions.",
+      "subthemes": [
+        {
+          "title": "Individual investor and household analysis",
+          "description": "We identify distinct financial conditions and behavioral patterns at the household and account level instead of reducing them to population averages.",
+          "papers": [
+            { "title": "Identifying Household Finance Heterogeneity via Deep Clustering", "venue": "Annals of Operations Research", "year": 2023, "link": "https://link.springer.com/article/10.1007/s10479-022-04900-3" },
+            { "title": "Household Financial Health: A Machine Learning Approach for Data-Driven Diagnosis and Prescription", "venue": "Quantitative Finance", "year": 2023, "link": "https://doi.org/10.1080/14697688.2023.2254335" },
+            { "title": "Heterogeneous Trading Behaviors of Individual Investors: A Deep Clustering Approach", "venue": "Finance Research Letters", "year": 2024, "link": "https://doi.org/10.1016/j.frl.2024.105481" }
+          ]
+        },
+        {
+          "title": "Personalized investment decision making",
+          "description": "We connect user-specific objectives and preferences to optimization and recommendation methods that preserve diversification and decision relevance.",
+          "papers": [
+            { "title": "Personalized Goal-Based Investing via Multi-Stage Stochastic Goal Programming", "venue": "Quantitative Finance", "year": 2020, "link": "https://www.tandfonline.com/doi/full/10.1080/14697688.2019.1662079" },
+            { "title": "Mean-Variance Efficient Collaborative Filtering for Stock Recommendation", "venue": "ICAIF", "year": 2025, "link": "https://dl.acm.org/doi/10.1145/3768292.3770427" },
+            { "title": "Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling", "venue": "ICAIF", "year": 2024, "link": "https://doi.org/10.1145/3677052.3698662" },
+            { "title": "Machine Learning for Disease-Specific Prediction of High-Cost Patients", "venue": "Engineering Applications of Artificial Intelligence", "year": 2025, "link": "https://www.sciencedirect.com/science/article/pii/S0952197625022080" },
+            { "title": "Multi-Attention Recommender System for NFTs", "venue": "Engineering Applications of Artificial Intelligence", "year": 2024, "link": "https://doi.org/10.1016/j.engappai.2024.109179" }
+          ]
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "group": "Machine learning & AI",
+      "papers": [
+        { "title": "Deep Learning in Asset Management: Architectures, Applications, and Challenges", "venue": "Journal of Portfolio Management", "year": 2025, "link": "https://www.pm-research.com/content/iijpormgmt/52/2/233" },
+        { "title": "Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners", "venue": "Journal of Portfolio Management", "year": 2025, "link": "https://www.pm-research.com/content/iijpormgmt/52/2/150" },
+        { "title": "Random Forests for Feature Selection: Concepts and Applications in Asset Management", "venue": "Journal of Portfolio Management", "year": 2025, "link": "https://www.pm-research.com/content/iijpormgmt/52/2/24" },
+        { "title": "An Overview of Machine Learning for Asset Management", "venue": "Journal of Portfolio Management", "year": 2023, "link": "https://www.pm-research.com/content/iijpormgmt/49/9/31" }
+      ]
+    },
+    {
+      "group": "Portfolio optimization",
+      "papers": [
+        { "title": "An Overview of Machine Learning for Portfolio Optimization", "venue": "Journal of Portfolio Management", "year": 2024, "link": "https://doi.org/10.3905/jpm.2024.1.639" },
+        { "title": "An Overview of Optimization Models for Portfolio Management", "venue": "Journal of Portfolio Management", "year": 2024, "link": "https://doi.org/10.3905/jpm.2024.1.643" },
+        { "title": "Robustness in Portfolio Optimization", "venue": "Journal of Portfolio Management", "year": 2023, "link": "https://www.pm-research.com/content/iijpormgmt/49/9/140" },
+        { "title": "Mean-Variance Optimization for Asset Allocation", "venue": "Journal of Portfolio Management", "year": 2021, "link": "https://jpm.pm-research.com/content/47/5/24" }
+      ]
+    },
+    {
+      "group": "Industry perspective",
+      "papers": [
+        { "title": "Recent Trends and Perspectives on Korean Asset Management Industry", "venue": "Journal of Portfolio Management", "year": 2021 }
+      ]
+    }
+  ],
+  "classificationOverrides": {
+    "other": [
+      "Basic Enhancement Strategies When Using Bayesian Optimization for Hyperparameter Tuning of Deep Neural Networks",
+      "Concise Formulas for the Surface Area of the Intersection of Two Hyperspherical Caps",
+      "Homophily and Entropy Temperature Scaling for Graph Neural Network"
+    ],
+    "decisions": [
+      "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model",
+      "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization"
+    ],
+    "assets": [
+      "Recent Trends and Perspectives on Korean Asset Management Industry",
+      "Strengthening Financial Markets by Analyzing the Causes of Major Financial Disasters",
+      "Why Your Smart Beta Portfolio Might Not Work",
+      "Cost of Asset Allocation in Equity Market: How Much Do Investors Lose Due to Bad Asset Class Design?",
+      "Post-Calibration Reliability Reranking of Relevance Decisions via Label-wise Monotone Projection"
+    ],
+    "llms": [
+      "FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation",
+      "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering",
+      "MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing",
+      "Structuring the Unstructured: A Multi-Agent System for Extracting and Querying Financial KPIs and Guidance"
+    ]
+  },
+  "authorGroups": {
+    "alumni": ["Yoontae Hwang", "Youngbin Lee", "Yejin Kim", "Seyoung Kim", "Seonmi Kim", "Joohwan Hong", "Hyeongwoo Kong", "Minjoo Choi", "Sohyeon Kwon"],
+    "linqalpha": ["Chanyeol Choi", "Jihoon Kwon", "Minjae Kim", "Sumin Kim", "Juneha Hwang", "Chaewoon Kim", "Jaeseon Ha", "Hojun Choi", "Suyeol Yun", "Yongjin Kim"],
+    "external": ["Jongyeop Lee"]
+  },
+  "affiliations": {
+    "Yongjae Lee": "UNIST · LinqAlpha",
+    "Woo Chang Kim": "KAIST",
+    "Jang Ho Kim": "Kyung Hee Univ.",
+    "Frank J. Fabozzi": "Johns Hopkins",
+    "Yoontae Hwang": "Pusan Nat’l Univ.",
+    "Yejin Kim": "Meritz Fire",
+    "Youngbin Lee": "Elice",
+    "Alejandro Lopez-Lira": "Univ. of Florida",
+    "Chanyeol Choi": "LinqAlpha",
+    "Junhyeong Lee": "UNIST",
+    "Jihoon Kwon": "LinqAlpha",
+    "Joohwan Hong": "KFE",
+    "Do-Gyun Kwon": "KAIST",
+    "Inwoo Tae": "UNIST",
+    "Minjae Kim": "LinqAlpha",
+    "Hoyoung Lee": "UNIST",
+    "Suhwan Park": "UNIST",
+    "Wonbin Ahn": "LG AI Research",
+    "Juchan Kim": "UNIST",
+    "Kangmin Kim": "UNIST",
+    "Min Jeong Kim": "NPRI",
+    "Seyoung Kim": "Kyobo AXA IM",
+    "Stefan Zohren": "Oxford",
+    "Yoon Kim": "MIT",
+    "Chaewoon Kim": "LinqAlpha",
+    "Hyunglip Bae": "KAIST",
+    "Hyeongwoo Kong": "HUFS",
+    "Jaeseon Ha": "LinqAlpha",
+    "Jinkyu Lee": "KAIST",
+    "Juhyeong Kim": "Mirae Asset",
+    "Junpyo Park": "UNIST",
+    "Munki Chung": "KAIST",
+    "Sanghyeon Bae": "KAIST",
+    "Sangjin Jin": "UNIST",
+    "Seonmi Kim": "NICE P&I",
+    "Suin Kim": "Elice",
+    "Chanyeong Kim": "KAIST",
+    "Dhagash Mehta": "BlackRock",
+    "Guhyuk Chung": "KAIST",
+    "Haeun Jeon": "KAIST",
+    "Hojun Choi": "LinqAlpha",
+    "John R.J. Thompson": "UBC",
+    "Juneha Hwang": "LinqAlpha",
+    "Junghye Lee": "SNU",
+    "Oscar Levy": "UC Berkeley",
+    "Sohyeon Kwon": "NCSoft",
+    "Sukmin Hwang": "KAIST",
+    "Sumin Kim": "LinqAlpha",
+    "Sungho Lee": "KAIST",
+    "Suyeol Yun": "LinqAlpha",
+    "Yaxuan Kong": "Oxford",
+    "Yongjin Kim": "LinqAlpha",
+    "Yoon Hak Lee": "KAIST"
+  }
+}
