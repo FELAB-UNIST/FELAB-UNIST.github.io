@@ -192,6 +192,24 @@
     "linqalpha": ["Chanyeol Choi", "Jihoon Kwon", "Minjae Kim", "Sumin Kim", "Juneha Hwang", "Chaewoon Kim", "Jaeseon Ha", "Hojun Choi", "Suyeol Yun", "Yongjin Kim"],
     "external": ["Jongyeop Lee"]
   },
+  "authorIdentityOverrides": {
+    "pub_2026_emnlp_summary_fidelity": {
+      "Minjae Kim": "minjae-kim-lg-ai"
+    },
+    "pub_2026_kdd_datasets_fintexts": {
+      "Minjae Kim": "minjae-kim-lg-ai"
+    },
+    "pub_2025_cikm_theme": {
+      "Minjae Kim": "minjae-kim-lg-ai"
+    }
+  },
+  "authorProfiles": {
+    "minjae-kim-lg-ai": {
+      "name": "Minjae Kim",
+      "affiliation": "LG AI Research",
+      "type": "external"
+    }
+  },
   "affiliations": {
     "Yongjae Lee": "UNIST · LinqAlpha",
     "Atlas Wang": "XTX Markets · UT Austin",
