@@ -244,18 +244,34 @@ const ResearchManager = {
         return String(publication.authors || '').split(',').map((name) => this.cleanAuthor(name)).filter(Boolean);
     },
 
+    authorIdentity(name, publication) {
+        const id = (this.config.authorIdentityOverrides || {})[publication.id]?.[name] || this.authorId(name);
+        const profile = (this.config.authorProfiles || {})[id] || {};
+        return {
+            id,
+            name: profile.name || name,
+            affiliation: profile.affiliation || null,
+            type: profile.type || null
+        };
+    },
+
     buildGraph(publications) {
         const paperMap = new Map();
         const areaMap = new Map();
         const displayNames = new Map();
+        const identityProfiles = new Map();
         const linkMap = new Map();
         const labIds = new Set(publications.flatMap((publication) => publication.author_ids || []));
 
         publications.forEach((publication) => {
-            const authors = [...new Set(this.parseAuthors(publication))];
-            authors.forEach((name) => {
-                const id = this.authorId(name);
+            const authors = [...new Map(this.parseAuthors(publication).map((name) => {
+                const identity = this.authorIdentity(name, publication);
+                return [identity.id, identity];
+            })).values()];
+            authors.forEach((identity) => {
+                const { id, name } = identity;
                 displayNames.set(id, name);
+                identityProfiles.set(id, identity);
                 paperMap.set(id, [...(paperMap.get(id) || []), publication]);
                 if (!areaMap.has(id)) areaMap.set(id, new Set());
                 areaMap.get(id).add(publication.category);
@@ -263,7 +279,7 @@ const ResearchManager = {
 
             for (let i = 0; i < authors.length; i += 1) {
                 for (let j = i + 1; j < authors.length; j += 1) {
-                    const ids = [this.authorId(authors[i]), this.authorId(authors[j])].sort();
+                    const ids = [authors[i].id, authors[j].id].sort();
                     const key = ids.join('::');
                     const existing = linkMap.get(key) || { from: ids[0], to: ids[1], papers: [], areas: new Set() };
                     existing.papers.push(publication);
@@ -279,19 +295,22 @@ const ResearchManager = {
         const external = new Set(groups.external || []);
 
         const nodeInput = [...paperMap.entries()].map(([id, papers]) => {
-            const name = displayNames.get(id);
+            const profile = identityProfiles.get(id) || {};
+            const name = profile.name || displayNames.get(id);
             const slug = id;
-            let type = 'external';
-            if (name === 'Yongjae Lee') type = 'pi';
-            else if (linqalpha.has(name)) type = 'linqalpha';
-            else if (alumni.has(name)) type = 'alumni';
-            else if (external.has(name)) type = 'external';
-            else if (labIds.has(slug)) type = 'lab';
+            let type = profile.type || 'external';
+            if (!profile.type) {
+                if (name === 'Yongjae Lee') type = 'pi';
+                else if (linqalpha.has(name)) type = 'linqalpha';
+                else if (alumni.has(name)) type = 'alumni';
+                else if (external.has(name)) type = 'external';
+                else if (labIds.has(slug)) type = 'lab';
+            }
 
             return {
                 id,
                 name,
-                affiliation: (this.config.affiliations || {})[name] || (type === 'lab' || type === 'pi' ? 'UNIST' : type === 'linqalpha' ? 'LinqAlpha' : 'External'),
+                affiliation: profile.affiliation || (this.config.affiliations || {})[name] || (type === 'lab' || type === 'pi' ? 'UNIST' : type === 'linqalpha' ? 'LinqAlpha' : 'External'),
                 type,
                 papers,
                 areas: [...areaMap.get(id)]
