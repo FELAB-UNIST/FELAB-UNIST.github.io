@@ -169,7 +169,9 @@
     ],
     "decisions": [
       "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model",
-      "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization"
+      "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization",
+      "Deep Value Function Networks for Large-scale Multistage Stochastic Programs",
+      "Achieving Portfolio Diversification for Individuals with Low Financial Sustainability"
     ],
     "assets": [
       "Recent Trends and Perspectives on Korean Asset Management Industry",
