@@ -13,21 +13,21 @@ const ResearchManager = {
     // legend; the full names above are still used in the detail panel.
     filterLabels: {
         all: 'All',
-        reviews: 'Reviews',
         llms: 'LLMs',
         decisions: 'Decisions',
         assets: 'Asset Modeling',
         investors: 'Investors',
+        reviews: 'Reviews',
         other: 'Other'
     },
 
     categoryLabels: {
         all: 'All publications',
-        reviews: 'Review Papers',
         llms: 'LLMs in Finance',
         decisions: 'Investment Decision Making',
         assets: 'Financial Asset Modeling',
         investors: 'Investor Modeling',
+        reviews: 'Review Papers',
         other: 'Other'
     },
 
