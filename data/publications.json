@@ -199,7 +199,7 @@
       "id": "pub_2026_kdd_datasets_fintexts",
       "year": 2026,
       "event_date": "2026-08-09",
-      "authors": "Jaehoon Lee†, Suhwan Park†, Tae Yoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn",
+      "authors": "Jaehoon Lee†, Suhwan Park†, Taeyoon Lim, Seunghan Lee, Jun Seo, Dongwan Kang, Hwanil Choi, Minjae Kim, Sungdong Yoo, Soonyoung Lee, Yongjae Lee, Wonbin Ahn",
       "author_ids": [
         "suhwan-park",
         "yongjae-lee"
@@ -784,7 +784,7 @@
       "id": "pub_2025_cikm_theme",
       "year": 2025,
       "event_date": "2025-11-10",
-      "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jahoon Lee, Minjae Kim, Sundong You, Taeyoon Lim, Woohyung Lim*, Yongjae Lee**",
+      "authors": "Hoyoung Lee†, Wonbin Ahn†, Suhwan Park, Jaehoon Lee, Minjae Kim, Sungdong Yoo, Taeyoon Lim, Woohyung Lim*, Yongjae Lee**",
       "author_ids": [
         "hoyoung-lee",
         "suhwan-park",
