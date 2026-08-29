@@ -58,7 +58,6 @@
           "title": "Portfolio optimization",
           "description": "We study scalable portfolio and financial-planning problems under multiple stages, uncertain future states, sparse decisions, and distributional shifts.",
           "papers": [
-            { "title": "Personalized Goal-Based Investing via Multi-Stage Stochastic Goal Programming", "venue": "Quantitative Finance", "year": 2020, "link": "https://www.tandfonline.com/doi/full/10.1080/14697688.2019.1662079" },
             { "title": "Value Function Gradient Learning for Large-Scale Multistage Stochastic Programming Problems", "venue": "European Journal of Operational Research", "year": 2023, "link": "https://doi.org/10.1016/j.ejor.2022.10.011" },
             { "title": "Large-scale Financial Planning via a Partially Observable Stochastic Dual Dynamic Programming Framework", "venue": "Quantitative Finance", "year": 2023, "link": "https://doi.org/10.1080/14697688.2023.2221296" },
             { "title": "Deep Value Function Networks for Large-scale Multistage Stochastic Programs", "venue": "AISTATS", "year": 2023, "link": "https://proceedings.mlr.press/v206/bae23a.html" },
