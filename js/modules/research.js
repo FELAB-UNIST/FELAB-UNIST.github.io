@@ -315,7 +315,9 @@ const ResearchManager = {
                 papers,
                 areas: [...areaMap.get(id)]
             };
-        }).filter((node) => node.papers.length >= 2);
+        // Lab people (PI, current members, alumni) join the network on a single
+        // paper; everyone else still needs two so the graph stays readable.
+        }).filter((node) => node.papers.length >= 2 || ['pi', 'lab', 'alumni'].includes(node.type));
 
         const included = new Set(nodeInput.map((node) => node.id));
         const links = [...linkMap.values()]
