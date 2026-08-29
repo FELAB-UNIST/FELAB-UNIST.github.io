@@ -58,10 +58,10 @@
           "title": "Portfolio optimization",
           "description": "We study scalable portfolio and financial-planning problems under multiple stages, uncertain future states, sparse decisions, and distributional shifts.",
           "papers": [
-            { "title": "Value Function Gradient Learning for Large-Scale Multistage Stochastic Programming Problems", "venue": "European Journal of Operational Research", "year": 2023, "link": "https://doi.org/10.1016/j.ejor.2022.10.011" },
+            { "title": "Enhancing Mean-Variance Portfolio Optimization through GANs-Based Anomaly Detection", "venue": "Annals of Operations Research", "year": 2025, "link": "https://link.springer.com/article/10.1007/s10479-024-06293-x" },
             { "title": "Large-scale Financial Planning via a Partially Observable Stochastic Dual Dynamic Programming Framework", "venue": "Quantitative Finance", "year": 2023, "link": "https://doi.org/10.1080/14697688.2023.2221296" },
-            { "title": "Deep Value Function Networks for Large-scale Multistage Stochastic Programs", "venue": "AISTATS", "year": 2023, "link": "https://proceedings.mlr.press/v206/bae23a.html" },
-            { "title": "Enhancing Mean-Variance Portfolio Optimization through GANs-Based Anomaly Detection", "venue": "Annals of Operations Research", "year": 2025, "link": "https://link.springer.com/article/10.1007/s10479-024-06293-x" }
+            { "title": "Value Function Gradient Learning for Large-Scale Multistage Stochastic Programming Problems", "venue": "European Journal of Operational Research", "year": 2023, "link": "https://doi.org/10.1016/j.ejor.2022.10.011" },
+            { "title": "Deep Value Function Networks for Large-scale Multistage Stochastic Programs", "venue": "AISTATS", "year": 2023, "link": "https://proceedings.mlr.press/v206/bae23a.html" }
           ]
         }
       ]
