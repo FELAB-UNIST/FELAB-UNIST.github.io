@@ -1,6 +1,28 @@
 {
   "news": [
     {
+      "id": "k-data-science-research-awards-2026",
+      "date": "2026-09-11",
+      "category": "award",
+      "featured": false,
+      "title": "FELAB Students Receive Minister’s Award and Creative Research Award at 2026 K-Data Science Conference",
+      "title_kr": "FELAB 학생들, 2026 K-Data Science 컨퍼런스 연구발표회 과학기술정보통신부 장관상 및 창의연구상 수상",
+      "summary": "FELAB students received the Minister of Science and ICT Award for research on decision-focused learning and the Creative Research Award for research on sequential tabular synthetic data generation at the 2026 K-Data Science Conference.",
+      "content": "FELAB students received two awards at the research presentation session of the 2026 K-Data Science Conference on September 11, 2026. Junhyeong Lee and Sangjin Jin received the <strong>Minister of Science and ICT Award (과학기술정보통신부 장관상)</strong>, while Inwoo Tae and Kangmin Kim received the <strong>Creative Research Award (창의연구상)</strong>.\n\n[figure1]\n\n<strong>Junhyeong Lee</strong> and <strong>Sangjin Jin</strong> were recognized for their research on <strong>decision-focused learning</strong>, which trains predictive models to support downstream decisions. Their work focuses on restoring predictive performance without compromising decision quality, addressing the challenge of maintaining accurate predictions while optimizing models for decision-making.\n\n[figure2]\n\n<strong>Inwoo Tae</strong> and <strong>Kangmin Kim</strong> received the Creative Research Award for their work on <strong>sequential tabular synthetic data generation</strong>. Their research addresses the deterioration of temporal quality in generated data, aiming to better preserve patterns and relationships across time.\n\n[figure3]\n\nCongratulations to Junhyeong, Sangjin, Inwoo, and Kangmin on their achievements.\n\n[figure4]",
+      "figure1": "./public/news/260911_k-data-science_group.jpg",
+      "figure2": "./public/news/260911_k-data-science_minister-award.jpg",
+      "figure3": "./public/news/260911_k-data-science_creative-research-award.jpg",
+      "figure4": "./public/news/260911_k-data-science_certificates.jpg",
+      "tags": [
+        "award",
+        "K-Data Science",
+        "decision-focused learning",
+        "synthetic data",
+        "temporal modeling"
+      ],
+      "links": []
+    },
+    {
       "id": "linqalpha-ai-lab-chief-scientist-2026",
       "date": "2026-08-18",
       "category": "achievement",
