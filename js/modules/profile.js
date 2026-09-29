@@ -643,12 +643,24 @@
                 }
             });
             
-            // Sort each category by year (most recent first)
+            // Sort newest year first, then newest event date within the year.
+            // Keep source order for ties and put undated papers after dated ones.
             Object.keys(categories).forEach(cat => {
                 categories[cat].sort((a, b) => {
-                    if (a.year === 'working_paper') return 1;
-                    if (b.year === 'working_paper') return -1;
-                    return b.year - a.year;
+                    if (a.year !== b.year) {
+                        if (a.year === 'working_paper') return 1;
+                        if (b.year === 'working_paper') return -1;
+                        const yearDifference = Number(b.year) - Number(a.year);
+                        if (yearDifference) return yearDifference;
+                    }
+
+                    const aDate = Date.parse(a.event_date ? a.event_date + 'T00:00:00Z' : '');
+                    const bDate = Date.parse(b.event_date ? b.event_date + 'T00:00:00Z' : '');
+                    const aHasDate = Number.isFinite(aDate);
+                    const bHasDate = Number.isFinite(bDate);
+                    if (aHasDate && bHasDate) return bDate - aDate;
+                    if (aHasDate !== bHasDate) return aHasDate ? -1 : 1;
+                    return 0;
                 });
             });
             

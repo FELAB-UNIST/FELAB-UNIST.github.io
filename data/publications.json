@@ -2067,32 +2067,7 @@
       },
       "event_date": "2026-12-06"
     },
-    {
-      "id": "pub_wp_mm_compliance",
-      "year": "working_paper",
-      "authors": "Rui He, Jianhua Yang, Tomoki Kera, Atsushi Keyaki, Anaïs Lhuissier, Juyeon Kang, Min-Yuh Day, Guan-Bo Yang, Hsin-Hsi Chen, Dittaya Wanvarie, Yongjae Lee, Suhwan Park, Yuriko Nakao, Chung-Chi Chen, Yohei Seki*",
-      "author_ids": [
-        "yongjae-lee",
-        "suhwan-park"
-      ],
-      "venue": "",
-      "title": "MM-Compliance: A Multilingual Multimodal Dataset for Sustainability Compliance Auditing",
-      "keywords": [
-        "Finance",
-        "Compliance",
-        "Multimodal",
-        "NLP"
-      ],
-      "notes": "submitted",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
+
     {
       "id": "pub_wp_cross_sectional_retrieval",
       "year": "working_paper",
@@ -2144,30 +2119,7 @@
         "scholar_url": null
       }
     },
-    {
-      "id": "pub_wp_text_to_alpha",
-      "year": "working_paper",
-      "authors": "Chanyeol Choi, Yoon Kim, Yu Yu, Young Cha, Zach Golkhou, Igor Halperin, Georgios Papaioannou, Minkyu Kim, Zhangyang Wang, Jihoon Kwon, Minjae Kim, Alejandro Lopez-Lira, Yongjae Lee",
-      "author_ids": [
-        "yongjae-lee"
-      ],
-      "venue": "",
-      "title": "From Text to Alpha: Can LLMs Track Evolving Signals in Corporate Disclosures?",
-      "keywords": [
-        "Finance",
-        "LLMs",
-        "Corporate Disclosures"
-      ],
-      "notes": "submitted",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
-      "citation": {
-        "apa": null,
-        "bibtex": null,
-        "scholar_url": null
-      }
-    },
+
     {
       "id": "pub_wp_temporal",
       "year": "working_paper",
