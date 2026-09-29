@@ -95,9 +95,10 @@
           ]
         },
         {
-          "title": "Tabular data modeling",
-          "description": "We study synthetic sequential tables and mixed-variable learning, where temporal fidelity, heterogeneous feature geometry, and limited labels are central challenges.",
+          "title": "Tabular and graph modeling",
+          "description": "We study synthetic sequential tables, mixed-variable learning, and graph neural network calibration, with a focus on temporal fidelity, heterogeneous feature geometry, learning with limited labels, and reliable predictions on graph-structured data.",
           "papers": [
+            { "title": "HoTS: Homophily-Aware Temperature Scaling for Graph Neural Network Calibration", "venue": "NeurIPS", "year": 2026, "link": "https://arxiv.org/abs/2609.32426" },
             { "title": "Seq2Synth: Benchmarking Temporal Fidelity in Synthetic Sequential Tabular Data", "venue": "CIKM", "year": 2026, "link": "https://arxiv.org/abs/2607.15606" },
             { "title": "Geodesic Flow Kernels for Semi-Supervised Learning on Mixed-Variable Tabular Dataset", "venue": "AAAI", "year": 2025, "link": "https://ojs.aaai.org/index.php/AAAI/article/view/33928" }
           ]
@@ -163,16 +164,16 @@
   "classificationOverrides": {
     "other": [
       "Basic Enhancement Strategies When Using Bayesian Optimization for Hyperparameter Tuning of Deep Neural Networks",
-      "Concise Formulas for the Surface Area of the Intersection of Two Hyperspherical Caps",
-      "Homophily and Entropy Temperature Scaling for Graph Neural Network"
+      "Concise Formulas for the Surface Area of the Intersection of Two Hyperspherical Caps"
     ],
     "decisions": [
       "Integrating LLM-Generated Views into Mean-Variance Optimization Using the Black-Litterman Model",
-      "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization",
+      "Decision-informed neural network with large language model integration for portfolio optimization",
       "Deep Value Function Networks for Large-scale Multistage Stochastic Programs",
       "Achieving Portfolio Diversification for Individuals with Low Financial Sustainability"
     ],
     "assets": [
+      "HoTS: Homophily-Aware Temperature Scaling for Graph Neural Network Calibration",
       "Recent Trends and Perspectives on Korean Asset Management Industry",
       "Strengthening Financial Markets by Analyzing the Causes of Major Financial Disasters",
       "Why Your Smart Beta Portfolio Might Not Work",
