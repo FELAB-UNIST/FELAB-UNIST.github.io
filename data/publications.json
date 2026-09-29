@@ -2041,28 +2041,31 @@
     
     {
       "id": "pub_wp_homophily_gnn",
-      "year": "working_paper",
+      "year": 2026,
       "authors": "Inwoo Tae, Yoontae Hwang*, Yongjae Lee**",
       "author_ids": [
         "inwoo-tae",
         "yoontae-hwang",
         "yongjae-lee"
       ],
-      "venue": "",
-      "title": "Homophily and Entropy Temperature Scaling for Graph Neural Network",
+      "venue": "NeurIPS 2026",
+      "title": "HoTS: Homophily-Aware Temperature Scaling for Graph Neural Network Calibration",
       "keywords": [
         "Graph Neural Networks",
-        "Machine Learning"
+        "Calibration",
+        "Homophily",
+        "Temperature Scaling"
       ],
-      "notes": "submitted",
-      "link": "",
-      "type": "Working Papers",
-      "github": null,
+      "notes": "Poster (acceptance rate: 25.7%)",
+      "link": "https://arxiv.org/abs/2609.32426",
+      "type": "Conference",
+      "github": "https://github.com/inu0104/HoTS",
       "citation": {
-        "apa": null,
-        "bibtex": null,
+        "apa": "Tae, I., Hwang, Y., & Lee, Y. (2026). HoTS: Homophily-Aware Temperature Scaling for Graph Neural Network Calibration. Advances in Neural Information Processing Systems (NeurIPS 2026). https://arxiv.org/abs/2609.32426",
+        "bibtex": "@inproceedings{tae2026hots,\n  title={{HoTS}: Homophily-Aware Temperature Scaling for Graph Neural Network Calibration},\n  author={Tae, Inwoo and Hwang, Yoontae and Lee, Yongjae},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026},\n  url={https://arxiv.org/abs/2609.32426}\n}",
         "scholar_url": null
-      }
+      },
+      "event_date": "2026-12-06"
     },
     {
       "id": "pub_wp_mm_compliance",
@@ -2192,28 +2195,29 @@
     
     {
       "id": "pub_wp_decision_llm",
-      "year": "working_paper",
+      "year": 2027,
       "authors": "Yoontae Hwang, Yaxuan Kong, Stefan Zohren*, Yongjae Lee**",
       "author_ids": [
         "yoontae-hwang",
         "yongjae-lee"
       ],
-      "venue": "",
-      "title": "Decision-informed Neural Networks with Large Language Model Integration for Portfolio Optimization",
+      "venue": "Expert Systems with Applications",
+      "title": "Decision-informed neural network with large language model integration for portfolio optimization",
       "keywords": [
         "Finance",
         "Machine Learning",
         "Large Language Models"
       ],
-      "notes": "submitted",
-      "link": "https://arxiv.org/abs/2502.00828",
-      "type": "Working Papers",
+      "notes": "Available online September 13, 2026; Volume 334 (2027), Article 134389.",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0957417426032938",
+      "type": "Journal",
       "github": "https://anonymous.4open.science/r/Decision-informed-Neural-Networks-with-Large-Language-Model-Integration-for-Portfolio-Optimization-A441/README.md",
       "citation": {
-        "apa": "Hwang, Y., Kong, Y., Zohren, S., & Lee, Y. (2025). Decision-informed neural networks with large language model integration for portfolio optimization. arXiv preprint arXiv:2502.00828.",
-        "bibtex": "@article{hwang2025decision,\n  title={Decision-informed neural networks with large language model integration for portfolio optimization},\n  author={Hwang, Yoontae and Kong, Yaxuan and Zohren, Stefan and Lee, Yongjae},\n  journal={arXiv preprint arXiv:2502.00828},\n  year={2025}\n}",
+        "apa": "Hwang, Y., Kong, Y., Zohren, S., & Lee, Y. (2027). Decision-informed neural network with large language model integration for portfolio optimization. Expert Systems with Applications, 334, 134389. https://doi.org/10.1016/j.eswa.2026.134389",
+        "bibtex": "@article{hwang2027decision,\n  title={Decision-informed neural network with large language model integration for portfolio optimization},\n  author={Hwang, Yoontae and Kong, Yaxuan and Zohren, Stefan and Lee, Yongjae},\n  journal={Expert Systems with Applications},\n  volume={334},\n  pages={134389},\n  year={2027},\n  doi={10.1016/j.eswa.2026.134389}\n}",
         "scholar_url": "https://scholar.google.com/scholar?cluster=10666944650353888385&hl=ko&as_sdt=0,5"
-      }
+      },
+      "event_date": "2026-09-13"
     },
     {
       "id": "pub_wp_gr_fraud",
