@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "id": "kftc-aml-network-2026-aug",
+      "status": "ongoing",
+      "title_kr": "AI 기반 지급결제 네트워크 분석을 활용한 자금세탁 의심거래 탐지 고도화 연구",
+      "title_en": "Enhancing Suspicious Money Laundering Transaction Detection Using AI-based Payment Network Analysis",
+      "funding_agency": "금융결제원",
+      "duration": "2026.08 ~ 2026.12",
+      "project_number": "2.261143.01",
+      "keywords": ["AML", "Payment Network", "Graph Analysis", "AI"],
+      "participants": ["inwoo-tae"]
+    },
+    {
       "id": "kakaobank-multi-agent-debate-2026",
       "status": "ongoing",
       "title_kr": "Multi-Agent Debate 기반 금융 의사결정 예측 및 신뢰도 개선 연구",
@@ -24,7 +35,7 @@
     },
     {
       "id": "kcis-synthetic-data-automation-2026",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "합성데이터 생성 자동화 모델 고도화",
       "title_en": "Advanced Automation Model for Synthetic Data Generation",
       "funding_agency": "한국신용정보원",
@@ -69,7 +80,7 @@
     },
     {
       "id": "seed-2025",
-      "status": "ongoing",
+      "status": "completed",
       "title_kr": "개인투자자의 다양한 투자 선호를 고려한 개인 맞춤형 자산관리 모형 개발",
       "title_en": "Development and Evaluation of a Synthetic Data Generation Model for Credit Information",
       "funding_agency": "한국연구재단 (NRF of Korea)",
