@@ -3,6 +3,7 @@
     {
       "id": "pub_2026_icaif_hindsight_foresight",
       "year": 2026,
+      "event_date": "2026-11-14",
       "authors": "Sangjin Jin*, Junhyeong Lee*, Daehee Han*, Kangmin Kim, Suhwan Park, Seonghun Jeong, Daekyung Park, Lukasz Szpruch, Zhangyang Wang, Chanyeol Choi, Youngjun Kwak†, Yongjae Lee†",
       "author_ids": [
         "sangjin-jin",
@@ -11,7 +12,7 @@
         "suhwan-park",
         "yongjae-lee"
       ],
-      "venue": "ACM International Conference on AI in Finance (ICAIF 2026)",
+      "venue": "The 7th ACM International Conference on AI in Finance (ICAIF'26)",
       "title": "From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events",
       "keywords": [
         "Finance",
@@ -23,8 +24,8 @@
       "type": "Conference",
       "github": null,
       "citation": {
-        "apa": "Jin, S., Lee, J., Han, D., Kim, K., Park, S., Jeong, S., Park, D., Szpruch, L., Wang, Z., Choi, C., Kwak, Y., & Lee, Y. (2026). From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events. ACM International Conference on AI in Finance (ICAIF 2026). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7475378",
-        "bibtex": "@inproceedings{jin2026hindsight,\n  title={From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events},\n  author={Jin, Sangjin and Lee, Junhyeong and Han, Daehee and Kim, Kangmin and Park, Suhwan and Jeong, Seonghun and Park, Daekyung and Szpruch, Lukasz and Wang, Zhangyang and Choi, Chanyeol and Kwak, Youngjun and Lee, Yongjae},\n  booktitle={ACM International Conference on AI in Finance},\n  year={2026},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7475378}\n}",
+        "apa": "Jin, S., Lee, J., Han, D., Kim, K., Park, S., Jeong, S., Park, D., Szpruch, L., Wang, Z., Choi, C., Kwak, Y., & Lee, Y. (2026). From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events. The 7th ACM International Conference on AI in Finance (ICAIF'26). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7475378",
+        "bibtex": "@inproceedings{jin2026hindsight,\n  title={From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events},\n  author={Jin, Sangjin and Lee, Junhyeong and Han, Daehee and Kim, Kangmin and Park, Suhwan and Jeong, Seonghun and Park, Daekyung and Szpruch, Lukasz and Wang, Zhangyang and Choi, Chanyeol and Kwak, Youngjun and Lee, Yongjae},\n  booktitle={Proceedings of the 7th ACM International Conference on AI in Finance},\n  year={2026},\n  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7475378}\n}",
         "scholar_url": null
       }
     },
